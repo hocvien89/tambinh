@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C007D0D-A759-4DB2-A6E7-6C3FF11CCE00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>CM</RootNamespace>
+    <AssemblyName>CM</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CTKM\CM\CTKM_DICHVU_CHITIETEntity.vb" />
+    <Compile Include="CTKM\CM\CTKM_DM_CHUONGTRINHKHUYENMAIEntity.vb" />
+    <Compile Include="CTKM\CM\CTKM_LOAIGIAMGIAEntity.vb" />
+    <Compile Include="CTKM\CM\CTKM_MATHANG_CHITIETEntity.vb" />
+    <Compile Include="CTKM\I_CM\ICTKM_DICHVU_CHITIETEntity.vb" />
+    <Compile Include="CTKM\I_CM\ICTKM_DM_CHUONGTRINHKHUYENMAIEntity.vb" />
+    <Compile Include="CTKM\I_CM\ICTKM_LOAIGIAMGIAEntity.vb" />
+    <Compile Include="CTKM\I_CM\ICTKM_MATHANG_CHITIETEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_CRM_DM_KhachhangEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_CRM_DM_NGUONEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_CRM_DM_TRANGTHAIEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_MKT_SALES.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DINHMUC_GIAMATHANGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DM_KHOEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DM_LOAIMATHANGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DM_MATHANGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DM_NHACUNGCAPEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DM_NHOMMATHANGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLMH_DM_XUATXUEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLP_DM_PHONGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QLP_DM_THIETBIEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QT_DM_CHUCNANGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QT_DM_CUAHANGEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QT_DM_NHANVIENEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_QT_DM_PHANHEEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_Tenlop.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_DM_DICHVUEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_DM_GOIDICHVUEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_DM_LOAITHEEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_DM_NGOAITEEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_DM_NHOMDICHVUEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_DM_NHOMTHAMDOEntity.vb" />
+    <Compile Include="DANHMUC\CM\cls_TNTP_NGOAITE_TYGIAEntity.vb" />
+    <Compile Include="DANHMUC\CM\CRM_DM_QUANHUYENEntity.vb" />
+    <Compile Include="DANHMUC\CM\CRM_DM_QUOCGIAEntity.vb" />
+    <Compile Include="DANHMUC\CM\CRM_DM_TINHTHANHEntity.vb" />
+    <Compile Include="DANHMUC\CM\CRM_DM_XAPHUONGEntity.vb" />
+    <Compile Include="DANHMUC\CM\NHATKYSUDUNGEntity.vb" />
+    <Compile Include="DANHMUC\CM\QLP_DM_GIUONGEntity.vb" />
+    <Compile Include="DANHMUC\CM\TNTP_DM_DICHVU_CONGDOANEntity.vb" />
+    <Compile Include="DANHMUC\CM\TNTP_DM_MENHGIATIENEntity.vb" />
+    <Compile Include="DANHMUC\CM\TNTP_QT_DIEUTRI_CONGDOANEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_CRM_DM_KhachhangEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_CRM_DM_NGUONEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_CRM_DM_TRANGTHAIEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_MKT_SALES.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DINHMUC_GIAMATHANGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DM_KHOEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DM_LOAIMATHANGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DM_MATHANGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DM_NHACUNGCAPEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DM_NHOMMATHANGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLMH_DM_XUATXUEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLP_DM_PHONGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QLP_DM_THIETBIEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QT_DM_CHUCNANGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QT_DM_CUAHANGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QT_DM_NHANVIENEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_QT_DM_PHANHEEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\iCls_Tenlop.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_DM_DICHVUEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_DM_GOIDICHVUEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_DM_LOAITHEEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_DM_NGOAITEEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_DM_NHOMDICHVUEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_DM_NHOMTHAMDOEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\icls_TNTP_NGOAITE_TYGIAEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ICRM_DM_QUANHUYENEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ICRM_DM_QUOCGIAEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ICRM_DM_TINHTHANHEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ICRM_DM_XAPHUONGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\INHATKYSUDUNGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\IQLP_DM_GIUONGEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ITNTP_DM_DICHVU_CONGDOANEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ITNTP_DM_MENHGIATIENEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ITNTP_QT_DIEUTRI_CONGDOANEntity.vb" />
+    <Compile Include="KHQT\CM\cls_KHQT_KHACHHANG_USEREntity.vb" />
+    <Compile Include="KHQT\I_CM\icls_KHQT_KHACHHANG_USEREntity.vb" />
+    <Compile Include="LICHHEN\CM\AppointmentsEntity.vb" />
+    <Compile Include="LICHHEN\CM\cls_CALAMVIEC.vb" />
+    <Compile Include="LICHHEN\CM\cls_CRM_LICHHENEntity.vb" />
+    <Compile Include="LICHHEN\CM\cls_CRM_LICHHEN_DATLICHHENEntity.vb" />
+    <Compile Include="LICHHEN\CM\ResourcesEntity.vb" />
+    <Compile Include="LICHHEN\I_CM\IAppointmentsEntity.vb" />
+    <Compile Include="LICHHEN\I_CM\icls_CRM_LICHHENEntity.vb" />
+    <Compile Include="LICHHEN\I_CM\icls_CRM_LICHHEN_DATLICHHENEntity.vb" />
+    <Compile Include="LICHHEN\I_CM\icls_DM_CALAMVIEC.vb" />
+    <Compile Include="LICHHEN\I_CM\IResourcesEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_ChiendichMarketing_ChitietEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_ChiendichMKTEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_Chitiet_ChiendichMKTEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_ChuyendoiEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_CongviecEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_EmailEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_HUYDV.vb" />
+    <Compile Include="MAKETING\CM\MKT_KH_TIEMNANGEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_LOAITAGSEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_MaCongviecEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_PHANANHKHACHHANG.vb" />
+    <Compile Include="MAKETING\CM\MKT_SMSEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_TAGS.vb" />
+    <Compile Include="MAKETING\CM\MKT_TRANGTHAIKHEntity.vb" />
+    <Compile Include="MAKETING\CM\MKT_VOUCHEREntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_TAGS.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_Chiendichmarketing_Chitiet_Entity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_ChiendichMKTEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_Chitiet_ChiendichMKTEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_ChuyendoiEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_CongviecEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_EmailEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_HUYDV.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_KH_TIEMNANGEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_LOAITAGSEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_MaCongviecEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_PHANANHKHACHHANG.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_SMSEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_TRANGTHAIKHEntity.vb" />
+    <Compile Include="MAKETING\I_CM\IMKT_VOUCHER.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PROCESS\CM\CM_PROCESS_DETAIL.vb" />
+    <Compile Include="PROCESS\CM\CM_PROCESS_ROOT.vb" />
+    <Compile Include="PROCESS\ICM\ICM_PROCESS_DETAIL.vb" />
+    <Compile Include="PROCESS\ICM\ICM_PROCESS_ROOT.vb" />
+    <Compile Include="QLCN\CM\cls_QLCN_CONGNOEntity.vb" />
+    <Compile Include="QLCN\CM\cls_QLCN_CONGNO_SPEntity.vb" />
+    <Compile Include="QLCN\CM\cls_QLCN_CONGNO_THANHTOANEntity.vb" />
+    <Compile Include="QLCN\CM\cls_QLTC_PhieuthuchiEntity.vb" />
+    <Compile Include="QLCN\CM\QLTC_DM_THUCHIEntity.vb" />
+    <Compile Include="QLCN\CM\QLTC_LoaiHinhTTEntity.vb" />
+    <Compile Include="QLCN\CM\QLTC_PHIEUDICHVU_CHUYENKHOANEntity.vb" />
+    <Compile Include="QLCN\CM\QLTC_TK_KHACHHANGEntity.vb" />
+    <Compile Include="QLCN\I_CM\icls_QLCN_CONGNOEntity.vb" />
+    <Compile Include="QLCN\I_CM\icls_QLCN_CONGNO_SPEntity.vb" />
+    <Compile Include="QLCN\I_CM\icls_QLCN_CONGNO_THANHTOANEntity.vb" />
+    <Compile Include="QLCN\I_CM\icls_QLTC_PhieuthuchiEntity.vb" />
+    <Compile Include="QLCN\I_CM\IQLTC_DM_THUCHIEntity.vb" />
+    <Compile Include="QLCN\I_CM\IQLTC_LoaiHinhTTEntity.vb" />
+    <Compile Include="QLCN\I_CM\IQLTC_PHIEUDICHVU_CHUYENKHOANEntity.vb" />
+    <Compile Include="QLCN\I_CM\IQLTC_TK_KHACHHANGEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_CHITIEUTHAMDOEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_DM_KHUYENMAIEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_GOIDICHVU_DICHVUEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_KHACHHANG_CHITIEUTHAMDOEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_KHACHHANG_GOIDICHVUEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_KHACHHANG_THEEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_KHACHHANG_THE_GIAHANEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_LOAITHE_DICHVUEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_PHIEUDICHVUEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_PHIEUDICHVU_CHITIETEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_PHIEUDICHVU_KHUYENMAIEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_PHIEUDICHVU_NHOMPHIEUEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_QT_DieutriEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TTV_KH_THECHUYENTIENEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TTV_THECHUYENTIEN_LICHSUEntity.vb" />
+    <Compile Include="QLKH\CM\CRM_DM_DANHGIAEntity.vb" />
+    <Compile Include="QLKH\CM\CRM_KHACHHANGDANHGIAEntity.vb" />
+    <Compile Include="QLKH\CM\CRM_QUANHEGIADINHEntity.vb" />
+    <Compile Include="QLKH\CM\TNTP_KM_LOAITHEEntity.vb" />
+    <Compile Include="QLKH\CM\TNTP_PHIEUDICHVU_LOAITTEntity.vb" />
+    <Compile Include="QLKH\CM\TNTP_PHIEUDICHVU_SOTOTIENEntity.vb" />
+    <Compile Include="DANHMUC\CM\TNTP_QT_DIEUTRI_NHANVIENPHUEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_CHITIEUTHAMDOEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_DM_KHUYENMAIEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_GOIDICHVU_DICHVUEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_KHACHHANG_CHITIEUTHAMDOEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_KHACHHANG_GOIDICHVUEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_KHACHHANG_THEEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_KHACHHANG_THE_GIAHANEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_LOAITHE_DICHVUEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_PHIEUDICHVUEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_PHIEUDICHVU_CHITIETEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_PHIEUDICHVU_KHUYENMAIEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_PHIEUDICHVU_NHOMPHIEUEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TNTP_QT_DieutriEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TTV_KH_THECHUYENTIENEntity.vb" />
+    <Compile Include="QLKH\I_CM\icls_TTV_THECHUYENTIEN_LICHSUEntity.vb" />
+    <Compile Include="QLKH\I_CM\ICRM_DM_DANHGIAEntity.vb" />
+    <Compile Include="QLKH\I_CM\ICRM_KHACHHANGDANHGIAEntity.vb" />
+    <Compile Include="QLKH\I_CM\ICRM_QUANHEGIADINHEntity.vb" />
+    <Compile Include="QLKH\I_CM\ITNTP_KM_LOAITHEEntity.vb" />
+    <Compile Include="QLKH\I_CM\ITNTP_PHIEUDICHVU_LOAITTEntity.vb" />
+    <Compile Include="QLKH\I_CM\ITNTP_PHIEUDICHVU_SOTOTIENEntity.vb" />
+    <Compile Include="DANHMUC\I_CM\ITNTP_QT_DIEUTRI_NHANVIENPHUEntity.vb" />
+    <Compile Include="QLL\CM\cls_QLL_QUATRINHLUONGEntity.vb" />
+    <Compile Include="QLL\CM\cls_QLL_THONGTINLUONGEntity.vb" />
+    <Compile Include="QLL\I_CM\icls_QLL_QUATRINHLUONGEntity.vb" />
+    <Compile Include="QLL\I_CM\icls_QLL_THONGTINLUONGEntity.vb" />
+    <Compile Include="QLMH\CM\cls_Phieunhap.vb" />
+    <Compile Include="QLMH\CM\cls_Phieunhap_Congno.vb" />
+    <Compile Include="QLMH\CM\cls_Phieunhap_Congno_Thanhtoan.vb" />
+    <Compile Include="QLMH\CM\cls_Phieuxuat.vb" />
+    <Compile Include="QLMH\CM\cls_QLMH_VATTUTIEUHAOEntity.vb" />
+    <Compile Include="QLKH\CM\cls_TNTP_QT_Dieutri_Hinhanh.vb" />
+    <Compile Include="QLMH\CM\DMDonviEntity.vb" />
+    <Compile Include="QLMH\CM\DMQuyDoiDonViEntity.vb" />
+    <Compile Include="QLMH\CM\QLMH_PHIEUXUAT_LOAITTEntity.vb" />
+    <Compile Include="QLMH\CM\QLMH_VATTUTIEUHAO_QT_DIEUTRIEntity.vb" />
+    <Compile Include="QLMH\CM\TNTP_CHECKINCHECKOUTEntity.vb" />
+    <Compile Include="QLMH\I_CM\iCls_Phieunhap.vb" />
+    <Compile Include="QLMH\I_CM\iCls_Phieunhap_Congno.vb" />
+    <Compile Include="QLMH\I_CM\iCls_Phieunhap_Congno_Thanhtoan.vb" />
+    <Compile Include="QLMH\I_CM\iCls_Phieuxuat.vb" />
+    <Compile Include="QLMH\I_CM\icls_QLMH_VATTUTIEUHAOEntity.vb" />
+    <Compile Include="QLKH\I_CM\iCls_TNTP_QT_Dieutri_Hinhanh.vb" />
+    <Compile Include="QLMH\I_CM\IDMDonviEntity.vb" />
+    <Compile Include="QLMH\I_CM\IDMQuyDoiDonViEntity.vb" />
+    <Compile Include="QLMH\I_CM\IQLMH_PHIEUXUAT_LOAITTEntity.vb" />
+    <Compile Include="QLMH\I_CM\IQLMH_VATTUTIEUHAO_QT_DIEUTRIEntity.vb" />
+    <Compile Include="QLMH\I_CM\ITNTP_CHECKINCHECKOUTEntity.vb" />
+    <Compile Include="QLPHONG\CM\cls_QLP_CAEntity.vb" />
+    <Compile Include="QLPHONG\CM\cls_QLP_CA_THIETBIEntity.vb" />
+    <Compile Include="QLPHONG\CM\PQP_DICHVU_PHONGEntity.vb" />
+    <Compile Include="QLPHONG\CM\PQP_DM_PHONGBANEntity.vb" />
+    <Compile Include="QLPHONG\CM\PQP_NHANVIEN_PHONGEntity.vb" />
+    <Compile Include="QLPHONG\CM\PQP_TRANGTHAIKHCHOXULYEntity.vb" />
+    <Compile Include="QLPHONG\CM\PQP_TRANGTHAI_PHONGEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\icls_QLP_CAEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\icls_QLP_CA_THIETBIEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\IPQP_DICHVU_PHONGEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\IPQP_DM_PHONGBANEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\IPQP_NHANVIEN_PHONGEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\IPQP_TRANGTHAIKHCHOXULYEntity.vb" />
+    <Compile Include="QLPHONG\I_CM\IPQP_TRANGTHAI_PHONGEntity.vb" />
+    <Compile Include="QUANTRI\CM\cls_Nhanvien.vb" />
+    <Compile Include="QUANTRI\CM\cls_QT_PHANQUYENEntity.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QUANTRI\CM\cls_QT_THAMSOHETHONG.vb" />
+    <Compile Include="QUANTRI\CM\CUAHANG_NHANVIENEntity.vb" />
+    <Compile Include="QUANTRI\I_CM\iCls_Nhanvien.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QUANTRI\I_CM\icls_QT_PHANQUYENEntity.vb" />
+    <Compile Include="QUANTRI\I_CM\iCls_QT_THAMSOHETHONG.vb" />
+    <Compile Include="QUANTRI\I_CM\ICUAHANG_NHANVIENEntity.vb" />
+    <Compile Include="THETHANHVIEN\CM\cls_DM_ThetichdiemEntity.vb" />
+    <Compile Include="THETHANHVIEN\CM\cls_TTV_DM_Thetichdiem_ChuyendoiEntity.vb" />
+    <Compile Include="THETHANHVIEN\CM\cls_TTV_KH_ThetichdiemEntity.vb" />
+    <Compile Include="THETHANHVIEN\CM\cls_TTV_KH_Thetichdiem_LichsuEntity.vb" />
+    <Compile Include="THETHANHVIEN\I_CM\icls_TTV_DM_ThetichdiemEntity.vb" />
+    <Compile Include="THETHANHVIEN\I_CM\icls_TTV_DM_Thetichdiem_ChuyendoiEntity.vb" />
+    <Compile Include="THETHANHVIEN\I_CM\icls_TTV_KH_ThetichdiemEntity.vb" />
+    <Compile Include="THETHANHVIEN\I_CM\iCls_TTV_KH_thetichdiem_LichsuEntity.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\.MySCMServerInfo" />
+    <None Include="MAKETING\.MySCMServerInfo" />
+    <None Include="MAKETING\I_CM\.MySCMServerInfo" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="PROCESS\CM\.MySCMServerInfo" />
+    <None Include="PROCESS\ICM\.MySCMServerInfo" />
+    <None Include="QLKH\CM\.MySCMServerInfo" />
+    <None Include="QLKH\I_CM\.MySCMServerInfo" />
+    <None Include="QLL\CM\.MySCMServerInfo" />
+    <None Include="QLL\I_CM\.MySCMServerInfo" />
+    <None Include="QLPHONG\CM\.MySCMServerInfo" />
+    <None Include="QLPHONG\I_CM\.MySCMServerInfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CM.dll" />
+    <Content Include="bin\Debug\CM.pdb" />
+    <Content Include="bin\Debug\CM.xml" />
+    <Content Include="bin\Release\CM.dll" />
+    <Content Include="bin\Release\CM.pdb" />
+    <Content Include="bin\Release\CM.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

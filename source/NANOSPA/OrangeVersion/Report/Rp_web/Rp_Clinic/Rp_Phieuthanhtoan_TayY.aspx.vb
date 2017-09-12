@@ -1,0 +1,32 @@
+﻿Public Class Rp_Phieuthanhtoan_TayY
+    Inherits System.Web.UI.Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Loadrp()
+    End Sub
+    Private Sub Loadrp()
+        Dim rp As New Xtr_Inhoadon_Tayy
+        Dim objEnPhieuxuat As New CM.QLMH_PHIEUXUATEntity
+        Dim objFcPhieuxuat As New BO.QLMH_PHIEUXUATFacade
+        objEnPhieuxuat = objFcPhieuxuat.SelectByID(Session("uId_Phieuxuat"))
+        Dim objEnKhachhang As New CM.CRM_DM_KhachhangEntity
+        Dim objFcKhachhang As New BO.CRM_DM_KhachhangFacade
+        Dim objFcPhong As New BO.QLP_DM_PHONGFacade
+        objEnKhachhang = objFcKhachhang.SelectByID(objEnPhieuxuat.uId_Khachhang)
+        rp.lblbenhnhan.Text = objEnKhachhang.nv_Hoten_vn
+        rp.lblTuoi.Text = DateDiff(DateInterval.Year, objEnKhachhang.d_Ngaysinh, Date.Now).ToString
+        rp.lblDiachi.Text = objEnKhachhang.nv_Diachi_vn
+        rp.lblDienthoai.Text = objEnKhachhang.v_DienthoaiDD
+        If objEnPhieuxuat.uId_Phieuxuat <> Nothing Then
+            rp.lblSothang.Text = objEnPhieuxuat.i_Soluog.ToString + " " + "thang"
+            rp.lblTongtien.Text = String.Format("{0:#,##0}", (objEnPhieuxuat.i_Soluog * objEnPhieuxuat.f_Gia).ToString) + "đ"
+        Else
+            rp.lblTongtien.Text = ""
+        End If
+        ReportViewerControl.ReportViewer.Report = rp
+        objEnPhieuxuat = Nothing
+        objEnKhachhang = Nothing
+        objFcKhachhang = Nothing
+        objFcPhieuxuat = Nothing
+    End Sub
+End Class

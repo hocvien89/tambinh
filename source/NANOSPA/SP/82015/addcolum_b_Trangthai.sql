@@ -1,0 +1,2 @@
+alter table TNTP_PHIEUDICHVU_CHITIET
+add b_Trangthai bit

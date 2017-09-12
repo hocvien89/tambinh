@@ -1,0 +1,126 @@
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\DB.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\DB.pdb
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\DB.xml
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\CM.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\Lib_SAT.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\LogError.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\Microsoft.Practices.Unity.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\CM.pdb
+D:\Work-project\Working\DA_SPA\05_Sources\DB\bin\Release\CM.xml
+D:\Work-project\Working\DA_SPA\05_Sources\DB\obj\Release\ResolveAssemblyReference.cache
+D:\Work-project\Working\DA_SPA\05_Sources\DB\obj\Release\DB.Resources.resources
+D:\Work-project\Working\DA_SPA\05_Sources\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+D:\Work-project\Working\DA_SPA\05_Sources\DB\obj\Release\DB.dll
+D:\Work-project\Working\DA_SPA\05_Sources\DB\obj\Release\DB.xml
+D:\Work-project\Working\DA_SPA\05_Sources\DB\obj\Release\DB.pdb
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\DB.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\DB.pdb
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\DB.xml
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\CM.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Lib_SAT.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\LogError.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.Unity.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\CM.pdb
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\CM.xml
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\ResolveAssemblyReference.cache
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.Resources.resources
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.dll
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.xml
+D:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\DB.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\DB.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\DB.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\CM.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Lib_SAT.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\LogError.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\Microsoft.Practices.Unity.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\CM.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\bin\Release\CM.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\ResolveAssemblyReference.cache
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.Resources.resources
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_SourcesCode\DB\obj\Release\DB.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\bin\Release\DB.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\bin\Release\DB.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\bin\Release\DB.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\bin\Release\CM.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\bin\Release\CM.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\bin\Release\CM.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\obj\Release\DB.vbprojResolveAssemblyReference.cache
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\obj\Release\DB.Resources.resources
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\obj\Release\DB.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\obj\Release\DB.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\BACKUP\Design\05_SourcesCode\DB\obj\Release\DB.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\bin\Release\DB.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\bin\Release\DB.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\bin\Release\DB.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\bin\Release\CM.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\bin\Release\CM.pdb
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\bin\Release\CM.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\obj\Release\DB.vbprojResolveAssemblyReference.cache
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\obj\Release\DB.Resources.resources
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\obj\Release\DB.dll
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\obj\Release\DB.xml
+E:\INFORMATION TECHNOLOGY\NANOSOFT_WORKSPACE\NANO-SPA-OFFICICAL\05_Sources_2015\NANOSPA2015\DB\obj\Release\DB.pdb
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\bin\Release\CM.dll
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\bin\Release\CM.pdb
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\bin\Release\CM.xml
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\obj\Release\DB.vbprojResolveAssemblyReference.cache
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\obj\Release\DB.Resources.resources
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\obj\Release\DB.dll
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\obj\Release\DB.xml
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\obj\Release\DB.pdb
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\bin\Release\DB.dll
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\bin\Release\DB.pdb
+E:\NANO\NANOFULLSPA2015\04_SourceCode\DB\bin\Release\DB.xml
+D:\SPA_Shira\DB\bin\Release\DB.dll
+D:\SPA_Shira\DB\bin\Release\DB.pdb
+D:\SPA_Shira\DB\bin\Release\DB.xml
+D:\SPA_Shira\DB\bin\Release\CM.dll
+D:\SPA_Shira\DB\bin\Release\Lib_SAT.dll
+D:\SPA_Shira\DB\bin\Release\LogError.dll
+D:\SPA_Shira\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\SPA_Shira\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\SPA_Shira\DB\bin\Release\Microsoft.Practices.Unity.dll
+D:\SPA_Shira\DB\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+D:\SPA_Shira\DB\bin\Release\CM.pdb
+D:\SPA_Shira\DB\bin\Release\CM.xml
+D:\SPA_Shira\DB\obj\Release\DB.vbprojResolveAssemblyReference.cache
+D:\SPA_Shira\DB\obj\Release\DB.Resources.resources
+D:\SPA_Shira\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+D:\SPA_Shira\DB\obj\Release\DB.dll
+D:\SPA_Shira\DB\obj\Release\DB.xml
+D:\SPA_Shira\DB\obj\Release\DB.pdb
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\DB.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\DB.pdb
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\DB.xml
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\CM.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\Lib_SAT.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\LogError.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\Microsoft.Practices.Unity.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\CM.pdb
+E:\NANO\SPA\Spa_Datdaiduong\DB\bin\Release\CM.xml
+E:\NANO\SPA\Spa_Datdaiduong\DB\obj\Release\DB.vbprojResolveAssemblyReference.cache
+E:\NANO\SPA\Spa_Datdaiduong\DB\obj\Release\DB.Resources.resources
+E:\NANO\SPA\Spa_Datdaiduong\DB\obj\Release\DB.vbproj.GenerateResource.Cache
+E:\NANO\SPA\Spa_Datdaiduong\DB\obj\Release\DB.dll
+E:\NANO\SPA\Spa_Datdaiduong\DB\obj\Release\DB.xml
+E:\NANO\SPA\Spa_Datdaiduong\DB\obj\Release\DB.pdb

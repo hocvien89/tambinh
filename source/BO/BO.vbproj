@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B408FDE-DAA7-4532-888B-5D2E2AE1A040}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>BO</RootNamespace>
+    <AssemblyName>BO</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2">
+      <HintPath>bin\Release\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>bin\Release\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CTKM\CTKM_DICHVU_CHITIETFacade.vb" />
+    <Compile Include="CTKM\CTKM_DM_CHUONGTRINHKHUYENMAIFacade.vb" />
+    <Compile Include="CTKM\CTKM_LOAIGIAMGIAFacade.vb" />
+    <Compile Include="CTKM\CTKM_MATHANG_CHITIETFacade.vb" />
+    <Compile Include="DANHMUC\clsB_CRM_DM_KhachhangFacade.vb" />
+    <Compile Include="DANHMUC\clsB_CRM_DM_NGUONFacade.vb" />
+    <Compile Include="DANHMUC\clsB_CRM_DM_TRANGTHAIFacade.vb" />
+    <Compile Include="DANHMUC\clsB_MKT_SALES.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DINHMUC_GIAMATHANGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DM_KHOFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DM_LOAIMATHANGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DM_MATHANGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DM_NHACUNGCAPFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DM_NHOMMATHANGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLMH_DM_XUATXUFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLP_DM_PHONGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QLP_DM_THIETBIFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QT_DM_CHUCNANGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QT_DM_CUAHANGFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QT_DM_NHANVIENFacade.vb" />
+    <Compile Include="DANHMUC\clsB_QT_DM_PHANHEFacade.vb" />
+    <Compile Include="DANHMUC\clsB_Tenlop.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_DM_DICHVUFacade.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_DM_GOIDICHVUFacade.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_DM_LOAITHEFacade.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_DM_NGOAITEFacade.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_DM_NHOMDICHVUFacade.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_DM_NHOMTHAMDOFacade.vb" />
+    <Compile Include="DANHMUC\clsB_TNTP_NGOAITE_TYGIAFacade.vb" />
+    <Compile Include="DANHMUC\CRM_DM_QUANHUYENFacade.vb" />
+    <Compile Include="DANHMUC\CRM_DM_QUOCGIAFacade.vb" />
+    <Compile Include="DANHMUC\CRM_DM_TINHTHANHFacade.vb" />
+    <Compile Include="DANHMUC\CRM_DM_XAPHUONGFacade.vb" />
+    <Compile Include="DANHMUC\NHATKYSUDUNGFacade.vb" />
+    <Compile Include="DANHMUC\QLP_DM_GIUONGFacade.vb" />
+    <Compile Include="DANHMUC\TNTP_DM_DICHVU_CONGDOANFacade.vb" />
+    <Compile Include="DANHMUC\TNTP_DM_MENHGIATIENFacade.vb" />
+    <Compile Include="DANHMUC\TNTP_QT_DIEUTRI_CONGDOANFacade.vb" />
+    <Compile Include="KHQT\clsB_KHQT_KHACHHANG_USERFacade.vb" />
+    <Compile Include="LICHHEN\AppointmentsFacade.vb" />
+    <Compile Include="LICHHEN\clsB_CRM_LICHHENFacade.vb" />
+    <Compile Include="LICHHEN\clsB_CRM_LICHHEN_DATLICHHENFacade.vb" />
+    <Compile Include="LICHHEN\clsB_DM_CALAMVIEC.vb" />
+    <Compile Include="LICHHEN\ResourcesFacade.vb" />
+    <Compile Include="MAKETING\MKT_ChiendichDungthuSP.vb" />
+    <Compile Include="MAKETING\MKT_ChiendichMKTFacade.vb" />
+    <Compile Include="MAKETING\MKT_Chitiet_ChiendichMKTFacade.vb" />
+    <Compile Include="MAKETING\MKT_ChuyendoiFacade.vb" />
+    <Compile Include="MAKETING\MKT_CongviecFacade.vb" />
+    <Compile Include="MAKETING\MKT_EmailFacade.vb" />
+    <Compile Include="MAKETING\MKT_HUYDV.vb" />
+    <Compile Include="MAKETING\MKT_KH_TIEMNANGFacade.vb" />
+    <Compile Include="MAKETING\MKT_LOAITAGFacade.vb" />
+    <Compile Include="MAKETING\MKT_MaCongviecFacade.vb" />
+    <Compile Include="MAKETING\MKT_PHANANHKHACHHANG.vb" />
+    <Compile Include="MAKETING\MKT_SMSFacade.vb" />
+    <Compile Include="MAKETING\MKT_Tags.vb" />
+    <Compile Include="MAKETING\MKT_TRANGTHAIKHFacade.vb" />
+    <Compile Include="MAKETING\MKT_VOUCHER.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PROCESS\BO_PROCESS_DETAIL.vb" />
+    <Compile Include="PROCESS\BO_PROCESS_ROOT.vb" />
+    <Compile Include="PROCESS\BO_PROCESS_ROOT_STEP.vb" />
+    <Compile Include="QLCN\clsB_QLCN_CONGNOFacade.vb" />
+    <Compile Include="QLCN\clsB_QLCN_CONGNO_SPFacade.vb" />
+    <Compile Include="QLCN\clsB_QLCN_CONGNO_THANHTOANFacade.vb" />
+    <Compile Include="QLCN\clsB_QLTC_PhieuthuchiFacade.vb" />
+    <Compile Include="QLCN\QLTC_DM_THUCHIFacade.vb" />
+    <Compile Include="QLCN\QLTC_LoaiHinhTTFacade.vb" />
+    <Compile Include="QLCN\QLTC_PHIEUDICHVU_CHUYENKHOANFacade.vb" />
+    <Compile Include="QLCN\QLTC_TK_KHACHHANGFacade.vb" />
+    <Compile Include="QLKH\clsB_BaoCao_Khachhang.vb" />
+    <Compile Include="QLKH\clsB_TNTP_CHITIEUTHAMDOFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_Dieutri_Hinhanh.vb" />
+    <Compile Include="QLKH\clsB_TNTP_DM_KHUYENMAIFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_GOIDICHVU_DICHVUFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_KHACHHANG_CHITIEUTHAMDOFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_KHACHHANG_GOIDICHVUFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_KHACHHANG_THEFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_KHACHHANG_THE_GIAHANFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_LOAITHE_DICHVUFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_PHIEUDICHVUFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_PHIEUDICHVU_CHITIETFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_PHIEUDICHVU_KHUYENMAIFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_PHIEUDICHVU_NHOMPHIEUFacade.vb" />
+    <Compile Include="QLKH\clsB_TNTP_QT_DieutriFacade.vb" />
+    <Compile Include="QLKH\clsB_TTV_KH_THECHUYENTIENFacade.vb" />
+    <Compile Include="QLKH\clsb_TTV_KH_THECHUYENTIEN_LichsuFacede.vb" />
+    <Compile Include="QLKH\CRM_DM_DANHGIAFacade.vb" />
+    <Compile Include="QLKH\CRM_KHACHHANGDANHGIAFacade.vb" />
+    <Compile Include="QLKH\CRM_QUANHEGIADINHDAFacade.vb" />
+    <Compile Include="QLKH\TNTP_CHECKINCHECKOUTFacade.vb" />
+    <Compile Include="QLKH\TNTP_KM_LOAITHEFacade.vb" />
+    <Compile Include="QLKH\TNTP_PHIEUDICHVU_LOAITTFacade.vb" />
+    <Compile Include="QLKH\TNTP_PHIEUDICHVU_SOTOTIENFacade.vb" />
+    <Compile Include="DANHMUC\TNTP_QT_DIEUTRI_NHANVIENPHUFacade.vb" />
+    <Compile Include="QLL\clsB_QLL_QUATRINHLUONGFacade.vb" />
+    <Compile Include="QLL\clsB_QLL_THONGTINLUONGFacade.vb" />
+    <Compile Include="QLMH\clsB_BaoCaoQLMH.vb" />
+    <Compile Include="QLMH\clsB_Phieunhap.vb" />
+    <Compile Include="QLMH\clsB_Phieunhap_Congno.vb" />
+    <Compile Include="QLMH\clsB_Phieunhap_Congno_Thanhtoan.vb" />
+    <Compile Include="QLMH\clsB_Phieuxuat.vb" />
+    <Compile Include="QLMH\clsB_QLMH_VATTUTIEUHAOFacade.vb" />
+    <Compile Include="QLMH\DMDonviFacade.vb" />
+    <Compile Include="QLMH\DMQuyDoiDonViFacade.vb" />
+    <Compile Include="QLMH\QLMH_PHIEUXUAT_LOAITTFacade.vb" />
+    <Compile Include="QLMH\QLMH_VATTUTIEUHAO_QT_DIEUTRIFacade.vb" />
+    <Compile Include="QLPHONG\clsB_QLP_CAFacade.vb" />
+    <Compile Include="QLPHONG\clsB_QLP_CA_THIETBIFacade.vb" />
+    <Compile Include="QLPHONG\PQP_DICHVU_PHONGFacade.vb" />
+    <Compile Include="QLPHONG\PQP_DM_PHONGBANFacade.vb" />
+    <Compile Include="QLPHONG\PQP_NHANVIEN_PHONGFacade.vb" />
+    <Compile Include="QLPHONG\PQP_TRANGTHAIKHCHOXULYFacade.vb" />
+    <Compile Include="QLPHONG\PQP_TRANGTHAI_PHONGFacade.vb" />
+    <Compile Include="QUANTRI\clsB_Baocao_Taichinh.vb" />
+    <Compile Include="QUANTRI\clsB_BC_ThuChi_Tienmat.vb" />
+    <Compile Include="QUANTRI\clsB_Nhanvien.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QUANTRI\clsB_QT_PHANQUYENFacade.vb" />
+    <Compile Include="QUANTRI\clsB_THAMSOHETHONG.vb" />
+    <Compile Include="QUANTRI\CRM_KhachHang_DoangThuNguonFacade.vb" />
+    <Compile Include="QUANTRI\CUAHANG_NHANVIENFacade.vb" />
+    <Compile Include="THETHANHVIEN\clsB_TTV_DM_Thetichdiem.vb" />
+    <Compile Include="THETHANHVIEN\clsB_TTV_DM_Thetichdiem_Chuyendoi.vb" />
+    <Compile Include="THETHANHVIEN\clsB_TTV_KH_Thetichdiem.vb" />
+    <Compile Include="THETHANHVIEN\clsB_TTV_KH_Thetichdiem_Lichsu.vb" />
+    <Compile Include="Util\SendEmail.vb" />
+    <Compile Include="Util\Util.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="QLL\.MySCMServerInfo" />
+    <None Include="QLPHONG\.MySCMServerInfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CM\CM.vbproj">
+      <Project>{7c007d0d-a759-4db2-a6e7-6c3ff11cce00}</Project>
+      <Name>CM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB\DB.vbproj">
+      <Project>{6cd868a6-125f-4d76-a025-b81d8aedd7cf}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2 @@
+CREATE TABLE TTV_KH_THECHUYENTIEN_LICHSU(uId_Lichsuchuyentien uniqueidentifier,uId_Thechuyentien uniqueidentifier,d_Ngaychuyen datetime,nv_Ghichu nvarchar(50),
+f_Sotien float,nv_Lido nvarchar(50),nv_TUthethanhtoan nvarchar(50),nv_Thanhtoancho nvarchar(50),nv_TTPhieuxuat nvarchar(50))

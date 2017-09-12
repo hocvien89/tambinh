@@ -1,0 +1,10 @@
+SCMBranch=SpaTMV2017
+SCMRepository=SpaTMV2017/Spa_Datdaiduong/NANOSPA/SP/12015
+xuanhieu280115-spTNTP_QT_Dieutri_Hinhanh_Update.sql;3391006786;1;1490697499;
+xuanhieu280115-spTNTP_QT_Dieutri_Hinhanh_SelectAllTable.sql;2101384207;1;1490697499;
+xuanhieu280115-spTNTP_QT_Dieutri_Hinhanh_Insert.sql;1350704562;1;1490697499;
+xuanhieu280115-spTNTP_QT_Dieutri_Hinhanh_Delete.sql;4153201359;1;1490697499;
+xuanhieu280115-spTNTP_QT_Dieutri_Hinhanh_CreateTable.sql;4092802947;1;1490697499;
+xuanhieu190515-spQLMH_MATHANG_HANSUDUNG.sql;3576180252;1;1490697499;
+xuanhieu190515-spBAOCAO_Luocsu_Sudung_DV_yc55.sql;1530979630;1;1490697499;
+xuanhieu190115-spQT_DM_NHANVIEN_HoaHong_Phieudichvu.sql;4217970908;1;1490697499;

@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CD868A6-125F-4D76-A025-B81D8AEDD7CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>DB</RootNamespace>
+    <AssemblyName>DB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lib_SAT">
+      <HintPath>..\BO\bin\Release\Lib_SAT.dll</HintPath>
+    </Reference>
+    <Reference Include="LogError">
+      <HintPath>..\BO\bin\Release\LogError.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\BO\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\BO\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\BO\bin\Release\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CTKM\DB\CTKM_DICHVU_CHITIETDA.vb" />
+    <Compile Include="CTKM\DB\CTKM_DM_CHUONGTRINHKHUYENMAIDA.vb" />
+    <Compile Include="CTKM\DB\CTKM_LOAIGIAMGIADA.vb" />
+    <Compile Include="CTKM\DB\CTKM_MATHANG_CHITIETDA.vb" />
+    <Compile Include="CTKM\I_DB\ICTKM_DICHVU_CHITIETDA.vb" />
+    <Compile Include="CTKM\I_DB\ICTKM_DM_CHUONGTRINHKHUYENMAIDA.vb" />
+    <Compile Include="CTKM\I_DB\ICTKM_LOAIGIAMGIADA.vb" />
+    <Compile Include="CTKM\I_DB\ICTKM_MATHANG_CHITIETDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_CRM_DM_KhachhangDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_CRM_DM_NGUONDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_CRM_DM_TRANGTHAIDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_MKT_SALES.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DINHMUC_GIAMATHANGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DM_KHODA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DM_LOAIMATHANGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DM_MATHANGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DM_NHACUNGCAPDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DM_NHOMMATHANGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLMH_DM_XUATXUDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLP_DM_PHONGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QLP_DM_THIETBIDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QT_DM_CHUCNANGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QT_DM_CUAHANGDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QT_DM_NHANVIENDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_QT_DM_PHANHEDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_Tenlop.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_DM_DICHVUDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_DM_GOIDICHVUDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_DM_LOAITHEDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_DM_NGOAITEDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_DM_NHOMDICHVUDA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_DM_NHOMTHAMDODA.vb" />
+    <Compile Include="DANHMUC\DB\clsD_TNTP_NGOAITE_TYGIADA.vb" />
+    <Compile Include="DANHMUC\DB\CRM_DM_QUANHUYENDA.vb" />
+    <Compile Include="DANHMUC\DB\CRM_DM_QUOCGIADA.vb" />
+    <Compile Include="DANHMUC\DB\CRM_DM_TINHTHANHDA.vb" />
+    <Compile Include="DANHMUC\DB\CRM_DM_XAPHUONGDA.vb" />
+    <Compile Include="DANHMUC\DB\NHATKYSUDUNGDA.vb" />
+    <Compile Include="DANHMUC\DB\QLP_DM_GIUONGDA.vb" />
+    <Compile Include="DANHMUC\DB\TNTP_DM_DICHVU_CONGDOANDA.vb" />
+    <Compile Include="DANHMUC\DB\TNTP_DM_MENHGIATIENDA.vb" />
+    <Compile Include="DANHMUC\DB\TNTP_QT_DIEUTRI_CONGDOANDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_CRM_DM_KhachhangDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_CRM_DM_NGUONDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_CRM_DM_TRANGTHAIDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_MKT_SALES.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DINHMUC_GIAMATHANGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DM_KHODA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DM_LOAIMATHANGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DM_MATHANGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DM_NHACUNGCAPDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DM_NHOMMATHANGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLMH_DM_XUATXUDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLP_DM_PHONGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QLP_DM_THIETBIDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QT_DM_CHUCNANGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QT_DM_CUAHANGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_QT_DM_PHANHEDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iClsD_Tenlop.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_DM_DICHVUDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_DM_GOIDICHVUDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_DM_LOAITHEDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_DM_NGOAITEDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_DM_NHOMDICHVUDA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_DM_NHOMTHAMDODA.vb" />
+    <Compile Include="DANHMUC\I_DB\iclsD_TNTP_NGOAITE_TYGIADA.vb" />
+    <Compile Include="DANHMUC\I_DB\icls_QT_DM_NHANVIENDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ICRM_DM_QUANHUYENDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ICRM_DM_QUOCGIADA.vb" />
+    <Compile Include="DANHMUC\I_DB\ICRM_DM_TINHTHANHDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ICRM_DM_XAPHUONGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\INHATKYSUDUNGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\IQLP_DM_GIUONGDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ITNTP_DM_DICHVU_CONGDOANDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ITNTP_DM_MENHGIATIENDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ITNTP_QT_DIEUTRI_CONGDOANDA.vb" />
+    <Compile Include="KHQT\DB\clsD_KHQT_KHACHHANG_USERDA.vb" />
+    <Compile Include="KHQT\I_DB\iclsD_KHQT_KHACHHANG_USERDA.vb" />
+    <Compile Include="LICHHEN\DB\AppointmentsDA.vb" />
+    <Compile Include="LICHHEN\DB\clsD_CRM_LICHHENDA.vb" />
+    <Compile Include="LICHHEN\DB\clsD_CRM_LICHHEN_DATLICHHENDA.vb" />
+    <Compile Include="LICHHEN\DB\clsD_DM_CALAMVIEC.vb" />
+    <Compile Include="LICHHEN\DB\ResourcesDA.vb" />
+    <Compile Include="LICHHEN\I_DB\IAppointmentsDA.vb" />
+    <Compile Include="LICHHEN\I_DB\iclsD_CRM_LICHHENDA.vb" />
+    <Compile Include="LICHHEN\I_DB\iclsD_CRM_LICHHEN_DATLICHHENDA.vb" />
+    <Compile Include="LICHHEN\I_DB\iclsD_DM_CALAMVIEC.vb" />
+    <Compile Include="LICHHEN\I_DB\IResourcesDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_ChiendichDungthuSP.vb" />
+    <Compile Include="MAKETING\DB\MKT_ChiendichMKTDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_Chitiet_ChiendichMKTDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_ChuyendoiDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_CongviecDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_EmailDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_HUYDV.vb" />
+    <Compile Include="MAKETING\DB\MKT_KHACHHANGPHANANH.vb" />
+    <Compile Include="MAKETING\DB\MKT_KH_TIEMNANGDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_LOAITAGDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_MaCongviecDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_MaCongviecEntity.vb" />
+    <Compile Include="MAKETING\DB\MKT_SMSDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_TAGS.vb" />
+    <Compile Include="MAKETING\DB\MKT_TRANGTHAIKHDA.vb" />
+    <Compile Include="MAKETING\DB\MKT_VOUCHER.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_ChiendichDungthuSP.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_ChiendichMKTDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_Chitiet_ChiendichMKTDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_ChuyendoiDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_CongviecDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_EmailDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_HUYDV.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_KHACHHANGPHANANH.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_KH_TIEMNANGDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_LOAITAGSDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_MaCongviecDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_SMSDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_TAGS.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_TRANGTHAIKHDA.vb" />
+    <Compile Include="MAKETING\I_DB\IMKT_VOUCHER.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PROCESS\DB\DB_PROCESS_DETAIL.vb" />
+    <Compile Include="PROCESS\DB\DB_PROCESS_ROOT.vb" />
+    <Compile Include="PROCESS\DB\DB_PROCESS_ROOT_STEP.vb" />
+    <Compile Include="PROCESS\IDB\IDB_PROCESS_DETAIL.vb" />
+    <Compile Include="PROCESS\IDB\IDB_PROCESS_ROOT.vb" />
+    <Compile Include="PROCESS\IDB\IDB_PROCESS_ROOT_STEP.vb" />
+    <Compile Include="QLCN\DB\clsD_QLCN_CONGNODA.vb" />
+    <Compile Include="QLCN\DB\clsD_QLCN_CONGNO_SPDA.vb" />
+    <Compile Include="QLCN\DB\clsD_QLCN_CONGNO_THANHTOANDA.vb" />
+    <Compile Include="QLCN\DB\clsD_QLTC_PhieuthuchiDA.vb" />
+    <Compile Include="QLCN\DB\QLTC_DM_THUCHIDA.vb" />
+    <Compile Include="QLCN\DB\QLTC_LoaiHinhTTDA.vb" />
+    <Compile Include="QLCN\DB\QLTC_PHIEUDICHVU_CHUYENKHOANDA.vb" />
+    <Compile Include="QLCN\DB\QLTC_TK_KHACHHANGDA.vb" />
+    <Compile Include="QLCN\I_DB\iclsD_QLCN_CONGNODA.vb" />
+    <Compile Include="QLCN\I_DB\iclsD_QLCN_CONGNO_SPDA.vb" />
+    <Compile Include="QLCN\I_DB\iclsD_QLCN_CONGNO_THANHTOANDA.vb" />
+    <Compile Include="QLCN\I_DB\iclsD_QLTC_PhieuthuchiDA.vb" />
+    <Compile Include="QLCN\I_DB\IQLTC_DM_THUCHIDA.vb" />
+    <Compile Include="QLCN\I_DB\IQLTC_LoaiHinhTTDA.vb" />
+    <Compile Include="QLCN\I_DB\IQLTC_PHIEUDICHVU_CHUYENKHOANDA.vb" />
+    <Compile Include="QLCN\I_DB\IQLTC_TK_KHACHHANGDA.vb" />
+    <Compile Include="QLKH\DB\clsD_BaoCao_Khachhang.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_CHITIEUTHAMDODA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_DM_KHUYENMAIDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_GOIDICHVU_DICHVUDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_KHACHHANG_CHITIEUTHAMDODA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_KHACHHANG_GOIDICHVUDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_KHACHHANG_THEDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_KHACHHANG_THE_GIAHANDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_LOAITHE_DICHVUDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_PHIEUDICHVUDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_PHIEUDICHVU_CHITIETDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_PHIEUDICHVU_KHUYENMAIDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_PHIEUDICHVU_NHOMPHIEUDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_QT_DieutriDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TTV_KH_THECHUYENTIENDA.vb" />
+    <Compile Include="QLKH\DB\clsD_TTV_THECHUYENTIEN_LICHSUDA.vb" />
+    <Compile Include="QLKH\DB\CRM_DM_DANHGIADA.vb" />
+    <Compile Include="QLKH\DB\CRM_KHACHHANGDANHGIADA.vb" />
+    <Compile Include="QLKH\DB\CRM_QUANHEGIADINHDA.vb" />
+    <Compile Include="QLKH\DB\TNTP_CHECKINCHECKOUTDA.vb" />
+    <Compile Include="QLKH\DB\TNTP_KM_LOAITHEDA.vb" />
+    <Compile Include="QLKH\DB\TNTP_PHIEUDICHVU_LOAITTDA.vb" />
+    <Compile Include="QLKH\DB\TNTP_PHIEUDICHVU_SOTOTIENDA.vb" />
+    <Compile Include="DANHMUC\DB\TNTP_QT_DIEUTRI_NHANVIENPHUDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_BaoCao_Khachhang.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_CHITIEUTHAMDODA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_DM_KHUYENMAIDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_GOIDICHVU_DICHVUDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_KHACHHANG_CHITIEUTHAMDODA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_KHACHHANG_GOIDICHVUDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_KHACHHANG_THEDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_KHACHHANG_THE_GIAHANDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_LOAITHE_DICHVUDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_PHIEUDICHVUDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_PHIEUDICHVU_CHITIETDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_PHIEUDICHVU_KHUYENMAIDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_PHIEUDICHVU_NHOMPHIEUDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TNTP_QT_DieutriDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TTV_KH_THECHUYENTIENDA.vb" />
+    <Compile Include="QLKH\I_DB\iclsD_TTV_THECHUYENTIEN_LICHSUDA.vb" />
+    <Compile Include="QLKH\I_DB\ICRM_DM_DANHGIADA.vb" />
+    <Compile Include="QLKH\I_DB\ICRM_KHACHHANGDANHGIADA.vb" />
+    <Compile Include="QLKH\I_DB\ICRM_QUANHEGIADINHDA.vb" />
+    <Compile Include="QLKH\I_DB\ITNTP_CHECKINCHECKOUTDA.vb" />
+    <Compile Include="QLKH\I_DB\ITNTP_KM_LOAITHEDA.vb" />
+    <Compile Include="QLKH\I_DB\ITNTP_PHIEUDICHVU_LOAITTDA.vb" />
+    <Compile Include="QLKH\I_DB\ITNTP_PHIEUDICHVU_SOTOTIENDA.vb" />
+    <Compile Include="DANHMUC\I_DB\ITNTP_QT_DIEUTRI_NHANVIENPHUDA.vb" />
+    <Compile Include="QLL\DB\clsd_QLL_QUATRINHLUONGDA.vb" />
+    <Compile Include="QLL\DB\clsD_QLL_THONGTINLUONGDA.vb" />
+    <Compile Include="QLL\I_DB\iclsD_QLL_QUATRINHLUONGDA.vb" />
+    <Compile Include="QLL\I_DB\iclsD_QLL_THONGTINLUONGDA.vb" />
+    <Compile Include="QLMH\DB\clsD_BaoCaoQLMH.vb" />
+    <Compile Include="QLMH\DB\clsD_Phieunhap.vb" />
+    <Compile Include="QLMH\DB\clsD_Phieunhap_Congno.vb" />
+    <Compile Include="QLMH\DB\clsD_Phieunhap_Congno_Thanhtoan.vb" />
+    <Compile Include="QLMH\DB\clsD_Phieuxuat.vb" />
+    <Compile Include="QLMH\DB\clsD_QLMH_VATTUTIEUHAODA.vb" />
+    <Compile Include="QLKH\DB\clsD_TNTP_QT_Dieutri_Hinhanh.vb" />
+    <Compile Include="QLMH\DB\DMDonviDA.vb" />
+    <Compile Include="QLMH\DB\DMQuyDoiDonViDA.vb" />
+    <Compile Include="QLMH\DB\QLMH_PHIEUXUAT_LOAITTDA.vb" />
+    <Compile Include="QLMH\DB\QLMH_VATTUTIEUHAO_QT_DIEUTRIDA.vb" />
+    <Compile Include="QLMH\I_DB\iclsD_BaoCaoQLMH.vb" />
+    <Compile Include="QLMH\I_DB\iClsD_Phieunhap.vb" />
+    <Compile Include="QLMH\I_DB\iClsD_Phieunhap_Congno.vb" />
+    <Compile Include="QLMH\I_DB\iClsD_Phieunhap_Congno_Thanhtoan.vb" />
+    <Compile Include="QLMH\I_DB\iClsD_Phieuxuat.vb" />
+    <Compile Include="QLMH\I_DB\iclsD_QLMH_VATTUTIEUHAODA.vb" />
+    <Compile Include="QLKH\I_DB\iClsD_TNTP_QT_Dieutri_Hinhanh.vb" />
+    <Compile Include="QLMH\I_DB\IDMDonviDA.vb" />
+    <Compile Include="QLMH\I_DB\IDMQuyDoiDonViDA.vb" />
+    <Compile Include="QLMH\I_DB\IQLMH_PHIEUXUAT_LOAITTDA.vb" />
+    <Compile Include="QLMH\I_DB\IQLMH_VATTUTIEUHAO_QT_DIEUTRIDA.vb" />
+    <Compile Include="QLPHONG\DB\clsD_QLP_CADA.vb" />
+    <Compile Include="QLPHONG\DB\clsD_QLP_CA_THIETBIDA.vb" />
+    <Compile Include="QLPHONG\DB\PQP_DICHVU_PHONGDA.vb" />
+    <Compile Include="QLPHONG\DB\PQP_DM_PHONGBANDA.vb" />
+    <Compile Include="QLPHONG\DB\PQP_NHANVIEN_PHONGDA.vb" />
+    <Compile Include="QLPHONG\DB\PQP_TRANGTHAIKHCHOXULYDA.vb" />
+    <Compile Include="QLPHONG\DB\PQP_TRANGTHAI_PHONGDA.vb" />
+    <Compile Include="QLPHONG\I_DB\iclsD_QLP_CADA.vb" />
+    <Compile Include="QLPHONG\I_DB\iclsD_QLP_CA_THIETBIDA.vb" />
+    <Compile Include="QLPHONG\I_DB\IPQP_DICHVU_PHONGDA.vb" />
+    <Compile Include="QLPHONG\I_DB\IPQP_DM_PHONGBANDA.vb" />
+    <Compile Include="QLPHONG\I_DB\IPQP_NHANVIEN_PHONGDA.vb" />
+    <Compile Include="QLPHONG\I_DB\IPQP_TRANGTHAIKHCHOXULYDA.vb" />
+    <Compile Include="QLPHONG\I_DB\IPQP_TRANGTHAI_PHONGDA.vb" />
+    <Compile Include="QUANTRI\DB\clsD_Baocao_Taichinh.vb" />
+    <Compile Include="QUANTRI\DB\clsD_BC_ThuChi_Tienmat.vb" />
+    <Compile Include="QUANTRI\DB\clsD_Nguoidung.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QUANTRI\DB\clsD_QT_PHANQUYENDA.vb" />
+    <Compile Include="QUANTRI\DB\clsD_THAMSOHETHONG.vb" />
+    <Compile Include="QUANTRI\DB\CRM_KhachHang_DoangThuNguonDA.vb" />
+    <Compile Include="QUANTRI\DB\CUAHANG_NHANVIENDA.vb" />
+    <Compile Include="QUANTRI\I_DB\iClisD_Nhanvien.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QUANTRI\I_DB\iClisD_THAMSOHETHONG.vb" />
+    <Compile Include="QUANTRI\I_DB\iclsD_Baocao_Taichinh.vb" />
+    <Compile Include="QUANTRI\I_DB\iclsD_BC_ThuChi_Tienmat.vb" />
+    <Compile Include="QUANTRI\I_DB\iclsD_QT_PHANQUYENDA.vb" />
+    <Compile Include="QUANTRI\I_DB\ICRM_KhachHang_DoangThuNguonDA.vb" />
+    <Compile Include="QUANTRI\I_DB\ICUAHANG_NHANVIENDA.vb" />
+    <Compile Include="THETHANHVIEN\DB\clsD_TTV_DM_THETICHDIEMDA.vb" />
+    <Compile Include="THETHANHVIEN\DB\clsD_TTV_DM_THETICHDIEM_CHUYENDOIDA.vb" />
+    <Compile Include="THETHANHVIEN\DB\clsD_TTV_KH_THETICHDIEMDA.vb" />
+    <Compile Include="THETHANHVIEN\DB\clsD_TTV_KH_THETICHDIEM_LICHSUDA.vb" />
+    <Compile Include="THETHANHVIEN\I_DB\iclsD_TTV_DM_THETICHDIEMDA.vb" />
+    <Compile Include="THETHANHVIEN\I_DB\iclsD_TTV_DM_THETICHDIEM_CHUYENDOIDA.vb" />
+    <Compile Include="THETHANHVIEN\I_DB\iclsD_TTV_KH_THETICHDIEMDA.vb" />
+    <Compile Include="THETHANHVIEN\I_DB\iclsD_TTV_KH_THETICHDIEM_LICHSUDA.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KHQT\DB\.MySCMServerInfo" />
+    <None Include="KHQT\I_DB\.MySCMServerInfo" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="QLL\DB\.MySCMServerInfo" />
+    <None Include="QLL\I_DB\.MySCMServerInfo" />
+    <None Include="QLPHONG\DB\.MySCMServerInfo" />
+    <None Include="QLPHONG\I_DB\.MySCMServerInfo" />
+    <None Include="THETHANHVIEN\DB\.MySCMServerInfo" />
+    <None Include="THETHANHVIEN\I_DB\.MySCMServerInfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CM\CM.vbproj">
+      <Project>{7c007d0d-a759-4db2-a6e7-6c3ff11cce00}</Project>
+      <Name>CM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

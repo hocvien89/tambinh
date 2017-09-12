@@ -1,0 +1,4 @@
+<Log Entry> : 11:50:44 PM Monday, September 11, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------

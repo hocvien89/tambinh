@@ -1,0 +1,44 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="sConnect" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=NANOSPA2015;Integrated Security=True;Pooling=false&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=NANOSPA2015;Integrated Security=True;Pooling=false</Value>
+    </Setting>
+    <Setting Name="TenCuaHang" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DiaChiCuaHang" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ThanhPho" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="KyTen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Sothutu" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sUser_SMS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">4050545D535658</Value>
+    </Setting>
+    <Setting Name="sPass_SMS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">050A0607010E</Value>
+    </Setting>
+    <Setting Name="uId_XaPhuong" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">9599e526-4b5f-4853-bb2d-7a596c6075ce</Value>
+    </Setting>
+    <Setting Name="NANO_SPA_WebReference_SMS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://115.165.162.27/CMC_BRAND/Service.asmx</Value>
+    </Setting>
+    <Setting Name="NANO_SPA_wsv_SMS_SMS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://115.165.162.27/CMC_BRAND/Service.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

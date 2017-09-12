@@ -1,0 +1,14 @@
+SCMBranch=SpaTMV2017
+SCMRepository=SpaTMV2017/Spa_Datdaiduong/NANOSPA/SP/06015
+sp_Phuongdv_SelectDVBYKhachhang.sql;2641349280;1;1490697511;
+sp_Phuongdv_KHachhangselectall.sql;1603410273;1;1490697511;
+sp_Phuongdv_Hopdongchamsocbau.sql;4142251398;1;1490697511;
+sp_Phuongdv_Baocaomevabe_PhieudichvuByID.sql;1781254587;1;1490697511;
+sp_Phuongdv_Baocaohopdongchamsocbau.sql;30860834;1;1490697511;
+sp_Phuongdv_baocaochamsocbau_ByID.sql;744220898;1;1490697511;
+sp_Phuongdv_17-6_QT_dieutri_Congdoan_update.sql;652537733;1;1490697512;
+sp_Phuongdv_17-6_Dieutricongdoan_Insert.sql;2904509924;1;1490697512;
+sp_Phuongdv_05-06-2015_DM_Xuatxu_Selectall.sql;548332056;1;1490697512;
+sp_Phuongdv_04062015_DMXuatxu_Update.sql;2719240269;1;1490697512;
+sp_PhuongDV_04-06-2015_QLMH_DMXuatxu_Insert.sql;1836838495;1;1490697512;
+06015.rar;4130571757;1;1490697598;

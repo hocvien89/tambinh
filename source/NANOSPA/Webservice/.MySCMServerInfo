@@ -1,0 +1,16 @@
+SCMBranch=SpaTMV2017
+SCMRepository=SpaTMV2017/Spa_Datdaiduong/NANOSPA/Webservice
+nano_websv_Clinic.asmx;2487047157;1;1480561337;
+nano_websv_Clinic.asmx.vb;419754847;1;1480561337;
+nano_websv_mak.asmx;1073976605;1;1480561337;
+nano_websv_mak.asmx.vb;3113622687;1;1480561337;
+nano_websv_ProcessClinic.asmx;181411170;1;1480561337;
+nano_websv_ProcessClinic.asmx.vb;492869933;1;1480561337;
+nano_websv_ThuocMethod.asmx;985126802;1;1480561338;
+nano_websv_ThuocMethod.asmx.vb;2787868966;1;1480561338;
+nano_websv.asmx.vb;2107510457;3;1490697264;
+nano_websv.asmx;1668260210;3;1490697264;
+nano_websv_thetichdiem.asmx.vb;1333310241;1;1490697527;
+nano_websv_thetichdiem.asmx;2529672720;1;1490697527;
+nano_websv_CheckInCheckOut.asmx.vb;3534243853;1;1490697527;
+nano_websv_CheckInCheckOut.asmx;3246809489;1;1490697527;

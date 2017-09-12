@@ -1,0 +1,69 @@
+﻿	#accordion {
+			
+			width: 100%;
+			height: 30px;
+			font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+			font-size: 11px;
+			position:fixed  !important;
+			display:block;
+			bottom: 0;
+			background-image:url(../images/001.jpg);
+			background-repeat:no-repeat;
+			background-position:top left;
+	}
+	#MainContent
+	{
+		
+		width : 100%;
+		height : 630px;
+		overflow: auto ;
+		/*background : #F5F5F5 ;		*/
+		z-index :1000px;
+		
+	}
+		
+	h3 {
+			font-size: 13px;
+			padding: 6px 6px 4px 35px;
+			margin: 0;
+			color:#fff;
+			border-bottom:1px solid #333333;
+			cursor:pointer;
+			display:block;
+			background-image:url(../images/Arrow-double-up-icon.png);
+			background-position:top left;
+			background-repeat:no-repeat;
+	}
+	
+	#visible {
+			background-image:url(../images/Arrow-double-down-icon.png);
+			border-bottom:1px solid #DA1074;
+	}
+	
+	.panel_body {
+			height:150px;
+			background-color:#333333;
+			display:block;
+			position:relative;
+			color:#FFFFFF;
+			z-index :1000;
+	}
+	
+	.panel_body div {
+			padding:3px 5px;
+	}
+	
+	.panel_container{
+		bottom:0px;
+		margin:0px;
+		padding:0px;
+		background-image:url(../images/tab-right.gif);
+		background-position:top right;
+		background-repeat:repeat-x;
+		background-color:#333333;
+		z-index :1000;
+	}
+	.wrapper{
+		bottom:0px;
+		position:absolute;
+	}

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Errors !</title>
+    <style type="text/css">
+        .error
+        {
+            padding: 10px;
+            font-family: Tahoma;
+            font-size: 12px;
+            width: 500px;
+            height: 215px;
+            background: #eee;
+            margin: 200px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .error b
+        {
+            font-size: 15px;
+            position: relative;
+            top: 9px;
+        }
+        .error p
+        {
+            bottom: 4px;
+            line-height: 20px;
+            position: relative;
+        }
+        .error p a
+        {
+            text-decoration: underline;
+            color: #497AD3;
+        }
+        .error p a:hover
+        {
+            color: #E97D13;
+        }
+    </style>
+</head>
+<body>
+    <div class="error">
+        <img src="updatting_item.gif" />
+        <div>
+            <b>Hệ thống đang cập nhật</b>
+            <div class="back_home" style="position:relative;left:145px;top:28px">
+            <span style="float:left">
+                Tự động quay lại <a href="../Default.aspx">trang chủ</a> sau&nbsp</span>
+                <form  style="float:left;width:13px" name="counter">
+        <input type="Text" style="border: none;color:Red;font-weight:bold !important; background-color:#EEEEEE; width: 22px" value="0.0" name="d2">
+        </form> <span  style="float:left">giây </span></div>
+            <!--<a href="../Default.aspx">Quay lại trang chủ</a>-->
+        </div>
+        <!-- <p class="email">Hoặc <a href="mailto:suportSach24.vn@gmail.com?Cc=Thông%20báo&Subject=Errors%20On%20Sach24.vn">gửi Email</a> thông báo lỗi cho ban quản trị</p> -->
+    </div>
+    <script>
+        //window.setTimeout(function () {
+        //    location.href = "../Default.aspx";
+        //}, 3000)
+    </script>
+    <script> 
+         var milisec=0 
+         var seconds=4 
+         document.counter.d2.value ='3' 
+
+        function display(){ 
+         if (milisec<=0){ 
+            milisec=9 
+            seconds-=1 
+         } 
+         if (seconds<=-1){ 
+            milisec=0 
+            seconds+=1 
+         } 
+         else 
+            milisec-=1 
+           document.counter.d2.value =seconds
+            setTimeout("display()",100) 
+        } 
+        display() 
+        </script>
+</body>
+</html>

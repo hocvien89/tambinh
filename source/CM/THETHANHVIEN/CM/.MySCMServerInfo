@@ -1,0 +1,6 @@
+SCMBranch=SpaTMV2017
+SCMRepository=SpaTMV2017/Spa_Datdaiduong/CM/THETHANHVIEN/CM
+cls_TTV_KH_ThetichdiemEntity.vb;4022668106;3;1490697675;
+cls_TTV_KH_Thetichdiem_LichsuEntity.vb;796481044;3;1490697675;
+cls_DM_ThetichdiemEntity.vb;4229994898;3;1490697677;
+cls_TTV_DM_Thetichdiem_ChuyendoiEntity.vb;2956317299;1;1490697679;

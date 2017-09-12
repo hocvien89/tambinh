@@ -1,0 +1,15 @@
+SCMBranch=SpaTMV2017
+SCMRepository=SpaTMV2017/Spa_Datdaiduong/NANOSPA/OrangeVersion/Scheduling
+UserAppointmentFormClass.vb;671109799;3;1490697231;
+UserAppointmentForm.ascx.vb;1810821310;3;1490697231;
+UserAppointmentForm.ascx.designer.vb;231834319;3;1490697231;
+UserAppointmentForm.ascx;2825319654;3;1490697231;
+SchdulerReport.aspx.vb;2306628978;3;1490697246;
+SchdulerReport.aspx.designer.vb;1307898898;3;1490697246;
+SchdulerReport.aspx;981668822;3;1490697246;
+MyScheduling.aspx.vb;924052862;3;1490697270;
+MyScheduling.aspx.designer.vb;1147769964;3;1490697270;
+MyScheduling.aspx;3802457176;3;1490697270;
+SetBed.aspx.vb;1007624872;1;1490697513;
+SetBed.aspx.designer.vb;326608741;1;1490697513;
+SetBed.aspx;4125614437;1;1490697513;

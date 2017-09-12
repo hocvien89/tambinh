@@ -1,0 +1,368 @@
+<Log Entry> : 2:08:48 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:07 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:07 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:08 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:09 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:13 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:13 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:24 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:24 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:24 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:10:25 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:12:40 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:13:02 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:14:25 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:14:55 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:16:21 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:16:48 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:16:58 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:16:58 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:16:58 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:17:09 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:17:10 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spMKT_KH_ChamsocKH]
+<Message>   : Could not find stored procedure 'dbo.spMKT_KH_ChamsocKH'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:17:10 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 2:17:12 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 3:54:24 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:04:54 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:06:01 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:07:51 PM Saturday, September 09, 2017
+<Position>  : [dbo].[sp_SelectNguoigioithieu_Option]
+<Message>   : Could not find stored procedure 'dbo.sp_SelectNguoigioithieu_Option'.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:14:25 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:16:33 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:18:06 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:18:15 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:24:59 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:25:08 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:25:57 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:26:04 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:28:46 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:28:59 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:30:00 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:30:01 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:30:26 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:30:26 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:31:09 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:31:24 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:32:27 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:34:36 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:34:41 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:35:10 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:35:11 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:36:20 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:36:31 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:40:14 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:40:39 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:43:32 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:44:12 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : i_Sothang
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:45:31 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:45:54 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:45:58 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:46:30 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:46:35 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:47:20 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : b_Kedon
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:49:09 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:49:11 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:49:36 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : f_Giathang
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:49:40 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : f_Giathang
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:50:59 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : f_Giathang
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:52:47 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:52:49 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:55:06 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:55:08 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:55:28 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 4:55:30 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:19:21 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:19:25 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:22:24 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:22:28 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:27:33 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:44:18 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:44:21 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:55:14 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:55:16 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:57:46 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:57:48 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:58:20 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 5:58:22 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:01:33 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Insert]
+<Message>   : @b_Kedon is not a parameter for procedure spQLMH_PHIEUXUAT_Insert.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:02:13 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_CHITIET_SelectByIDPX]
+<Message>   : Error converting data type nvarchar to uniqueidentifier.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:02:14 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_CHITIET_SelectByIDPX]
+<Message>   : Error converting data type nvarchar to uniqueidentifier.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:07:24 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:07:29 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:17:01 PM Saturday, September 09, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 6:17:06 PM Saturday, September 09, 2017
+<Position>  : [dbo].[spAppointments_SelectByDate]
+<Message>   : Procedure or function spAppointments_SelectByDate has too many arguments specified.
+--------------------------------------------------------------------------------------

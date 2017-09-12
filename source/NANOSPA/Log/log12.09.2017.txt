@@ -1,0 +1,76 @@
+<Log Entry> : 12:00:05 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:00:15 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:02:54 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:04:16 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:06:35 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:07:46 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Update]
+<Message>   : Procedure or function spQLMH_PHIEUXUAT_Update has too many arguments specified.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:21:51 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:22:28 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:23:04 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Insert]
+<Message>   : Procedure or function 'spQLMH_PHIEUXUAT_Insert' expects parameter '@i_Sothang', which was not supplied.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:23:24 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : Error converting data type nvarchar to uniqueidentifier.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:23:25 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Insert]
+<Message>   : Procedure or function 'spQLMH_PHIEUXUAT_Insert' expects parameter '@i_Sothang', which was not supplied.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:23:52 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : Error converting data type nvarchar to uniqueidentifier.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:23:52 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_Insert]
+<Message>   : Procedure or function 'spQLMH_PHIEUXUAT_Insert' expects parameter '@i_Sothang', which was not supplied.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:24:24 AM Tuesday, September 12, 2017
+<Position>  : [dbo].[spQLMH_PHIEUXUAT_SelectByID]
+<Message>   : Error converting data type nvarchar to uniqueidentifier.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:30:29 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:41:15 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:44:53 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 12:55:24 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
+<Log Entry> : 1:24:03 AM Tuesday, September 12, 2017
+<Position>  : cmdDangnhap_Click()
+<Message>   : Thread was being aborted.
+--------------------------------------------------------------------------------------
