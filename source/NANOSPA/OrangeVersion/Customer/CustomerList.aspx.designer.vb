@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class CustomerList
-    
+
     '''<summary>
     '''chkViewAll control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents chkViewAll As Global.DevExpress.Web.ASPxEditors.ASPxCheckBox
-    
+
     '''<summary>
     '''deTuNgay control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents deTuNgay As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
-    
+
     '''<summary>
     '''deDenNgay control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents deDenNgay As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
-    
+
     '''<summary>
     '''btnFilter control.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnFilter As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''btnThemmoi control.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnThemmoi As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''btn_ImportExcel control.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btn_ImportExcel As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''dgvDevexpress control.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents dgvDevexpress As Global.DevExpress.Web.ASPxGridView.ASPxGridView
-    
+
     '''<summary>
     '''hdfuIdKhachhang control.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents hdfuIdKhachhang As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''hdfKHGThieu control.
     '''</summary>
@@ -93,7 +93,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents hdfKHGThieu As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''pcAddKhachhang control.
     '''</summary>
@@ -102,7 +102,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pcAddKhachhang As Global.DevExpress.Web.ASPxPopupControl.ASPxPopupControl
-    
+
     '''<summary>
     '''PopupControlContentControl1 control.
     '''</summary>
@@ -111,7 +111,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PopupControlContentControl1 As Global.DevExpress.Web.ASPxPopupControl.PopupControlContentControl
-    
+
     '''<summary>
     '''Panel1 control.
     '''</summary>
@@ -120,7 +120,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Panel1 As Global.DevExpress.Web.ASPxPanel.ASPxPanel
-    
+
     '''<summary>
     '''PanelContent1 control.
     '''</summary>
@@ -129,7 +129,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PanelContent1 As Global.DevExpress.Web.ASPxPanel.PanelContent
-    
+
     '''<summary>
     '''upKhachhang control.
     '''</summary>
@@ -138,7 +138,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents upKhachhang As Global.System.Web.UI.UpdatePanel
-    
+
     '''<summary>
     '''deNgayden control.
     '''</summary>
@@ -147,7 +147,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents deNgayden As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
-    
+
     '''<summary>
     '''txtMaKH control.
     '''</summary>
@@ -156,7 +156,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtMaKH As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''imgAnhdaidien control.
     '''</summary>
@@ -165,7 +165,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents imgAnhdaidien As Global.System.Web.UI.WebControls.Image
-    
+
     '''<summary>
     '''txtImgUrl control.
     '''</summary>
@@ -174,7 +174,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtImgUrl As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''txtHoten control.
     '''</summary>
@@ -183,7 +183,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtHoten As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''chk_Ngaysinh control.
     '''</summary>
@@ -192,7 +192,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents chk_Ngaysinh As Global.DevExpress.Web.ASPxEditors.ASPxCheckBox
-    
+
     '''<summary>
     '''deNgaysinh control.
     '''</summary>
@@ -201,7 +201,16 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents deNgaysinh As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
-    
+
+    '''<summary>
+    '''txtNamsinh control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtNamsinh As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
+
     '''<summary>
     '''ddlGioitinh control.
     '''</summary>
@@ -210,7 +219,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlGioitinh As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''radkh control.
     '''</summary>
@@ -219,7 +228,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents radkh As Global.DevExpress.Web.ASPxEditors.ASPxRadioButton
-    
+
     '''<summary>
     '''radnv control.
     '''</summary>
@@ -228,7 +237,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents radnv As Global.DevExpress.Web.ASPxEditors.ASPxRadioButton
-    
+
     '''<summary>
     '''radnguon control.
     '''</summary>
@@ -237,7 +246,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents radnguon As Global.DevExpress.Web.ASPxEditors.ASPxRadioButton
-    
+
     '''<summary>
     '''txtDiachi control.
     '''</summary>
@@ -246,7 +255,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtDiachi As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''chk_NGThieu control.
     '''</summary>
@@ -255,7 +264,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents chk_NGThieu As Global.DevExpress.Web.ASPxEditors.ASPxCheckBox
-    
+
     '''<summary>
     '''cbo_Nguoigioithhieu control.
     '''</summary>
@@ -264,7 +273,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cbo_Nguoigioithhieu As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''txtDienthoai control.
     '''</summary>
@@ -273,7 +282,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtDienthoai As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''txtEmail control.
     '''</summary>
@@ -282,7 +291,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''ddlNghenghiep control.
     '''</summary>
@@ -291,7 +300,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlNghenghiep As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''txtGhichu control.
     '''</summary>
@@ -300,7 +309,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtGhichu As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''ddlNguon control.
     '''</summary>
@@ -309,7 +318,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlNguon As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''txt_Danhgia control.
     '''</summary>
@@ -318,7 +327,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txt_Danhgia As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
-    
+
     '''<summary>
     '''cbo_nhanvientuvan control.
     '''</summary>
@@ -327,7 +336,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cbo_nhanvientuvan As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''ltrError control.
     '''</summary>
@@ -336,7 +345,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ltrError As Global.DevExpress.Web.ASPxEditors.ASPxLabel
-    
+
     '''<summary>
     '''ltrSuccess control.
     '''</summary>
@@ -345,7 +354,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ltrSuccess As Global.DevExpress.Web.ASPxEditors.ASPxLabel
-    
+
     '''<summary>
     '''btOK control.
     '''</summary>
@@ -354,25 +363,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btOK As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
-    '''<summary>
-    '''btnClear control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnClear As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
-    '''<summary>
-    '''btCancel control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btCancel As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''btaddbill control.
     '''</summary>
@@ -381,7 +372,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btaddbill As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''btnaddproductbill control.
     '''</summary>
@@ -390,16 +381,25 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnaddproductbill As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
-    '''btnInphieukham control.
+    '''btnClear control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnInphieukham As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+    Protected WithEvents btnClear As Global.DevExpress.Web.ASPxEditors.ASPxButton
+
+    '''<summary>
+    '''btCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btCancel As Global.DevExpress.Web.ASPxEditors.ASPxButton
+
     '''<summary>
     '''UpdateProgress1 control.
     '''</summary>
@@ -408,7 +408,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UpdateProgress1 As Global.System.Web.UI.UpdateProgress
-    
+
     '''<summary>
     '''PcImportExcel control.
     '''</summary>
@@ -417,7 +417,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PcImportExcel As Global.DevExpress.Web.ASPxPopupControl.ASPxPopupControl
-    
+
     '''<summary>
     '''PopupControlContentControl2 control.
     '''</summary>
@@ -426,7 +426,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PopupControlContentControl2 As Global.DevExpress.Web.ASPxPopupControl.PopupControlContentControl
-    
+
     '''<summary>
     '''ASPxPanel2 control.
     '''</summary>
@@ -435,7 +435,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxPanel2 As Global.DevExpress.Web.ASPxPanel.ASPxPanel
-    
+
     '''<summary>
     '''PanelContent2 control.
     '''</summary>
@@ -444,7 +444,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PanelContent2 As Global.DevExpress.Web.ASPxPanel.PanelContent
-    
+
     '''<summary>
     '''UploadFileExcel control.
     '''</summary>
@@ -453,7 +453,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UploadFileExcel As Global.System.Web.UI.WebControls.FileUpload
-    
+
     '''<summary>
     '''link_Taiexcl_Mau control.
     '''</summary>
@@ -462,7 +462,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents link_Taiexcl_Mau As Global.System.Web.UI.WebControls.LinkButton
-    
+
     '''<summary>
     '''lbl_Import control.
     '''</summary>
@@ -471,7 +471,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbl_Import As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''btn_Import control.
     '''</summary>
@@ -480,7 +480,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btn_Import As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''btn_close control.
     '''</summary>
@@ -489,7 +489,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btn_close As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''PcBooklich control.
     '''</summary>
@@ -498,7 +498,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PcBooklich As Global.DevExpress.Web.ASPxPopupControl.ASPxPopupControl
-    
+
     '''<summary>
     '''PopupControlContentControl3 control.
     '''</summary>
@@ -507,7 +507,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PopupControlContentControl3 As Global.DevExpress.Web.ASPxPopupControl.PopupControlContentControl
-    
+
     '''<summary>
     '''ASPxPanel1 control.
     '''</summary>
@@ -516,7 +516,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxPanel1 As Global.DevExpress.Web.ASPxPanel.ASPxPanel
-    
+
     '''<summary>
     '''PanelContent3 control.
     '''</summary>
@@ -525,7 +525,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PanelContent3 As Global.DevExpress.Web.ASPxPanel.PanelContent
-    
+
     '''<summary>
     '''deNgaydatlich control.
     '''</summary>
@@ -534,7 +534,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents deNgaydatlich As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
-    
+
     '''<summary>
     '''cboKhachhang control.
     '''</summary>
@@ -543,7 +543,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboKhachhang As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboDichvu control.
     '''</summary>
@@ -552,7 +552,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboDichvu As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboPhong control.
     '''</summary>
@@ -561,7 +561,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboPhong As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboGiuong control.
     '''</summary>
@@ -570,7 +570,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboGiuong As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboBatdau control.
     '''</summary>
@@ -579,7 +579,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboBatdau As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboKetthuc control.
     '''</summary>
@@ -588,7 +588,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboKetthuc As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboNhanvienchinh control.
     '''</summary>
@@ -597,7 +597,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboNhanvienchinh As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''cboNhanvienphu control.
     '''</summary>
@@ -606,7 +606,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents cboNhanvienphu As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-    
+
     '''<summary>
     '''txtGhichudatgiuong control.
     '''</summary>
@@ -615,7 +615,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtGhichudatgiuong As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
-    
+
     '''<summary>
     '''Label1 control.
     '''</summary>
@@ -624,7 +624,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''btnDatgiuong control.
     '''</summary>
@@ -633,7 +633,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnDatgiuong As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''ASPxButton2 control.
     '''</summary>
@@ -642,7 +642,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxButton2 As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''ASPxPopupControl1 control.
     '''</summary>
@@ -651,7 +651,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxPopupControl1 As Global.DevExpress.Web.ASPxPopupControl.ASPxPopupControl
-    
+
     '''<summary>
     '''PopupControlContentControl4 control.
     '''</summary>
@@ -660,7 +660,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PopupControlContentControl4 As Global.DevExpress.Web.ASPxPopupControl.PopupControlContentControl
-    
+
     '''<summary>
     '''ASPxPanel3 control.
     '''</summary>
@@ -669,7 +669,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxPanel3 As Global.DevExpress.Web.ASPxPanel.ASPxPanel
-    
+
     '''<summary>
     '''PanelContent4 control.
     '''</summary>
@@ -678,7 +678,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PanelContent4 As Global.DevExpress.Web.ASPxPanel.PanelContent
-    
+
     '''<summary>
     '''GrvDanhsachsearch control.
     '''</summary>
@@ -687,7 +687,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GrvDanhsachsearch As Global.DevExpress.Web.ASPxGridView.ASPxGridView
-    
+
     '''<summary>
     '''ASPxPopupControl2 control.
     '''</summary>
@@ -696,7 +696,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxPopupControl2 As Global.DevExpress.Web.ASPxPopupControl.ASPxPopupControl
-    
+
     '''<summary>
     '''PopupControlContentControl8 control.
     '''</summary>
@@ -705,7 +705,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PopupControlContentControl8 As Global.DevExpress.Web.ASPxPopupControl.PopupControlContentControl
-    
+
     '''<summary>
     '''ASPxPanel7 control.
     '''</summary>
@@ -714,7 +714,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxPanel7 As Global.DevExpress.Web.ASPxPanel.ASPxPanel
-    
+
     '''<summary>
     '''PanelContent8 control.
     '''</summary>
@@ -723,7 +723,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PanelContent8 As Global.DevExpress.Web.ASPxPanel.PanelContent
-    
+
     '''<summary>
     '''UpdatePanel3 control.
     '''</summary>
@@ -732,7 +732,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UpdatePanel3 As Global.System.Web.UI.UpdatePanel
-    
+
     '''<summary>
     '''txt_Mathe control.
     '''</summary>
@@ -741,7 +741,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txt_Mathe As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
-    
+
     '''<summary>
     '''btn_Search_The control.
     '''</summary>
@@ -750,7 +750,7 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btn_Search_The As Global.DevExpress.Web.ASPxEditors.ASPxButton
-    
+
     '''<summary>
     '''dgvDsTheTT control.
     '''</summary>

@@ -15,12 +15,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x:auto; height:100%">
 <head runat="server">
-        <script language="javascript">
+<%--        <script language="javascript">
             var txt = "(¯`·.º-:¦:-::: NANO-CLINIC 2016 ::: - Phần mềm quản lý spa, salon-:¦:-º.·´¯)"; var espera = 200; var refresco = null; function rotulo_title() { document.title = txt; txt = txt.substring(1, txt.length) + txt.charAt(0); refresco = setTimeout("rotulo_title()", espera); } rotulo_title();
-        </script>
+        </script>--%>
  <title>
-           
-           <asp:Literal ID="ltr" runat="server"></asp:Literal>
+         NANO-CLINIC 2016
+           <%--<asp:Literal ID="ltr" runat="server"></asp:Literal>--%>
     </title>
     <link type="text/css" rel="stylesheet" href="Css/CssMain.css" />
     <meta name="title" content="Phần mềm quản lý spa, Salon, Thẩm mỹ viện" />

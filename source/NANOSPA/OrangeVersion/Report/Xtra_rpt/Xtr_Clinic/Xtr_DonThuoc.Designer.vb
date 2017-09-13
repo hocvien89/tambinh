@@ -56,7 +56,6 @@ Partial Public Class Xtr_DonThuoc
         Me.XrTableCell5 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell8 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand()
@@ -68,7 +67,10 @@ Partial Public Class Xtr_DonThuoc
         Me.f_Soluong = New DevExpress.XtraReports.UI.CalculatedField()
         Me.CalculatedField1 = New DevExpress.XtraReports.UI.CalculatedField()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
+        Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,26 +332,16 @@ Partial Public Class Xtr_DonThuoc
         '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiachi, Me.lblPKName, Me.lblHeader, Me.XrTable1, Me.XrTable2})
+        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xtrlogo, Me.lblDiachi, Me.lblPKName, Me.XrLabel3, Me.lblHeader, Me.XrTable1, Me.XrTable2})
         Me.TopMargin.HeightF = 396.9645!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(26.83334!, 22.29168!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(311.4584!, 25.0!)
-        Me.lblPKName.StylePriority.UseFont = False
-        Me.lblPKName.Text = "lblPKName"
-        '
         'lblHeader
         '
         Me.lblHeader.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.lblHeader.LocationFloat = New DevExpress.Utils.PointFloat(208.5!, 83.75001!)
+        Me.lblHeader.LocationFloat = New DevExpress.Utils.PointFloat(198.0833!, 111.875!)
         Me.lblHeader.Name = "lblHeader"
         Me.lblHeader.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblHeader.SizeF = New System.Drawing.SizeF(346.875!, 25.0!)
@@ -414,15 +406,44 @@ Partial Public Class Xtr_DonThuoc
         Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblNgayThang, Me.lblNhanVien})
         Me.ReportFooter.Name = "ReportFooter"
         '
+        'xtrlogo
+        '
+        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 10.00001!)
+        Me.xtrlogo.Name = "xtrlogo"
+        Me.xtrlogo.SizeF = New System.Drawing.SizeF(82.90964!, 76.08333!)
+        '
         'lblDiachi
         '
         Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(26.83334!, 47.29168!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(82.90965!, 38.0833!)
         Me.lblDiachi.Name = "lblDiachi"
         Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(398.9584!, 25.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
         Me.lblDiachi.StylePriority.UseFont = False
-        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội   ĐT: 024 3734 5600"
+        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(82.90955!, 13.0833!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
+        Me.lblPKName.StylePriority.UseFont = False
+        Me.lblPKName.StylePriority.UseTextAlignment = False
+        Me.lblPKName.Text = "lblPKName"
+        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(82.90955!, 63.0833!)
+        Me.XrLabel3.Multiline = True
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.Text = "ĐT: 024 3734 5600"
         '
         'Xtr_DonThuoc
         '
@@ -445,7 +466,6 @@ Partial Public Class Xtr_DonThuoc
     Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
-    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblHeader As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTable1 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow1 As DevExpress.XtraReports.UI.XRTableRow
@@ -489,5 +509,8 @@ Partial Public Class Xtr_DonThuoc
     Friend WithEvents f_Soluong As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents CalculatedField1 As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
+    Friend WithEvents xtrlogo As DevExpress.XtraReports.UI.XRPictureBox
     Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
 End Class

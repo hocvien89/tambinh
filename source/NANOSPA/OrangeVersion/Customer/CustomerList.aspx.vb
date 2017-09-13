@@ -217,18 +217,6 @@ Partial Public Class CustomerList
                 .v_Email = ""
                 .nv_Diachi_vn = ""
                 .uId_Cuahang = Session("uId_Cuahang")
-                '-----------harumyspa
-                '.nv_Hoten_en = txtTenbe.Text
-                '.d_NgaycapCMT = deNgaysinhbe.Value
-                '.nv_Diachi_en = txtCannangbe.Text.ToString
-                '.nv_Nguyenquan_en = txtChieucao.Text.ToString
-                '.v_Dienthoaikhac = txtTuansinh.Text.ToString
-                '.nv_Noicap_en = txtTiensuSK.Text
-                '------------charmnguyenspa
-                '.nv_Diachi_en = txt_Danhgia.Text
-                '.nv_Nguyenquan_en = txtSuckhoe.Text
-                '.nv_Hoten_en = txt_Lichsuchamsocda.Text
-                '.nv_Diachi_en = txt_Lichsuchamsocsuckhoe.Text
             End With
             If Len(objEnKhachhang.v_DienthoaiDD) > 0 Then
                 dt = objFCKhachhang.TimKiemKHChuan(objEnKhachhang)
@@ -259,7 +247,7 @@ Partial Public Class CustomerList
                 .uId_Cuahang = Session("uId_Cuahang").ToString
                 .v_Makhachang = txtMaKH.Text
                 .nv_Hoten_vn = CStr(Me.txtHoten.Text.Trim)
-                .d_Ngaysinh = BO.Util.ConvertDateTime(deNgaysinh.Text)
+                .d_Ngaysinh = BO.Util.ConvertDateTime("1/1/" + txtNamsinh.Text)
                 .nv_Hinhanh = txtImgUrl.Text.Trim
                 .v_DienthoaiDD = CStr(Me.txtDienthoai.Text.Trim)
                 '.nv_Diachi_vn = CStr(Me.txtDiachi.Text.Trim)

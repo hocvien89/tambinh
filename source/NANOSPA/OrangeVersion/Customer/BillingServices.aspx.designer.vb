@@ -1247,6 +1247,15 @@ Partial Public Class BillingServices
     Protected WithEvents btnThanhtoan_PX As Global.DevExpress.Web.ASPxEditors.ASPxButton
 
     '''<summary>
+    '''btnInDonThuoc control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnInDonThuoc As Global.DevExpress.Web.ASPxEditors.ASPxButton
+
+    '''<summary>
     '''InPhieu_Dongy control.
     '''</summary>
     '''<remarks>

@@ -84,12 +84,14 @@ Partial Public Class Xtr_PhieuDieuTri
         Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.cellTienSu = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.lblNgayThang = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNhanVien = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -188,6 +190,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell11
         '
         Me.XrTableCell11.Name = "XrTableCell11"
+        Me.XrTableCell11.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell11.StylePriority.UsePadding = False
         Me.XrTableCell11.Text = "Châm cứu"
         Me.XrTableCell11.Weight = 0.87655560301148128R
         '
@@ -218,6 +222,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell17
         '
         Me.XrTableCell17.Name = "XrTableCell17"
+        Me.XrTableCell17.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell17.StylePriority.UsePadding = False
         Me.XrTableCell17.Text = "Chiếu đèn"
         Me.XrTableCell17.Weight = 0.87655560301148128R
         '
@@ -248,6 +254,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell25
         '
         Me.XrTableCell25.Name = "XrTableCell25"
+        Me.XrTableCell25.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell25.StylePriority.UsePadding = False
         Me.XrTableCell25.Text = "Xoa bóp bấm huyệt"
         Me.XrTableCell25.Weight = 0.87655560301148128R
         '
@@ -278,6 +286,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell21
         '
         Me.XrTableCell21.Name = "XrTableCell21"
+        Me.XrTableCell21.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell21.StylePriority.UsePadding = False
         Me.XrTableCell21.Text = "Siêu âm trị liệu"
         Me.XrTableCell21.Weight = 0.87655560301148128R
         '
@@ -308,6 +318,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell29
         '
         Me.XrTableCell29.Name = "XrTableCell29"
+        Me.XrTableCell29.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell29.StylePriority.UsePadding = False
         Me.XrTableCell29.Text = "Điện xung trị liệu"
         Me.XrTableCell29.Weight = 0.87655560301148128R
         '
@@ -338,6 +350,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell33
         '
         Me.XrTableCell33.Name = "XrTableCell33"
+        Me.XrTableCell33.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell33.StylePriority.UsePadding = False
         Me.XrTableCell33.Text = "Giác hơi"
         Me.XrTableCell33.Weight = 0.87655560301148128R
         '
@@ -368,6 +382,8 @@ Partial Public Class Xtr_PhieuDieuTri
         'XrTableCell37
         '
         Me.XrTableCell37.Name = "XrTableCell37"
+        Me.XrTableCell37.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
+        Me.XrTableCell37.StylePriority.UsePadding = False
         Me.XrTableCell37.Text = "Nhiệt trị liệu"
         Me.XrTableCell37.Weight = 0.87655560301148128R
         '
@@ -517,33 +533,11 @@ Partial Public Class Xtr_PhieuDieuTri
         '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblPKName, Me.XrLabel1, Me.lblHeader})
+        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3, Me.lblPKName, Me.lblDiachi, Me.xtrlogo, Me.lblHeader})
         Me.TopMargin.HeightF = 146.875!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(24.75001!, 64.99999!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(204.1667!, 25.0!)
-        Me.lblPKName.StylePriority.UseFont = False
-        Me.lblPKName.Text = "lblPKName"
-        '
-        'XrLabel1
-        '
-        Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(24.75001!, 39.99999!)
-        Me.XrLabel1.Name = "XrLabel1"
-        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(160.4167!, 25.0!)
-        Me.XrLabel1.StylePriority.UseFont = False
-        Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "PHÒNG KHÁM"
-        Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'lblHeader
         '
@@ -587,6 +581,45 @@ Partial Public Class Xtr_PhieuDieuTri
         Me.lblNhanVien.Text = "Bác sĩ điều trị"
         Me.lblNhanVien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
+        'XrLabel3
+        '
+        Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(82.90958!, 63.0833!)
+        Me.XrLabel3.Multiline = True
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.Text = "ĐT: 024 3734 5600"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(82.90958!, 13.0833!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
+        Me.lblPKName.StylePriority.UseFont = False
+        Me.lblPKName.StylePriority.UseTextAlignment = False
+        Me.lblPKName.Text = "lblPKName"
+        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(82.90965!, 38.0833!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
+        Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        '
+        'xtrlogo
+        '
+        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 10.00001!)
+        Me.xtrlogo.Name = "xtrlogo"
+        Me.xtrlogo.SizeF = New System.Drawing.SizeF(82.90964!, 76.08333!)
+        '
         'Xtr_PhieuDieuTri
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin})
@@ -604,8 +637,6 @@ Partial Public Class Xtr_PhieuDieuTri
     Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
-    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblHeader As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTable1 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow1 As DevExpress.XtraReports.UI.XRTableRow
@@ -672,4 +703,8 @@ Partial Public Class Xtr_PhieuDieuTri
     Friend WithEvents lblNgayThang As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblNhanVien As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents xtrlogo As DevExpress.XtraReports.UI.XRPictureBox
 End Class

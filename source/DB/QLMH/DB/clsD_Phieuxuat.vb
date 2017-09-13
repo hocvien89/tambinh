@@ -127,8 +127,8 @@ Public Class QLMH_PHIEUXUATDA
                     .b_IsKhoa = IIf(IsDBNull(objReader("b_IsKhoa")) = True, False, objReader("b_IsKhoa"))
                     .b_Dathanhtoan = IIf(IsDBNull(objReader("b_IsKhoa")) = True, False, objReader("b_Kedon"))
                     .uId_LoaiTT = IIf(IsDBNull(objReader("uId_LoaiTT")) = True, "", Convert.ToString(objReader("uId_LoaiTT")))
-                    .i_Soluog = IIf(IsDBNull(objReader("i_Sothang")) = True, "", objReader("i_Sothang"))
-                    .f_Gia = IIf(IsDBNull(objReader("f_Giathang")) = True, "", objReader("f_Giathang"))
+                    .i_Soluog = IIf(IsDBNull(objReader("i_Sothang")) = True, 0, objReader("i_Sothang"))
+                    .f_Gia = IIf(IsDBNull(objReader("f_Giathang")) = True, 0, objReader("f_Giathang"))
                 End With
             End If
             Return obj

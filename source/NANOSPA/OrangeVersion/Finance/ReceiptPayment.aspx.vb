@@ -119,7 +119,7 @@ Public Class ReceiptPayment
                 .uId_Thuchi = ddlDanhmuc.SelectedItem.Value
                 .v_Maphieu = txtMaphieu.Text.Trim
                 .d_Ngay = BO.Util.ConvertDateTime(deNgaylap.Text)
-                .nv_Ghichu = ddlNguoinop.Text
+                .nv_Ghichu = ddlNguoinop.Value
                 .nv_Lydo_vn = txtGhichu.Text
                 .f_Sotien = Val(txtSotien.Text.Replace(",", ""))
                 .uId_Nhanvien = ddlNguoilap.SelectedItem.Value

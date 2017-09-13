@@ -120,16 +120,21 @@
         }
         function OnSuccessCall_Phieuxuat(msg) {
             if (msg.d != "") {
-                //var defaultdata = msg.d.split("$");
-                //var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
-                //var txtGiamgiaPhieu = document.getElementById("<%=txtGiamgiaPhieu.ClientID%>");
-                //var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
-                //var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
-               // var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
-               //lblTongtien.innerHTML = jo_FormatMoney(defaultdata[0]);
-               //txtGiamgiaPhieu.value = jo_IsString(defaultdata[1]);
-               //lblConlai.innerHTML = jo_FormatMoney(parseFloat(defaultdata[2]));
-                //txtSotiennhan.value = jo_FormatMoney(parseFloat(defaultdata[2]));
+                var defaultdata = msg.d.split("$");
+                var txtGiamgiaPhieu = document.getElementById("<%=txtGiamgiaPhieu.ClientID%>");
+                var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
+                var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
+                var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
+                var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
+                txtdongiathang.SetText(jo_FormatMoney(defaultdata[0]));
+                var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
+                var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
+                var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
+                lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
+                txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
+                lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
+                var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
+                lblTienthua.innerHTML = "0";
             }
         }
       

@@ -12,24 +12,30 @@
         objEnDMThuchi = New CM.QLTC_DM_THUCHIEntity
         objFcKhachhang = New BO.CRM_DM_KhachhangFacade
         objEnKhachhang = New CM.CRM_DM_KhachhangEntity
-        lbl_Cuahang.Text = nv_tencuahang
-        lbl_Diachi.Text = nv_DiachiCH
+        Dim public_class As New Public_Class
+        Dim datenow As DateTime = Date.Now
         objEnPhieuthuchi = objFcPhieuthuchi.SelectByID(uId_phieuthuchi)
         objEnDMThuchi = objFcDMThuchi.SelectByID(objEnPhieuthuchi.uId_Thuchi)
+        lblPKName.Text = "PHÒNG KHÁM TÂM BÌNH"
         If objEnDMThuchi.b_ThuChi = True Then
             XrCel_Nguoi.Text = "Người nộp"
             lbl_Tenphieu.Text = "PHIẾU THU"
-
-            'XrCel_Diachi.Text = objEnKhachhang.nv_Diachi_vn.ToString
+            objEnKhachhang = objFcKhachhang.SelectByID(objEnPhieuthuchi.nv_Ghichu)
+            If String.IsNullOrEmpty(objEnKhachhang.uId_Khachhang) = False Then
+                XrCel_Nguoinop.Text = objEnKhachhang.nv_Hoten_vn.ToString
+                XrCel_Diachi.Text = objEnKhachhang.nv_Diachi_vn.ToString
+            End If
         Else
             XrCel_Nguoi.Text = "Người nhận"
             lbl_Tenphieu.Text = "PHIẾU CHI"
+            XrCel_Nguoinop.Text = objEnPhieuthuchi.nv_Ghichu.ToString
         End If
-        XrCel_Nguoinop.Text = objEnPhieuthuchi.nv_Ghichu.ToString
+        lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         XrCel_Lydo.Text = objEnPhieuthuchi.nv_Lydo_vn.ToString
         XrCel_Sotien.Text = Format(objEnPhieuthuchi.f_Sotien, "n0") + " VND"
         lbl_Maphieu.Text = objEnPhieuthuchi.v_Maphieu.ToString
-        XrCel_Bangchu.Text = ToStrings(objEnPhieuthuchi.f_Sotien)
+        XrCel_Bangchu.Text = public_class.ToStrings(objEnPhieuthuchi.f_Sotien)
+        xtrlogo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
         'Strings.Format(objEnPhieuthuchi.f_Sotien, "{0:n0}")
     End Sub
     Public Shared Function ToStrings(number As Decimal) As String

@@ -121,7 +121,199 @@
         namhientai = Date.Now.Year
         Return namhientai - namsinh
     End Function
+    Public Shared Function ToStrings(number As Decimal) As String
+        Dim s As String = number.ToString("#")
+        Dim so As String() = New String() {"không", "một", "hai", "ba", "bốn", "năm", _
+            "sáu", "bảy", "tám", "chín"}
+        Dim hang As String() = New String() {"", "nghìn ", "triệu ", "tỷ "}
+        Dim i As Integer, j As Integer, donvi As Integer, chuc As Integer, tram As Integer
+        Dim str As String = " "
+        Dim booAm As Boolean = False
+        Dim decS As Decimal = 0
+        'Tung addnew
+        Try
+            decS = Convert.ToDecimal(s.ToString())
+        Catch
+        End Try
+        If decS < 0 Then
+            decS = -decS
+            s = decS.ToString()
+            booAm = True
+        End If
+        i = s.Length
+        If i = 0 Then
+            str = so(0) + str
+        Else
+            j = 0
+            While i > 0
+                donvi = Convert.ToInt32(s.Substring(i - 1, 1))
+                i -= 1
+                If i > 0 Then
+                    chuc = Convert.ToInt32(s.Substring(i - 1, 1))
+                Else
+                    chuc = -1
+                End If
+                i -= 1
+                If i > 0 Then
+                    tram = Convert.ToInt32(s.Substring(i - 1, 1))
+                Else
+                    tram = -1
+                End If
+                i -= 1
+                If (donvi > 0) OrElse (chuc > 0) OrElse (tram > 0) OrElse (j = 3) Then
+                    str = hang(j) + str
+                End If
+                j += 1
+                If j > 3 Then
+                    j = 1
+                End If
+                If (donvi = 1) AndAlso (chuc > 1) Then
+                    str = Convert.ToString("một ") & str
+                Else
+                    If (donvi = 5) AndAlso (chuc > 0) Then
+                        str = Convert.ToString("lăm ") & str
+                    ElseIf donvi > 0 Then
+                        str = Convert.ToString(so(donvi) + " ") & str
+                    End If
+                End If
+                If chuc < 0 Then
+                    Exit While
+                Else
+                    If (chuc = 0) AndAlso (donvi > 0) Then
+                        str = Convert.ToString("lẻ ") & str
+                    End If
+                    If chuc = 1 Then
+                        str = Convert.ToString("mười ") & str
+                    End If
+                    If chuc > 1 Then
+                        str = Convert.ToString(so(chuc) + " mươi ") & str
+                    End If
+                End If
+                If tram < 0 Then
+                    Exit While
+                Else
+                    If (tram > 0) OrElse (chuc > 0) OrElse (donvi > 0) Then
+                        str = Convert.ToString(so(tram) + " trăm ") & str
+                    End If
+                End If
+                str = Convert.ToString("") & str
+            End While
+        End If
+        If booAm Then
+            str = Convert.ToString("Âm ") & str
+        End If
+        Return str & Convert.ToString("đồng chẵn")
+    End Function
 
+    Public Shared Function ToStrings(number As Double) As String
+        Dim s As String = number.ToString("#")
+        Dim so As String() = New String() {"không", "một", "hai", "ba", "bốn", "năm", _
+            "sáu", "bảy", "tám", "chín"}
+        Dim hang As String() = New String() {"", "nghìn ", "triệu", "tỷ "}
+        Dim i As Integer, j As Integer, donvi As Integer, chuc As Integer, tram As Integer
+        Dim str As String = " "
+        Dim booAm As Boolean = False
+        Dim decS As Double = 0
+        'Tung addnew
+        Try
+            decS = Convert.ToDouble(s.ToString())
+        Catch
+        End Try
+        If decS < 0 Then
+            decS = -decS
+            s = decS.ToString()
+            booAm = True
+        End If
+        i = s.Length
+        If i = 0 Then
+            str = so(0) + str
+        Else
+            j = 0
+            While i > 0
+                donvi = Convert.ToInt32(s.Substring(i - 1, 1))
+                i -= 1
+                If i > 0 Then
+                    chuc = Convert.ToInt32(s.Substring(i - 1, 1))
+                Else
+                    chuc = -1
+                End If
+                i -= 1
+                If i > 0 Then
+                    tram = Convert.ToInt32(s.Substring(i - 1, 1))
+                Else
+                    tram = -1
+                End If
+                i -= 1
+                If (donvi > 0) OrElse (chuc > 0) OrElse (tram > 0) OrElse (j = 3) Then
+                    str = hang(j) + str
+                End If
+                j += 1
+                If j > 3 Then
+                    j = 1
+                End If
+                If (donvi = 1) AndAlso (chuc > 1) Then
+                    str = Convert.ToString("một ") & str
+                Else
+                    If (donvi = 5) AndAlso (chuc > 0) Then
+                        str = Convert.ToString("lăm ") & str
+                    ElseIf donvi > 0 Then
+                        str = Convert.ToString(so(donvi) + " ") & str
+                    End If
+                End If
+                If chuc < 0 Then
+                    Exit While
+                Else
+                    If (chuc = 0) AndAlso (donvi > 0) Then
+                        str = Convert.ToString("lẻ ") & str
+                    End If
+                    If chuc = 1 Then
+                        str = Convert.ToString("mười ") & str
+                    End If
+                    If chuc > 1 Then
+                        str = Convert.ToString(so(chuc) + " mươi ") & str
+                    End If
+                End If
+                If tram < 0 Then
+                    Exit While
+                Else
+                    If (tram > 0) OrElse (chuc > 0) OrElse (donvi > 0) Then
+                        str = Convert.ToString(so(tram) + " trăm ") & str
+                    End If
+                End If
+                str = Convert.ToString("") & str
+            End While
+        End If
+        If booAm Then
+            str = Convert.ToString("Âm ") & str
+        End If
+        Return UplowerFirstString(str & Convert.ToString("đồng chẵn"))
+    End Function
+    Function ConvertString(chuthuong As String) As String
+        Dim chuhoa As String
+        chuhoa = StrConv(chuthuong, 3)
+        Return chuhoa
+    End Function
+    Public Shared Function ToCapFist(value As String) As String
+        If String.IsNullOrEmpty(value) Then
+            Return String.Empty
+        End If
+        If value.Length = 1 Then
+            Return value.ToUpper
+        End If
+        Return String.Concat(Char.ToUpper(value(0)), value.Substring(1).ToLower())
+    End Function
+    Public Shared Function UplowerFirstString(s As String) As String
+        Dim arrValue() As String
+        Dim sfirst As String
+        arrValue = s.Split(" ")
+        If arrValue.Length > 1 Then
+            sfirst = arrValue(0)
+            sfirst = ToCapFist(sfirst)
+            Return sfirst + s.Substring(sfirst.Length, s.Length - sfirst.Length)
+        Else
+            Return ToCapFist(s)
+        End If
+    End Function
 End Class
 
 

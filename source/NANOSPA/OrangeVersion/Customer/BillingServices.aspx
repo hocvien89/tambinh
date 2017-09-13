@@ -1571,6 +1571,9 @@
             else if (e.item.name == "thanhtoan") {
                 InPhieuThanhToan();
             }
+            else if (e.item.name == "dieutri") {
+                InPhieuDieuTri();
+            }
         }
         function InPhieuKham() {
             if (jo_GetSession("uId_Phieudichvu") == null) {
@@ -1610,7 +1613,7 @@
                      modal: true,
                      height: 634,
                      width: 855.733,
-                     title: "In phiếu dịch vụ",
+                     title: "In phiếu thanh toán dịch vụ",
                      buttons: {
                          "Close": function () { $dialog.dialog('close'); }
                      },
@@ -1650,7 +1653,35 @@
                 return false;
             }
         }
+        //in phieu dieu tri
+        function InPhieuDieuTri(s, e) {
+            var donthuoc = jo_GetSession("uId_Phieuxuat")
+            if (donthuoc = null) {
+                alert("Hãy chọn đơn thuốc");
+                return;
+            }
+            else {
+                var $dialog = $('<div></div>')
+                 .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=dieutri" width="850px" height="100%"></iframe>')
+                 .dialog({
+                     autoOpen: false,
+                     modal: true,
+                     height: 634,
+                     width: 855.733,
+                     title: "In phiếu điều trị",
+                     buttons: {
+                         "Close": function () { $dialog.dialog('close'); }
+                     },
+                     close: function (event, ui) {
+                         pc_Export_Product.Show;
+                     }
+                 });
+                pc_Export_Product.Hide();
+                $dialog.dialog('open');
 
+                return false;
+            }
+        }
     </script>
     <div class="brest_crum">
         <dx:ASPxButton ID="btnQuaylai" Style="float: left; margin-right: 7px; margin-left: 5px" Image-Url="~/images/16x16/back.png" ClientInstanceName="btnQuaylai" AutoPostBack="false" runat="server" Text="Quay lại">
@@ -3048,6 +3079,7 @@
             <Items>
                 <dx:MenuItem Text="In phiếu khám" Name="phieukham"></dx:MenuItem>
                 <dx:MenuItem Text="In phiếu thanh toán" Name="thanhtoan"></dx:MenuItem>
+                <dx:MenuItem Text="In phiếu điều trị" Name="dieutri"></dx:MenuItem>
             </Items>
             <ClientSideEvents Init="InitPopupMenuHandler2" ItemClick="menuItemClick2" />
         </dx:ASPxPopupMenu>

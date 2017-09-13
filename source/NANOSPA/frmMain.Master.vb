@@ -28,13 +28,13 @@
     End Sub
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'Kiem tra da dang nhap chua, neu chua bawt buoc phai dang nhap
-        Dim dt As DataTable
-        dt = objFcAppoint.SelectWarming(30)
-        If dt.Rows.Count > 0 Then
-            ltr.Text = "Bạn có " & dt.Rows.Count.ToString.ToUpper & " lịch hẹn"
-        Else
-            ltr.Text = "::: NANO-SPA 2015 ::: - Phần mềm quản lý spa, salon"
-        End If
+        'Dim dt As DataTable
+        'dt = objFcAppoint.SelectWarming(30)
+        'If dt.Rows.Count > 0 Then
+        '    ltr.Text = "Bạn có " & dt.Rows.Count.ToString.ToUpper & " lịch hẹn"
+        'Else
+        '    ltr.Text = "::: NANO-SPA 2015 ::: - Phần mềm quản lý spa, salon"
+        'End If
         Dim sUid_Nhanvien_Dangnhap As String = ""
         Try
             sUid_Nhanvien_Dangnhap = Session("uId_Nhanvien_Dangnhap")

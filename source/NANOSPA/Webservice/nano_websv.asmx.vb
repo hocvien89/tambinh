@@ -98,7 +98,7 @@ Public Class nano_websv
         objEnKhachhang = New CM.CRM_DM_KhachhangEntity
         objEnKhachhang = objFCKhachhang.SelectByID(uId_Khachhang)
         rs = objEnKhachhang.d_Ngayden & "$" & objEnKhachhang.v_Makhachang & "$" & objEnKhachhang.nv_Hoten_vn &
-            "$" & objEnKhachhang.d_Ngaysinh & "$" & objEnKhachhang.b_Gioitinh & "$" & objEnKhachhang.nv_Diachi_vn &
+            "$" & objEnKhachhang.d_Ngaysinh.Year & "$" & objEnKhachhang.b_Gioitinh & "$" & objEnKhachhang.nv_Diachi_vn &
               "$" & objEnKhachhang.v_DienthoaiDD & "$" & objEnKhachhang.v_Email & "$" & objEnKhachhang.uId_Nghenghiep &
               "$" & objEnKhachhang.uId_Nguonden & "$" & objEnKhachhang.nv_Ghichu_vn & "$" & objEnKhachhang.nv_Hinhanh &
               "$" & objEnKhachhang.uId_Nguoigioithieu & "$" & objEnKhachhang.nv_Diachi_en & "$" & objEnKhachhang.nv_Nguyenquan_en &
@@ -1000,7 +1000,7 @@ Public Class nano_websv
         uId_TrangthaiKH = objFcMKTChuyendoi.SelectByID(uId_Chuyendoi).uId_TrangthaiKH
         objEnKHTiemnang = objFcKHTiemnang.SelectByID(uId_KHTiemnang)
         rs = objEnKHTiemnang.d_Ngaynhap & "$" & objEnKHTiemnang.v_Makhachhang & "$" & objEnKHTiemnang.nv_Hoten_vn &
-            "$" & objEnKHTiemnang.d_Ngaysinh & "$" & objEnKHTiemnang.b_Gioitinh & "$" & objEnKHTiemnang.nv_Diachi_vn &
+            "$" & objEnKHTiemnang.d_Ngaysinh.Year & "$" & objEnKHTiemnang.b_Gioitinh & "$" & objEnKHTiemnang.nv_Diachi_vn &
               "$" & objEnKHTiemnang.v_DienthoaiDD & "$" & objEnKHTiemnang.v_Email & "$" & objEnKHTiemnang.uId_Cuahang &
               "$" & objEnKHTiemnang.Ghichu & "$" & uId_TrangthaiKH
 

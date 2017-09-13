@@ -189,8 +189,8 @@
                         <img src="../../../../../images/16x16/star.png" alt="">Cấu hình hệ thống</a></li>
                     <li><a href="../../../../../../OrangeVersion/Category/Personel.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Quản lý nhân viên</a></li>
-                              <li><a href="../../../../OrangeVersion/Personnel/ManageSalaries.aspx">
-                        <img src="../../../../../images/16x16/star.png" alt="">Quản lý lương</a></li>
+                       <%--       <li><a href="../../../../OrangeVersion/Personnel/ManageSalaries.aspx">
+                        <img src="../../../../../images/16x16/star.png" alt="">Quản lý lương</a></li>--%>
                     <%--<li><a href="../../../QUANTRI/Add_TaikhoanKH.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Thiết lập TK KH</a></li>--%>
 <%--                    <li><a href="../../../../OrangeVersion/Category/Security.aspx">

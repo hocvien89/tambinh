@@ -169,18 +169,19 @@
                 deNgayden.SetDate(date_ngayden);
                 txtMaKH.value = defaultdata[1];
                 txtHoten.value = defaultdata[2];
-                var date_ngaysinh = new Date(defaultdata[3]);
+                txtnamsinh.SetText(defaultdata[3])
+                //var date_ngaysinh = new Date(defaultdata[3]);
                 //_ngaysinh = date_ngaysinh;
-                var date_Nam = new Date("01/01/1900")
-                deNgaysinh.SetDate(date_ngaysinh);
-                if (date_ngaysinh.getDate() == date_Nam.getDate() & date_ngaysinh.getMonth() == date_Nam.getMonth() & date_ngaysinh.getFullYear() == date_Nam.getFullYear()) {
-                    chk_Ngaysinh.SetChecked(true);
-                    deNgaysinh.SetEnabled(false);
-                }
-                else {
-                    chk_Ngaysinh.SetChecked(false);
-                    deNgaysinh.SetEnabled(true);
-                }
+                //var date_Nam = new Date("01/01/1900")
+                //deNgaysinh.SetDate(date_ngaysinh);
+                //if (date_ngaysinh.getDate() == date_Nam.getDate() & date_ngaysinh.getMonth() == date_Nam.getMonth() & date_ngaysinh.getFullYear() == date_Nam.getFullYear()) {
+                //    chk_Ngaysinh.SetChecked(true);
+                //    deNgaysinh.SetEnabled(false);
+                //}
+                //else {
+                //    chk_Ngaysinh.SetChecked(false);
+                //    deNgaysinh.SetEnabled(true);
+                //}
                 //txttinhtrangda.SetText(defaultdata[13]);
                 //txtsuckhoe.SetText(defaultdata[14]);
 
@@ -250,8 +251,9 @@
             txtHoten.value = "";
             txtDiachi.value = "";
             txtDienthoai.value = "";
-            deNgayden.SetDate(new Date());
-            deNgaysinh.SetDate(new Date());
+            txtnamsinh.SetText("");
+            //deNgayden.SetDate(new Date());
+            //deNgaysinh.SetDate(new Date());
             txtEmail.value = "";
             txtGhichu.value = "";
             imgAnhdaidien.src = "";
@@ -263,7 +265,7 @@
             hdfKHGThieu.value = "";
             chk_ngthieu.SetChecked(false);
             cbo_nguoigioithieu.SetEnabled(false);
-            deNgaysinh.SetEnabled(true);
+            //deNgaysinh.SetEnabled(true);
             ltrError.SetText("");
             ltrSuccess.SetText("");
             txtHoten.focus();
@@ -293,12 +295,12 @@
                 grvdanhsachsearch.Refresh();
                 var txtHoten = document.getElementById("<%=txtHoten.ClientID%>");
                 if (txtHoten.value != "") {
-                    deNgaysinh.Focus();
+                    txtnamsinh.Focus();
                 }
                 return false;
             }
         }
-        function enter_deNgaysinh(e) {
+        function enter_namsinh(e) {
             if (e.keyCode == 13) {
                 //var txtTuoi = document.getElementById("");
                 //var currentTime = new Date()
@@ -445,10 +447,10 @@
                 deNgayden.ShowDropDown();
                 e.processOnServer = false;
             }
-            else if (deNgaysinh.GetText() == "01/01/0100") {
-                deNgaysinh.Focus();
+            else if (txtnamsinh.GetText() == "") {
+                txtnamsinh.Focus();
                 error.innerHTML = "Ngày sinh không được để trống";
-                deNgaysinh.ShowDropDown();
+                //deNgaysinh.ShowDropDown();
                 e.processOnServer = false;
             }
             else if (document.getElementById("<%=txtHoten.ClientID%>").value == "") {
@@ -1132,12 +1134,13 @@
                                                 <td class="info_table_td">Ngày sinh:
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <dx:ASPxCheckBox ID="chk_Ngaysinh" runat="server" Style="float: left; margin-right: 8px; padding-top: 5px" ClientInstanceName="chk_Ngaysinh">
+                                                    <dx:ASPxCheckBox ID="chk_Ngaysinh" runat="server" Style="float: left; margin-right: 8px; padding-top: 5px" ClientInstanceName="chk_Ngaysinh" Visible="false">
                                                         <ClientSideEvents CheckedChanged="chk_NgaysinhChange" />
                                                     </dx:ASPxCheckBox>
-                                                    <dx:ASPxDateEdit ID="deNgaysinh" UseMaskBehavior="true" AutoPostBack="false" onkeypress="return enter_deNgaysinh(event)" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
+                                                    <dx:ASPxDateEdit ID="deNgaysinh" Visible="false" UseMaskBehavior="true" AutoPostBack="false" onkeypress="return enter_deNgaysinh(event)" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
                                                         runat="server">
                                                     </dx:ASPxDateEdit>
+                                                    <dx:ASPxTextBox ID="txtNamsinh" runat="server" ClientInstanceName="txtnamsinh"  onkeypress="return enter_txtnamsinh(event)"  Style="float: left; margin-right: 8px;" Width="80px" Height="25px"></dx:ASPxTextBox> 
                                                     <%--                                                    <asp:TextBox ID="txtTuoi" runat="server" Width="30px" Style="float: left; margin-right: 7px" placeholder="Tuổi" CssClass="nano_textbox"></asp:TextBox>--%>
                                                     <dx:ASPxComboBox ClientInstanceName="ddlGioitinh" onkeypress="return enter_ddlGioitinh(event)" ID="ddlGioitinh" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Height="25px" Width="50px" runat="server" ValueType="System.String">
                                                         <Items>
@@ -1198,7 +1201,7 @@
                                                         Height="25px" Width="200px" ValueType="System.String" runat="server">
                                                     </dx:ASPxComboBox>
                                                 </td>
-                                               <td class="info_table_td">Tiền sử:
+                                               <td class="info_table_td">Bệnh sử:
                                                 </td>
                                                 <td class="info_table_td">
                                                     <asp:TextBox ID="txtGhichu" onkeypress="return enter_txtGhichu(event)" runat="server" Width="200px" CssClass="nano_textbox"></asp:TextBox>
@@ -1245,7 +1248,7 @@
                                                         <dx:ASPxButton ID="btaddbill" Image-Url="~/images/16x16/report_go.png" OnClick="btaddbill_Click" runat="server" Text="Thêm phiếu dịch vụ" AutoPostBack="False" Style="float: left; margin-right: 8px">
                                                             <ClientSideEvents Click="Checkthemdv" />
                                                         </dx:ASPxButton>
-                                                        <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                        <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" Visible="false" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
                                                             <ClientSideEvents Click="Checkthempx" />
                                                         </dx:ASPxButton>
                                                         <dx:ASPxButton ID="btnClear" runat="server" AutoPostBack="false" Image-Url="~/images/16x16/refresh.png" Text="Làm mới (F9)" Style="float: left; margin-right: 8px">
