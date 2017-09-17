@@ -90,7 +90,7 @@
                     <td class="info_table_td_report">
                         <a href="../../OrangeVersion/Report/Rp_web/Rp_Taichinh/Rpt_DoanhthuNVTuvan.aspx" style="text-decoration: none">
                             <img class="img-login" src="../../images/orange/reporticon.png" /><br />
-                            Báo cáo doanh thu nhân viên tư vấn</a>
+                            Báo cáo DT theo bác sĩ và kỹ thuật viên</a>
                     </td>
                     <td class="info_table_td_report">
                         <%-- <a href="../Report/Rp_web/Rp_Taichinh/Rp_Sonhatky_Chung.aspx" style="text-decoration: none">

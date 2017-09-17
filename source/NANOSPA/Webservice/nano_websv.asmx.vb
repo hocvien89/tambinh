@@ -282,7 +282,7 @@ Public Class nano_websv
     End Function
     'Update thong tin phieu dich vu
     <WebMethod(True)> _
-    Public Function UpdatePhieudichvu(ByVal v_Sophieu As String, ByVal d_Ngay As String, ByVal f_Tongtienthuc As String, ByVal tienthua As String, ByVal uId_LoaiTT As String, ByVal f_Giamgia As String, ByVal uId_Nhanvien As String, ByVal nv_Ghichu_vn As String, ByVal HH As String, ByVal Id_Nhomphieu As String, f_Khachtra As String) As String
+    Public Function UpdatePhieudichvu(ByVal v_Sophieu As String, ByVal d_Ngay As String, ByVal f_Tongtienthuc As String, ByVal tienthua As String, ByVal uId_LoaiTT As String, ByVal f_Giamgia As String, ByVal uId_Nhanvien As String, ByVal nv_Ghichu_vn As String, ByVal HH As String, ByVal Id_Nhomphieu As String, f_Khachtra As String, nv_Lydogiamgia As String) As String
         Dim rs As String = ""
         objFCPhanQuyen = New BO.QT_PHANQUYENFacade
         objEnPhanQuyen = New CM.QT_PHANQUYENEntity
@@ -318,6 +318,7 @@ Public Class nano_websv
                         .v_Sophieu = v_Sophieu
                         .d_Ngay = BO.Util.ConvertDateTime(d_Ngay)
                         .uId_Phieudichvu = oLibP.NullProString(Session("uId_Phieudichvu"))
+                        .nv_Lydogiamgia = nv_Lydogiamgia
                         'Truong hop thanh toan khong thanh toan tu the
                         If (tienthua <= 0 And dt_Check_TTT.Rows.Count = 0) Then 'thanh toan het trong 1 lan
                             Dim uId_Khachhang As String = Session("uId_Khachhang")
@@ -522,7 +523,7 @@ Public Class nano_websv
         rs = objEnPhieuDV.v_Sophieu & "$" & objEnPhieuDV.d_Ngay & "$" & objEnPhieuDV.f_Tongtienthuc &
             "$" & objEnPhieuDV.f_Giamgia & "$" & objEnPhieuDV.uId_LoaiTT & "$" & objEnPhieuDV.uId_Nhanvien &
             "$" & objEnPhieuDV.nv_Ghichu_en & "$" & objEnPhieuDV.nv_Ghichu_vn & "$" & objEnPhieuDV.HHPhieu &
-            "$" & objEnPhieuDV.Id_Nhomphieu & "$" & objEnPhieuDV.b_IsPayed
+            "$" & objEnPhieuDV.Id_Nhomphieu & "$" & objEnPhieuDV.b_IsPayed & "$" & objEnPhieuDV.nv_Lydogiamgia
         Return rs
     End Function
 

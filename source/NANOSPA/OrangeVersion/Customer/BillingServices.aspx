@@ -333,6 +333,7 @@
                 var ddlLoaithanhtoanvalue = ddlLoaithanhtoan.GetValue().toString();
                 var txtGiamgiaPhieu = document.getElementById("<%=txtGiamgiaPhieu.ClientID%>");
                 var ddlNhanvienvalue = ddlNhanvien.GetValue().toString();
+                var txtLydogiamgia = document.getElementById("<%=txtLydogiamgia.ClientID%>");
                 var txtGhichu = document.getElementById("<%=txtGhichu.ClientID%>");
                 var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
                 var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
@@ -354,7 +355,7 @@
                     //lblTienthua.innerHTML.replace(/,/g, "") + "','uId_LoaiTT':'" + ddlLoaithanhtoanvalue +
                     tienthua_Data + "','uId_LoaiTT':'" + ddlLoaithanhtoanvalue +
                     "','f_Giamgia':'" + giamgia + "','uId_Nhanvien':'" + ddlNhanvienvalue + "','nv_Ghichu_vn':'" +
-                    txtGhichu.value + "','HH':'" + txtHH.value + "','Id_Nhomphieu':'" + ddlNhomphieuvalue + "','f_Khachtra':'" + f_Khachtra + "'}";
+                    txtGhichu.value + "','HH':'" + txtHH.value + "','Id_Nhomphieu':'" + ddlNhomphieuvalue + "','f_Khachtra':'" + f_Khachtra + "','nv_Lydogiamgia':'" + txtLydogiamgia.value + "'}";
                 var pageUrl = "../../../../Webservice/nano_websv.asmx/UpdatePhieudichvu";
                 $.ajax({
                     type: "POST",
@@ -508,6 +509,7 @@
                 var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
                 var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
                 var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
+                var txtLydogiamgia = document.getElementById("<%=txtLydogiamgia.ClientID%>");
                 var txtGhichu = document.getElementById("<%=txtGhichu.ClientID%>");
                 var txtHH = document.getElementById("<%=txtHH.ClientID%>");
                 var lblTienthuatext = document.getElementById("<%=lblTienthuatext.ClientID%>");
@@ -517,6 +519,7 @@
                 //date_ngaylap.SetEnabled(false);
                 lblTongtien.innerHTML = jo_FormatMoney(jo_IsString(defaultdata[6]));
                 txtGiamgiaPhieu.value = jo_IsString(defaultdata[3]);
+                txtLydogiamgia.value = defaultdata[12];
                 if (Number(defaultdata[7]) < 100) {
                     lbluutien.SetText(defaultdata[7] + " %");
                     lblConlai.innerHTML = jo_FormatMoney(jo_IsString(parseFloat(defaultdata[6])) - parseFloat(defaultdata[3]) - parseFloat(Number(defaultdata[7]) * defaultdata[6] / 100));
@@ -566,6 +569,7 @@
                     if (defaultdata[4] != null && defaultdata[4] != "") {
                         ddlLoaithanhtoan.SetValue(defaultdata[4]);
                     }
+                    
                     txtGhichu.value = defaultdata[8];
                     txtHH.value = defaultdata[9];
                     ddlNhomphieu.SetValue(defaultdata[10]);
@@ -2003,6 +2007,13 @@
                                 <dx:ASPxButton ID="btnKekhaiHT" Image-Url="~/images/16x16/pencil_add.png" AutoPostBack="false" Style="float: left;" Width="95px" ClientInstanceName="btnKekhai_client" runat="server" Text="Kê khai">
                                     <ClientSideEvents Click="KeKhaiTT" />
                                 </dx:ASPxButton>
+                            </li>
+                        </ul>
+                        <ul style="float:left">
+                            <li class="text_title">Lý do giảm giá:
+                            </li>
+                            <li  class="text_title" style="padding-left:5px">
+                                <asp:TextBox TextMode="MultiLine" runat="server" Width="487px" Height="17px" CssClass="nano_textbox" ID="txtLydogiamgia"></asp:TextBox>
                             </li>
                         </ul>
                         <ul style="float:left">

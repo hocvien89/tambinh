@@ -255,7 +255,7 @@ Partial Public Class CustomerList
                 .v_Email = CStr(Me.txtEmail.Text.Trim)
                 '-----------harumyspa
                 .nv_Hoten_en = ""
-                '.nv_Diachi_en = txt_Danhgia.Text
+                .nv_Diachi_en = txt_Danhgia.Text
                 .nv_Nguyenquan_en = op
                 .d_Ngayden = BO.Util.ConvertDateTime(deNgayden.Text)
                 .uId_Nguonden = ddlNguon.SelectedItem.Value.ToString
@@ -784,5 +784,9 @@ Partial Public Class CustomerList
         dt = objFCGoiDV.SelectBy_Mathe(v_Mathe)
         dgvDsTheTT.DataSource = dt
         dgvDsTheTT.DataBind()
+    End Sub
+
+    Protected Sub bnt_ExportExcel_Click(sender As Object, e As EventArgs)
+       dgvexport.WriteXlsToResponse()
     End Sub
 End Class

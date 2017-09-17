@@ -68,6 +68,15 @@ Partial Public Class CustomerList
     Protected WithEvents btn_ImportExcel As Global.DevExpress.Web.ASPxEditors.ASPxButton
 
     '''<summary>
+    '''bnt_ExportExcel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents bnt_ExportExcel As Global.DevExpress.Web.ASPxEditors.ASPxButton
+
+    '''<summary>
     '''dgvDevexpress control.
     '''</summary>
     '''<remarks>
@@ -326,7 +335,7 @@ Partial Public Class CustomerList
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_Danhgia As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
+    Protected WithEvents txt_Danhgia As Global.DevExpress.Web.ASPxEditors.ASPxMemo
 
     '''<summary>
     '''cbo_nhanvientuvan control.
@@ -759,4 +768,13 @@ Partial Public Class CustomerList
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents dgvDsTheTT As Global.DevExpress.Web.ASPxGridView.ASPxGridView
+
+    '''<summary>
+    '''dgvexport control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dgvexport As Global.DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter
 End Class

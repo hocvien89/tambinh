@@ -43,4 +43,5 @@ Public Interface ITNTP_PHIEUDICHVUEntity
     Property uId_Dichvu1() As String
     Property uId_Dichvu2() As String
     Property uId_Dichvu3() As String
+    Property nv_Lydogiamgia() As String
 End Interface

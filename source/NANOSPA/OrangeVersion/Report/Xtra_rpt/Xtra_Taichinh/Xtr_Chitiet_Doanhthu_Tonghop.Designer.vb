@@ -42,8 +42,6 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Tonghop
         Me.XrTableCell39 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell40 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.lbl_Tencuahang = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lbl_Diachi = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbl_Tungay = New DevExpress.XtraReports.UI.XRLabel()
@@ -108,6 +106,10 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Tonghop
         Me.XrTableCell41 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell42 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.f_Doanhthu = New DevExpress.XtraReports.UI.CalculatedField()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource_DATA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,33 +255,11 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Tonghop
         '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lbl_Tencuahang, Me.lbl_Diachi, Me.XrLabel1, Me.XrLabel4, Me.lbl_Tungay, Me.XrLabel6, Me.lbl_Denngay})
+        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiachi, Me.lblPKName, Me.XrLabel14, Me.XrPictureBox_logo, Me.XrLabel1, Me.XrLabel4, Me.lbl_Tungay, Me.XrLabel6, Me.lbl_Denngay})
         Me.TopMargin.HeightF = 172.0!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'lbl_Tencuahang
-        '
-        Me.lbl_Tencuahang.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lbl_Tencuahang.LocationFloat = New DevExpress.Utils.PointFloat(21.71612!, 9.502602!)
-        Me.lbl_Tencuahang.Multiline = True
-        Me.lbl_Tencuahang.Name = "lbl_Tencuahang"
-        Me.lbl_Tencuahang.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lbl_Tencuahang.SizeF = New System.Drawing.SizeF(192.5781!, 23.0!)
-        Me.lbl_Tencuahang.StylePriority.UseFont = False
-        Me.lbl_Tencuahang.StylePriority.UseTextAlignment = False
-        Me.lbl_Tencuahang.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.lbl_Tencuahang.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'lbl_Diachi
-        '
-        Me.lbl_Diachi.LocationFloat = New DevExpress.Utils.PointFloat(21.71612!, 32.50262!)
-        Me.lbl_Diachi.Name = "lbl_Diachi"
-        Me.lbl_Diachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lbl_Diachi.SizeF = New System.Drawing.SizeF(375.3906!, 23.0!)
-        Me.lbl_Diachi.StylePriority.UseTextAlignment = False
-        Me.lbl_Diachi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel1
         '
@@ -760,6 +740,46 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Tonghop
         '
         Me.f_Doanhthu.Name = "f_Doanhthu"
         '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 20.83333!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(92.55074!, 76.18!)
+        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(102.5508!, 45.83333!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
+        Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(102.5507!, 20.83333!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
+        Me.lblPKName.StylePriority.UseFont = False
+        Me.lblPKName.StylePriority.UseTextAlignment = False
+        Me.lblPKName.Text = "PHÒNG KHÁM ĐÔNG Y TÂM BÌNH"
+        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel14
+        '
+        Me.XrLabel14.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(102.5507!, 70.83334!)
+        Me.XrLabel14.Multiline = True
+        Me.XrLabel14.Name = "XrLabel14"
+        Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel14.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.XrLabel14.StylePriority.UseFont = False
+        Me.XrLabel14.Text = "ĐT: 024 3734 5600"
+        '
         'Xtr_Chitiet_Doanhthu_Tonghop
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.ReportFooter})
@@ -782,8 +802,6 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Tonghop
     Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
-    Public WithEvents lbl_Tencuahang As DevExpress.XtraReports.UI.XRLabel
-    Public WithEvents lbl_Diachi As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Public WithEvents lbl_Tungay As DevExpress.XtraReports.UI.XRLabel
@@ -860,4 +878,8 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Tonghop
     Friend WithEvents XrTableCell41 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell42 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents f_Doanhthu As DevExpress.XtraReports.UI.CalculatedField
+    Friend WithEvents XrPictureBox_logo As DevExpress.XtraReports.UI.XRPictureBox
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel14 As DevExpress.XtraReports.UI.XRLabel
 End Class

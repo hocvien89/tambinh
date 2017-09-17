@@ -172,6 +172,7 @@ Public Class TNTP_PHIEUDICHVUDA
                     .Id_Nhomphieu = IIf(IsDBNull(objReader("Id_Nhomphieu")) = True, 0, objReader("Id_Nhomphieu"))
                     .b_IsKhoa = IIf(IsDBNull(objReader("b_IsKhoa")) = True, False, objReader("b_IsKhoa"))
                     .b_IsPayed = IIf(IsDBNull(objReader("b_IsPayed")) = True, False, objReader("b_IsPayed"))
+                    .nv_Lydogiamgia = IIf(IsDBNull(objReader("nv_Lydogiamgia")) = True, "", objReader("nv_Lydogiamgia"))
                 End With
             End If
             Return obj
@@ -255,6 +256,7 @@ Public Class TNTP_PHIEUDICHVUDA
             db.AddInParameter(objCmd, "@uId_Dichvu1", DbType.String, obj.uId_Dichvu1)
             db.AddInParameter(objCmd, "@uId_Dichvu2", DbType.String, obj.uId_Dichvu2)
             db.AddInParameter(objCmd, "@uId_Dichvu3", DbType.String, obj.uId_Dichvu3)
+            db.AddInParameter(objCmd, "@nv_Lydogiamgia", DbType.String, obj.nv_Lydogiamgia)
             db.ExecuteNonQuery(objCmd)
             Return True
         Catch ex As Exception

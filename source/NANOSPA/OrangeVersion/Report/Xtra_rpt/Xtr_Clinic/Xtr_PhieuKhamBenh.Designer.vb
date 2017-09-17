@@ -61,13 +61,13 @@ Partial Public Class Xtr_PhieuKhamBenh
         Me.lblNgayThang = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNhanVien = New DevExpress.XtraReports.UI.XRLabel()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
-        Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -114,14 +114,14 @@ Partial Public Class Xtr_PhieuKhamBenh
         'XrLabel10
         '
         Me.XrLabel10.Font = New System.Drawing.Font("Times New Roman", 12.0!)
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 571.8748!)
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(50.00006!, 571.8749!)
         Me.XrLabel10.Name = "XrLabel10"
         Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel10.SizeF = New System.Drawing.SizeF(658.3334!, 39.58331!)
         Me.XrLabel10.StylePriority.UseFont = False
         Me.XrLabel10.StylePriority.UseTextAlignment = False
-        Me.XrLabel10.Text = "+ Tây y:........................................................................." & _
-    "....................................................................."
+        Me.XrLabel10.Text = "+ Đông y: ......................................................................." & _
+    "................................................................."
         Me.XrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft
         '
         'XrLabel9
@@ -133,8 +133,8 @@ Partial Public Class Xtr_PhieuKhamBenh
         Me.XrLabel9.SizeF = New System.Drawing.SizeF(658.3334!, 39.58328!)
         Me.XrLabel9.StylePriority.UseFont = False
         Me.XrLabel9.StylePriority.UseTextAlignment = False
-        Me.XrLabel9.Text = "+ Đông y: ......................................................................." & _
-    "..................................................................."
+        Me.XrLabel9.Text = "+ Tây y: ........................................................................" & _
+    ".................................................................."
         Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft
         '
         'XrLabel8
@@ -451,6 +451,39 @@ Partial Public Class Xtr_PhieuKhamBenh
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'XrLabel14
+        '
+        Me.XrLabel14.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(99.45818!, 60.875!)
+        Me.XrLabel14.Multiline = True
+        Me.XrLabel14.Name = "XrLabel14"
+        Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel14.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.XrLabel14.StylePriority.UseFont = False
+        Me.XrLabel14.Text = "ĐT: 024 3734 5600"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(99.45818!, 10.875!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
+        Me.lblPKName.StylePriority.UseFont = False
+        Me.lblPKName.StylePriority.UseTextAlignment = False
+        Me.lblPKName.Text = "lblPKName"
+        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(99.45825!, 35.875!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
+        Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        '
         'XrLabel12
         '
         Me.XrLabel12.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
@@ -486,39 +519,6 @@ Partial Public Class Xtr_PhieuKhamBenh
         Me.BottomMargin.Name = "BottomMargin"
         Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'XrLabel14
-        '
-        Me.XrLabel14.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(99.45818!, 60.875!)
-        Me.XrLabel14.Multiline = True
-        Me.XrLabel14.Name = "XrLabel14"
-        Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel14.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
-        Me.XrLabel14.StylePriority.UseFont = False
-        Me.XrLabel14.Text = "ĐT: 024 3734 5600"
-        '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(99.45818!, 10.875!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
-        Me.lblPKName.StylePriority.UseFont = False
-        Me.lblPKName.StylePriority.UseTextAlignment = False
-        Me.lblPKName.Text = "lblPKName"
-        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'lblDiachi
-        '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(99.45825!, 35.875!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
-        Me.lblDiachi.StylePriority.UseFont = False
-        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
         '
         'Xtr_PhieuKhamBenh
         '

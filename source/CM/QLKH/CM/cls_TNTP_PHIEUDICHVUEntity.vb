@@ -30,7 +30,7 @@ Public Class TNTP_PHIEUDICHVUEntity
     Private _uId_Dichvu1 As String
     Private _uId_Dichvu2 As String
     Private _uId_Dichvu3 As String
-
+    Private _nv_Lydogiamgia As String
     Public Property uId_Phieudichvu() As String Implements ITNTP_PHIEUDICHVUEntity.uId_Phieudichvu
         Get
             Return _uId_Phieudichvu
@@ -352,6 +352,19 @@ Public Class TNTP_PHIEUDICHVUEntity
                 _uId_Dichvu3 = String.Empty
             Else
                 _uId_Dichvu3 = value.Trim
+            End If
+        End Set
+    End Property
+
+    Public Property nv_Lydogiamgia() As String Implements ITNTP_PHIEUDICHVUEntity.nv_Lydogiamgia
+        Get
+            Return _nv_Lydogiamgia
+        End Get
+        Set(value As String)
+            If String.IsNullOrEmpty(value) Then
+                _nv_Lydogiamgia = String.Empty
+            Else
+                _nv_Lydogiamgia = value.Trim
             End If
         End Set
     End Property

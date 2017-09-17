@@ -311,6 +311,15 @@ Partial Public Class BillingServices
     Protected WithEvents btnKekhaiHT As Global.DevExpress.Web.ASPxEditors.ASPxButton
 
     '''<summary>
+    '''txtLydogiamgia control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtLydogiamgia As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtGhichu control.
     '''</summary>
     '''<remarks>

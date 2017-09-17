@@ -19,8 +19,9 @@
         Dim d_Tungay As Date = BO.Util.ConvertDateTime(Aspx_Tungay.Text)
         Dim d_Denngay As Date = BO.Util.ConvertDateTime(Aspx_Denngay.Text)
         dt = objFcKhachhang.Baocao_DoanhThu_Tonghop(d_Tungay, d_Denngay)
-        BC.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn")
-        BC.lbl_Diachi.Text = Session("nv_DiachiCH_vn")
+
+        'BC.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn")
+        'BC.lbl_Diachi.Text = Session("nv_DiachiCH_vn")
         BC.lbl_Tungay.Text = Aspx_Tungay.Text
         BC.lbl_Denngay.Text = Aspx_Denngay.Text
         BC.Bindata(dt)
