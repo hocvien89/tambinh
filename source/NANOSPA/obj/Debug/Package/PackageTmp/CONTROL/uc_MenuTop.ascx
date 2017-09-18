@@ -113,8 +113,8 @@
                         <img src="../../../../../images/16x16/star.png" alt="">Báo cáo thuốc </a></li>
                     <li><a href="../../../../OrangeVersion/Customer/ReportForm_Cus.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Báo cáo dịch vụ</a></li>
-<%--                    <li><a href="../../../../OrangeVersion/Finance/ReportForm_HH.aspx">
-                        <img src="../../../../../images/16x16/star.png" alt="">Báo cáo hoa hồng</a></li>--%>
+                    <li><a href="../../../../OrangeVersion/Finance/ReportForm_HH.aspx">
+                        <img src="../../../../../images/16x16/star.png" alt="">Báo cáo hoa hồng</a></li>
                     <li><a href="../../../../OrangeVersion/Report/Rp_Web/Rp_Sheduler/rp_SchedulerReport.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Báo cáo lịch hẹn</a></li>
 <%--                     <li><a href="../../../../OrangeVersion/Product/ReportForm_Sevice.aspx">
@@ -189,8 +189,8 @@
                         <img src="../../../../../images/16x16/star.png" alt="">Cấu hình hệ thống</a></li>
                     <li><a href="../../../../../../OrangeVersion/Category/Personel.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Quản lý nhân viên</a></li>
-                              <li><a href="../../../../OrangeVersion/Personnel/ManageSalaries.aspx">
-                        <img src="../../../../../images/16x16/star.png" alt="">Quản lý lương</a></li>
+                       <%--       <li><a href="../../../../OrangeVersion/Personnel/ManageSalaries.aspx">
+                        <img src="../../../../../images/16x16/star.png" alt="">Quản lý lương</a></li>--%>
                     <%--<li><a href="../../../QUANTRI/Add_TaikhoanKH.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Thiết lập TK KH</a></li>--%>
 <%--                    <li><a href="../../../../OrangeVersion/Category/Security.aspx">

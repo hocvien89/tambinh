@@ -2,7 +2,7 @@
     CodeBehind="CustomerList.aspx.vb" Inherits="NANO_SPA.CustomerList" Title="" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dx" %>
-
+<%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxFileManager" TagPrefix="dx" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
@@ -169,18 +169,19 @@
                 deNgayden.SetDate(date_ngayden);
                 txtMaKH.value = defaultdata[1];
                 txtHoten.value = defaultdata[2];
-                var date_ngaysinh = new Date(defaultdata[3]);
+                txtnamsinh.SetText(defaultdata[3])
+                //var date_ngaysinh = new Date(defaultdata[3]);
                 //_ngaysinh = date_ngaysinh;
-                var date_Nam = new Date("01/01/1900")
-                deNgaysinh.SetDate(date_ngaysinh);
-                if (date_ngaysinh.getDate() == date_Nam.getDate() & date_ngaysinh.getMonth() == date_Nam.getMonth() & date_ngaysinh.getFullYear() == date_Nam.getFullYear()) {
-                    chk_Ngaysinh.SetChecked(true);
-                    deNgaysinh.SetEnabled(false);
-                }
-                else {
-                    chk_Ngaysinh.SetChecked(false);
-                    deNgaysinh.SetEnabled(true);
-                }
+                //var date_Nam = new Date("01/01/1900")
+                //deNgaysinh.SetDate(date_ngaysinh);
+                //if (date_ngaysinh.getDate() == date_Nam.getDate() & date_ngaysinh.getMonth() == date_Nam.getMonth() & date_ngaysinh.getFullYear() == date_Nam.getFullYear()) {
+                //    chk_Ngaysinh.SetChecked(true);
+                //    deNgaysinh.SetEnabled(false);
+                //}
+                //else {
+                //    chk_Ngaysinh.SetChecked(false);
+                //    deNgaysinh.SetEnabled(true);
+                //}
                 //txttinhtrangda.SetText(defaultdata[13]);
                 //txtsuckhoe.SetText(defaultdata[14]);
 
@@ -194,7 +195,7 @@
                 txtGhichu.value = defaultdata[10];
                 imgAnhdaidien.src = defaultdata[11];
                 txtImgUrl.value = defaultdata[11];
-                //txt_Danhgia.SetValue(defaultdata[19]);
+                txt_Chandoan.SetValue(defaultdata[19]);
              if (defaultdata[14] == 1) {
                     radkh.SetChecked(true);
                 }
@@ -250,20 +251,21 @@
             txtHoten.value = "";
             txtDiachi.value = "";
             txtDienthoai.value = "";
-            deNgayden.SetDate(new Date());
-            deNgaysinh.SetDate(new Date());
+            txtnamsinh.SetText("");
+            //deNgayden.SetDate(new Date());
+            //deNgaysinh.SetDate(new Date());
             txtEmail.value = "";
             txtGhichu.value = "";
             imgAnhdaidien.src = "";
             txtImgUrl.value = "";
-            chk_Ngaysinh.SetChecked(false);
+            //chk_Ngaysinh.SetChecked(false);
             cbo_nguoigioithieu.SetText('');
             jo_RemoveSession("uId_Khachhang");
             hdfuIdKhachhang.value = "";
             hdfKHGThieu.value = "";
             chk_ngthieu.SetChecked(false);
             cbo_nguoigioithieu.SetEnabled(false);
-            deNgaysinh.SetEnabled(true);
+            //deNgaysinh.SetEnabled(true);
             ltrError.SetText("");
             ltrSuccess.SetText("");
             txtHoten.focus();
@@ -293,12 +295,12 @@
                 grvdanhsachsearch.Refresh();
                 var txtHoten = document.getElementById("<%=txtHoten.ClientID%>");
                 if (txtHoten.value != "") {
-                    deNgaysinh.Focus();
+                    txtnamsinh.Focus();
                 }
                 return false;
             }
         }
-        function enter_deNgaysinh(e) {
+        function enter_namsinh(e) {
             if (e.keyCode == 13) {
                 //var txtTuoi = document.getElementById("");
                 //var currentTime = new Date()
@@ -445,10 +447,10 @@
                 deNgayden.ShowDropDown();
                 e.processOnServer = false;
             }
-            else if (deNgaysinh.GetText() == "01/01/0100") {
-                deNgaysinh.Focus();
+            else if (txtnamsinh.GetText() == "") {
+                txtnamsinh.Focus();
                 error.innerHTML = "Ngày sinh không được để trống";
-                deNgaysinh.ShowDropDown();
+                //deNgaysinh.ShowDropDown();
                 e.processOnServer = false;
             }
             else if (document.getElementById("<%=txtHoten.ClientID%>").value == "") {
@@ -693,6 +695,11 @@
                     <ClientSideEvents Click="function(s, e) { ShowAddWindowimport(); }" />
                 </dx:ASPxButton>
             </li>
+            <li class="text_title">
+                <dx:ASPxButton ID="bnt_ExportExcel" Image-Url="~/images/Excel-icon.png" ClientInstanceName="btnXuatexcel" Height="20px" Style="bottom: 5px; position: relative" OnClick="bnt_ExportExcel_Click"
+                    runat="server" Text="Xuất Excel">
+                </dx:ASPxButton>
+            </li>
         </ul>
     </fieldset>
     <div class="">
@@ -714,7 +721,7 @@
                     Width="150px" HeaderStyle-HorizontalAlign="Center" Caption="Tên bệnh nhân" FieldName="nv_Hoten_vn"
                     Name="nv_Hoten_vn">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn Width="90" VisibleIndex="2" Caption="Ngày sinh" Settings-AutoFilterCondition="Contains"
+                <dx:GridViewDataTextColumn Width="90" VisibleIndex="2" Caption="Năm sinh" Settings-AutoFilterCondition="Contains"
                     HeaderStyle-HorizontalAlign="Center" FieldName="d_Ngaysinh" Name="d_Ngaysinh">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn VisibleIndex="2" Caption="Địa chỉ" Settings-AutoFilterCondition="Contains"
@@ -726,11 +733,11 @@
                 <dx:GridViewDataTextColumn Caption="Email" Settings-AutoFilterCondition="Contains"
                     VisibleIndex="3" FieldName="v_Email" Name="v_Email">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn Visible="false" Caption="Lịch sử chăm sóc sức khỏe" Settings-AutoFilterCondition="Contains"
-                    VisibleIndex="3" FieldName="nv_Diachi_en" Name="nv_Diachi_en">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn Caption="Ghi chú" Settings-AutoFilterCondition="Contains"
+                <dx:GridViewDataTextColumn Caption="Bệnh sử" Settings-AutoFilterCondition="Contains"
                     VisibleIndex="3" FieldName="nv_Ghichu_vn" Name="nv_Ghichu_vn" Width="150px">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn  Caption="Chẩn đoán" Settings-AutoFilterCondition="Contains"
+                    VisibleIndex="3" FieldName="nv_Diachi_en" Name="nv_Diachi_en">
                 </dx:GridViewDataTextColumn>
                   <dx:GridViewDataTextColumn Caption="Nguồn" Width="150" Settings-AutoFilterCondition="Contains"
                     VisibleIndex="3" FieldName="nv_Nguon_vn" Name="nv_Nguon_vn">
@@ -873,7 +880,7 @@
                                                                                         Caption="Tên trạng thái" FieldName="nv_Tentrangthai_vn" Name="nv_Tentrangthai_vn">
                                                                                     </dx:GridViewDataTextColumn>
                                                                                     <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
-                                                                                        Caption="Ghi chú" FieldName="nv_Ghichu" Name="nv_Ghichu">
+                                                                                        Caption="Bệnh sử" FieldName="nv_Ghichu" Name="nv_Ghichu">
                                                                                     </dx:GridViewDataTextColumn>
                                                                                 </Columns>
                                                                             </dx:ASPxGridView>
@@ -1129,15 +1136,16 @@
 
                                                     <asp:TextBox ID="txtHoten" AutoPostBack="false" onkeypress="return enter_txtHoten(event)" runat="server" Width="200px" CssClass="nano_textbox"></asp:TextBox>
                                                 </td>
-                                                <td class="info_table_td">Ngày sinh:
+                                                <td class="info_table_td">Năm sinh:
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <dx:ASPxCheckBox ID="chk_Ngaysinh" runat="server" Style="float: left; margin-right: 8px; padding-top: 5px" ClientInstanceName="chk_Ngaysinh">
+                                                    <dx:ASPxCheckBox ID="chk_Ngaysinh" runat="server" Style="float: left; margin-right: 8px; padding-top: 5px" ClientInstanceName="chk_Ngaysinh" Visible="false">
                                                         <ClientSideEvents CheckedChanged="chk_NgaysinhChange" />
                                                     </dx:ASPxCheckBox>
-                                                    <dx:ASPxDateEdit ID="deNgaysinh" UseMaskBehavior="true" AutoPostBack="false" onkeypress="return enter_deNgaysinh(event)" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
+                                                    <dx:ASPxDateEdit ID="deNgaysinh" Visible="false" UseMaskBehavior="true" AutoPostBack="false" onkeypress="return enter_deNgaysinh(event)" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
                                                         runat="server">
                                                     </dx:ASPxDateEdit>
+                                                    <dx:ASPxTextBox ID="txtNamsinh" runat="server" ClientInstanceName="txtnamsinh"  onkeypress="return enter_txtnamsinh(event)"  Style="float: left; margin-right: 8px;" Width="80px" Height="25px"></dx:ASPxTextBox> 
                                                     <%--                                                    <asp:TextBox ID="txtTuoi" runat="server" Width="30px" Style="float: left; margin-right: 7px" placeholder="Tuổi" CssClass="nano_textbox"></asp:TextBox>--%>
                                                     <dx:ASPxComboBox ClientInstanceName="ddlGioitinh" onkeypress="return enter_ddlGioitinh(event)" ID="ddlGioitinh" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Height="25px" Width="50px" runat="server" ValueType="System.String">
                                                         <Items>
@@ -1198,7 +1206,7 @@
                                                         Height="25px" Width="200px" ValueType="System.String" runat="server">
                                                     </dx:ASPxComboBox>
                                                 </td>
-                                               <td class="info_table_td">Tiền sử:
+                                               <td class="info_table_td">Bệnh sử:
                                                 </td>
                                                 <td class="info_table_td">
                                                     <asp:TextBox ID="txtGhichu" onkeypress="return enter_txtGhichu(event)" runat="server" Width="200px" CssClass="nano_textbox"></asp:TextBox>
@@ -1208,21 +1216,21 @@
                                             <tr>
                                                   <%--  <td class="info_table_td">Nguồn đến:
                                                 </td>--%>
-                                                <td class="info_table_td">
+                                         
                                                     <dx:ASPxComboBox ID="ddlNguon" Visible="false" ClientInstanceName="ddlNguon" DropDownStyle="DropDown" onkeypress="return enter_ddlNguon(event)"
                                                         IncrementalFilteringMode="StartsWith" Height="25px" Width="200px" runat="server" ValueType="System.String">
                                                     </dx:ASPxComboBox>
-                                                </td>
-                                       <%--         <td class="info_table_td">Đánh giá:
-                                                </td>--%>
-                                                <td class="info_table_td">
                                                
-                                                    <dx:ASPxTextBox ID="txt_Danhgia" Visible="false" runat="server" ClientInstanceName="txt_Danhgia" Width="200px"></dx:ASPxTextBox>
+                                                <td class="info_table_td">Chẩn đoán:
+                                                </td>
+                                                <td class="info_table_td" colspan="3">
+                                               
+                                                    <dx:ASPxMemo ID="txt_Danhgia" runat="server" Height="50px" ClientInstanceName="txt_Chandoan" Width="100%"></dx:ASPxMemo>
                                                 </td>
                                             </tr>
                                             <tr>
-                                            <%--       <td class="info_table_td">Nhân viên tư vấn:--%>
-                                                </td>
+                                            <%--       <td class="info_table_td">Nhân viên tư vấn:
+                                                </td>--%>
                                                    <td class="info_table_td">
                                                        <dx:ASPxComboBox ID="cbo_nhanvientuvan" SelectedIndex="0" Visible="false" DropDownStyle="DropDown" ClientInstanceName="cbo_nhanvientuvan" Width="200px" runat="server" ValueType="System.String"></dx:ASPxComboBox>
                                                 </td>
@@ -1245,7 +1253,7 @@
                                                         <dx:ASPxButton ID="btaddbill" Image-Url="~/images/16x16/report_go.png" OnClick="btaddbill_Click" runat="server" Text="Thêm phiếu dịch vụ" AutoPostBack="False" Style="float: left; margin-right: 8px">
                                                             <ClientSideEvents Click="Checkthemdv" />
                                                         </dx:ASPxButton>
-                                                        <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                        <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" Visible="false" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
                                                             <ClientSideEvents Click="Checkthempx" />
                                                         </dx:ASPxButton>
                                                         <dx:ASPxButton ID="btnClear" runat="server" AutoPostBack="false" Image-Url="~/images/16x16/refresh.png" Text="Làm mới (F9)" Style="float: left; margin-right: 8px">
@@ -1534,5 +1542,6 @@
             <Paddings PaddingBottom="5px" />
         </ContentStyle>
     </dx:ASPxPopupControl>
+    <dx:ASPxGridViewExporter ID="dgvexport" GridViewID="dgvDevexpress" runat="server"></dx:ASPxGridViewExporter>
 </asp:Content>
 
