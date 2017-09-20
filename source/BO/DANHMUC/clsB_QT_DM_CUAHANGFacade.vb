@@ -26,6 +26,8 @@ Public Class QT_DM_CUAHANGFacade
         Return IQT_DM_CUAHANG.SelectByID(uId_Cuahang)
     End Function
 
+
+
     Public Function SelectByMaCH(ByVal v_Macuahang As String) As System.Data.DataTable
         Return IQT_DM_CUAHANG.SelectByMaCH(v_Macuahang)
     End Function
@@ -34,4 +36,7 @@ Public Class QT_DM_CUAHANGFacade
         Return IQT_DM_CUAHANG.AddThongtinMail(obj)
     End Function
 
+    Public Function SelectByIDCuahang(uId_Cuahang As String) As CM.QT_DM_CUAHANGEntity
+        Return IQT_DM_CUAHANG.SelectByIDCuahang(uId_Cuahang)
+    End Function
 End Class

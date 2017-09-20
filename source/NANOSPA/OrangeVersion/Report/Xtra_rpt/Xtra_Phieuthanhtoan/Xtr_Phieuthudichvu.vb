@@ -20,7 +20,7 @@
         lbdienthoai.Text = objEnKhachhang.v_DienthoaiDD
         lbsinhnhat.Text = objEnKhachhang.d_Ngaysinh
         lblPKName.Text = "PHÒNG KHÁM TÂM BÌNH"
-        xtrlogo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
+        XrPictureBox_logo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
         Dim table As DataTable
         table = objFcKhachhang.SelectByIDTable_PDV(uId_Phieudichvu)
         If table.Rows.Count > 0 Then

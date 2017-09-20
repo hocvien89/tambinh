@@ -96,19 +96,25 @@ Public Class CustomerPotential
             Dim Bc As New Xtr_CustomerPotential
             Bc.bind(dt)
             ReportViewer1.Report = Bc
-
-            If cbo_Cuahang.SelectedIndex <> 0 Then
-                If chk_Cuahang.Checked = True Then
-                    Bc.lbl_Diachi.Text = Session("nv_DiachiCH_vn").ToString
-                    Bc.lbl_Tencuahang.Text = "Cửa hàng: " + cbo_Cuahang.SelectedItem.ToString
-                Else
-                    Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
-                    Bc.lbl_Diachi.Text = ""
-                End If
-            Else
-                Bc.lbl_Diachi.Text = ""
-                Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
-            End If
+            Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+            Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+            objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+            Bc.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+            Bc.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+            Bc.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+            Bc.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+            'If cbo_Cuahang.SelectedIndex <> 0 Then
+            '    If chk_Cuahang.Checked = True Then
+            '        Bc.lbl_Diachi.Text = Session("nv_DiachiCH_vn").ToString
+            '        Bc.lbl_Tencuahang.Text = "Cửa hàng: " + cbo_Cuahang.SelectedItem.ToString
+            '    Else
+            '        Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
+            '        Bc.lbl_Diachi.Text = ""
+            '    End If
+            'Else
+            '    Bc.lbl_Diachi.Text = ""
+            '    Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
+            'End If
 
             Bc.lbl_Tungay.Text = Aspx_Tungay.Text
             Bc.lbl_Denngay.Text = Aspx_Denngay.Text

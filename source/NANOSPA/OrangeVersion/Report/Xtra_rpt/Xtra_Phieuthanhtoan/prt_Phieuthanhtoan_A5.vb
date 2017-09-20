@@ -34,8 +34,6 @@ Public Class rpt_Phieuthanhtoan_A5
             BindingSource_BC.DataSource = dt
             dt.Dispose()
         End If
-        lblSpaName.Text = nv_Tencuahang_vn
-        lblSpaAddress.Text = nv_Diachicuahang
         lbl_Sophieu.Tag = objEnPhieuDV.v_Sophieu
         lblTenKH.Text = objEnKhachhang.nv_Hoten_vn
         lblKhachhangKy.Text = objEnKhachhang.nv_Hoten_vn

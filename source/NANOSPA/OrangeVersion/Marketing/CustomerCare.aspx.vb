@@ -576,12 +576,19 @@ Public Class CustomerCare
             Dim Bc As New Xtr_CustomerPotential
             Bc.bind(dt)
             ReportViewer1.Report = Bc
-            Bc.lbl_Diachi.Text = Session("nv_DiachiCH_vn").ToString
-            Bc.lbl_Tencuahang.Text = "Cửa hàng: " + Session("uId_Cuahang").ToString
-            Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
-            Bc.lbl_Diachi.Text = ""
-            Bc.lbl_Diachi.Text = ""
-            Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
+            Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+            Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+            objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+            Bc.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+            Bc.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+            Bc.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+            Bc.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+            'Bc.lbl_Diachi.Text = Session("nv_DiachiCH_vn").ToString
+            'Bc.lbl_Tencuahang.Text = "Cửa hàng: " + Session("uId_Cuahang").ToString
+            'Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
+            'Bc.lbl_Diachi.Text = ""
+            'Bc.lbl_Diachi.Text = ""
+            'Bc.lbl_Tencuahang.Text = "Cửa hàng: Tất cả"
             Bc.lbl_Tungay.Text = deTuNgay.Text
             Bc.lbl_Denngay.Text = deDenNgay.Text
         Catch ex As Exception

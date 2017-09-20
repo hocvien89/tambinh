@@ -1634,6 +1634,7 @@
     <Content Include="Js\calendar-vn.js" />
     <Content Include="Js\calendar.js" />
     <Content Include="Js\click_menu.js" />
+    <Content Include="Js\Customer\billingservice.common.js" />
     <Content Include="Js\Customer\BillingService.js" />
     <Content Include="Js\Customer\customer.common.js" />
     <Content Include="Js\Customer\CustomerTherapy.js" />

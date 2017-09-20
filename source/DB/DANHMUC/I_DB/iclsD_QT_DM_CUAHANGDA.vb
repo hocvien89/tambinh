@@ -16,4 +16,5 @@ Public Interface IQT_DM_CUAHANGDA
 
     Function AddThongtinMail(ByVal obj As CM.QT_DM_CUAHANGEntity) As Boolean
 
+    Function SelectByIDCuahang(uId_Cuahang As String) As CM.QT_DM_CUAHANGEntity
 End Interface

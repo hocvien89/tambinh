@@ -38,7 +38,7 @@ Partial Public Class Xtr_Phieuthudichvu
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDienthoai = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbsophieu = New DevExpress.XtraReports.UI.XRLabel()
@@ -64,7 +64,7 @@ Partial Public Class Xtr_Phieuthudichvu
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbcuahang = New DevExpress.XtraReports.UI.XRLabel()
-        Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
@@ -99,6 +99,11 @@ Partial Public Class Xtr_Phieuthudichvu
         Me.XrLabel41 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel42 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTable4 = New DevExpress.XtraReports.UI.XRTable()
+        Me.XrTableRow10 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell26 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell32 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.lblGiamgia = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.lblLydogiamgia = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableRow5 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell23 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell24 = New DevExpress.XtraReports.UI.XRTableCell()
@@ -146,11 +151,6 @@ Partial Public Class Xtr_Phieuthudichvu
         Me.nv_Tendichvu_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.nv_Tenchuongtrinh_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Soluong = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.XrTableRow10 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell26 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell32 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.lblLydogiamgia = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.lblGiamgia = New DevExpress.XtraReports.UI.XRTableCell()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -265,20 +265,20 @@ Partial Public Class Xtr_Phieuthudichvu
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3, Me.lblPKName, Me.lblDiachi, Me.lbsophieu, Me.lbtuvan, Me.lbemail, Me.lbnguon, Me.lbdiachi, Me.lbdienthoai, Me.lbsinhnhat, Me.lbkhachhang, Me.XrLabel18, Me.XrLabel17, Me.XrLabel16, Me.XrLabel15, Me.XrLabel14, Me.XrLabel13, Me.XrLabel9, Me.XrLabel11, Me.XrLabel10, Me.XrLabel8, Me.XrLine2, Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.lbcuahang, Me.xtrlogo, Me.XrLabel2})
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDienthoai, Me.lblPKName, Me.lblDiachi, Me.lbsophieu, Me.lbtuvan, Me.lbemail, Me.lbnguon, Me.lbdiachi, Me.lbdienthoai, Me.lbsinhnhat, Me.lbkhachhang, Me.XrLabel18, Me.XrLabel17, Me.XrLabel16, Me.XrLabel15, Me.XrLabel14, Me.XrLabel13, Me.XrLabel9, Me.XrLabel11, Me.XrLabel10, Me.XrLabel8, Me.XrLine2, Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.lbcuahang, Me.XrPictureBox_logo, Me.XrLabel2})
         Me.ReportHeader.HeightF = 237.9167!
         Me.ReportHeader.Name = "ReportHeader"
         '
-        'XrLabel3
+        'lblDienthoai
         '
-        Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(100.459!, 75.04164!)
-        Me.XrLabel3.Multiline = True
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.Text = "ĐT: 024 3734 5600"
+        Me.lblDienthoai.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDienthoai.LocationFloat = New DevExpress.Utils.PointFloat(100.459!, 75.04164!)
+        Me.lblDienthoai.Multiline = True
+        Me.lblDienthoai.Name = "lblDienthoai"
+        Me.lblDienthoai.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDienthoai.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.lblDienthoai.StylePriority.UseFont = False
+        Me.lblDienthoai.Text = "ĐT: 024 3734 5600"
         '
         'lblPKName
         '
@@ -548,11 +548,11 @@ Partial Public Class Xtr_Phieuthudichvu
         Me.lbcuahang.StylePriority.UseFont = False
         Me.lbcuahang.Visible = False
         '
-        'xtrlogo
+        'XrPictureBox_logo
         '
-        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(17.54943!, 21.95832!)
-        Me.xtrlogo.Name = "xtrlogo"
-        Me.xtrlogo.SizeF = New System.Drawing.SizeF(82.90964!, 76.08333!)
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(17.54943!, 21.95832!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(82.90964!, 76.08333!)
         '
         'XrLabel2
         '
@@ -915,6 +915,41 @@ Partial Public Class Xtr_Phieuthudichvu
         Me.XrTable4.StylePriority.UseBorders = False
         Me.XrTable4.StylePriority.UseTextAlignment = False
         Me.XrTable4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrTableRow10
+        '
+        Me.XrTableRow10.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell26, Me.XrTableCell32, Me.lblGiamgia, Me.lblLydogiamgia})
+        Me.XrTableRow10.Name = "XrTableRow10"
+        Me.XrTableRow10.Weight = 1.0R
+        '
+        'XrTableCell26
+        '
+        Me.XrTableCell26.Name = "XrTableCell26"
+        Me.XrTableCell26.Weight = 0.17949939336070747R
+        '
+        'XrTableCell32
+        '
+        Me.XrTableCell32.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.XrTableCell32.Name = "XrTableCell32"
+        Me.XrTableCell32.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 10, 0, 0, 100.0!)
+        Me.XrTableCell32.StylePriority.UseFont = False
+        Me.XrTableCell32.StylePriority.UsePadding = False
+        Me.XrTableCell32.StylePriority.UseTextAlignment = False
+        Me.XrTableCell32.Text = "Giảm giá: "
+        Me.XrTableCell32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        Me.XrTableCell32.Weight = 0.81933071408259273R
+        '
+        'lblGiamgia
+        '
+        Me.lblGiamgia.Name = "lblGiamgia"
+        Me.lblGiamgia.Weight = 0.45475982159167017R
+        '
+        'lblLydogiamgia
+        '
+        Me.lblLydogiamgia.Name = "lblLydogiamgia"
+        Me.lblLydogiamgia.StylePriority.UseTextAlignment = False
+        Me.lblLydogiamgia.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.lblLydogiamgia.Weight = 1.5464100709650295R
         '
         'XrTableRow5
         '
@@ -1378,41 +1413,6 @@ Partial Public Class Xtr_Phieuthudichvu
         '
         Me.f_Soluong.Name = "f_Soluong"
         '
-        'XrTableRow10
-        '
-        Me.XrTableRow10.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell26, Me.XrTableCell32, Me.lblGiamgia, Me.lblLydogiamgia})
-        Me.XrTableRow10.Name = "XrTableRow10"
-        Me.XrTableRow10.Weight = 1.0R
-        '
-        'XrTableCell26
-        '
-        Me.XrTableCell26.Name = "XrTableCell26"
-        Me.XrTableCell26.Weight = 0.17949939336070747R
-        '
-        'XrTableCell32
-        '
-        Me.XrTableCell32.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.XrTableCell32.Name = "XrTableCell32"
-        Me.XrTableCell32.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 10, 0, 0, 100.0!)
-        Me.XrTableCell32.StylePriority.UseFont = False
-        Me.XrTableCell32.StylePriority.UsePadding = False
-        Me.XrTableCell32.StylePriority.UseTextAlignment = False
-        Me.XrTableCell32.Text = "Giảm giá: "
-        Me.XrTableCell32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell32.Weight = 0.81933071408259273R
-        '
-        'lblLydogiamgia
-        '
-        Me.lblLydogiamgia.Name = "lblLydogiamgia"
-        Me.lblLydogiamgia.StylePriority.UseTextAlignment = False
-        Me.lblLydogiamgia.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.lblLydogiamgia.Weight = 1.5464100709650295R
-        '
-        'lblGiamgia
-        '
-        Me.lblGiamgia.Name = "lblGiamgia"
-        Me.lblGiamgia.Weight = 0.45475982159167017R
-        '
         'Xtr_Phieuthudichvu
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.PageHeader, Me.ReportFooter, Me.GroupFooter1})
@@ -1457,7 +1457,7 @@ Partial Public Class Xtr_Phieuthudichvu
     Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents xtrlogo As DevExpress.XtraReports.UI.XRPictureBox
+    Friend WithEvents XrPictureBox_logo As DevExpress.XtraReports.UI.XRPictureBox
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTable2 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow3 As DevExpress.XtraReports.UI.XRTableRow
@@ -1556,7 +1556,7 @@ Partial Public Class Xtr_Phieuthudichvu
     Friend WithEvents lblNgay As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblNam As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblThang As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDienthoai As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel11 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTableRow10 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents XrTableCell26 As DevExpress.XtraReports.UI.XRTableCell

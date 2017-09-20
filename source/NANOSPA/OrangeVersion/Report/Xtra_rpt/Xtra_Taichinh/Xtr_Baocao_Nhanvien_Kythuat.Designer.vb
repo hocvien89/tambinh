@@ -96,6 +96,10 @@ Partial Public Class Xtr_Baocao_Nhanvien_Kythuat
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.nv_Tendichvu_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Tongtientip = New DevExpress.XtraReports.UI.CalculatedField()
+        Me.lblDienthoai = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,6 +204,7 @@ Partial Public Class Xtr_Baocao_Nhanvien_Kythuat
         '
         'TopMargin
         '
+        Me.TopMargin.HeightF = 25.0!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -212,13 +217,14 @@ Partial Public Class Xtr_Baocao_Nhanvien_Kythuat
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3})
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDienthoai, Me.lblPKName, Me.lblDiachi, Me.XrPictureBox_logo, Me.XrLabel3})
+        Me.ReportHeader.HeightF = 169.7917!
         Me.ReportHeader.Name = "ReportHeader"
         '
         'XrLabel3
         '
         Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 22.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(158.3333!, 36.45833!)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(163.5416!, 121.1667!)
         Me.XrLabel3.Name = "XrLabel3"
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(503.1561!, 38.625!)
@@ -636,13 +642,53 @@ Partial Public Class Xtr_Baocao_Nhanvien_Kythuat
         Me.f_Tongtientip.Expression = "[].Sum([f_Hoahong] + [f_Tientip] + [f_Tiendichvu])"
         Me.f_Tongtientip.Name = "f_Tongtientip"
         '
+        'lblDienthoai
+        '
+        Me.lblDienthoai.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDienthoai.LocationFloat = New DevExpress.Utils.PointFloat(112.389!, 65.38916!)
+        Me.lblDienthoai.Multiline = True
+        Me.lblDienthoai.Name = "lblDienthoai"
+        Me.lblDienthoai.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDienthoai.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.lblDienthoai.StylePriority.UseFont = False
+        Me.lblDienthoai.Text = "ĐT: 024 3734 5600"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(112.389!, 15.38916!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
+        Me.lblPKName.StylePriority.UseFont = False
+        Me.lblPKName.StylePriority.UseTextAlignment = False
+        Me.lblPKName.Text = "lblPKName"
+        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(112.3891!, 40.38916!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
+        Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(19.83837!, 14.51416!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(92.55074!, 76.18!)
+        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
         'Xtr_Baocao_Nhanvien_Kythuat
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.ReportFooter, Me.PageHeader, Me.GroupHeader1})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.d_Ngay, Me.v_Sophieu, Me.nv_Hoten_vn, Me.f_Doanhthu, Me.f_Hoahong, Me.f_Tiendichvu, Me.f_Tientip, Me.f_Tongluong, Me.nv_Tendichvu_vn, Me.f_Tongtientip})
         Me.DataSource = Me.BindingSource_DATA
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.FormattingRule1})
-        Me.Margins = New System.Drawing.Printing.Margins(2, 0, 100, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(2, 0, 25, 100)
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.Version = "12.2"
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -720,4 +766,8 @@ Partial Public Class Xtr_Baocao_Nhanvien_Kythuat
     Friend WithEvents nv_Tendichvu_vn As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents FormattingRule1 As DevExpress.XtraReports.UI.FormattingRule
     Friend WithEvents f_Tongtientip As DevExpress.XtraReports.UI.CalculatedField
+    Friend WithEvents lblDienthoai As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrPictureBox_logo As DevExpress.XtraReports.UI.XRPictureBox
 End Class

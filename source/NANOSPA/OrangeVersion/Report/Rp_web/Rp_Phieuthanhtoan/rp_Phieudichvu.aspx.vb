@@ -27,6 +27,13 @@
             ElseIf oThamsohethong.v_Giatri = "1" Then
 
                 Dim rp_A5 As New Xtr_Phieuthudichvu 'May in A5 doc
+                Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+                Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+                objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+                rp_A5.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+                rp_A5.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+                rp_A5.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+                rp_A5.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
                 rp_A5.Bindata(Session("uId_Phieudichvu"), Session("uId_Khachhang"), Session("nv_Tencuahang_vn"), Session("nv_DiachiCH_vn"))
                 ReportViewerControl.ReportViewer.Report = rp_A5
             End If
@@ -148,8 +155,13 @@
             BC.xtrCellMaPhieu.Text = objFcPhieudichvu.SelectByID(objEnPhieucongnoTT.uId_Phieuno).v_Sophieu
             BC.xtrCellTienNo.Text = String.Format("{0:#,##0}", objFcPhieunodv.SelectByID(objEnPhieucongnoTT.uId_Phieuno).f_Sotien)
         End If
-        BC.lblCuahang.Text = Session("nv_Tencuahang_vn").ToString
-        BC.lblDiachi.Text = Session("nv_DiachiCH_vn").ToString
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+        BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+        BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+        BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
         BC.lblNgay.Text = "Ngày:" + String.Format(Date.Now.ToString, "dd/MM/yyyy")
         BC.xtrCellTenKhachHang.Text = objEnKhachhang.nv_Hoten_vn
         BC.xtrCellDienthoai.Text = objEnKhachhang.v_DienthoaiDD

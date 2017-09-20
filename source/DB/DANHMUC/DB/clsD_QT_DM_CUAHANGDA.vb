@@ -7,6 +7,7 @@ Imports System.Data.SqlClient
 Public Class QT_DM_CUAHANGDA
 
     Implements IQT_DM_CUAHANGDA
+
     Private log As New LogError.ShowError
 
     Public Function SelectAll() As System.Collections.Generic.List(Of CM.QT_DM_CUAHANGEntity) Implements IQT_DM_CUAHANGDA.SelectAll
@@ -162,6 +163,39 @@ Public Class QT_DM_CUAHANGDA
         Catch ex As Exception
             log.WriteLog(sp, ex.Message)
             Return False
+        End Try
+    End Function
+
+    Public Function SelectByIDCuahang(uId_Cuahang As String) As CM.QT_DM_CUAHANGEntity Implements IQT_DM_CUAHANGDA.SelectByIDCuahang
+        Dim db As Database
+        Dim sp As String = "[dbo].[spQT_DM_CUAHANG_SelectByID]"
+        Dim objCmd As DbCommand
+        Dim objReader As IDataReader
+        Dim obj As CM.QT_DM_CUAHANGEntity = Nothing
+        Try
+            db = DatabaseFactory.CreateDatabase()
+            objCmd = db.GetStoredProcCommand(sp)
+            db.AddInParameter(objCmd, "@uId_Cuahang", System.Data.DbType.String, uId_Cuahang)
+            objReader = db.ExecuteReader(objCmd)
+            obj = New CM.QT_DM_CUAHANGEntity
+            If objReader.Read Then
+                With obj
+                    .uId_Cuahang = IIf(IsDBNull(objReader("uId_Cuahang")) = True, "", Convert.ToString(objReader("uId_Cuahang")))
+                    .nv_Tencuahang_vn = IIf(IsDBNull(objReader("nv_Tencuahang_vn")) = True, "", Convert.ToString(objReader("nv_Tencuahang_vn")))
+                    .nv_Tencuahang_en = IIf(IsDBNull(objReader("nv_Tencuahang_en")) = True, "", Convert.ToString(objReader("nv_Tencuahang_en")))
+                    .nv_Diachi_vn = IIf(IsDBNull(objReader("nv_Diachi_vn")) = True, Nothing, objReader("nv_Diachi_vn"))
+                    .nv_Diachi_en = IIf(IsDBNull(objReader("nv_Diachi_en")) = True, "", objReader("nv_Diachi_en"))
+                    .nv_Dienthoai = IIf(IsDBNull(objReader("nv_Dienthoai")) = True, "", objReader("nv_Dienthoai"))
+                    .v_Macuahang = IIf(IsDBNull(objReader("v_Macuahang")) = True, "", objReader("v_Macuahang"))
+                    .b_Active = IIf(IsDBNull(objReader("b_Active")) = True, 1, objReader("b_Active"))
+                    .v_Email = IIf(IsDBNull(objReader("v_Email")) = True, "", objReader("v_Email"))
+                    .v_passEmail = IIf(IsDBNull(objReader("v_passEmail")) = True, "", objReader("v_passEmail"))
+                End With
+            End If
+            Return obj
+        Catch ex As Exception
+            log.WriteLog(sp, ex.Message)
+            Return New CM.QT_DM_CUAHANGEntity
         End Try
     End Function
 End Class

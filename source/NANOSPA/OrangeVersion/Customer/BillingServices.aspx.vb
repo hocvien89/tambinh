@@ -59,6 +59,8 @@ Public Class BillingServices
             ApplyLayoutDanhsachphieu()
             LoadDropDownList()
             deNgayxuat.Date = DateTime.Now
+            deTungay.Date = DateTime.Now
+            deDenNgay.Date = DateTime.Now
             txtMaphieu.Text = pc.ReturnAutoString("PX")
             If Session("uId_Khachhang") <> Nothing Then
                 LoadThongTinKhachHang()
@@ -91,6 +93,7 @@ Public Class BillingServices
             LoadDSLoaiTT()
         End If
         LoadDropDown_PX()
+        LoadDSPhieu()
     End Sub
     Private Sub LoadDropDown_PX()
         objFcDMKho = New BO.QLMH_DM_KHOFacade
@@ -102,6 +105,12 @@ Public Class BillingServices
         ddlDMKho.TextField = "nv_Tenkho_vn"
         ddlDMKho.DataBind()
         ddlDMKho.SelectedIndex = 1
+        'load danh muc kho tren pupop danh sach phieu da tao
+        ddlDsKho.DataSource = dt
+        ddlDsKho.ValueField = "uId_Kho"
+        ddlDsKho.TextField = "nv_Tenkho_vn"
+        ddlDsKho.DataBind()
+        ddlDsKho.SelectedIndex = 1
 
         Dim listItem0 As New ListEditItem
         listItem0.Value = "0"
@@ -1029,6 +1038,13 @@ Public Class BillingServices
             ddlNhanvien.Value = Session("uId_Nhanvien_Dangnhap")
         End If
     End Sub
+    Private Sub LoadDSPhieu()
+        objFcPhieuxuat = New BO.QLMH_PHIEUXUATFacade
+        Dim dt As DataTable
+        dt = objFcPhieuxuat.Timkiem(ddlDsKho.SelectedItem.Value.ToString, BO.Util.ConvertDateTime(deTungay.Text), BO.Util.ConvertDateTime(deDenNgay.Text), "PX")
+        dgvDanhsachphieu.DataSource = dt
+        dgvDanhsachphieu.DataBind()
+    End Sub
     Protected Sub btnLuu_Click(sender As Object, e As EventArgs)
         If Session("uId_Khachhang") <> Nothing Then
             objFCPhanQuyen = New BO.QT_PHANQUYENFacade
@@ -1148,4 +1164,91 @@ Public Class BillingServices
     Protected Sub grid_Phieuxuat_Chitiet_DataBinding(sender As Object, e As EventArgs)
         Loadphieuchitiet()
     End Sub
+
+    Protected Sub btnFilter_Click(sender As Object, e As EventArgs)
+        LoadDSPhieu()
+    End Sub
+
+    Protected Sub ASPxGridView1_RowDeleting(sender As Object, e As DevExpress.Web.Data.ASPxDataDeletingEventArgs)
+        objFcPhieuxuat = New BO.QLMH_PHIEUXUATFacade
+        objFCNhatKy = New BO.NHATKYSUDUNGFacade
+        Dim objFcTtdKh = New BO.clsB_TTV_KH_Thetichdiem
+        Try
+            Dim uId_Phieuxuat As String
+            Dim v_sophieu As String
+            Dim f_Tongthanhtoan As Double
+            Dim uId_Khachhang As String
+            uId_Phieuxuat = e.Keys(0).ToString
+            v_sophieu = e.Values("v_Maphieuxuat").ToString
+            f_Tongthanhtoan = e.Values("f_Tongtienthuc")
+            uId_Khachhang = e.Values("uId_Khachhang").ToString
+            If objFcTtdKh.SelectByIdKH(uId_Khachhang).Rows.Count > 0 Then
+                Dim dt As DataTable
+                Dim tongtien As Double = 0
+                dt = objFcPhieuxuat.SelectByID_QLMH_PHIEUXUAT_CHITIET(uId_Phieuxuat)
+                If dt.Rows.Count > 0 Then
+                    For i As Integer = 0 To dt.Rows.Count - 1
+                        tongtien += Convert.ToDouble(dt.Rows(i)("f_Tongtien").ToString)
+                    Next
+                End If
+                If f_Tongthanhtoan - tongtien >= 0 Then
+                    Tinhdiemtichluy(objFcTtdKh.SelectByIdKH(uId_Khachhang), f_Tongthanhtoan, "", v_sophieu)
+                    If objFcKhachhang.SelectByID(uId_Khachhang).uId_Nguoigioithieu <> Nothing Then
+                        If objFcTtdKh.SelectByIdKH(objFcKhachhang.SelectByID(uId_Khachhang).uId_Nguoigioithieu).Rows.Count > 0 Then
+                            Tinhdiemtichluy(objFcTtdKh.SelectByIdKH(objFcKhachhang.SelectByID(uId_Khachhang).uId_Nguoigioithieu), f_Tongthanhtoan, "người giới thiệu", v_sophieu)
+                        End If
+                    End If
+                End If
+            End If
+            objFcPhieuxuat.DeleteByID(uId_Phieuxuat)
+            objFCNhatKy.Write(Session("sTendangnhap"), System.Environment.MachineName, "Xóa phiếu xuất mã " & e.Keys(1).ToString)
+            LoadDSPhieu()
+            Session("uId_Phieuxuat") = Nothing
+            Session("uId_Khachhang") = Nothing
+        Catch ex As Exception
+
+        End Try
+        e.Cancel = True
+    End Sub
+#Region "the tich diem "
+    Public Sub Tinhdiemtichluy(dtTheKh As DataTable, tienmathang As Double, str As String, sophieu As String)
+        Dim objFcTtdKh = New BO.clsB_TTV_KH_Thetichdiem
+        Dim objFcTtdLichdu = New BO.clsB_TTV_KH_Thetichdiem_Lichsu
+        Dim objEnTtdLichsu = New CM.cls_TTV_KH_Thetichdiem_LichsuEntity
+        Dim objFcThetichdiem = New BO.clsB_TTV_DM_THETICHDIEM
+        Dim dtDmthe As DataTable
+        dtDmthe = objFcThetichdiem.SelectAllTable(Session("uId_Cuahang").ToString)
+        If dtTheKh.Rows.Count > 0 Then
+            If dtDmthe.Rows.Count > 0 Then
+                For j As Integer = 0 To dtDmthe.Rows.Count - 1 Step 1
+                    If dtDmthe.Rows(j)("uId_Thetichdiem").ToString = dtTheKh.Rows(0)("uId_Thetichdiem").ToString Then
+                        Dim f_diemhientai As Integer = dtTheKh.Rows(0)("f_Diemhientai")
+                        Dim f_Tongtichluy As Integer = dtTheKh.Rows(0)("f_Tongtichluy")
+                        'Dim sodiemdoi As Double = Convert.ToDouble(dtDmthe.Rows(j)("i_Sodiemdoi").ToString)
+                        'Dim sotiendoi As Double = Convert.ToDouble(dtDmthe.Rows(j)("f_Sotiendoi").ToString)
+                        'Dim diemtru = tienmathang * sodiemdoi / sotiendoi
+                        Dim diemtru = tienmathang
+                        If f_diemhientai >= diemtru And f_Tongtichluy >= diemtru Then
+                            f_diemhientai -= diemtru
+                            f_Tongtichluy -= diemtru
+                            objFcTtdKh.UpdatePoint(f_Tongtichluy, f_diemhientai, dtTheKh.Rows(0)("uId_KH_The").ToString)
+                            objEnTtdLichsu = New CM.cls_TTV_KH_Thetichdiem_LichsuEntity
+                            objFcTtdLichdu = New BO.clsB_TTV_KH_Thetichdiem_Lichsu
+                            With objEnTtdLichsu
+                                .b_Luachon = False
+                                .d_Ngaythuchien = DateAndTime.Now
+                                .f_Diem = diemtru
+                                .uId_KH_The = dtTheKh.Rows(0)("uId_KH_The").ToString
+                                .uId_Nhanvien = Session("uId_Nhanvien_Dangnhap").ToString
+                                .uId_Sukien = Nothing
+                                .nv_Noidung = "Trừ điểm " + str + " của phiếu mặt hàng mã: " + sophieu
+                            End With
+                            objFcTtdLichdu.Insert(objEnTtdLichsu)
+                        End If
+                    End If
+                Next
+            End If
+        End If
+    End Sub
+#End Region
 End Class

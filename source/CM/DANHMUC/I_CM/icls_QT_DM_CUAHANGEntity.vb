@@ -18,4 +18,5 @@ Public Interface IQT_DM_CUAHANGEntity
 
     Property v_passEmail() As String
 
+    Property nv_Dienthoai() As String
 End Interface
