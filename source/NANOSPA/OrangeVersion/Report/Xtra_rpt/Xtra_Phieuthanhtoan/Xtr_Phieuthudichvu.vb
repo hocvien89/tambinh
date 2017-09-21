@@ -33,6 +33,7 @@
         lbemail.Text = objEnKhachhang.v_Email
         objEnPhieuDV = objFcPhieudichvu.SelectByID(uId_Phieudichvu)
         lblGiamgia.Text = String.Format("{0:#,##}", Val(objEnPhieuDV.f_Giamgia))
+        lblLydogiamgia.Text = objEnPhieuDV.nv_Lydogiamgia
         lbcongno.Text = String.Format("{0:#,##}", Val(dt_Congno.Rows(0).Item("f_Tienno")))
         lbcuahang.Text = Diachi
         lbsophieu.Text = objEnPhieuDV.v_Sophieu

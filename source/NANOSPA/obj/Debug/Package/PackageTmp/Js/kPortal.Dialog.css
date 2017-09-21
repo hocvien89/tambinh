@@ -1,0 +1,9 @@
+.noscroll { overflow: hidden !important; }
+.close { background: url(images/close.png); width: 13px; height: 13px; display: block; }
+#kZoom { background-color: rgba(170, 170, 170, 0.3); bottom: 0; left: 0; overflow-x: auto; overflow-y: scroll; position: fixed; right: 0; top: 0; z-index: 9999; }
+    #kZoom .boxpanel-view { width: 900px; box-shadow: 0 3px 8px rgba(34, 25, 25, 0.4); padding: 10px; top: 110px !important; margin: 0px auto; position: static; height: 1000px; background: #fff; }
+    #kZoom .k-dialog { background-color: #FCFCFC; box-shadow: 0 3px 8px rgba(34, 25, 25, 0.4); padding: 0; -moz-box-sizing: content-box; overflow: hidden; margin: 0 auto; position: relative; padding-bottom: 30px; border: 1px solid #DDDDDD; margin-bottom: 20px; }
+    #kZoom .k-dialog-title { background-color: #F3F3F3; border-bottom: 1px solid #DDDDDD; height: 18px; padding: 5px; }
+    #kZoom .k-dialog-body { padding: 6px; }
+    #kZoom .k-dialog-footer { background: #ddd; height: 25px; width: 99%; position: absolute; bottom: 0px; left: 0px; padding: 3px; }
+    #kZoom .k-dialog .x-close { position: absolute; right: 5px; top: 5px; }

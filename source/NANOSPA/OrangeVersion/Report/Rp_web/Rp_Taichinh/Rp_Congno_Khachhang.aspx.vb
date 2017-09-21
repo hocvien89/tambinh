@@ -27,8 +27,14 @@
         Try
             dt = objFckhachhang.SelectCognoBytime(TuNgay, DenNgay, uId_Cuahang)
             Xtr.bind(dt)
-            Xtr.lb_Diachi.Text = nv_DiachiCuahang_vn
-            Xtr.lbl_Tencuahang.Text = nv_Tencuahang_vn
+            Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+            Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+            objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+            Xtr.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+            Xtr.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+            Xtr.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+            Xtr.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+
             ReportViewer1.Report = Xtr
         Catch ex As Exception
 

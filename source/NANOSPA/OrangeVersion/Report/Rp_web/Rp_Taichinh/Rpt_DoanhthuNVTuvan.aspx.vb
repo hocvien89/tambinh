@@ -17,8 +17,15 @@ Public Class Rpt_DoanhthuNVTuvan
         dt = objFcBaocao.DoanhthuTV(cbonhanvien.SelectedItem.Value.ToString, Aspx_Tungay.Date, Aspx_Denngay.Date)
         Dim BC As New Xtr_DoanhthuNVTuvan
         BC.BindingSource1.DataSource = dt
-        BC.lbcuahang.Text = Session("nv_Tencuahang_vn").ToString
-        BC.lbdiachi.Text = Session("nv_DiachiCH_vn").ToString
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+        BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+        BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+        BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        Dim datenow As DateTime = Date.Now
+        BC.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
         BC.lbtungay.Text = Aspx_Tungay.Text
         BC.lndenngay.Text = Aspx_Denngay.Text
         BC.lbnhanvien.Text = Session("sTendangnhap").ToString

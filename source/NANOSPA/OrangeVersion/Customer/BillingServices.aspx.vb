@@ -106,13 +106,18 @@ Public Class BillingServices
         ddlDMKho.DataBind()
         ddlDMKho.SelectedIndex = 1
         'load danh muc kho tren pupop danh sach phieu da tao
-        ddlDsKho.DataSource = dt
-        ddlDsKho.ValueField = "uId_Kho"
-        ddlDsKho.TextField = "nv_Tenkho_vn"
-        ddlDsKho.DataBind()
-        ddlDsKho.SelectedIndex = 1
-
         Dim listItem0 As New ListEditItem
+        listItem0.Value = "0"
+        listItem0.Text = "Tất cả"
+        ddlDsKho.Items.Add(listItem0)
+        For Each row As DataRow In dt.Rows
+            Dim listItem As New ListEditItem
+            listItem.Value = row("uId_Kho")
+            listItem.Text = row("nv_Tenkho_vn")
+            ddlDsKho.Items.Add(listItem)
+        Next
+        ddlDsKho.Value = "0"
+
         listItem0.Value = "0"
         listItem0.Text = "Tất cả"
         dt = New DataTable
@@ -963,8 +968,14 @@ Public Class BillingServices
         objFcPhieuxuat = New BO.QLMH_PHIEUXUATFacade
         If Session("uId_Phieuxuat") <> Nothing Then
             objEnPhieuxuat = objFcPhieuxuat.SelectByID(BO.Util.IsString(Session("uId_Phieuxuat")))
+
             Dim dt As DataTable
-            dt = objFcDmMathang.Bang_Tonghop_Ton(DateTime.Now, objEnPhieuxuat.d_Ngayxuat, objEnPhieuxuat.uId_Kho.ToString, Session("uId_Cuahang"))
+            If String.IsNullOrEmpty(objEnPhieuxuat.uId_Phieuxuat) = False Then
+                dt = objFcDmMathang.Bang_Tonghop_Ton(DateTime.Now, objEnPhieuxuat.d_Ngayxuat, objEnPhieuxuat.uId_Kho.ToString, Session("uId_Cuahang"))
+            Else
+                dt = objFcDmMathang.Bang_Tonghop_Ton(DateTime.Now, DateTime.Now, ddlDMKho.Value, Session("uId_Cuahang"))
+
+            End If
             If dt.Rows.Count > 0 Then
                 ddlMathang.DataSource = dt
                 ddlMathang.ValueField = "uId_Mathang"
@@ -1042,8 +1053,8 @@ Public Class BillingServices
         objFcPhieuxuat = New BO.QLMH_PHIEUXUATFacade
         Dim dt As DataTable
         dt = objFcPhieuxuat.Timkiem(ddlDsKho.SelectedItem.Value.ToString, BO.Util.ConvertDateTime(deTungay.Text), BO.Util.ConvertDateTime(deDenNgay.Text), "PX")
-        dgvDanhsachphieu.DataSource = dt
-        dgvDanhsachphieu.DataBind()
+        ASPxGridView1.DataSource = dt
+        ASPxGridView1.DataBind()
     End Sub
     Protected Sub btnLuu_Click(sender As Object, e As EventArgs)
         If Session("uId_Khachhang") <> Nothing Then

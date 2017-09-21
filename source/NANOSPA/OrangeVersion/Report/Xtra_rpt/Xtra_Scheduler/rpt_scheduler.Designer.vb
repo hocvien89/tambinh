@@ -28,6 +28,7 @@ Partial Public Class rpt_scheduler
         Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell15 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell12 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell20 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell13 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell14 = New DevExpress.XtraReports.UI.XRTableCell()
@@ -38,8 +39,6 @@ Partial Public Class rpt_scheduler
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTungay = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSpaName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSpaAddress = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNgaylap = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
@@ -48,11 +47,11 @@ Partial Public Class rpt_scheduler
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell19 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell8 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell6 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell9 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
-        Me.XrLabel28 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNhanvien = New DevExpress.XtraReports.UI.XRLabel()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Location = New DevExpress.XtraReports.UI.CalculatedField()
@@ -64,12 +63,16 @@ Partial Public Class rpt_scheduler
         Me.UniqueID = New DevExpress.XtraReports.UI.CalculatedField()
         Me.StartDate = New DevExpress.XtraReports.UI.CalculatedField()
         Me.EndDate = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.XrTableCell19 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell20 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.d_Start_Hour = New DevExpress.XtraReports.UI.CalculatedField()
         Me.d_End_Hour = New DevExpress.XtraReports.UI.CalculatedField()
         Me.nv_Tendichvu_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.ResourceName = New DevExpress.XtraReports.UI.CalculatedField()
+        Me.lblDienthoai = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.lblNgay = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,6 +139,13 @@ Partial Public Class rpt_scheduler
         Me.XrTableCell12.Text = "XrTableCell12"
         Me.XrTableCell12.Weight = 1.0432953924020554R
         '
+        'XrTableCell20
+        '
+        Me.XrTableCell20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "ResourceName")})
+        Me.XrTableCell20.Name = "XrTableCell20"
+        Me.XrTableCell20.Text = "XrTableCell20"
+        Me.XrTableCell20.Weight = 0.52078779133650954R
+        '
         'XrTableCell3
         '
         Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "trangthai")})
@@ -173,13 +183,13 @@ Partial Public Class rpt_scheduler
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDenngay, Me.XrLabel4, Me.lblTungay, Me.XrLabel2, Me.lblSpaName, Me.lblSpaAddress, Me.lblNgaylap, Me.XrLabel1, Me.XrTable2})
-        Me.ReportHeader.HeightF = 153.1251!
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDienthoai, Me.lblPKName, Me.lblDiachi, Me.XrPictureBox_logo, Me.lblDenngay, Me.XrLabel4, Me.lblTungay, Me.XrLabel2, Me.lblNgaylap, Me.XrLabel1, Me.XrTable2})
+        Me.ReportHeader.HeightF = 186.4585!
         Me.ReportHeader.Name = "ReportHeader"
         '
         'lblDenngay
         '
-        Me.lblDenngay.LocationFloat = New DevExpress.Utils.PointFloat(618.6199!, 84.62499!)
+        Me.lblDenngay.LocationFloat = New DevExpress.Utils.PointFloat(616.5365!, 125.25!)
         Me.lblDenngay.Multiline = True
         Me.lblDenngay.Name = "lblDenngay"
         Me.lblDenngay.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -188,7 +198,7 @@ Partial Public Class rpt_scheduler
         '
         'XrLabel4
         '
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(552.9949!, 84.62499!)
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(550.9115!, 125.25!)
         Me.XrLabel4.Multiline = True
         Me.XrLabel4.Name = "XrLabel4"
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -197,7 +207,7 @@ Partial Public Class rpt_scheduler
         '
         'lblTungay
         '
-        Me.lblTungay.LocationFloat = New DevExpress.Utils.PointFloat(460.5991!, 84.62499!)
+        Me.lblTungay.LocationFloat = New DevExpress.Utils.PointFloat(458.5158!, 125.25!)
         Me.lblTungay.Multiline = True
         Me.lblTungay.Name = "lblTungay"
         Me.lblTungay.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -206,28 +216,12 @@ Partial Public Class rpt_scheduler
         '
         'XrLabel2
         '
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(405.3908!, 84.62499!)
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(403.3075!, 125.25!)
         Me.XrLabel2.Multiline = True
         Me.XrLabel2.Name = "XrLabel2"
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(55.2083!, 23.0!)
         Me.XrLabel2.Text = "Từ ngày:"
-        '
-        'lblSpaName
-        '
-        Me.lblSpaName.LocationFloat = New DevExpress.Utils.PointFloat(21.52081!, 0.0!)
-        Me.lblSpaName.Name = "lblSpaName"
-        Me.lblSpaName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSpaName.SizeF = New System.Drawing.SizeF(288.5417!, 23.0!)
-        Me.lblSpaName.Text = "lblSpaName"
-        '
-        'lblSpaAddress
-        '
-        Me.lblSpaAddress.LocationFloat = New DevExpress.Utils.PointFloat(21.52081!, 23.0!)
-        Me.lblSpaAddress.Name = "lblSpaAddress"
-        Me.lblSpaAddress.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSpaAddress.SizeF = New System.Drawing.SizeF(439.625!, 23.0!)
-        Me.lblSpaAddress.Text = "lblSpaAddress"
         '
         'lblNgaylap
         '
@@ -241,7 +235,7 @@ Partial Public Class rpt_scheduler
         'XrLabel1
         '
         Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(275.1825!, 46.0!)
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(273.0992!, 86.625!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(558.9581!, 25.08332!)
@@ -257,7 +251,7 @@ Partial Public Class rpt_scheduler
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTable2.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 121.875!)
+        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 155.2084!)
         Me.XrTable2.Name = "XrTable2"
         Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow2})
         Me.XrTable2.SizeF = New System.Drawing.SizeF(1109.0!, 31.25!)
@@ -300,6 +294,13 @@ Partial Public Class rpt_scheduler
         Me.XrTableCell7.Text = "Dịch vụ"
         Me.XrTableCell7.Weight = 1.0147303892231918R
         '
+        'XrTableCell19
+        '
+        Me.XrTableCell19.CanGrow = False
+        Me.XrTableCell19.Name = "XrTableCell19"
+        Me.XrTableCell19.Text = "Phòng"
+        Me.XrTableCell19.Weight = 0.506529005311541R
+        '
         'XrTableCell8
         '
         Me.XrTableCell8.CanGrow = False
@@ -323,31 +324,18 @@ Partial Public Class rpt_scheduler
         '
         'ReportFooter
         '
-        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel28, Me.lblNhanvien})
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblNgay, Me.XrLabel3, Me.lblNhanvien})
         Me.ReportFooter.HeightF = 110.2499!
         Me.ReportFooter.Name = "ReportFooter"
-        '
-        'XrLabel28
-        '
-        Me.XrLabel28.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel28.LocationFloat = New DevExpress.Utils.PointFloat(953.3332!, 15.20834!)
-        Me.XrLabel28.Multiline = True
-        Me.XrLabel28.Name = "XrLabel28"
-        Me.XrLabel28.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel28.SizeF = New System.Drawing.SizeF(91.66663!, 23.0!)
-        Me.XrLabel28.StylePriority.UseFont = False
-        Me.XrLabel28.StylePriority.UseTextAlignment = False
-        Me.XrLabel28.Text = "Nhân viên"
-        Me.XrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'lblNhanvien
         '
         Me.lblNhanvien.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lblNhanvien.LocationFloat = New DevExpress.Utils.PointFloat(913.1251!, 38.20832!)
+        Me.lblNhanvien.LocationFloat = New DevExpress.Utils.PointFloat(891.3959!, 51.74999!)
         Me.lblNhanvien.Multiline = True
         Me.lblNhanvien.Name = "lblNhanvien"
         Me.lblNhanvien.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblNhanvien.SizeF = New System.Drawing.SizeF(179.8333!, 23.0!)
+        Me.lblNhanvien.SizeF = New System.Drawing.SizeF(201.5624!, 23.0!)
         Me.lblNhanvien.StylePriority.UseFont = False
         Me.lblNhanvien.StylePriority.UseTextAlignment = False
         Me.lblNhanvien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
@@ -388,20 +376,6 @@ Partial Public Class rpt_scheduler
         '
         Me.EndDate.Name = "EndDate"
         '
-        'XrTableCell19
-        '
-        Me.XrTableCell19.CanGrow = False
-        Me.XrTableCell19.Name = "XrTableCell19"
-        Me.XrTableCell19.Text = "Phòng"
-        Me.XrTableCell19.Weight = 0.506529005311541R
-        '
-        'XrTableCell20
-        '
-        Me.XrTableCell20.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "ResourceName")})
-        Me.XrTableCell20.Name = "XrTableCell20"
-        Me.XrTableCell20.Text = "XrTableCell20"
-        Me.XrTableCell20.Weight = 0.52078779133650954R
-        '
         'd_Start_Hour
         '
         Me.d_Start_Hour.Name = "d_Start_Hour"
@@ -417,6 +391,65 @@ Partial Public Class rpt_scheduler
         'ResourceName
         '
         Me.ResourceName.Name = "ResourceName"
+        '
+        'lblDienthoai
+        '
+        Me.lblDienthoai.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDienthoai.LocationFloat = New DevExpress.Utils.PointFloat(93.90182!, 71.08332!)
+        Me.lblDienthoai.Multiline = True
+        Me.lblDienthoai.Name = "lblDienthoai"
+        Me.lblDienthoai.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDienthoai.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.lblDienthoai.StylePriority.UseFont = False
+        Me.lblDienthoai.Text = "ĐT: 024 3734 5600"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(93.90182!, 21.08332!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
+        Me.lblPKName.StylePriority.UseFont = False
+        Me.lblPKName.StylePriority.UseTextAlignment = False
+        Me.lblPKName.Text = "lblPKName"
+        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(93.90189!, 46.08332!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
+        Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(10.99218!, 18.0!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(82.90964!, 76.08333!)
+        '
+        'lblNgay
+        '
+        Me.lblNgay.LocationFloat = New DevExpress.Utils.PointFloat(891.3959!, 9.916687!)
+        Me.lblNgay.Name = "lblNgay"
+        Me.lblNgay.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblNgay.SizeF = New System.Drawing.SizeF(201.5624!, 20.91666!)
+        Me.lblNgay.StylePriority.UseTextAlignment = False
+        Me.lblNgay.Text = "Ngày:.....Tháng.....Năm........."
+        Me.lblNgay.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(891.3959!, 30.83334!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(201.5624!, 20.91666!)
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "Người lập"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'rpt_scheduler
         '
@@ -442,8 +475,6 @@ Partial Public Class rpt_scheduler
     Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSpaName As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSpaAddress As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblNgaylap As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblTungay As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
@@ -473,7 +504,6 @@ Partial Public Class rpt_scheduler
     Friend WithEvents nv_Hoten_vn As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents nv_HotenNhanvien As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents UniqueID As DevExpress.XtraReports.UI.CalculatedField
-    Friend WithEvents XrLabel28 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblNhanvien As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTableCell15 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell16 As DevExpress.XtraReports.UI.XRTableCell
@@ -485,4 +515,10 @@ Partial Public Class rpt_scheduler
     Friend WithEvents d_End_Hour As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents nv_Tendichvu_vn As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents ResourceName As DevExpress.XtraReports.UI.CalculatedField
+    Friend WithEvents lblDienthoai As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrPictureBox_logo As DevExpress.XtraReports.UI.XRPictureBox
+    Public WithEvents lblNgay As DevExpress.XtraReports.UI.XRLabel
+    Public WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
 End Class

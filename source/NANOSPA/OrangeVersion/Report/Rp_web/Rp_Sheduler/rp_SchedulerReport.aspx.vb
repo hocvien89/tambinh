@@ -48,6 +48,15 @@ Public Class rp_SchedulerReport
             nv_tenkhachhang_vn = txtTenkhachhang.Text
         End If
         Dim rpt As rpt_scheduler = New rpt_scheduler
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        rpt.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+        rpt.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+        rpt.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+        rpt.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        Dim datenow As DateTime = Date.Now
+        rpt.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
         rpt.BindData(ddlCuahang.SelectedItem.Value, deTuNgay.Text, deDenNgay.Text, Session("nv_Tencuahang_vn"), Session("nv_DiachiCH_vn"), Integer.Parse(ddlTrangthai.SelectedItem.Value), nv_tenkhachhang_vn, cb_Phong.SelectedItem.Value)
         ReportViewer1.Report = rpt
     End Sub

@@ -66,8 +66,15 @@ Public Class Rp_TonghopNhap
         ReportViewer1.Report = bc
         bc.lbl_Tungay.Text = Aspx_Tungay.Text
         bc.lbl_Denngay.Text = Aspx_Denngay.Text
-        bc.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn").ToString
-        bc.lbl_diachi.Text = Session("nv_DiachiCH_vn").ToString
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        bc.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+        bc.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+        bc.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+        bc.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        Dim datenow As DateTime = Date.Now
+        bc.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
     End Sub
 
     Private Sub loadTime()

@@ -31,6 +31,15 @@
         Dim d_Denngay As Date = BO.Util.ConvertDateTime(Aspx_Denngay.Text)
         Dim uId_Nhanvien As String = cb_Nhanvien.Value.ToString
         dt = objFc_Nhanvien.Baocao_Nhanvien_Kythuat(d_Tungay, d_Denngay, uId_Nhanvien)
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+        BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+        BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+        BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        Dim datenow As DateTime = Date.Now
+        BC.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
         BC.Bindata(dt)
         ReportViewer_BC.Report = BC
     End Sub

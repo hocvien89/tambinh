@@ -53,8 +53,14 @@
             BC.bind(dt)
             ReportViewer1.Report = BC
             'Dispose\
-            BC.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn")
-            BC.lbl_Diachi.Text = Session("nv_DiachiCH_vn")
+            Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+            Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+            objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+            BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+            BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+            BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+            BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+
             BC.lbl_Tungay.Text = Aspx_Tungay.Text
             BC.lbl_Denngay.Text = Aspx_Denngay.Text
             dt = Nothing

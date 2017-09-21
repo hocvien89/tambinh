@@ -24,8 +24,15 @@
             ReportViewer1.Report = xtra
         xtra.lbl_Tungay.Text = Aspx_Tungay.Text
         xtra.lbl_Denngay.Text = Aspx_Denngay.Text
-        xtra.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn")
-        xtra.lbl_Diachi.Text = Session("nv_DiachiCH_vn")
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        xtra.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
+        xtra.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
+        xtra.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
+        xtra.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        Dim datenow As DateTime = Date.Now
+        xtra.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
     End Sub
 
     Private Sub loadTime()
