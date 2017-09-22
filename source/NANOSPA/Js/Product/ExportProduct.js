@@ -1,6 +1,7 @@
 ﻿SelChanged_dsphieu// ExportProduct.aspx
 function GetThongTinPhieu() {
-    var param_dt = "{'uId_Phieuxuat':'" + jo_GetSession("uId_Phieuxuat") + "'}";
+    //var param_dt = "{'uId_Phieuxuat':'" + jo_GetSession("uId_Phieuxuat") + "'}";
+    //var pageUrl = "../../../../Webservice/nano_websv.asmx/LoadThongTinPhieuXuat";
     var pageUrl = "../../../../Webservice/nano_websv.asmx/LoadThongTinPhieuXuat";
     $.ajax({
         type: "POST",
@@ -121,12 +122,12 @@ function OnGridSelectionDSPhieuComplete(values) {
     jo_CreateSession("uId_Phieuxuat", values[0]);
     jo_CreateSession("uId_Khachhang", values[2]);
     client_grid.Refresh();
-    var param_dt = "{'uId_Phieuxuat':'" + values[0] + "'}";
-    var pageUrl = "../../../../Webservice/nano_websv.asmx/LoadThongTinPhieuXuat";
+    //var param_dt = "{'uId_Phieuxuat':'" + values[0] + "'}";
+    var pageUrl = "../../../../Webservice/nano_websv.asmx/LoadThongTinPhieuXuatChuaThanhToan";
     $.ajax({
         type: "POST",
         url: pageUrl,
-        data: param_dt,
+        //data: param_dt,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         async: false,
