@@ -391,7 +391,7 @@
             var b_Check = cbkchike.GetChecked();
             var txtMaphieu = document.getElementById("<%=txtMaphieu.ClientID%>");
                     var txtGhichu = document.getElementById("<%=txtGhichu.ClientID%>");
-                    var sPara = ddlDMKho.GetValue() + "$" + ddlNhanvien.GetValue() + "$" + txtMaphieu.value + "$" + deNgayxuat.GetText() + "$" + txtGhichu.value + "$" + b_Check;
+            var sPara = ddlDMKho.GetValue() + "$" + ddlNhanvien.GetValue() + "$" + txtMaphieu.value + "$" + deNgayxuat.GetText() + "$" + txtGhichu.value + "$" + b_Check + "$" + txtsothang.GetText();
                     var param_dt = "{'sPara':'" + sPara + "'}";
                     var pageUrl = "../../../../Webservice/nano_websv.asmx/InsertPhieuxuat";
                     $.ajax({
@@ -789,7 +789,7 @@
 <%--                            <dx:ASPxCheckBox runat="server" ID="chkGia" ClientInstanceName="chkgia" style="float:left; padding-right:10px">
                                 <ClientSideEvents CheckedChanged="chkgiachange" />
                             </dx:ASPxCheckBox>--%>
-                            <dx:ASPxTextBox runat="server" Enabled="false" onkeyup="txtGiathangKey()" Width="200px" ClientInstanceName="txtdongiathang" style="float:left"  ID="txtDongiathang">
+                            <dx:ASPxTextBox runat="server"  onkeyup="txtGiathangKey()" Width="200px" ClientInstanceName="txtdongiathang" style="float:left"  ID="txtDongiathang">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>

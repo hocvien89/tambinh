@@ -1269,6 +1269,7 @@ Public Class nano_websv
                 objEnPhieuxuat.f_Giamgia_Tong = 0
                 objEnPhieuxuat.f_Tongtienthuc = 0
                 objEnPhieuxuat.b_Dathanhtoan = Boolean.Parse(sList(5))
+                objEnPhieuxuat.i_Soluog = Convert.ToInt32(sList(6))
                 If Session("uId_Phieuxuat") = Nothing Then
                     Dim dt_Test As DataTable
                     dt_Test = objFcPhieuxuat.SelectBySoPhieuXuat(sList(2))
