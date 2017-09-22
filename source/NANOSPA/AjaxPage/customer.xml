@@ -23,6 +23,7 @@
     <data unit="19" value="0" />
     <data unit="20" value="0" />
     <data unit="21" value="0" />
+    <data unit="22" value="0" />
   </dataset>
   <optionset>
     <option set="setSize" value="950, 250" />

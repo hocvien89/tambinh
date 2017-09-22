@@ -11,6 +11,7 @@ Public Class Inventory
             LoadDropDownlist()
         End If
         LoadDataGrid()
+        LoadLayout()
     End Sub
 #Region "Load thong tin"
     Private Sub LoadDropDownlist()
@@ -49,6 +50,18 @@ Public Class Inventory
     End Sub
     Private Sub btnback_Click(sender As Object, e As EventArgs) Handles btnback.Click
         Response.Redirect("~/OrangeVersion/Product/ReportForm_Product.aspx")
+    End Sub
+#End Region
+#Region "set layout"
+    Private Sub LoadLayout()
+        Dim objFcNhanvien As New BO.QT_DM_NHANVIENFacade
+        Dim username As String
+        username = objFcNhanvien.SelectByID(Session("uId_Nhanvien_Dangnhap")).v_Tendangnhap
+        If username.ToLower() = "admin" Then
+            dgvDevexpress.Columns("f_GT_Nhap").Visible = True
+        Else
+            dgvDevexpress.Columns("f_GT_Nhap").Visible = False
+        End If
     End Sub
 #End Region
 End Class

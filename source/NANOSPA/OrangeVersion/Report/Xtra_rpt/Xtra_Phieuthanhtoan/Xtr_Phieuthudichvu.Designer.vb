@@ -946,7 +946,12 @@ Partial Public Class Xtr_Phieuthudichvu
         '
         'lblLydogiamgia
         '
+        Me.lblLydogiamgia.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) _
+            Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.lblLydogiamgia.Name = "lblLydogiamgia"
+        Me.lblLydogiamgia.Padding = New DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100.0!)
+        Me.lblLydogiamgia.StylePriority.UseBorders = False
+        Me.lblLydogiamgia.StylePriority.UsePadding = False
         Me.lblLydogiamgia.StylePriority.UseTextAlignment = False
         Me.lblLydogiamgia.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         Me.lblLydogiamgia.Weight = 1.5464100709650295R

@@ -25,7 +25,6 @@
                 rp_A6.BindData(Session("uId_Phieudichvu"), Session("uId_Khachhang"), Session("nv_Tencuahang_vn"), Session("nv_DiachiCH_vn"))
                 ReportViewerControl.ReportViewer.Report = rp_A6
             ElseIf oThamsohethong.v_Giatri = "1" Then
-
                 Dim rp_A5 As New Xtr_Phieuthudichvu 'May in A5 doc
                 Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
                 Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
