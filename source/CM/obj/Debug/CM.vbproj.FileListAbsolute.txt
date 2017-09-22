@@ -126,14 +126,6 @@ E:\NANO\SPA\Spa_Datdaiduong\CM\obj\Debug\CM.vbproj.GenerateResource.Cache
 E:\NANO\SPA\Spa_Datdaiduong\CM\obj\Debug\CM.dll
 E:\NANO\SPA\Spa_Datdaiduong\CM\obj\Debug\CM.xml
 E:\NANO\SPA\Spa_Datdaiduong\CM\obj\Debug\CM.pdb
-E:\Github\tambinh\source\CM\bin\Debug\CM.dll
-E:\Github\tambinh\source\CM\bin\Debug\CM.pdb
-E:\Github\tambinh\source\CM\bin\Debug\CM.xml
-E:\Github\tambinh\source\CM\obj\Debug\CM.Resources.resources
-E:\Github\tambinh\source\CM\obj\Debug\CM.vbproj.GenerateResource.Cache
-E:\Github\tambinh\source\CM\obj\Debug\CM.dll
-E:\Github\tambinh\source\CM\obj\Debug\CM.xml
-E:\Github\tambinh\source\CM\obj\Debug\CM.pdb
 E:\HieuTX\Myproject\source\CM\bin\Debug\CM.dll
 E:\HieuTX\Myproject\source\CM\bin\Debug\CM.pdb
 E:\HieuTX\Myproject\source\CM\bin\Debug\CM.xml
@@ -150,3 +142,11 @@ E:\HieuTX\Myproject\2017\tambinh\source\CM\obj\Debug\CM.vbproj.GenerateResource.
 E:\HieuTX\Myproject\2017\tambinh\source\CM\obj\Debug\CM.dll
 E:\HieuTX\Myproject\2017\tambinh\source\CM\obj\Debug\CM.xml
 E:\HieuTX\Myproject\2017\tambinh\source\CM\obj\Debug\CM.pdb
+E:\Github\tambinh\source\CM\bin\Debug\CM.dll
+E:\Github\tambinh\source\CM\bin\Debug\CM.pdb
+E:\Github\tambinh\source\CM\bin\Debug\CM.xml
+E:\Github\tambinh\source\CM\obj\Debug\CM.Resources.resources
+E:\Github\tambinh\source\CM\obj\Debug\CM.vbproj.GenerateResource.Cache
+E:\Github\tambinh\source\CM\obj\Debug\CM.dll
+E:\Github\tambinh\source\CM\obj\Debug\CM.xml
+E:\Github\tambinh\source\CM\obj\Debug\CM.pdb

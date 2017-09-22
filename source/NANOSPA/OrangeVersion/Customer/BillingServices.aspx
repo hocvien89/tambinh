@@ -1293,7 +1293,7 @@
               var b_Check = cbkchike.GetChecked();
               var txtMaphieu = document.getElementById("<%=txtMaphieu.ClientID%>");
             var txtGhichu = document.getElementById("<%=txtGhichu_PX.ClientID%>");
-            var sPara = ddlDMKho.GetValue() + "$" + ddlNhanvien.GetValue() + "$" + txtMaphieu.value + "$" + deNgayxuat.GetText() + "$" + txtGhichu.value + "$" + b_Check;
+            var sPara = ddlDMKho.GetValue() + "$" + ddlNhanvien.GetValue() + "$" + txtMaphieu.value + "$" + deNgayxuat.GetText() + "$" + txtGhichu.value + "$" + b_Check + "$" +txtsothang.GetText();
             var param_dt = "{'sPara':'" + sPara + "'}";
             var pageUrl = "../../../../Webservice/nano_websv.asmx/InsertPhieuxuat";
             $.ajax({

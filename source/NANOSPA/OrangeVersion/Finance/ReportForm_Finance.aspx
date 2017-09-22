@@ -93,9 +93,9 @@
                             Báo cáo DT theo bác sĩ và kỹ thuật viên</a>
                     </td>
                     <td class="info_table_td_report">
-                        <%-- <a href="../Report/Rp_web/Rp_Taichinh/Rp_Sonhatky_Chung.aspx" style="text-decoration: none">
+                         <a href="../Report/Rp_web/Rp_Taichinh/Rp_Tonghop_Dichvu.aspx" style="text-decoration: none">
                             <img class="img-login" src="../../images/orange/reporticon.png" /><br />
-                            Sổ nhật ký</a>--%>
+                            Báo cáo tổng hợp dịch vụ</a>
 <%--                        <asp:ImageButton ID="btnKhoaso" OnClick="btnKhoaso_Click" ImageUrl="../../images/orange/reporticon.png" CssClass="img-login" runat="server"></asp:ImageButton></br>
                         Khóa sổ--%>
                     </td>

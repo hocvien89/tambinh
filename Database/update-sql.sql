@@ -78,3 +78,50 @@ where uId_Mathang=@uId_Mathang and px.uId_Phieuxuat = pxct.uId_Phieuxuat and px.
 return @value
 end
 go
+
+-- update bao cao doanh thu chi tiet mat hang
+ALTER FUNCTION [dbo].[Get_TongTiennhan_PXChitiet](@uId_Phieuxuat uniqueidentifier)
+RETURNS float
+as
+Begin
+Declare @ValReturn float
+SELECT @ValReturn = sum(pxct.f_Tongtien*px.i_Sothang)
+	FROM QLMH_PHIEUXUAT_CHITIET pxct inner join qlmh_phieuxuat px on 
+	pxct.uId_phieuxuat=px.uid_phieuxuat
+where pxct.uId_Phieuxuat  = @uId_Phieuxuat
+return @ValReturn 
+End
+go
+
+--update bao cao tong hop dich vu
+ALTER proc [dbo].[spBAOCAO_DICHVU_Uachuong]
+@uId_Cuahang as nvarchar(50)='',
+@Tungay as datetime='1/1/2010',
+@Denngay as datetime='12/12/2017'
+as
+begin
+if @uId_Cuahang=''
+begin
+	select distinct pct.uId_Dichvu, COUNT(pct.uId_Dichvu) solan , nv_Tendichvu_vn,nv_TennhomDichvu_vn,f_Gia,COUNT(pct.uId_Dichvu)*f_Gia as f_Tongtien,
+	(select sum(f_Giamgia) from TNTP_PHIEUDICHVU_CHITIET where uId_Dichvu=pct.uid_dichvu) as f_Giamgia,isnull(sum(pdv.f_Tongtienthuc),0) as f_Thanhtoan
+	,(COUNT(pct.uId_Dichvu)*f_Gia-isnull(sum(pdv.f_Tongtienthuc),0)) as f_No
+	from TNTP_PHIEUDICHVU_CHITIET pct, TNTP_PHIEUDICHVU pdv,TNTP_DM_DICHVU dv,TNTP_DM_NHOMDICHVU ndv
+	where pdv.uId_Phieudichvu=pct.uId_Phieudichvu 
+	and pct.uId_Dichvu=dv.uId_Dichvu
+	and dv.uId_Nhomdichvu=ndv.uId_Nhomdichvu
+	and @Tungay<=pdv.d_Ngay and pdv.d_Ngay<=@Denngay
+	group by pct.uId_Dichvu,nv_Tendichvu_vn,nv_TennhomDichvu_vn,f_Gia
+	end
+	else
+	begin
+	select distinct pct.uId_Dichvu, COUNT(pct.uId_Dichvu) solan , nv_Tendichvu_vn,nv_TennhomDichvu_vn,f_Gia,COUNT(pct.uId_Dichvu)*f_Gia as f_Tongtien,
+	(select sum(f_Giamgia) from TNTP_PHIEUDICHVU_CHITIET where uId_Dichvu=pct.uid_dichvu) as f_Giamgia,isnull(sum(pdv.f_Tongtienthuc),0) as f_Thanhtoan
+	,(COUNT(pct.uId_Dichvu)*f_Gia-isnull(sum(pdv.f_Tongtienthuc),0)) as f_No
+	from TNTP_PHIEUDICHVU_CHITIET pct, TNTP_PHIEUDICHVU pdv,TNTP_DM_DICHVU dv,TNTP_DM_NHOMDICHVU ndv
+	where pdv.uId_Phieudichvu=pct.uId_Phieudichvu 
+	and pct.uId_Dichvu=dv.uId_Dichvu
+	and dv.uId_Nhomdichvu=ndv.uId_Nhomdichvu
+	and @Tungay<=pdv.d_Ngay and pdv.d_Ngay<=@Denngay and pdv.uId_Cuahang=@uId_Cuahang
+	group by pct.uId_Dichvu,nv_Tendichvu_vn,nv_TennhomDichvu_vn,f_Gia
+	end
+end

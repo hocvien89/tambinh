@@ -88,13 +88,13 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Dv
         Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.tonggiamgia = New DevExpress.XtraReports.UI.CalculatedField()
         Me.FormattingRule1 = New DevExpress.XtraReports.UI.FormattingRule()
         Me.giamgiaphieu = New DevExpress.XtraReports.UI.CalculatedField()
         Me.giamgia = New DevExpress.XtraReports.UI.CalculatedField()
         Me.giam = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -296,7 +296,7 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Dv
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(154.517!, 22.99999!)
         Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "CÁN BỘ LẬP BÁO CÁO"
+        Me.XrLabel3.Text = "Người lập"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'lbl_Ngaythangnam
@@ -682,6 +682,24 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Dv
         Me.ReportHeader.HeightF = 178.4948!
         Me.ReportHeader.Name = "ReportHeader"
         '
+        'XrLabel14
+        '
+        Me.XrLabel14.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(102.5507!, 66.42823!)
+        Me.XrLabel14.Multiline = True
+        Me.XrLabel14.Name = "XrLabel14"
+        Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel14.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
+        Me.XrLabel14.StylePriority.UseFont = False
+        Me.XrLabel14.Text = "ĐT: 024 3734 5600"
+        '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 20.42823!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(92.55074!, 76.18!)
+        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
         'tonggiamgia
         '
         Me.tonggiamgia.FieldType = DevExpress.XtraReports.UI.FieldType.[Double]
@@ -703,24 +721,6 @@ Partial Public Class Xtr_Chitiet_Doanhthu_Dv
         'giam
         '
         Me.giam.Name = "giam"
-        '
-        'XrLabel14
-        '
-        Me.XrLabel14.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(102.5507!, 66.42823!)
-        Me.XrLabel14.Multiline = True
-        Me.XrLabel14.Name = "XrLabel14"
-        Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel14.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
-        Me.XrLabel14.StylePriority.UseFont = False
-        Me.XrLabel14.Text = "ĐT: 024 3734 5600"
-        '
-        'XrPictureBox_logo
-        '
-        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 20.42823!)
-        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
-        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(92.55074!, 76.18!)
-        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'Xtr_Chitiet_Doanhthu_Dv
         '

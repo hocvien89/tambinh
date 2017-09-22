@@ -1748,6 +1748,7 @@
     <Content Include="OrangeVersion\Report\Rp_web\Rp_Phieuthanhtoan\rpt_Phieunhapsp.aspx" />
     <Content Include="OrangeVersion\Report\Rp_web\Rp_Phieuthuchi\rp_InHoadontonghop.aspx" />
     <Content Include="OrangeVersion\Report\Rp_web\Rp_Phieuthuchi\rp_Inphieuthuchi.aspx" />
+    <Content Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\Rp_Tonghop_Dichvu.aspx" />
     <Content Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\Rpt_DoanhthuNVTuvan.aspx" />
     <Content Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\rpt_HH_Phieudichvu.aspx" />
     <Content Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\rp_Baocao_Dichvu_Tonghop.aspx" />
@@ -2478,6 +2479,13 @@
       <DependentUpon>rp_Inphieuthuchi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\Rp_Tonghop_Dichvu.aspx.designer.vb">
+      <DependentUpon>Rp_Tonghop_Dichvu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\Rp_Tonghop_Dichvu.aspx.vb">
+      <DependentUpon>Rp_Tonghop_Dichvu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="OrangeVersion\Report\Rp_web\Rp_Taichinh\Rpt_DoanhthuNVTuvan.aspx.designer.vb">
       <DependentUpon>Rpt_DoanhthuNVTuvan.aspx</DependentUpon>
     </Compile>
@@ -2937,6 +2945,12 @@
     <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_TonghopNhap.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_Tonghop_dichvu.Designer.vb">
+      <DependentUpon>Xtr_Tonghop_dichvu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_Tonghop_dichvu.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_Tonghop_DV.Designer.vb">
       <DependentUpon>Xtr_Tonghop_DV.vb</DependentUpon>
     </Compile>
@@ -3185,6 +3199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_TonghopNhap.resx">
       <DependentUpon>Xtr_TonghopNhap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_Tonghop_dichvu.resx">
+      <DependentUpon>Xtr_Tonghop_dichvu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Taichinh\Xtr_Tonghop_DV.resx">
       <DependentUpon>Xtr_Tonghop_DV.vb</DependentUpon>

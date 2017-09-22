@@ -83,12 +83,12 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.tienno = New DevExpress.XtraReports.UI.CalculatedField()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
-        Me.giamgiadv = New DevExpress.XtraReports.UI.CalculatedField()
         Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblDienthoai = New DevExpress.XtraReports.UI.XRLabel()
+        Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
+        Me.giamgiadv = New DevExpress.XtraReports.UI.CalculatedField()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,7 +272,7 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(154.517!, 22.99999!)
         Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "CÁN BỘ LẬP BÁO CÁO"
+        Me.XrLabel3.Text = "Người lập"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'lbl_Ngaythangnam
@@ -644,16 +644,6 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.ReportHeader.HeightF = 153.125!
         Me.ReportHeader.Name = "ReportHeader"
         '
-        'ReportFooter
-        '
-        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable4, Me.lbl_Ngaythangnam, Me.XrLabel3})
-        Me.ReportFooter.HeightF = 125.0208!
-        Me.ReportFooter.Name = "ReportFooter"
-        '
-        'giamgiadv
-        '
-        Me.giamgiadv.Name = "giamgiadv"
-        '
         'XrPictureBox_logo
         '
         Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(21.45055!, 18.77082!)
@@ -692,6 +682,16 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.lblDienthoai.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
         Me.lblDienthoai.StylePriority.UseFont = False
         Me.lblDienthoai.Text = "ĐT: 024 3734 5600"
+        '
+        'ReportFooter
+        '
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable4, Me.lbl_Ngaythangnam, Me.XrLabel3})
+        Me.ReportFooter.HeightF = 125.0208!
+        Me.ReportFooter.Name = "ReportFooter"
+        '
+        'giamgiadv
+        '
+        Me.giamgiadv.Name = "giamgiadv"
         '
         'Xtr_Chitiet_Doanhthu_MH
         '
