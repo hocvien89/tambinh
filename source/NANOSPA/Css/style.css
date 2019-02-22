@@ -491,8 +491,6 @@ form#main-search
 
 		.chat li.left .chat-body
 		{
-			bottom: 20px;
-			margin-left: 46px;
 			position: relative;
 		}
 
@@ -780,4 +778,9 @@ td.cs55BE0B1 img {
 }
 .cs55BE0B1 {
     background-color: red;
+}
+
+/*update style display flex */
+.chat li {
+    display: flex!important;
 }

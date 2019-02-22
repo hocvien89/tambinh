@@ -37,7 +37,7 @@
             rp.lblPhikham.Text = String.Format("{0:#,##0}", Val(objEnPhieudichvu.f_Tongtienthuc)) + " đ"
         End If
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
-        rp.XrPictureBox_logo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
+        rp.XrPictureBox_logo.ImageUrl = "~/images/icon_logo/pk-logo.png"
         ReportViewerControl.ReportViewer.Report = rp
     End Sub
     Private Sub LoadDonThuoc()
@@ -59,7 +59,7 @@
         rp.cellTuoi.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year)
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         dt = objFcPhieuxuat.SelectByID_QLMH_PHIEUXUAT_CHITIET(Session("uId_Phieuxuat").ToString())
-        rp.xtrlogo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
+        rp.xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
         rp.BindingSource1.DataSource = dt
         ReportViewerControl.ReportViewer.Report = rp
     End Sub
@@ -78,7 +78,7 @@
         rp.cellDienThoai.Text = objEnKhachhang.v_DienthoaiDD
         rp.cellGioiTinh.Text = IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ")
         rp.cellTuoi.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year)
-        rp.xtrlogo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
+        rp.xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         ReportViewerControl.ReportViewer.Report = rp
     End Sub

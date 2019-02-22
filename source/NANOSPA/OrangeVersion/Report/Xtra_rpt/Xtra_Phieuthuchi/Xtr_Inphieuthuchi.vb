@@ -35,7 +35,7 @@
         XrCel_Sotien.Text = Format(objEnPhieuthuchi.f_Sotien, "n0") + " VND"
         lbl_Maphieu.Text = objEnPhieuthuchi.v_Maphieu.ToString
         XrCel_Bangchu.Text = public_class.ToStrings(objEnPhieuthuchi.f_Sotien)
-        xtrlogo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
+        xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
         'Strings.Format(objEnPhieuthuchi.f_Sotien, "{0:n0}")
     End Sub
     Public Shared Function ToStrings(number As Decimal) As String

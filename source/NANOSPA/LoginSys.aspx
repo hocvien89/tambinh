@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>..::NANO-CLINIC 2016 - Đăng nhập::..</title>
+    <title>..::NANO-CLINIC 2019 - Đăng nhập::..</title>
     <link rel="shortcut icon" href="/favicon.ico"/>
     <meta name="title" content="Phần mềm quản lý spa, Salon, Thẩm mỹ viện" />
     <meta name="keywords" content="Quan ly spa, Quan ly salon, Quan ly tham my vien" />
@@ -26,7 +26,7 @@
                 <div class="row">
                     <img style="float: left; position: relative; top: 2px; width: 74px" src="images/icon_logo/LogoSpa_pts.png" alt="" />
                     <div class="logo">
-                        <h1><a href="">NANO-CLINIC 2016 - <span class="red">Perfect solution Great successful</span></a></h1>
+                        <h1><a href="">NANO-CLINIC 2019 - <span class="red">Perfect solution Great successful</span></a></h1>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
         <div class="register-container container">
             <div class="row">
                 <div class="register span6">
-                    <h2>LOGIN - <span class="red"><strong>PK - TÂM BÌNH</strong></span></h2>
+                    <h2>LOGIN - <span class="red"><strong>PK - TRƯỜNG SINH</strong></span></h2>
                     <label for="UserName">UserName</label>
                     <asp:TextBox ID="txtTendangnhap" CssClass="inputlogin" placeholder="enter your username..." runat="server"></asp:TextBox>
                     <label for="password">Password</label>

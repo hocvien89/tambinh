@@ -19,7 +19,7 @@
         rp.lblDiachi.Text = objEnKhachhang.nv_Diachi_vn
         rp.lblDienthoai.Text = objEnKhachhang.v_DienthoaiDD
         rp.lblPKName.Text = "PHÒNG KHÁM ĐÔNG Y TÂM BÌNH"
-        rp.xtrlogo.ImageUrl = "~/images/icon_logo/tambinh.jpg"
+        rp.xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
         rp.lblNgay.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         If objEnPhieuxuat.uId_Phieuxuat <> Nothing Then
             rp.lblSothang.Text = objEnPhieuxuat.i_Soluog.ToString + " " + "thang"

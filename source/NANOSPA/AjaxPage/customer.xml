@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <JSChart>
   <dataset type="line" id="gray">
-    <data unit="1" value="0"></data>
+    <data unit="1" value="0">
+    </data>
     <data unit="1" value="0" />
     <data unit="2" value="0" />
     <data unit="3" value="0" />
@@ -104,6 +105,5 @@
     <option set="setAxisPaddingRight" value="100" />
     <option set="setLegendShow" value="true" />
     <option set="setLegendPosition" value="490, 80" />
-    <option set="setIntervalEndY" value="38" />
   </optionset>
 </JSChart>
