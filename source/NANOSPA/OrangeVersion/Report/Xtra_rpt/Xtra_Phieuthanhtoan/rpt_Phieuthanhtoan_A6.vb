@@ -25,8 +25,6 @@
             BindingSource1.DataSource = dt
             dt.Dispose()
         End If
-        lblSpaName.Text = nv_Tencuahang_vn
-        lblSpaAddress.Text = nv_Diachicuahang
         lblNgaylap.Text = "Ngày lập: " & objEnPhieuDV.d_Ngay.ToString("dd/MM/yyyy")
         lblTenKH.Text = objEnKhachhang.nv_Hoten_vn
         lblDiachi.Text = objEnKhachhang.nv_Diachi_vn

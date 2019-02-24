@@ -29,10 +29,10 @@
                 Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
                 Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
                 objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-                rp_A5.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-                rp_A5.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-                rp_A5.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-                rp_A5.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+                rp_A5.lblTencuahang.Html = Session("nv_Tencuahang_en")
+                rp_A5.lblDiachi.Html = Session("nv_DiachiCH_en")
+                rp_A5.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+                rp_A5.XrPictureBox_logo.ImageUrl = "~" + objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
                 rp_A5.Bindata(Session("uId_Phieudichvu"), Session("uId_Khachhang"), Session("nv_Tencuahang_vn"), Session("nv_DiachiCH_vn"))
                 ReportViewerControl.ReportViewer.Report = rp_A5
             End If
@@ -138,6 +138,7 @@
         objEnPhieucongnoTT = objFcPhieucongnoTT.SelectByID(Session("uIdConNoThanhToan"))
         Dim objFcKhachhang As New BO.CRM_DM_KhachhangFacade
         Dim objEnKhachhang As New CM.CRM_DM_KhachhangEntity
+        Dim objFcThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         objEnKhachhang = objFcKhachhang.SelectByID(objEnPhieucongnoTT.uId_Khachhang)
         If objEnPhieucongnoTT.vTypeThanhToan = "PX" Then
             Dim objFcPhieuxuat As New BO.QLMH_PHIEUXUATFacade
@@ -157,10 +158,10 @@
         Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
         Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
         objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-        BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-        BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-        BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-        BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        BC.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        BC.lblDiachi.Html = Session("nv_DiachiCH_en")
+        BC.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+        BC.XrPictureBox_logo.ImageUrl = objFcThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         BC.lblNgay.Text = "Ngày:" + String.Format(Date.Now.ToString, "dd/MM/yyyy")
         BC.xtrCellTenKhachHang.Text = objEnKhachhang.nv_Hoten_vn
         BC.xtrCellDienthoai.Text = objEnKhachhang.v_DienthoaiDD

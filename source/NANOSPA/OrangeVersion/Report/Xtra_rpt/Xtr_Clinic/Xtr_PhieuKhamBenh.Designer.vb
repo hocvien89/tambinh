@@ -19,6 +19,7 @@ Partial Public Class Xtr_PhieuKhamBenh
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_PhieuKhamBenh))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrLabel13 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblPhikham = New DevExpress.XtraReports.UI.XRLabel()
@@ -61,15 +62,17 @@ Partial Public Class Xtr_PhieuKhamBenh
         Me.lblNgayThang = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNhanVien = New DevExpress.XtraReports.UI.XRLabel()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
-        Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -445,44 +448,35 @@ Partial Public Class Xtr_PhieuKhamBenh
         '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel14, Me.lblPKName, Me.lblDiachi, Me.XrLabel12, Me.XrPictureBox_logo, Me.lblHeader})
+        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiachi, Me.lblTencuahang, Me.lblSdt, Me.XrLabel12, Me.XrPictureBox_logo, Me.lblHeader})
         Me.TopMargin.HeightF = 128.0!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
-        'XrLabel14
-        '
-        Me.XrLabel14.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(99.45818!, 60.875!)
-        Me.XrLabel14.Multiline = True
-        Me.XrLabel14.Name = "XrLabel14"
-        Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel14.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
-        Me.XrLabel14.StylePriority.UseFont = False
-        Me.XrLabel14.Text = "ĐT: 024 3734 5600"
-        '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(99.45818!, 10.875!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
-        Me.lblPKName.StylePriority.UseFont = False
-        Me.lblPKName.StylePriority.UseTextAlignment = False
-        Me.lblPKName.Text = "lblPKName"
-        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
         'lblDiachi
         '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(99.45825!, 35.875!)
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(92.55075!, 37.91666!)
         Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
-        Me.lblDiachi.StylePriority.UseFont = False
-        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
+        '
+        'lblTencuahang
+        '
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(92.55074!, 14.91666!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(92.55074!, 60.91668!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
         '
         'XrLabel12
         '
@@ -496,9 +490,9 @@ Partial Public Class Xtr_PhieuKhamBenh
         '
         'XrPictureBox_logo
         '
-        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(6.907519!, 10.00001!)
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 10.00001!)
         Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
-        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(92.55074!, 76.18!)
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(75.0!, 75.0!)
         Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'lblHeader
@@ -531,6 +525,8 @@ Partial Public Class Xtr_PhieuKhamBenh
         Me.Version = "12.2"
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -580,7 +576,7 @@ Partial Public Class Xtr_PhieuKhamBenh
     Friend WithEvents XrLabel11 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel12 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel13 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel14 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
 End Class

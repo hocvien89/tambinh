@@ -5,18 +5,18 @@
     Private objEnDMThuchi As CM.QLTC_DM_THUCHIEntity
     Private objFcKhachhang As BO.CRM_DM_KhachhangFacade
     Private objEnKhachhang As CM.CRM_DM_KhachhangEntity
-    Public Sub Bindata(uId_phieuthuchi As String, nv_tencuahang As String, nv_DiachiCH As String)
+    Public Sub Bindata(uId_phieuthuchi As String)
         objFcPhieuthuchi = New BO.QLTC_PhieuthuchiFacade
         objEnPhieuthuchi = New CM.QLTC_PhieuthuchiEntity
         objFcDMThuchi = New BO.QLTC_DM_THUCHIFacade
         objEnDMThuchi = New CM.QLTC_DM_THUCHIEntity
         objFcKhachhang = New BO.CRM_DM_KhachhangFacade
         objEnKhachhang = New CM.CRM_DM_KhachhangEntity
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim public_class As New Public_Class
         Dim datenow As DateTime = Date.Now
         objEnPhieuthuchi = objFcPhieuthuchi.SelectByID(uId_phieuthuchi)
         objEnDMThuchi = objFcDMThuchi.SelectByID(objEnPhieuthuchi.uId_Thuchi)
-        lblPKName.Text = "PHÒNG KHÁM TÂM BÌNH"
         If objEnDMThuchi.b_ThuChi = True Then
             XrCel_Nguoi.Text = "Người nộp"
             lbl_Tenphieu.Text = "PHIẾU THU"
@@ -35,7 +35,7 @@
         XrCel_Sotien.Text = Format(objEnPhieuthuchi.f_Sotien, "n0") + " VND"
         lbl_Maphieu.Text = objEnPhieuthuchi.v_Maphieu.ToString
         XrCel_Bangchu.Text = public_class.ToStrings(objEnPhieuthuchi.f_Sotien)
-        xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
+        xtrlogo.ImageUrl = "~" + objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         'Strings.Format(objEnPhieuthuchi.f_Sotien, "{0:n0}")
     End Sub
     Public Shared Function ToStrings(number As Decimal) As String

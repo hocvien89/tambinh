@@ -15,11 +15,9 @@
             BindingSource1.DataSource = dt
             dt.Dispose()
         End If
-        lblSpaName.Text = nv_Tencuahang_vn
-        lblSpaAddress.Text = nv_Diachicuahang
         lblNgaylap.Text = "Ngày lập: " & objEnPhieuxuat.d_Ngayxuat.ToString("dd/MM/yyyy")
         lblTenKH.Text = objEnKhachhang.nv_Hoten_vn
-        lblDiachi.Text = objEnKhachhang.nv_Diachi_vn
+        lblDiachiKH.Text = objEnKhachhang.nv_Diachi_vn
         lblTongtien.Text = String.Format("{0:#,##}", Val(objEnPhieuxuat.nv_Noidungxuat_en))
         lblGiamgia.Text = String.Format("{0:#,##}", objEnPhieuxuat.f_Giamgia_Tong)
         lblConlai.Text = String.Format("{0:#,##}", Val(objEnPhieuxuat.nv_Noidungxuat_en) - Val(objEnPhieuxuat.f_Giamgia_Tong))

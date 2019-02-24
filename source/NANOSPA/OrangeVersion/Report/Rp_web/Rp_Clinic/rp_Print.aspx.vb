@@ -1,6 +1,6 @@
 ﻿Public Class rp_Print
     Inherits System.Web.UI.Page
-
+    Dim objFCThamso As New BO.clsB_QT_THAMSOHETHONG
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim type As String
         type = Request.QueryString("type")
@@ -25,7 +25,9 @@
         uId_Khachang = Session("uId_Khachhang")
         uId_Phieudichvu = Session("uId_PhieuDichVu")
         objEnKhachhang = objFcKhachhang.SelectByID(uId_Khachang)
-        rp.lblPKName.Text = "PHÒNG KHÁM ĐÔNG Y TÂM BÌNH"
+        rp.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        rp.lblDiachi.Html = Session("nv_DiachiCH_en")
+        rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         rp.cellHoten.Text = objEnKhachhang.nv_Hoten_vn
         rp.cellDiaChi.Text = objEnKhachhang.nv_Diachi_vn
         rp.cellDienThoai.Text = objEnKhachhang.v_DienthoaiDD
@@ -37,7 +39,7 @@
             rp.lblPhikham.Text = String.Format("{0:#,##0}", Val(objEnPhieudichvu.f_Tongtienthuc)) + " đ"
         End If
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
-        rp.XrPictureBox_logo.ImageUrl = "~/images/icon_logo/pk-logo.png"
+        rp.XrPictureBox_logo.ImageUrl = "~" + objFCThamso.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         ReportViewerControl.ReportViewer.Report = rp
     End Sub
     Private Sub LoadDonThuoc()
@@ -51,7 +53,9 @@
         Dim datenow As DateTime = Date.Now
         uId_Khachang = Session("uId_Khachhang")
         objEnKhachhang = objFcKhachhang.SelectByID(uId_Khachang)
-        rp.lblPKName.Text = "PHÒNG KHÁM ĐÔNG Y TÂM BÌNH"
+        rp.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        rp.lblDiachi.Html = Session("nv_DiachiCH_en")
+        rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         rp.cellHoten.Text = objEnKhachhang.nv_Hoten_vn
         rp.cellDiaChi.Text = objEnKhachhang.nv_Diachi_vn
         rp.cellDienThoai.Text = objEnKhachhang.v_DienthoaiDD
@@ -59,7 +63,7 @@
         rp.cellTuoi.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year)
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         dt = objFcPhieuxuat.SelectByID_QLMH_PHIEUXUAT_CHITIET(Session("uId_Phieuxuat").ToString())
-        rp.xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
+        rp.xtrlogo.ImageUrl = "~" + objFCThamso.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         rp.BindingSource1.DataSource = dt
         ReportViewerControl.ReportViewer.Report = rp
     End Sub
@@ -72,13 +76,15 @@
         Dim datenow As DateTime = Date.Now
         uId_Khachang = Session("uId_Khachhang")
         objEnKhachhang = objFcKhachhang.SelectByID(uId_Khachang)
-        rp.lblPKName.Text = "PHÒNG KHÁM ĐÔNG Y TÂM BÌNH"
+        rp.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        rp.lblDiachi.Html = Session("nv_DiachiCH_en")
+        rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         rp.cellHoten.Text = objEnKhachhang.nv_Hoten_vn
         rp.cellDiaChi.Text = objEnKhachhang.nv_Diachi_vn
         rp.cellDienThoai.Text = objEnKhachhang.v_DienthoaiDD
         rp.cellGioiTinh.Text = IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ")
         rp.cellTuoi.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year)
-        rp.xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
+        rp.xtrlogo.ImageUrl = "~" + objFCThamso.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         ReportViewerControl.ReportViewer.Report = rp
     End Sub

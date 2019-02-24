@@ -6,7 +6,10 @@
     End Sub
     Private Sub loadRp()
         Rp = New Xtr_Inphieuthuchi
-        Rp.Bindata(Session("uId_Phieuthuchi").ToString, Session("nv_Tencuahang_vn"), Session("nv_DiachiCH_vn"))
+        Rp.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        Rp.lblDiachi.Html = Session("nv_DiachiCH_en")
+        Rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+        Rp.Bindata(Session("uId_Phieuthuchi").ToString)
         ReportViewerControl.ReportViewer.Report = Rp
     End Sub
 End Class

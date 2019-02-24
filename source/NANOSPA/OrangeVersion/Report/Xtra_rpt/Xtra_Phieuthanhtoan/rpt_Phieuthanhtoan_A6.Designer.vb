@@ -21,6 +21,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rpt_Phieuthanhtoan_A6))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -40,9 +41,6 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSpaName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSpaAddress = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblNgaylap = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell4 = New DevExpress.XtraReports.UI.XRTableCell()
@@ -50,6 +48,8 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.XrTableCell6 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
+        Me.lbctkm = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblHinhThucTT = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbTienthutext = New DevExpress.XtraReports.UI.XRLabel()
@@ -73,11 +73,14 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
         Me.nv_Nguon_vn = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lbctkm = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblNgaylap = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.XrRichText1 = New DevExpress.XtraReports.UI.XRRichText()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XrRichText1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -180,7 +183,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.pic_Logo, Me.XrLine1, Me.lblNhanvien, Me.XrLabel3, Me.XrLabel6, Me.lblTenKH, Me.lblDiachi, Me.XrLabel10, Me.XrLabel1, Me.lblSpaName, Me.lblSpaAddress, Me.lblNgaylap})
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblTencuahang, Me.XrRichText1, Me.pic_Logo, Me.XrLine1, Me.lblNhanvien, Me.XrLabel3, Me.XrLabel6, Me.lblTenKH, Me.lblDiachi, Me.XrLabel10, Me.XrLabel1, Me.lblNgaylap})
         Me.ReportHeader.Font = New System.Drawing.Font("Times New Roman", 8.0!)
         Me.ReportHeader.HeightF = 114.8635!
         Me.ReportHeader.Name = "ReportHeader"
@@ -282,37 +285,6 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.XrLabel1.Text = "PHIẾU THANH TOÁN DỊCH VỤ"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
-        'lblSpaName
-        '
-        Me.lblSpaName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSpaName.LocationFloat = New DevExpress.Utils.PointFloat(58.58196!, 0.0!)
-        Me.lblSpaName.Name = "lblSpaName"
-        Me.lblSpaName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSpaName.SizeF = New System.Drawing.SizeF(164.6427!, 11.73874!)
-        Me.lblSpaName.StylePriority.UseFont = False
-        Me.lblSpaName.Text = "lblSpaName"
-        '
-        'lblSpaAddress
-        '
-        Me.lblSpaAddress.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSpaAddress.LocationFloat = New DevExpress.Utils.PointFloat(56.98756!, 11.73875!)
-        Me.lblSpaAddress.Name = "lblSpaAddress"
-        Me.lblSpaAddress.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSpaAddress.SizeF = New System.Drawing.SizeF(166.2371!, 11.12612!)
-        Me.lblSpaAddress.StylePriority.UseFont = False
-        Me.lblSpaAddress.Text = "lblSpaAddress"
-        '
-        'lblNgaylap
-        '
-        Me.lblNgaylap.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNgaylap.LocationFloat = New DevExpress.Utils.PointFloat(56.98756!, 23.0!)
-        Me.lblNgaylap.Multiline = True
-        Me.lblNgaylap.Name = "lblNgaylap"
-        Me.lblNgaylap.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblNgaylap.SizeF = New System.Drawing.SizeF(166.2371!, 11.73874!)
-        Me.lblNgaylap.StylePriority.UseFont = False
-        Me.lblNgaylap.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
         'XrTable2
         '
         Me.XrTable2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
@@ -393,6 +365,28 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lbctkm, Me.XrLabel5, Me.lblHinhThucTT, Me.XrLabel4, Me.lbTienthutext, Me.lblTienthua, Me.XrLabel19, Me.lblKhachtra, Me.lblConlai, Me.XrLabel16, Me.lblGiamgia, Me.XrLabel14, Me.lblTongtien, Me.XrLabel12, Me.XrLabel26})
         Me.ReportFooter.HeightF = 147.0858!
         Me.ReportFooter.Name = "ReportFooter"
+        '
+        'lbctkm
+        '
+        Me.lbctkm.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbctkm.LocationFloat = New DevExpress.Utils.PointFloat(90.60417!, 86.4117!)
+        Me.lbctkm.Multiline = True
+        Me.lbctkm.Name = "lbctkm"
+        Me.lbctkm.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lbctkm.SizeF = New System.Drawing.SizeF(219.3958!, 10.74509!)
+        Me.lbctkm.StylePriority.UseFont = False
+        Me.lbctkm.Text = "lblHinhthucTT"
+        '
+        'XrLabel5
+        '
+        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(6.66666!, 85.18623!)
+        Me.XrLabel5.Multiline = True
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(83.93751!, 11.97058!)
+        Me.XrLabel5.StylePriority.UseFont = False
+        Me.XrLabel5.Text = "CTKM:"
         '
         'lblHinhThucTT
         '
@@ -592,27 +586,34 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         Me.nv_Nguon_vn.Name = "nv_Nguon_vn"
         '
-        'XrLabel5
+        'lblNgaylap
         '
-        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(6.66666!, 85.18623!)
-        Me.XrLabel5.Multiline = True
-        Me.XrLabel5.Name = "XrLabel5"
-        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel5.SizeF = New System.Drawing.SizeF(83.93751!, 11.97058!)
-        Me.XrLabel5.StylePriority.UseFont = False
-        Me.XrLabel5.Text = "CTKM:"
+        Me.lblNgaylap.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNgaylap.LocationFloat = New DevExpress.Utils.PointFloat(56.98754!, 23.0!)
+        Me.lblNgaylap.Multiline = True
+        Me.lblNgaylap.Name = "lblNgaylap"
+        Me.lblNgaylap.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblNgaylap.SizeF = New System.Drawing.SizeF(166.2371!, 11.73874!)
+        Me.lblNgaylap.StylePriority.UseFont = False
+        Me.lblNgaylap.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'lbctkm
+        'lblTencuahang
         '
-        Me.lbctkm.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbctkm.LocationFloat = New DevExpress.Utils.PointFloat(90.60417!, 86.4117!)
-        Me.lbctkm.Multiline = True
-        Me.lbctkm.Name = "lbctkm"
-        Me.lbctkm.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lbctkm.SizeF = New System.Drawing.SizeF(219.3958!, 10.74509!)
-        Me.lbctkm.StylePriority.UseFont = False
-        Me.lbctkm.Text = "lblHinhthucTT"
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(57.11514!, 0.0!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(230.8848!, 11.19942!)
+        Me.lblTencuahang.StylePriority.UseFont = False
+        '
+        'XrRichText1
+        '
+        Me.XrRichText1.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.XrRichText1.LocationFloat = New DevExpress.Utils.PointFloat(57.11514!, 11.19942!)
+        Me.XrRichText1.Name = "XrRichText1"
+        Me.XrRichText1.SerializableRtfString = resources.GetString("XrRichText1.SerializableRtfString")
+        Me.XrRichText1.SizeF = New System.Drawing.SizeF(230.8848!, 11.19942!)
+        Me.XrRichText1.StylePriority.UseFont = False
         '
         'rpt_Phieuthanhtoan_A6
         '
@@ -628,6 +629,8 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XrRichText1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -636,9 +639,6 @@ Partial Public Class rpt_Phieuthanhtoan_A6
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
     Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
-    Friend WithEvents lblSpaName As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSpaAddress As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblNgaylap As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblTenKH As DevExpress.XtraReports.UI.XRLabel
@@ -685,4 +685,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
     Friend WithEvents nv_Nguon_vn As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents lbctkm As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblNgaylap As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents XrRichText1 As DevExpress.XtraReports.UI.XRRichText
 End Class

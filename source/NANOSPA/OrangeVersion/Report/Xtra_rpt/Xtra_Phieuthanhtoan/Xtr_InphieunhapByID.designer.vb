@@ -22,6 +22,7 @@ Partial Public Class Xtr_InphieunhapByID
         Me.components = New System.ComponentModel.Container()
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_InphieunhapByID))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -35,7 +36,6 @@ Partial Public Class Xtr_InphieunhapByID
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
         Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.txtcuahang = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.txtngaylap = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
@@ -71,10 +71,15 @@ Partial Public Class Xtr_InphieunhapByID
         Me.f_Dongia = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Soluong = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Thanhtien = New DevExpress.XtraReports.UI.CalculatedField()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -168,7 +173,7 @@ Partial Public Class Xtr_InphieunhapByID
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel9, Me.XrLabel8, Me.txtcuahang, Me.XrLabel5, Me.txtngaylap, Me.XrLabel3, Me.txtmaphieu, Me.XrLabel1, Me.XrLabel2, Me.XrLabel4, Me.XrLabel6, Me.XrLabel7})
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiachi, Me.lblTencuahang, Me.lblSdt, Me.XrLabel9, Me.XrLabel8, Me.XrLabel5, Me.txtngaylap, Me.XrLabel3, Me.txtmaphieu, Me.XrLabel1, Me.XrLabel2, Me.XrLabel4, Me.XrLabel6, Me.XrLabel7})
         Me.ReportHeader.HeightF = 202.7917!
         Me.ReportHeader.Name = "ReportHeader"
         '
@@ -193,15 +198,6 @@ Partial Public Class Xtr_InphieunhapByID
         Me.XrLabel8.SizeF = New System.Drawing.SizeF(100.0!, 23.0!)
         Me.XrLabel8.StylePriority.UseTextAlignment = False
         Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
-        'txtcuahang
-        '
-        Me.txtcuahang.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcuahang.LocationFloat = New DevExpress.Utils.PointFloat(22.50001!, 10.00001!)
-        Me.txtcuahang.Name = "txtcuahang"
-        Me.txtcuahang.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.txtcuahang.SizeF = New System.Drawing.SizeF(363.9583!, 23.0!)
-        Me.txtcuahang.StylePriority.UseFont = False
         '
         'XrLabel5
         '
@@ -476,6 +472,30 @@ Partial Public Class Xtr_InphieunhapByID
         '
         Me.f_Thanhtien.Name = "f_Thanhtien"
         '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 33.00001!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
+        '
+        'lblTencuahang
+        '
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 10.00001!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 56.0!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
+        '
         'Xtr_InphieunhapByID
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.PageHeader, Me.ReportFooter, Me.PageFooter})
@@ -492,6 +512,8 @@ Partial Public Class Xtr_InphieunhapByID
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -499,7 +521,6 @@ Partial Public Class Xtr_InphieunhapByID
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
     Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
-    Friend WithEvents txtcuahang As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents txtngaylap As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
@@ -544,4 +565,7 @@ Partial Public Class Xtr_InphieunhapByID
     Friend WithEvents f_Dongia As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents f_Soluong As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents f_Thanhtien As DevExpress.XtraReports.UI.CalculatedField
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
 End Class

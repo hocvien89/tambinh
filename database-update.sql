@@ -1,0 +1,2 @@
+﻿/*2019/02/24: update ten, dia chi, sdt phieu in*/
+update QT_DM_CUAHANG set nv_Tencuahang_en =N'PHÒNG KHÁM TRƯỜNG SINH', nv_Diachi_en =N'Số 595 Đông Kim Ngưu, P. Vĩnh Tuy, Q. HBT, TP. HN', nv_Dienthoai='0904446848'

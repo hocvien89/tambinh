@@ -17,8 +17,10 @@
         End If
 
         ReportViewerControl.ReportViewer.Report = BC
-        BC.txtcuahang.Text = Session("nv_Tencuahang_vn").ToString
+        BC.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        BC.lblDiachi.Html = Session("nv_DiachiCH_en")
+        BC.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         BC.txtmaphieu.Text = dt.Rows(0)("v_Maphieunhap").ToString
-        BC.txtngaylap.Text = DateTime.Now
+        BC.txtngaylap.Text = DateTime.Now.ToString("dd/MM/yyyy")
     End Sub
 End Class

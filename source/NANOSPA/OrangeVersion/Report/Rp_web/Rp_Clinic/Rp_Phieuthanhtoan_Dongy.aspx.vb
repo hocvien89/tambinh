@@ -13,13 +13,16 @@
         Dim objEnKhachhang As New CM.CRM_DM_KhachhangEntity
         Dim objFcKhachhang As New BO.CRM_DM_KhachhangFacade
         Dim objFcPhong As New BO.QLP_DM_PHONGFacade
+        Dim objFCthamsohethong As New BO.clsB_QT_THAMSOHETHONG
         objEnKhachhang = objFcKhachhang.SelectByID(objEnPhieuxuat.uId_Khachhang)
         rp.lblbenhnhan.Text = objEnKhachhang.nv_Hoten_vn
         rp.lblTuoi.Text = DateDiff(DateInterval.Year, objEnKhachhang.d_Ngaysinh, Date.Now).ToString
-        rp.lblDiachi.Text = objEnKhachhang.nv_Diachi_vn
+        rp.lblDiachiKD.Text = objEnKhachhang.nv_Diachi_vn
         rp.lblDienthoai.Text = objEnKhachhang.v_DienthoaiDD
-        rp.lblPKName.Text = "PHÒNG KHÁM ĐÔNG Y TÂM BÌNH"
-        rp.xtrlogo.ImageUrl = "~/images/icon_logo/pk-logo.png"
+        rp.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        rp.lblDiachi.Html = Session("nv_DiachiCH_en")
+        rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+        rp.xtrlogo.ImageUrl = "~" + objFCthamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         rp.lblNgay.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         If objEnPhieuxuat.uId_Phieuxuat <> Nothing Then
             rp.lblSothang.Text = objEnPhieuxuat.i_Soluog.ToString + " " + "thang"

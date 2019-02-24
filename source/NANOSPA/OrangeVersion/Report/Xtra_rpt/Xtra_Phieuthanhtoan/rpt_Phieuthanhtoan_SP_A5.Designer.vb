@@ -21,6 +21,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rpt_Phieuthanhtoan_SP_A5))
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary4 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
@@ -37,10 +38,11 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblDiachiKH = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSpaName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSpaAddress = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNgaylap = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblSophieu = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
@@ -54,7 +56,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         Me.XrTableCell9 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.lblTenKH = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSDT = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblSDTKH = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
@@ -93,6 +95,8 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         Me.f_Giamgia = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Tongtien = New DevExpress.XtraReports.UI.CalculatedField()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -233,23 +237,47 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiachi, Me.XrLabel1, Me.lblSpaName, Me.lblSpaAddress, Me.lblNgaylap, Me.lblSophieu, Me.XrTable2, Me.lblTenKH, Me.XrLabel8, Me.lblSDT, Me.XrLabel10, Me.XrLabel6, Me.XrPictureBox_logo})
-        Me.ReportHeader.HeightF = 191.6667!
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblSdt, Me.lblTencuahang, Me.lblDiachi, Me.lblDiachiKH, Me.XrLabel1, Me.lblNgaylap, Me.lblSophieu, Me.XrTable2, Me.lblTenKH, Me.XrLabel8, Me.lblSDTKH, Me.XrLabel10, Me.XrLabel6, Me.XrPictureBox_logo})
+        Me.ReportHeader.HeightF = 218.75!
         Me.ReportHeader.Name = "ReportHeader"
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(82.33308!, 46.00003!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(310.8336!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
+        '
+        'lblTencuahang
+        '
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(82.33308!, 0.0!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(310.8336!, 23.0!)
         '
         'lblDiachi
         '
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(95.20831!, 129.7083!)
-        Me.lblDiachi.Multiline = True
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(82.33308!, 23.00002!)
         Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(443.7917!, 23.0!)
-        Me.lblDiachi.Text = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(460.8336!, 23.0!)
+        '
+        'lblDiachiKH
+        '
+        Me.lblDiachiKH.LocationFloat = New DevExpress.Utils.PointFloat(100.2083!, 153.6666!)
+        Me.lblDiachiKH.Multiline = True
+        Me.lblDiachiKH.Name = "lblDiachiKH"
+        Me.lblDiachiKH.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachiKH.SizeF = New System.Drawing.SizeF(443.7917!, 23.0!)
+        Me.lblDiachiKH.Text = "lblDiachiKH"
         '
         'XrLabel1
         '
         Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(95.20831!, 57.66671!)
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(100.2083!, 81.62505!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(356.8748!, 23.0!)
@@ -257,22 +285,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         Me.XrLabel1.StylePriority.UseTextAlignment = False
         Me.XrLabel1.Text = "PHIẾU THANH TOÁN SẢN PHẨM"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'lblSpaName
-        '
-        Me.lblSpaName.LocationFloat = New DevExpress.Utils.PointFloat(80.62498!, 0.00004577637!)
-        Me.lblSpaName.Name = "lblSpaName"
-        Me.lblSpaName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSpaName.SizeF = New System.Drawing.SizeF(288.5417!, 23.0!)
-        Me.lblSpaName.Text = "lblSpaName"
-        '
-        'lblSpaAddress
-        '
-        Me.lblSpaAddress.LocationFloat = New DevExpress.Utils.PointFloat(80.62498!, 23.00004!)
-        Me.lblSpaAddress.Name = "lblSpaAddress"
-        Me.lblSpaAddress.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSpaAddress.SizeF = New System.Drawing.SizeF(439.625!, 23.0!)
-        Me.lblSpaAddress.Text = "lblSpaAddress"
         '
         'lblNgaylap
         '
@@ -285,7 +297,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         '
         'lblSophieu
         '
-        Me.lblSophieu.LocationFloat = New DevExpress.Utils.PointFloat(192.125!, 80.66672!)
+        Me.lblSophieu.LocationFloat = New DevExpress.Utils.PointFloat(197.125!, 104.6251!)
         Me.lblSophieu.Multiline = True
         Me.lblSophieu.Name = "lblSophieu"
         Me.lblSophieu.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -295,7 +307,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         'XrTable2
         '
         Me.XrTable2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
-        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(15.00003!, 165.4167!)
+        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(15.00003!, 192.5!)
         Me.XrTable2.Name = "XrTable2"
         Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow2})
         Me.XrTable2.SizeF = New System.Drawing.SizeF(524.0!, 26.25002!)
@@ -413,7 +425,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         '
         'lblTenKH
         '
-        Me.lblTenKH.LocationFloat = New DevExpress.Utils.PointFloat(95.20831!, 106.7083!)
+        Me.lblTenKH.LocationFloat = New DevExpress.Utils.PointFloat(100.2083!, 130.6666!)
         Me.lblTenKH.Multiline = True
         Me.lblTenKH.Name = "lblTenKH"
         Me.lblTenKH.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -422,25 +434,25 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         '
         'XrLabel8
         '
-        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(343.125!, 106.7083!)
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(348.125!, 130.6666!)
         Me.XrLabel8.Multiline = True
         Me.XrLabel8.Name = "XrLabel8"
         Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel8.SizeF = New System.Drawing.SizeF(67.70828!, 23.0!)
         Me.XrLabel8.Text = "Điện thoại:"
         '
-        'lblSDT
+        'lblSDTKH
         '
-        Me.lblSDT.LocationFloat = New DevExpress.Utils.PointFloat(410.8333!, 106.7083!)
-        Me.lblSDT.Multiline = True
-        Me.lblSDT.Name = "lblSDT"
-        Me.lblSDT.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSDT.SizeF = New System.Drawing.SizeF(128.1667!, 23.0!)
-        Me.lblSDT.Text = "lblSDT"
+        Me.lblSDTKH.LocationFloat = New DevExpress.Utils.PointFloat(415.8333!, 130.6666!)
+        Me.lblSDTKH.Multiline = True
+        Me.lblSDTKH.Name = "lblSDTKH"
+        Me.lblSDTKH.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSDTKH.SizeF = New System.Drawing.SizeF(128.1667!, 23.0!)
+        Me.lblSDTKH.Text = "lblSDTKH"
         '
         'XrLabel10
         '
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(15.00001!, 129.7083!)
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(19.99998!, 153.6666!)
         Me.XrLabel10.Multiline = True
         Me.XrLabel10.Name = "XrLabel10"
         Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -449,7 +461,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         '
         'XrLabel6
         '
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(15.00001!, 106.7083!)
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(19.99998!, 130.6666!)
         Me.XrLabel6.Multiline = True
         Me.XrLabel6.Name = "XrLabel6"
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -460,7 +472,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         '
         Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(5.0!, 0.00004577637!)
         Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
-        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(65.20827!, 64.00002!)
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(75.0!, 75.0!)
         Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'ReportFooter
@@ -791,6 +803,8 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.Version = "12.2"
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -802,10 +816,8 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
     Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
-    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDiachiKH As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSpaName As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSpaAddress As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblNgaylap As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblSophieu As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTable2 As DevExpress.XtraReports.UI.XRTable
@@ -818,7 +830,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
     Friend WithEvents XrTableCell9 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents lblTenKH As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel8 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblSDT As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblSDTKH As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel10 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrPictureBox_logo As DevExpress.XtraReports.UI.XRPictureBox
@@ -865,4 +877,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A5
     Friend WithEvents XrTableCell19 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell20 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell21 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
 End Class

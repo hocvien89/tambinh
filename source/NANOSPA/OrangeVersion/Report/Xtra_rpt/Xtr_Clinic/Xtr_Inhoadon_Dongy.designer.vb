@@ -19,8 +19,11 @@ Partial Public Class Xtr_Inhoadon_Dongy
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_Inhoadon_Dongy))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
         Me.XrLabel16 = New DevExpress.XtraReports.UI.XRLabel()
@@ -31,11 +34,12 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblDienthoai = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachiKD = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTongtien = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblSothang = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
@@ -66,19 +70,18 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.XrTableCell6 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableRow7 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel12 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrTableRow8 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell8 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
-        Me.XrLabel17 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel18 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel11 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -90,11 +93,30 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xtrlogo, Me.XrLabel17, Me.lblPKName, Me.XrLabel18, Me.lblHeader})
+        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblSdt, Me.lblTencuahang, Me.lblDiachi, Me.xtrlogo, Me.lblHeader})
         Me.TopMargin.HeightF = 132.2917!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'xtrlogo
+        '
+        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(16.04899!, 6.916682!)
+        Me.xtrlogo.Name = "xtrlogo"
+        Me.xtrlogo.SizeF = New System.Drawing.SizeF(75.0!, 75.0!)
+        Me.xtrlogo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
+        'lblHeader
+        '
+        Me.lblHeader.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.lblHeader.LocationFloat = New DevExpress.Utils.PointFloat(98.95865!, 97.29166!)
+        Me.lblHeader.Name = "lblHeader"
+        Me.lblHeader.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblHeader.SizeF = New System.Drawing.SizeF(346.875!, 25.0!)
+        Me.lblHeader.StylePriority.UseFont = False
+        Me.lblHeader.StylePriority.UseTextAlignment = False
+        Me.lblHeader.Text = "PHIẾU THANH TOÁN THUỐC"
+        Me.lblHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'BottomMargin
         '
@@ -104,13 +126,13 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel16, Me.XrLabel15, Me.XrLabel10, Me.XrLabel7, Me.XrLabel9, Me.XrLabel8, Me.lblDienthoai, Me.XrLabel6, Me.lblDiachi, Me.XrLabel4, Me.XrTable2, Me.lblTuoi, Me.XrLabel3, Me.lblbenhnhan, Me.XrLabel2, Me.XrTable1})
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel16, Me.XrLabel15, Me.XrLabel10, Me.XrLabel7, Me.XrLabel9, Me.XrLabel8, Me.lblDienthoai, Me.XrLabel6, Me.lblDiachiKD, Me.XrLabel4, Me.XrTable2, Me.lblTuoi, Me.XrLabel3, Me.lblbenhnhan, Me.XrLabel2, Me.XrTable1})
         Me.ReportHeader.HeightF = 247.9166!
         Me.ReportHeader.Name = "ReportHeader"
         '
         'XrLabel16
         '
-        Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(98.95856!, 115.4583!)
+        Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(98.95854!, 137.4583!)
         Me.XrLabel16.Name = "XrLabel16"
         Me.XrLabel16.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel16.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
@@ -120,7 +142,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'XrLabel15
         '
-        Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(171.8752!, 115.4583!)
+        Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(171.8752!, 137.4583!)
         Me.XrLabel15.Multiline = True
         Me.XrLabel15.Name = "XrLabel15"
         Me.XrLabel15.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -131,7 +153,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'XrLabel10
         '
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(171.875!, 187.0!)
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(171.875!, 209.0!)
         Me.XrLabel10.Name = "XrLabel10"
         Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel10.SizeF = New System.Drawing.SizeF(409.1248!, 23.00001!)
@@ -141,7 +163,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'XrLabel7
         '
-        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(98.95828!, 187.0!)
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(98.95827!, 209.0!)
         Me.XrLabel7.Name = "XrLabel7"
         Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel7.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
@@ -151,7 +173,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'XrLabel9
         '
-        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(171.875!, 150.5416!)
+        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(171.875!, 172.5416!)
         Me.XrLabel9.Name = "XrLabel9"
         Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel9.SizeF = New System.Drawing.SizeF(409.1248!, 23.00001!)
@@ -161,7 +183,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'XrLabel8
         '
-        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(98.95835!, 150.5416!)
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(98.95834!, 172.5416!)
         Me.XrLabel8.Name = "XrLabel8"
         Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel8.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
@@ -171,41 +193,41 @@ Partial Public Class Xtr_Inhoadon_Dongy
         '
         'lblDienthoai
         '
-        Me.lblDienthoai.LocationFloat = New DevExpress.Utils.PointFloat(429.5415!, 72.08334!)
+        Me.lblDienthoai.LocationFloat = New DevExpress.Utils.PointFloat(170.4165!, 104.125!)
         Me.lblDienthoai.Name = "lblDienthoai"
         Me.lblDienthoai.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblDienthoai.SizeF = New System.Drawing.SizeF(151.4584!, 23.0!)
         Me.lblDienthoai.StylePriority.UseTextAlignment = False
-        Me.lblDienthoai.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.lblDienthoai.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel6
         '
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(388.9165!, 72.08334!)
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(129.7915!, 104.125!)
         Me.XrLabel6.Name = "XrLabel6"
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel6.SizeF = New System.Drawing.SizeF(40.625!, 23.0!)
         Me.XrLabel6.StylePriority.UseTextAlignment = False
-        Me.XrLabel6.Text = "ĐT"
-        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel6.Text = "ĐT: "
+        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'lblDiachi
+        'lblDiachiKD
         '
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(171.875!, 72.08334!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(183.3333!, 23.0!)
-        Me.lblDiachi.StylePriority.UseTextAlignment = False
-        Me.lblDiachi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.lblDiachiKD.LocationFloat = New DevExpress.Utils.PointFloat(171.8752!, 69.45833!)
+        Me.lblDiachiKD.Name = "lblDiachiKD"
+        Me.lblDiachiKD.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachiKD.SizeF = New System.Drawing.SizeF(385.1667!, 23.0!)
+        Me.lblDiachiKD.StylePriority.UseTextAlignment = False
+        Me.lblDiachiKD.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel4
         '
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(98.95837!, 72.08334!)
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(98.95856!, 69.45833!)
         Me.XrLabel4.Name = "XrLabel4"
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel4.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
         Me.XrLabel4.StylePriority.UseTextAlignment = False
-        Me.XrLabel4.Text = "Địa chỉ :"
-        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel4.Text = "Địa chỉ: "
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrTable2
         '
@@ -225,6 +247,16 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.XrTableCell1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel12, Me.lblTongtien, Me.lblSothang, Me.XrLabel5})
         Me.XrTableCell1.Name = "XrTableCell1"
         Me.XrTableCell1.Weight = 3.0R
+        '
+        'XrLabel12
+        '
+        Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 10.95835!)
+        Me.XrLabel12.Name = "XrLabel12"
+        Me.XrLabel12.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel12.SizeF = New System.Drawing.SizeF(71.24982!, 23.0!)
+        Me.XrLabel12.StylePriority.UseTextAlignment = False
+        Me.XrLabel12.Text = "Số thang :"
+        Me.XrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'lblTongtien
         '
@@ -261,7 +293,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.lblTuoi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblTuoi.SizeF = New System.Drawing.SizeF(49.99997!, 23.0!)
         Me.lblTuoi.StylePriority.UseTextAlignment = False
-        Me.lblTuoi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.lblTuoi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel3
         '
@@ -270,8 +302,8 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(40.625!, 23.0!)
         Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "Tuổi:"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrLabel3.Text = "Tuổi: "
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'lblbenhnhan
         '
@@ -280,7 +312,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.lblbenhnhan.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblbenhnhan.SizeF = New System.Drawing.SizeF(107.2916!, 23.0!)
         Me.lblbenhnhan.StylePriority.UseTextAlignment = False
-        Me.lblbenhnhan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.lblbenhnhan.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'XrLabel2
         '
@@ -289,7 +321,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
         Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "Bệnh nhân : "
+        Me.XrLabel2.Text = "Bệnh nhân:  "
         Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrTable1
@@ -464,38 +496,6 @@ Partial Public Class Xtr_Inhoadon_Dongy
     "................................................"
         Me.XrTableCell7.Weight = 3.0R
         '
-        'XrLabel11
-        '
-        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 10.00001!)
-        Me.XrLabel11.Name = "XrLabel11"
-        Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel11.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
-        Me.XrLabel11.StylePriority.UseTextAlignment = False
-        Me.XrLabel11.Text = "Kiêng :"
-        Me.XrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'lblHeader
-        '
-        Me.lblHeader.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.lblHeader.LocationFloat = New DevExpress.Utils.PointFloat(98.95865!, 97.29166!)
-        Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblHeader.SizeF = New System.Drawing.SizeF(346.875!, 25.0!)
-        Me.lblHeader.StylePriority.UseFont = False
-        Me.lblHeader.StylePriority.UseTextAlignment = False
-        Me.lblHeader.Text = "PHIẾU THANH TOÁN THUỐC"
-        Me.lblHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
-        '
-        'XrLabel12
-        '
-        Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 10.95835!)
-        Me.XrLabel12.Name = "XrLabel12"
-        Me.XrLabel12.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel12.SizeF = New System.Drawing.SizeF(71.24982!, 23.0!)
-        Me.XrLabel12.StylePriority.UseTextAlignment = False
-        Me.XrLabel12.Text = "Số thang :"
-        Me.XrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        '
         'XrTableRow8
         '
         Me.XrTableRow8.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell8})
@@ -509,44 +509,39 @@ Partial Public Class Xtr_Inhoadon_Dongy
     "................................................"
         Me.XrTableCell8.Weight = 3.0R
         '
-        'xtrlogo
+        'XrLabel11
         '
-        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(16.04899!, 6.916682!)
-        Me.xtrlogo.Name = "xtrlogo"
-        Me.xtrlogo.SizeF = New System.Drawing.SizeF(82.90964!, 76.08333!)
+        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 10.00001!)
+        Me.XrLabel11.Name = "XrLabel11"
+        Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel11.SizeF = New System.Drawing.SizeF(72.91668!, 23.0!)
+        Me.XrLabel11.StylePriority.UseTextAlignment = False
+        Me.XrLabel11.Text = "Kiêng :"
+        Me.XrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
-        'XrLabel17
+        'lblSdt
         '
-        Me.XrLabel17.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(98.95865!, 35.00001!)
-        Me.XrLabel17.Name = "XrLabel17"
-        Me.XrLabel17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel17.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
-        Me.XrLabel17.StylePriority.UseFont = False
-        Me.XrLabel17.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(101.4165!, 56.00001!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
         '
-        'lblPKName
+        'lblTencuahang
         '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(98.95856!, 10.00001!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(280.356!, 25.0!)
-        Me.lblPKName.StylePriority.UseFont = False
-        Me.lblPKName.StylePriority.UseTextAlignment = False
-        Me.lblPKName.Text = "lblPKName"
-        Me.lblPKName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(101.4165!, 10.00001!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
         '
-        'XrLabel18
+        'lblDiachi
         '
-        Me.XrLabel18.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(98.95856!, 60.00001!)
-        Me.XrLabel18.Multiline = True
-        Me.XrLabel18.Name = "XrLabel18"
-        Me.XrLabel18.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel18.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
-        Me.XrLabel18.StylePriority.UseFont = False
-        Me.XrLabel18.Text = "ĐT: 024 3734 5600"
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(101.4165!, 32.99999!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
         '
         'Xtr_Inhoadon_Dongy
         '
@@ -561,6 +556,8 @@ Partial Public Class Xtr_Inhoadon_Dongy
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -580,7 +577,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
     Friend WithEvents XrCheckBox1 As DevExpress.XtraReports.UI.XRCheckBox
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
     Friend WithEvents PageHeader As DevExpress.XtraReports.UI.PageHeaderBand
-    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblDiachiKD As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrTable2 As DevExpress.XtraReports.UI.XRTable
     Friend WithEvents XrTableRow2 As DevExpress.XtraReports.UI.XRTableRow
@@ -617,7 +614,7 @@ Partial Public Class Xtr_Inhoadon_Dongy
     Friend WithEvents XrTableRow8 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents XrTableCell8 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents xtrlogo As DevExpress.XtraReports.UI.XRPictureBox
-    Friend WithEvents XrLabel17 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents lblPKName As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel18 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
 End Class

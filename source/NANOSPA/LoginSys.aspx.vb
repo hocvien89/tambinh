@@ -82,7 +82,10 @@
                             Session("uId_Cuahang") = oClsB_Nhansu.chk_GetIDCuahangLogin(oCls_Nhansu)
                             Dim dt As DataTable = objFCCuaHang.SelectByID(Session("uId_Cuahang"))
                             Session("nv_Tencuahang_vn") = dt.Rows(0)("nv_Tencuahang_vn").ToString
+                            Session("nv_Tencuahang_en") = dt.Rows(0)("nv_Tencuahang_en").ToString
                             Session("nv_DiachiCH_vn") = dt.Rows(0)("nv_Diachi_vn").ToString
+                            Session("nv_DiachiCH_en") = dt.Rows(0)("nv_Diachi_en").ToString
+                            Session("nv_Dienthoai") = dt.Rows(0)("nv_Dienthoai").ToString
                         End If
                     End If
                     'Redirect toi Trang chu

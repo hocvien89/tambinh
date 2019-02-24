@@ -45,8 +45,9 @@ Public Class rp_InHoadontonghop
         BC.XrCellKhachhang.Text = objEnKhachhang.nv_Hoten_vn
         BC.XrCellDiachi.Text = objEnKhachhang.nv_Diachi_vn
         BC.XrCellDienthoai.Text = objEnKhachhang.v_DienthoaiDD
-        BC.lblTencuahang.Text = Session("nv_Tencuahang_vn")
-        BC.lblDiachi.Text = Session("nv_DiachiCH_vn")
+        BC.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        BC.lblDiachi.Html = Session("nv_DiachiCH_en")
+        BC.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         BC.bindata(dt)
         ReportViewerControl.ReportViewer.Report = BC
     End Sub
