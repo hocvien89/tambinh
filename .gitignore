@@ -3,3 +3,15 @@ obj/
 build/
 /build
 build.rar
+/Debug/
+Debug/
+bin/BO.dll
+bin/BO.pdb
+bin/CM.dll
+bin/CM.pdb
+bin/DB.dll
+bin/DB.pdb
+bin/NANO-SPA.dll
+bin/NANO-SPA.pdb
+bin/NANO-SPA.xml
+NANOSPA2015.v11.suo
