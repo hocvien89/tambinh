@@ -13,6 +13,7 @@ Public Class Rpt_DoanhthuNVTuvan
     End Sub
     Private Sub loaddata()
         objFcBaocao = New BO.clsB_Baocao_Taichinh
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim dt As DataTable
         dt = objFcBaocao.DoanhthuTV(cbonhanvien.SelectedItem.Value.ToString, Aspx_Tungay.Date, Aspx_Denngay.Date)
         Dim BC As New Xtr_DoanhthuNVTuvan
@@ -20,10 +21,10 @@ Public Class Rpt_DoanhthuNVTuvan
         Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
         Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
         objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-        BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-        BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-        BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-        BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        BC.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        BC.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        BC.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+        BC.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         Dim datenow As DateTime = Date.Now
         BC.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
         BC.lbtungay.Text = Aspx_Tungay.Text
@@ -51,5 +52,9 @@ Public Class Rpt_DoanhthuNVTuvan
 
     Protected Sub btn_Baocao_Click(sender As Object, e As EventArgs)
         loaddata()
+    End Sub
+
+    Private Sub btnback_Click(sender As Object, e As EventArgs) Handles btnback.Click
+        Response.Redirect("../../../../OrangeVersion/Finance/ReportForm_HH.aspx")
     End Sub
 End Class

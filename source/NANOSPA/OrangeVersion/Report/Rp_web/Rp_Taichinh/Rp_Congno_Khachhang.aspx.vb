@@ -10,13 +10,14 @@
     End Sub
     Private Sub loaddata()
         objFckhachhang = New BO.CRM_DM_KhachhangFacade
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim dt As DataTable
         Dim uId_Cuahang As String
         Dim nv_DiachiCuahang_vn As String
         Dim nv_Tencuahang_vn As String
         Dim Xtr As New Xtr_Congno_Khachhang
-        nv_Tencuahang_vn = Session("nv_Tencuahang_vn")
-        nv_DiachiCuahang_vn = Session("nv_DiachiCH_vn")
+        nv_Tencuahang_vn = Session("nv_Tencuahang_en")
+        nv_DiachiCuahang_vn = Session("nv_DiachiCH_en")
         uId_Cuahang = Session("uId_Cuahang")
         Dim TuNgay As DateTime
         Dim DenNgay As DateTime
@@ -30,10 +31,10 @@
             Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
             Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
             objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-            Xtr.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-            Xtr.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-            Xtr.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-            Xtr.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+            Xtr.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+            Xtr.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+            Xtr.lblSdt.Text = "SĐT: " + objEnCuahang.nv_Dienthoai
+            Xtr.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
 
             ReportViewer1.Report = Xtr
         Catch ex As Exception

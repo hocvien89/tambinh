@@ -63,13 +63,14 @@ Public Class Rp_TonghopXuat
         ReportViewer1.Report = bc
         bc.lbl_Tungay.Text = Aspx_Tungay.Text
         bc.lbl_Denngay.Text = Aspx_Denngay.Text
-            Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
         Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
         objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-        bc.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-        bc.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-        bc.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-        bc.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
+        bc.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        bc.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        bc.lblSdt.Text = "SĐT: " + objEnCuahang.nv_Dienthoai
+        bc.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         Dim datenow As DateTime = Date.Now
         bc.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
 

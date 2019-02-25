@@ -1,4 +1,0 @@
-<Log Entry> : 8:37:12 AM Tuesday, September 19, 2017
-<Position>  : cmdDangnhap_Click()
-<Message>   : Thread was being aborted.
---------------------------------------------------------------------------------------

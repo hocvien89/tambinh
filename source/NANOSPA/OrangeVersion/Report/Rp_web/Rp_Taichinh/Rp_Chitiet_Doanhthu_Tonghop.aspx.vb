@@ -15,13 +15,16 @@
     Public Sub loadData()
         objFcKhachhang = New BO.clsB_BaoCao_Khachhang
         BC = New Xtr_Chitiet_Doanhthu_Tonghop
+        Dim objFcThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim dt As DataTable
         Dim d_Tungay As Date = BO.Util.ConvertDateTime(Aspx_Tungay.Text)
         Dim d_Denngay As Date = BO.Util.ConvertDateTime(Aspx_Denngay.Text)
         dt = objFcKhachhang.Baocao_DoanhThu_Tonghop(d_Tungay, d_Denngay)
 
-        'BC.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn")
-        'BC.lbl_Diachi.Text = Session("nv_DiachiCH_vn")
+        BC.lblPKName.Html = Session("nv_Tencuahang_en")
+        BC.lblDiachi.Html = Session("nv_DiachiCH_en")
+        BC.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+        BC.XrPictureBox_logo.ImageUrl = "~" + objFcThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         BC.lbl_Tungay.Text = Aspx_Tungay.Text
         BC.lbl_Denngay.Text = Aspx_Denngay.Text
         BC.Bindata(dt)

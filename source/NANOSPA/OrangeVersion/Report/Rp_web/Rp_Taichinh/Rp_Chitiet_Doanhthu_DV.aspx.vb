@@ -15,7 +15,7 @@
     Public Sub loadData()
         Dim tungay As DateTime
         Dim denngay As DateTime
-
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim sFormat As System.Globalization.DateTimeFormatInfo = New System.Globalization.DateTimeFormatInfo()
         sFormat.ShortDatePattern = "dd/MM/yyyy"
         If Aspx_Tungay.Text <> "" And Aspx_Denngay.Text <> "" Then
@@ -29,8 +29,10 @@
         dt = objFCKHQT.BaoCaoDichVu(tungay, denngay, "", uId_Cuahang)
         Dim j, k As Integer
         j = 0
-        BC.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn")
-        BC.lbl_Diachi.Text = Session("nv_DiachiCH_vn")
+        BC.lblPKName.Html = Session("nv_Tencuahang_en")
+        BC.lblDiachi.Html = Session("nv_DiachiCH_en")
+        BC.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+        BC.XrPictureBox_logo.ImageUrl = "~" + objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri
         BC.lbl_Tungay.Text = Aspx_Tungay.Text
         BC.lbl_Denngay.Text = Aspx_Denngay.Text
         Try

@@ -5,9 +5,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_Main" runat="server">
     <div class="brest_crum">
         <ul>
-           <%-- <li class="text_title">
+            <li class="text_title">
                 <dx:ASPxButton ID="btnback" runat="server" Image-Url="~/images/16x16/back.png" Image-AlternateText="Quay lại" ToolTip="Quay lại"></dx:ASPxButton>
-            </li>--%>
+            </li>
             <li>
                 <p class="p_header"><i class="fa fa-user fa-fw fa-1x"></i>BÁO CÁO NHÂN VIÊN KỸ THUẬT</p>
             </li>

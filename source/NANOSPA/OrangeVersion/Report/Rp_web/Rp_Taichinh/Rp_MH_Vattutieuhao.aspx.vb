@@ -63,8 +63,14 @@ Public Class Rp_MH_Vattutieuhao
         rp.bind(dt)
         rp.lbl_Tungay.Text = Aspx_Tungay.Text
         rp.lbl_Denngay.Text = Aspx_Denngay.Text
-        rp.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn").ToString
-        rp.lbl_Diachi.Text = Session("nv_DiachiCH_vn").ToString
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
+        rp.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        rp.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        rp.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+        rp.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         ReportViewer1.Report = rp
     End Sub
 #End Region
@@ -77,8 +83,14 @@ Public Class Rp_MH_Vattutieuhao
         rp.bind(dt)
         rp.lbl_Tungay.Text = Aspx_Tungay.Text
         rp.lbl_Denngay.Text = Aspx_Denngay.Text
-        rp.lbl_Tencuahang.Text = Session("nv_Tencuahang_vn").ToString
-        rp.lbl_Diachi.Text = Session("nv_DiachiCH_vn").ToString
+        Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
+        Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
+        objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
+        rp.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        rp.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        rp.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+        rp.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         ReportViewer1.Report = rp
     End Sub
 

@@ -12,6 +12,7 @@
         Try
             Dim TuNgay As DateTime
             Dim DenNgay As DateTime
+            Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
             Dim sFormat As System.Globalization.DateTimeFormatInfo = New System.Globalization.DateTimeFormatInfo()
             sFormat.ShortDatePattern = "dd/MM/yyyy"
             If Aspx_Tungay.Text <> "" And Aspx_Denngay.Text <> "" Then
@@ -56,10 +57,10 @@
             Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
             Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
             objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-            BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-            BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-            BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-            BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+            BC.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+            BC.lblDiachi.Text = objEnCuahang.nv_Diachi_en
+            BC.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+            BC.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
 
             BC.lbl_Tungay.Text = Aspx_Tungay.Text
             BC.lbl_Denngay.Text = Aspx_Denngay.Text

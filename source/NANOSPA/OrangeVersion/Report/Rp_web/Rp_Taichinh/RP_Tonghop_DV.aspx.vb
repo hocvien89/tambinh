@@ -10,7 +10,8 @@
     End Sub
     Private Sub loaddata()
         Dim dt As DataTable
-        Dim tungay, denngay As Datetime
+        Dim tungay, denngay As DateTime
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim tencuahang, diachi, uid_Cuahang As String
         Dim sFormat As System.Globalization.DateTimeFormatInfo = New System.Globalization.DateTimeFormatInfo()
         sFormat.ShortDatePattern = "dd/MM/yyyy"
@@ -18,8 +19,8 @@
             tungay = Aspx_Tungay.Value.ToString
             denngay = Aspx_Denngay.Value.ToString
         End If
-        tencuahang = Session("nv_Tencuahang_vn")
-        diachi = Session("nv_DiachiCH_vn")
+        tencuahang = Session("nv_Tencuahang_en")
+        diachi = Session("nv_DiachiCH_en")
         uid_Cuahang = Session("uId_Cuahang")
 
         dt = obj.BAOCAO_DoanhThuTongHop(tungay, denngay, uid_Cuahang)
@@ -39,8 +40,10 @@
         Dim rpt As New Xtr_Tonghop_DV
         rpt.binddata(dt)
         ReportViewer1.Report = rpt
-        rpt.lbl_diachi.Text = diachi
-        rpt.lbl_Tencuahang.Text = tencuahang
+        rpt.lblPKName.Html = tencuahang
+        rpt.lblDiachi.Html = diachi
+        rpt.lblSdt.Text = Session("nv_Dienthoai")
+        rpt.XrPictureBox_logo.ImageUrl = "~" + objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         rpt.lbl_Tungay.Text = Aspx_Tungay.Text
         rpt.lbl_Denngay.Text = Aspx_Denngay.Text
         Dim Arplit() As String = Split(Strings.Format(DateAndTime.Now, "dd/MM/yyyy"))

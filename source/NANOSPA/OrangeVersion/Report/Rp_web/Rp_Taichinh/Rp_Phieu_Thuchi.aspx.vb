@@ -18,6 +18,7 @@
     Private Sub LoadData()
         Dim TuNgay As DateTime
         Dim DenNgay As DateTime
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim sFormat As System.Globalization.DateTimeFormatInfo = New System.Globalization.DateTimeFormatInfo()
         sFormat.ShortDatePattern = "dd/MM/yyyy"
         If Aspx_Tungay.Value.ToString <> "" And Aspx_Denngay.Value.ToString <> "" Then
@@ -44,10 +45,10 @@
         Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
         Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
         objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-        BC.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-        BC.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-        BC.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-        BC.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        BC.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        BC.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        BC.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+        BC.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         Dim datenow As DateTime = Date.Now
         BC.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
         BC.lbl_Tungay.Text = Aspx_Tungay.Text

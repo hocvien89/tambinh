@@ -57,6 +57,7 @@ Public Class Rp_TonghopNhap
 
     Private Sub loadReport()
         Dim dt As DataTable
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         dt = LoadData()
         For i As Integer = 0 To dt.Rows.Count - 1 Step 1
             dt.Rows(i)("v_Maphieunhap") = " - " + dt.Rows(i)("v_Maphieunhap").ToString + " / NCC: " + dt.Rows(i)("nv_Tennhacungcap_vn").ToString + " / " + dt.Rows(i)("d_Ngaynhap").ToString
@@ -69,10 +70,10 @@ Public Class Rp_TonghopNhap
         Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
         Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
         objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-        bc.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-        bc.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-        bc.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-        bc.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        bc.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        bc.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        bc.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+        bc.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         Dim datenow As DateTime = Date.Now
         bc.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
     End Sub

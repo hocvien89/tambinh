@@ -11,6 +11,7 @@
 #Region " dữ liệu"
     Private Sub loaddata()
         objFcPhieuthuchi = New BO.QLTC_PhieuthuchiFacade
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim dt As DataTable
         Dim tungay As DateTime
         Dim denngay As DateTime
@@ -27,10 +28,10 @@
         Dim objEnCuahang As New CM.QT_DM_CUAHANGEntity
         Dim objFcCuahang As New BO.QT_DM_CUAHANGFacade
         objEnCuahang = objFcCuahang.SelectByIDCuahang(Session("uId_Cuahang"))
-        xtra.lblPKName.Text = objEnCuahang.nv_Tencuahang_vn
-        xtra.lblDiachi.Text = objEnCuahang.nv_Diachi_vn
-        xtra.lblDienthoai.Text = objEnCuahang.nv_Dienthoai
-        xtra.XrPictureBox_logo.ImageUrl = objEnCuahang.nv_Diachi_en
+        xtra.lblPKName.Html = objEnCuahang.nv_Tencuahang_en
+        xtra.lblDiachi.Html = objEnCuahang.nv_Diachi_en
+        xtra.lblSdt.Text = "SĐT: "+ objEnCuahang.nv_Dienthoai
+        xtra.XrPictureBox_logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         Dim datenow As DateTime = Date.Now
         xtra.lblNgay.Text = "Ngày " & datenow.Day.ToString() & " tháng " & datenow.Month.ToString() & " năm " & datenow.Year.ToString
     End Sub
