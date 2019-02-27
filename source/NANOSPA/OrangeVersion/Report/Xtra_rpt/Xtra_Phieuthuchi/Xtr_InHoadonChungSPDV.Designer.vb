@@ -85,6 +85,7 @@ Partial Public Class Xtr_InHoadonChungSPDV
         Me.f_tongthanhtoan = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_giamgiaphieu = New DevExpress.XtraReports.UI.CalculatedField()
         Me.XrControlStyle1 = New DevExpress.XtraReports.UI.XRControlStyle()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,7 +196,7 @@ Partial Public Class Xtr_InHoadonChungSPDV
         '
         'TopMargin
         '
-        Me.TopMargin.HeightF = 0.0!
+        Me.TopMargin.HeightF = 20.83333!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -209,14 +210,14 @@ Partial Public Class Xtr_InHoadonChungSPDV
         '
         'PageHeader
         '
-        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblSdt, Me.lblDiachi, Me.lblTencuahang, Me.XrTable5, Me.XrTable1, Me.lblNgay, Me.XrLabel1})
+        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrPictureBox_logo, Me.lblSdt, Me.lblDiachi, Me.lblTencuahang, Me.XrTable5, Me.XrTable1, Me.lblNgay, Me.XrLabel1})
         Me.PageHeader.HeightF = 342.7084!
         Me.PageHeader.Name = "PageHeader"
         '
         'lblSdt
         '
         Me.lblSdt.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(23.95833!, 56.00001!)
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(112.4132!, 56.00001!)
         Me.lblSdt.Name = "lblSdt"
         Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
@@ -226,7 +227,7 @@ Partial Public Class Xtr_InHoadonChungSPDV
         'lblDiachi
         '
         Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(23.95835!, 33.00001!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(112.4132!, 33.00001!)
         Me.lblDiachi.Name = "lblDiachi"
         Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
         Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
@@ -235,7 +236,7 @@ Partial Public Class Xtr_InHoadonChungSPDV
         'lblTencuahang
         '
         Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(23.95833!, 10.00001!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(112.4132!, 10.00001!)
         Me.lblTencuahang.Name = "lblTencuahang"
         Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
         Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
@@ -624,12 +625,19 @@ Partial Public Class Xtr_InHoadonChungSPDV
         Me.XrControlStyle1.Name = "XrControlStyle1"
         Me.XrControlStyle1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(23.95833!, 10.00001!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(76.0!, 76.0!)
+        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
         'Xtr_InHoadonChungSPDV
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.GroupHeader1, Me.ReportFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.v_Phieu, Me.nv_ten, Me.f_dongia, Me.f_soluong, Me.f_giamgia, Me.f_tongtien, Me.f_tongthanhtoan, Me.f_giamgiaphieu})
         Me.DataSource = Me.BindingSource1
-        Me.Margins = New System.Drawing.Printing.Margins(31, 35, 0, 36)
+        Me.Margins = New System.Drawing.Printing.Margins(31, 35, 21, 36)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
@@ -710,4 +718,5 @@ Partial Public Class Xtr_InHoadonChungSPDV
     Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
     Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrControlStyle1 As DevExpress.XtraReports.UI.XRControlStyle
+    Friend WithEvents XrPictureBox_logo As DevExpress.XtraReports.UI.XRPictureBox
 End Class

@@ -84,12 +84,12 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.tienno = New DevExpress.XtraReports.UI.CalculatedField()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
-        Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
-        Me.giamgiadv = New DevExpress.XtraReports.UI.CalculatedField()
         Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
         Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
         Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
+        Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
+        Me.giamgiadv = New DevExpress.XtraReports.UI.CalculatedField()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -206,7 +206,7 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         '
         'TopMargin
         '
-        Me.TopMargin.HeightF = 0.0!
+        Me.TopMargin.HeightF = 21.875!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -647,23 +647,6 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.ReportHeader.HeightF = 153.125!
         Me.ReportHeader.Name = "ReportHeader"
         '
-        'XrPictureBox_logo
-        '
-        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(21.67788!, 11.77084!)
-        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
-        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(76.0!, 76.0!)
-        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
-        '
-        'ReportFooter
-        '
-        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable4, Me.lbl_Ngaythangnam, Me.XrLabel3})
-        Me.ReportFooter.HeightF = 125.0208!
-        Me.ReportFooter.Name = "ReportFooter"
-        '
-        'giamgiadv
-        '
-        Me.giamgiadv.Name = "giamgiadv"
-        '
         'lblPKName
         '
         Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
@@ -688,13 +671,30 @@ Partial Public Class Xtr_Chitiet_Doanhthu_MH
         Me.lblSdt.SizeF = New System.Drawing.SizeF(181.25!, 23.0!)
         Me.lblSdt.Text = "lblSdt"
         '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(21.67788!, 11.77084!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(76.0!, 76.0!)
+        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
+        '
+        'ReportFooter
+        '
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable4, Me.lbl_Ngaythangnam, Me.XrLabel3})
+        Me.ReportFooter.HeightF = 125.0208!
+        Me.ReportFooter.Name = "ReportFooter"
+        '
+        'giamgiadv
+        '
+        Me.giamgiadv.Name = "giamgiadv"
+        '
         'Xtr_Chitiet_Doanhthu_MH
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.GroupHeader1, Me.GroupFooter1, Me.ReportHeader, Me.ReportFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.v_Sophieu, Me.v_Makhachang, Me.nv_Hoten_vn, Me.f_Dongia, Me.f_Soluong, Me.f_Giamgia, Me.f_Tongtien, Me.tonggiamgia, Me.f_Tongtienthuc, Me.tienno, Me.giamgiadv})
         Me.DataSource = Me.Bind_Chitiet_Doanhthu_MH
         Me.Landscape = True
-        Me.Margins = New System.Drawing.Printing.Margins(35, 32, 0, 0)
+        Me.Margins = New System.Drawing.Printing.Margins(35, 32, 22, 0)
         Me.PageHeight = 827
         Me.PageWidth = 1169
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4

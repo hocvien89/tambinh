@@ -43,6 +43,9 @@ Partial Public Class Xtr_Inphieuthuchi
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrCel_Bangchu = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNgayThang = New DevExpress.XtraReports.UI.XRLabel()
         Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lbl_Maphieu = New DevExpress.XtraReports.UI.XRLabel()
@@ -50,13 +53,10 @@ Partial Public Class Xtr_Inphieuthuchi
         Me.lbl_Tenphieu = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
-        Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,6 +227,30 @@ Partial Public Class Xtr_Inphieuthuchi
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(112.4792!, 57.50306!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
+        '
+        'lblTencuahang
+        '
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(112.4792!, 34.50309!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(112.4792!, 80.5031!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
+        '
         'lblNgayThang
         '
         Me.lblNgayThang.Font = New System.Drawing.Font("Times New Roman", 12.0!)
@@ -288,84 +312,60 @@ Partial Public Class Xtr_Inphieuthuchi
         '
         'ReportFooter
         '
-        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel9, Me.XrLabel8, Me.XrLabel2, Me.XrLabel1})
+        Me.ReportFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel6, Me.XrLabel3, Me.XrLabel2, Me.XrLabel1})
         Me.ReportFooter.Name = "ReportFooter"
-        '
-        'XrLabel9
-        '
-        Me.XrLabel9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(574.6507!, 54.34048!)
-        Me.XrLabel9.Multiline = True
-        Me.XrLabel9.Name = "XrLabel9"
-        Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel9.SizeF = New System.Drawing.SizeF(129.2915!, 23.58895!)
-        Me.XrLabel9.StylePriority.UseFont = False
-        Me.XrLabel9.StylePriority.UseTextAlignment = False
-        Me.XrLabel9.Text = "(Ký, họ tên)"
-        Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter
-        '
-        'XrLabel8
-        '
-        Me.XrLabel8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(86.40296!, 54.34048!)
-        Me.XrLabel8.Multiline = True
-        Me.XrLabel8.Name = "XrLabel8"
-        Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel8.SizeF = New System.Drawing.SizeF(129.2915!, 23.58895!)
-        Me.XrLabel8.StylePriority.UseFont = False
-        Me.XrLabel8.StylePriority.UseTextAlignment = False
-        Me.XrLabel8.Text = "(Ký, họ tên)"
-        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter
         '
         'XrLabel2
         '
         Me.XrLabel2.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(574.6507!, 27.25463!)
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(606.2888!, 28.29628!)
         Me.XrLabel2.Multiline = True
         Me.XrLabel2.Name = "XrLabel2"
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(141.4034!, 27.08586!)
         Me.XrLabel2.StylePriority.UseFont = False
         Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "NGƯỜI NHẬN"
+        Me.XrLabel2.Text = "Người nhận"
         Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter
         '
         'XrLabel1
         '
         Me.XrLabel1.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(86.40292!, 28.29632!)
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(86.40291!, 28.29628!)
         Me.XrLabel1.Multiline = True
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(150.6805!, 26.04416!)
         Me.XrLabel1.StylePriority.UseFont = False
         Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "NGƯỜI NỘP"
+        Me.XrLabel1.Text = "Quản lý"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter
         '
-        'lblDiachi
+        'XrLabel3
         '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(112.4792!, 57.50306!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
+        Me.XrLabel3.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(248.9584!, 28.29628!)
+        Me.XrLabel3.Multiline = True
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(150.6805!, 26.04416!)
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "Thủ quỹ"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter
         '
-        'lblTencuahang
+        'XrLabel6
         '
-        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(112.4792!, 34.50309!)
-        Me.lblTencuahang.Name = "lblTencuahang"
-        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
-        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
-        '
-        'lblSdt
-        '
-        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(112.4792!, 80.5031!)
-        Me.lblSdt.Name = "lblSdt"
-        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
-        Me.lblSdt.Text = "lblSdt"
+        Me.XrLabel6.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(423.9702!, 28.29628!)
+        Me.XrLabel6.Multiline = True
+        Me.XrLabel6.Name = "XrLabel6"
+        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel6.SizeF = New System.Drawing.SizeF(150.6805!, 26.04416!)
+        Me.XrLabel6.StylePriority.UseFont = False
+        Me.XrLabel6.StylePriority.UseTextAlignment = False
+        Me.XrLabel6.Text = "Kế toán"
+        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter
         '
         'Xtr_Inphieuthuchi
         '
@@ -413,11 +413,11 @@ Partial Public Class Xtr_Inphieuthuchi
     Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel9 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel8 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents xtrlogo As DevExpress.XtraReports.UI.XRPictureBox
     Friend WithEvents lblNgayThang As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
     Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
     Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
 End Class

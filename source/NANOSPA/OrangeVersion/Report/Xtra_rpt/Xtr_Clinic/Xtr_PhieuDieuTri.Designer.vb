@@ -85,14 +85,15 @@ Partial Public Class Xtr_PhieuDieuTri
         Me.XrTableCell16 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.cellTienSu = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
         Me.xtrlogo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lblHeader = New DevExpress.XtraReports.UI.XRLabel()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.lblNgayThang = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNhanVien = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -536,15 +537,38 @@ Partial Public Class Xtr_PhieuDieuTri
         '
         'TopMargin
         '
-        Me.TopMargin.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblSdt, Me.lblTencuahang, Me.lblDiachi, Me.xtrlogo, Me.lblHeader})
-        Me.TopMargin.HeightF = 146.875!
+        Me.TopMargin.HeightF = 25.0!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(85.25955!, 56.00004!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
+        '
+        'lblTencuahang
+        '
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(85.25955!, 10.00001!)
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(85.25955!, 33.00002!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
+        '
         'xtrlogo
         '
-        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 10.00001!)
+        Me.xtrlogo.LocationFloat = New DevExpress.Utils.PointFloat(4.166667!, 10.00001!)
         Me.xtrlogo.Name = "xtrlogo"
         Me.xtrlogo.SizeF = New System.Drawing.SizeF(75.0!, 75.0!)
         Me.xtrlogo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
@@ -552,7 +576,7 @@ Partial Public Class Xtr_PhieuDieuTri
         'lblHeader
         '
         Me.lblHeader.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.lblHeader.LocationFloat = New DevExpress.Utils.PointFloat(198.0834!, 111.875!)
+        Me.lblHeader.LocationFloat = New DevExpress.Utils.PointFloat(202.2501!, 106.8959!)
         Me.lblHeader.Name = "lblHeader"
         Me.lblHeader.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblHeader.SizeF = New System.Drawing.SizeF(346.875!, 25.0!)
@@ -591,34 +615,16 @@ Partial Public Class Xtr_PhieuDieuTri
         Me.lblNhanVien.Text = "Bác sĩ điều trị"
         Me.lblNhanVien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
-        'lblSdt
+        'ReportHeader
         '
-        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(81.09288!, 60.97918!)
-        Me.lblSdt.Name = "lblSdt"
-        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSdt.SizeF = New System.Drawing.SizeF(328.1249!, 23.0!)
-        Me.lblSdt.Text = "lblSdt"
-        '
-        'lblTencuahang
-        '
-        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(81.09288!, 14.97916!)
-        Me.lblTencuahang.Name = "lblTencuahang"
-        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
-        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(328.125!, 23.0!)
-        '
-        'lblDiachi
-        '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(81.09288!, 37.97916!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(478.125!, 23.0!)
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblTencuahang, Me.xtrlogo, Me.lblDiachi, Me.lblHeader, Me.lblSdt})
+        Me.ReportHeader.HeightF = 150.0!
+        Me.ReportHeader.Name = "ReportHeader"
         '
         'Xtr_PhieuDieuTri
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin})
-        Me.Margins = New System.Drawing.Printing.Margins(50, 53, 147, 100)
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader})
+        Me.Margins = New System.Drawing.Printing.Margins(50, 53, 25, 100)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
@@ -704,4 +710,5 @@ Partial Public Class Xtr_PhieuDieuTri
     Friend WithEvents lblSdt As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
     Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
 End Class

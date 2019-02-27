@@ -25,6 +25,7 @@ Public Class rp_InHoadontonghop
         objFcPhieuthuchi = New BO.QLTC_PhieuthuchiFacade
         objFcKhachhang = New BO.CRM_DM_KhachhangFacade
         objEnKhachhang = New CM.CRM_DM_KhachhangEntity
+        Dim objFCThamsohethong As New BO.clsB_QT_THAMSOHETHONG
         Dim dt As DataTable
         Dim BC As New Xtr_InHoadonChungSPDV
         If SLuahchon = "Phieuxuat" Then
@@ -48,6 +49,7 @@ Public Class rp_InHoadontonghop
         BC.lblTencuahang.Html = Session("nv_Tencuahang_en")
         BC.lblDiachi.Html = Session("nv_DiachiCH_en")
         BC.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
+        BC.XrPictureBox_logo.ImageUrl = "~" + objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         BC.bindata(dt)
         ReportViewerControl.ReportViewer.Report = BC
     End Sub

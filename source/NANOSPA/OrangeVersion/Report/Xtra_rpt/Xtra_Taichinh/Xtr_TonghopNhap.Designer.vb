@@ -20,9 +20,9 @@ Partial Public Class Xtr_TonghopNhap
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_TonghopNhap))
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_TonghopNhap))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable3 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow3 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -46,6 +46,10 @@ Partial Public Class Xtr_TonghopNhap
         Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.lbl_Denngay = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbl_Tungay = New DevExpress.XtraReports.UI.XRLabel()
@@ -72,17 +76,13 @@ Partial Public Class Xtr_TonghopNhap
         Me.XrTableCell23 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell24 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -183,7 +183,7 @@ Partial Public Class Xtr_TonghopNhap
         '
         'TopMargin
         '
-        Me.TopMargin.HeightF = 0.0!
+        Me.TopMargin.HeightF = 19.79167!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -271,6 +271,37 @@ Partial Public Class Xtr_TonghopNhap
         Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblPKName, Me.lblDiachi, Me.lblSdt, Me.XrPictureBox_logo, Me.lbl_Denngay, Me.XrLabel4, Me.lbl_Tungay, Me.XrLabel2, Me.XrLabel1})
         Me.ReportHeader.HeightF = 170.096!
         Me.ReportHeader.Name = "ReportHeader"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(97.05818!, 10.00001!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.SerializableRtfString = resources.GetString("lblPKName.SerializableRtfString")
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(417.0609!, 23.0!)
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(97.05818!, 32.99998!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(417.0609!, 23.0!)
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(97.05818!, 56.00001!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(185.4167!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
+        '
+        'XrPictureBox_logo
+        '
+        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(9.069617!, 10.00001!)
+        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
+        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(76.0!, 76.0!)
+        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'lbl_Denngay
         '
@@ -484,44 +515,13 @@ Partial Public Class Xtr_TonghopNhap
         Me.XrTableCell24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         Me.XrTableCell24.Weight = 0.42812765028461364R
         '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(97.05818!, 10.00001!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.SerializableRtfString = resources.GetString("lblPKName.SerializableRtfString")
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(417.0609!, 23.0!)
-        '
-        'lblDiachi
-        '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(97.05818!, 32.99998!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(417.0609!, 23.0!)
-        '
-        'lblSdt
-        '
-        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(97.05818!, 56.00001!)
-        Me.lblSdt.Name = "lblSdt"
-        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSdt.SizeF = New System.Drawing.SizeF(185.4167!, 23.0!)
-        Me.lblSdt.Text = "lblSdt"
-        '
-        'XrPictureBox_logo
-        '
-        Me.XrPictureBox_logo.LocationFloat = New DevExpress.Utils.PointFloat(9.069617!, 10.00001!)
-        Me.XrPictureBox_logo.Name = "XrPictureBox_logo"
-        Me.XrPictureBox_logo.SizeF = New System.Drawing.SizeF(76.0!, 76.0!)
-        Me.XrPictureBox_logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
-        '
         'Xtr_TonghopNhap
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.ReportHeader, Me.GroupHeader1, Me.ReportFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.v_Maphieunhap, Me.v_MaMathang, Me.nv_TenMathang_vn, Me.soluong, Me.tendonvi, Me.f_Donggia, Me.thanhtien, Me.nv_Tenkho_vn})
         Me.DataSource = Me.BindingSource1
         Me.Landscape = True
-        Me.Margins = New System.Drawing.Printing.Margins(38, 44, 0, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(38, 44, 20, 100)
         Me.PageHeight = 827
         Me.PageWidth = 1169
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
@@ -529,11 +529,11 @@ Partial Public Class Xtr_TonghopNhap
         Me.Version = "12.2"
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub

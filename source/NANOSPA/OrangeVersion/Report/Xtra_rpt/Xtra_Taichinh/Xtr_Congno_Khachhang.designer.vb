@@ -21,10 +21,10 @@ Partial Public Class Xtr_Congno_Khachhang
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_Congno_Khachhang))
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary4 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_Congno_Khachhang))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -47,6 +47,9 @@ Partial Public Class Xtr_Congno_Khachhang
         Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
         Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
@@ -72,15 +75,12 @@ Partial Public Class Xtr_Congno_Khachhang
         Me.f_Congno = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Thanhtoan = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Doanhthu = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -189,7 +189,7 @@ Partial Public Class Xtr_Congno_Khachhang
         '
         'TopMargin
         '
-        Me.TopMargin.HeightF = 0.0!
+        Me.TopMargin.HeightF = 20.83333!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -271,6 +271,30 @@ Partial Public Class Xtr_Congno_Khachhang
         Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblSdt, Me.lblDiachi, Me.lblPKName, Me.XrPictureBox_logo, Me.XrLabel3})
         Me.ReportHeader.HeightF = 143.75!
         Me.ReportHeader.Name = "ReportHeader"
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(97.13625!, 56.00001!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(181.25!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(97.13625!, 32.99999!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(97.13625!, 10.00001!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.SerializableRtfString = resources.GetString("lblPKName.SerializableRtfString")
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
         '
         'XrPictureBox_logo
         '
@@ -439,36 +463,12 @@ Partial Public Class Xtr_Congno_Khachhang
         '
         Me.f_Doanhthu.Name = "f_Doanhthu"
         '
-        'lblSdt
-        '
-        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(97.13625!, 56.00001!)
-        Me.lblSdt.Name = "lblSdt"
-        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSdt.SizeF = New System.Drawing.SizeF(181.25!, 23.0!)
-        Me.lblSdt.Text = "lblSdt"
-        '
-        'lblDiachi
-        '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(97.13625!, 32.99999!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
-        '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(97.13625!, 10.00001!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.SerializableRtfString = resources.GetString("lblPKName.SerializableRtfString")
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
-        '
         'Xtr_Congno_Khachhang
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.ReportFooter, Me.PageHeader, Me.PageFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.nv_Hoten_vn, Me.nv_Diachi_vn, Me.v_DienthoaiDD, Me.f_CongnoKH, Me.f_ThuchiKH, Me.f_CongnoCuoi, Me.v_Makhachang, Me.nv_Nguon_vn, Me.f_Congno, Me.f_Thanhtoan, Me.f_Doanhthu})
         Me.DataSource = Me.BindingSource1
-        Me.Margins = New System.Drawing.Printing.Margins(24, 0, 0, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(24, 0, 21, 100)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
@@ -476,10 +476,10 @@ Partial Public Class Xtr_Congno_Khachhang
         Me.Version = "12.2"
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub

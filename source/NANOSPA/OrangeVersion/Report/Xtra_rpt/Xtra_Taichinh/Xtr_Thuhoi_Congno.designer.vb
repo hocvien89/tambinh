@@ -20,9 +20,9 @@ Partial Public Class Xtr_Thuhoi_Congno
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_Thuhoi_Congno))
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary2 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtr_Thuhoi_Congno))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -34,6 +34,9 @@ Partial Public Class Xtr_Thuhoi_Congno
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPictureBox_logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbl_Denngay = New DevExpress.XtraReports.UI.XRLabel()
@@ -72,17 +75,14 @@ Partial Public Class Xtr_Thuhoi_Congno
         Me.f_Sotien = New DevExpress.XtraReports.UI.CalculatedField()
         Me.nv_Diachi_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.v_Maphieu = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.lblPKName = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblSdt = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -159,7 +159,7 @@ Partial Public Class Xtr_Thuhoi_Congno
         '
         'TopMargin
         '
-        Me.TopMargin.HeightF = 0.0!
+        Me.TopMargin.HeightF = 19.79167!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -175,6 +175,30 @@ Partial Public Class Xtr_Thuhoi_Congno
         Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblPKName, Me.lblDiachi, Me.lblSdt, Me.XrPictureBox_logo, Me.XrLabel5, Me.lbl_Denngay, Me.lbl_Tungay, Me.XrLabel2, Me.XrLabel1})
         Me.ReportHeader.HeightF = 208.3333!
         Me.ReportHeader.Name = "ReportHeader"
+        '
+        'lblPKName
+        '
+        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(96.48083!, 10.00001!)
+        Me.lblPKName.Name = "lblPKName"
+        Me.lblPKName.SerializableRtfString = resources.GetString("lblPKName.SerializableRtfString")
+        Me.lblPKName.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
+        '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(96.48083!, 32.99999!)
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
+        '
+        'lblSdt
+        '
+        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(96.48083!, 56.00001!)
+        Me.lblSdt.Name = "lblSdt"
+        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblSdt.SizeF = New System.Drawing.SizeF(181.25!, 23.0!)
+        Me.lblSdt.Text = "lblSdt"
         '
         'XrPictureBox_logo
         '
@@ -488,49 +512,25 @@ Partial Public Class Xtr_Thuhoi_Congno
         '
         Me.v_Maphieu.Name = "v_Maphieu"
         '
-        'lblPKName
-        '
-        Me.lblPKName.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblPKName.LocationFloat = New DevExpress.Utils.PointFloat(96.48083!, 10.00001!)
-        Me.lblPKName.Name = "lblPKName"
-        Me.lblPKName.SerializableRtfString = resources.GetString("lblPKName.SerializableRtfString")
-        Me.lblPKName.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
-        '
-        'lblDiachi
-        '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 9.75!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(96.48083!, 32.99999!)
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(412.8942!, 23.0!)
-        '
-        'lblSdt
-        '
-        Me.lblSdt.LocationFloat = New DevExpress.Utils.PointFloat(96.48083!, 56.00001!)
-        Me.lblSdt.Name = "lblSdt"
-        Me.lblSdt.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblSdt.SizeF = New System.Drawing.SizeF(181.25!, 23.0!)
-        Me.lblSdt.Text = "lblSdt"
-        '
         'Xtr_Thuhoi_Congno
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.PageHeader, Me.GroupHeader1, Me.GroupFooter1, Me.ReportFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.nv_Hoten_vn, Me.v_DienthoaiDD, Me.d_Ngaytrano, Me.f_Sotien, Me.nv_Diachi_vn, Me.v_Maphieu})
         Me.DataSource = Me.BindingSource1
-        Me.Margins = New System.Drawing.Printing.Margins(24, 28, 0, 100)
+        Me.Margins = New System.Drawing.Printing.Margins(24, 28, 20, 100)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.Version = "12.2"
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblPKName, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
