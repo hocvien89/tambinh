@@ -290,9 +290,10 @@
         }
         //Enter key function Form
         function enter_txtHoten(e) {
+            console.log("enter key ho ten");
             if (e.keyCode == 13) {
-                pcDsKhachhangSearch.Show();
-                grvdanhsachsearch.Refresh();
+                //pcDsKhachhangSearch.Show();
+                //grvdanhsachsearch.Refresh();
                 var txtHoten = document.getElementById("<%=txtHoten.ClientID%>");
                 if (txtHoten.value != "") {
                     txtnamsinh.Focus();
@@ -300,34 +301,37 @@
                 return false;
             }
         }
-        function enter_namsinh(e) {
+        function enter_txtnamsinh(e) {
             if (e.keyCode == 13) {
                 //var txtTuoi = document.getElementById("");
                 //var currentTime = new Date()
                 //var year = currentTime.getFullYear()
                 //txtTuoi.value = year - parseInt(deNgaysinh.GetText().split("/")[2]);
-                ddlGioitinh.Focus();
+                var txtdiachi = document.getElementById("<%=txtDiachi.ClientID%>");
+                txtdiachi.focus();
                 return false;
             }
         }
         function enter_ddlGioitinh(e) {
             if (e.keyCode == 13) {
                 var txtDiachi = document.getElementById("<%=txtDiachi.ClientID%>");
-                txtDiachi.focus();
+                txtDiachi.Focus();
                 return false;
             }
         }
         function enter_txtDiachi(e) {
             if (e.keyCode == 13) {
-                var txtDienthoai = document.getElementById("<%=txtDienthoai.ClientID%>");
-                txtDienthoai.focus();
+                var txtdienthoai = document.getElementById("<%=txtDienthoai.ClientID%>");
+                txtdienthoai.focus();
+                
                 return false;
             }
         }
         function enter_txtDienthoai(e) {
             if (e.keyCode == 13) {
-                var txtEmail = document.getElementById("<%=txtEmail.ClientID%>");
-                txtEmail.focus();
+                //var txtEmail = document.getElementById("<%=txtEmail.ClientID%>");
+                //txtEmail.focus();
+                btOk.Focus();
                 return false;
             }
         }
@@ -1171,7 +1175,7 @@
                                                 <td class="info_table_td">Địa chỉ:
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <asp:TextBox ID="txtDiachi" runat="server" onkeypress="return enter_txtDiachi(event)" Width="200px" CssClass="nano_textbox"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDiachi" runat="server" ClientInstanceName="txtdiachi" onkeypress="return enter_txtDiachi(event)" Width="200px" CssClass="nano_textbox"></asp:TextBox>
                                                 </td>
                                                 <td class="info_table_td">Người giới thiệu:</td>
                                                 <td class="info_table_td">
@@ -1189,7 +1193,7 @@
                                                 <td class="info_table_td">Điện thoại:
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <asp:TextBox ID="txtDienthoai" runat="server" onkeypress="return enter_txtDienthoai(event)" Width="200px" CssClass="nano_textbox"></asp:TextBox>
+                                                    <asp:TextBox ID="txtDienthoai" ClientInstanceName="txtdienthoai" runat="server" onkeypress="return enter_txtDienthoai(event)" Width="200px" CssClass="nano_textbox"></asp:TextBox>
                                                 </td>
                                                 <td class="info_table_td">Email:
                                                 </td>

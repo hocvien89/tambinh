@@ -255,7 +255,8 @@ Public Class nano_websv
                     objEnChitietDV.f_Solan = objEnDMDichvu.i_Solan_Dieutri
                     objEnChitietDV.f_Soluong = 1 'So luong mac dinh la 1
                     objEnChitietDV.f_Dongia = objEnDMDichvu.f_Gia
-                    objEnChitietDV.f_Giamgia = CDbl(f_GiamgiaDV) * objEnDMDichvu.f_Gia / 100
+                    'objEnChitietDV.f_Giamgia = CDbl(f_GiamgiaDV) * objEnDMDichvu.f_Gia / 100
+                    objEnChitietDV.f_Giamgia = objEnDMDichvu.f_Gia_Giam
                     objEnChitietDV.uId_Nhanvien = uId_Nhanvien
                     objEnChitietDV.b_BaoHanh = False
                     objFCChitietDV.Insert(objEnChitietDV)
