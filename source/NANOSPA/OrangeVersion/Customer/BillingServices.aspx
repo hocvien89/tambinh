@@ -84,6 +84,7 @@
         $(document).ready(function () {
             document.onkeyup = KeyCheck;
             function KeyCheck(e) {
+                console.log("entrer");
                 var KeyID = (window.event) ? event.keyCode : e.keyCode;
                 if (KeyID == 113) {
                     document.getElementById('<%=btnThanhtoan.ClientID%>').click();
@@ -96,6 +97,9 @@
                 }
                 if (KeyID == 27) {
                     document.getElementById('<%=btCancel.ClientID%>').click();
+                }
+                if (KeyID == 9) {
+                    client_Phieuchitiet.UpdateEdit();
                 }
             }
         });
@@ -675,6 +679,7 @@
                 lblTienthua.innerHTML = jo_FormatMoney(jo_IsString((parseFloat(lblConlai.innerHTML.replace(/,/g, "")) - parseFloat(txtSotiennhan.value.replace(/,/g, "")))));
                 document.getElementById("span_giamgia").innerHTML = "%";
             }
+            e.processOnServer = false;
             return false;
         }
         function rbGiamgiaVND_Check(s, e) {
@@ -829,6 +834,10 @@
             return false;
         }
         function BackQuanLyKhachHang(s, e) {
+            
+            if (e.keyCode === 13) {
+                e.processOnServer = false;
+            }
             window.location.href = "../../OrangeVersion/Customer/CustomerList.aspx";
             return false;
         }
@@ -1156,7 +1165,8 @@
                 }
             })
         };
-        function btnAddSP_Show() {
+        function btnAddSP_Show(e) {
+            createPhieuxuat(e);
             pc_Export_Product.Show();
             
         }
@@ -1319,7 +1329,9 @@
             });
         }
         function btnLammoiClick(s, e) {
-
+            createPhieuxuat(e);
+           }
+        function createPhieuxuat(e) {
             uId_Mathang = "";
             //txtbarcode.SetText("");
             //ddlMathang.SetText("");
@@ -1338,24 +1350,24 @@
             lblConlai.innerHTML = "0";
             txtdongiathang.SetText("0");
             var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
-               lblTienthua.innerHTML = "0";
-           }
-           function Create_Maphieu() {
-               var txtMaphieu = document.getElementById("<%=txtMaphieu.ClientID%>");
-            var param_dt = "{'sPara':'PX'}";
-            var pageUrl = "../../../../Webservice/nano_websv.asmx/CreatePhieunhapxuatCode";
-            $.ajax({
-                type: "POST",
-                url: pageUrl,
-                data: param_dt,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                async: false,
-                success: function (msg) {
-                    txtMaphieu.value = msg.d;
-                },
-                error: onFail
-            });
+            lblTienthua.innerHTML = "0";
+        }
+        function Create_Maphieu() {
+            var txtMaphieu = document.getElementById("<%=txtMaphieu.ClientID%>");
+               var param_dt = "{'sPara':'PX'}";
+               var pageUrl = "../../../../Webservice/nano_websv.asmx/CreatePhieunhapxuatCode";
+               $.ajax({
+                   type: "POST",
+                   url: pageUrl,
+                   data: param_dt,
+                   contentType: "application/json; charset=utf-8",
+                   dataType: "json",
+                   async: false,
+                   success: function (msg) {
+                       txtMaphieu.value = msg.d;
+                   },
+                   error: onFail
+               });
         }
         function ddlMathang_Selectchange(s, e) {
             uId_Mathang = ddlMathang.GetValue().toString();
@@ -1750,6 +1762,15 @@
                 }
                 btnThanhtoan.SetEnabled(true);
             }
+          }
+        function enter_Soluong(s,e) {
+            console.log(e.htmlEvent.keyCode);
+            if (e.htmlEvent.keyCode == 13) {
+                client_Phieuchitiet.UpdateEdit();
+                e.processOnServer = false;
+            }
+            e.processOnServer = false;
+            return false;
         }
     </script>
     <div class="brest_crum">
@@ -1902,7 +1923,7 @@
                             Name="f_Dongia">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
-                            HeaderStyle-HorizontalAlign="Center" Caption="SL" Width="50px" FieldName="f_Soluong"
+                            HeaderStyle-HorizontalAlign="Center" Caption="SL" Width="50px" FieldName="f_Soluong" PropertiesTextEdit-ClientSideEvents-KeyPress="enter_Soluong"
                             Name="f_Soluong">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
