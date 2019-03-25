@@ -33,7 +33,7 @@ Public Class Inventory
     Private Sub LoadDataGrid()
         objFcDMMathang = New BO.QLMH_DM_MATHANGFacade
         Dim dt As DataTable
-        dt = objFcDMMathang.Bang_Tonghop_Ton(DateTime.Now, BO.Util.ConvertDateTime(deDenNgay.Text), ddlDsKho.SelectedItem.Value.ToString, Session("uId_Cuahang"))
+        dt = objFcDMMathang.reportInventory(DateTime.Now, BO.Util.ConvertDateTime(deDenNgay.Text), ddlDsKho.SelectedItem.Value.ToString, Session("uId_Cuahang"))
         dgvDevexpress.DataSource = dt
         dgvDevexpress.DataBind()
         If ddlDsKho.SelectedItem.Text <> "Chọn kho" Then

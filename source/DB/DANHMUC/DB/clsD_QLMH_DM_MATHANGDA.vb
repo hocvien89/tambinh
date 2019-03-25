@@ -776,4 +776,23 @@ Public Class QLMH_DM_MATHANGDA
             Return New DataTable
         End Try
     End Function
+
+    Public Function reportInventory(TuNgay As Date, DenNgay As Date, uId_Kho As String, uId_Cuahang As String) As DataTable Implements IQLMH_DM_MATHANGDA.reportInventory
+        Dim db As Database
+        Dim sp As String = "[dbo].[report_inventory]"
+        Dim objCmd As DbCommand
+        Dim objDs As DataSet
+        Try
+            db = DatabaseFactory.CreateDatabase()
+            objCmd = db.GetStoredProcCommand(sp)
+            db.AddInParameter(objCmd, "@DenNgay", DbType.DateTime, DenNgay)
+            db.AddInParameter(objCmd, "@uId_Kho", DbType.String, uId_Kho)
+            db.AddInParameter(objCmd, "@uId_Cuahang", DbType.String, uId_Cuahang)
+            objDs = db.ExecuteDataSet(objCmd)
+            Return objDs.Tables(0)
+        Catch ex As Exception
+            log.WriteLog(sp, ex.Message)
+            Return New DataTable
+        End Try
+    End Function
 End Class

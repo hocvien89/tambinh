@@ -67,4 +67,6 @@ Public Interface IQLMH_DM_MATHANGDA
 
     Function Select_By_Mathang_Table(v_Mamathang As String) As DataTable
 
+    Function reportInventory(ByVal TuNgay As DateTime, ByVal DenNgay As DateTime, ByVal uId_Kho As String, ByVal uId_Cuahang As String) As System.Data.DataTable
+
 End Interface

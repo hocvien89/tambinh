@@ -120,4 +120,7 @@ Public Class QLMH_DM_MATHANGFacade
         Return IQLMH_DM_MATHANG.Select_By_Mathang_Table(v_Mamathang)
     End Function
 
+    Public Function reportInventory(ByVal TuNgay As DateTime, ByVal DenNgay As DateTime, ByVal uId_Kho As String, ByVal uId_Cuahang As String) As System.Data.DataTable
+        Return IQLMH_DM_MATHANG.reportInventory(TuNgay, DenNgay, uId_Kho, uId_Cuahang)
+    End Function
 End Class
