@@ -37,7 +37,7 @@ Public Class ExportProduct
             deDenNgay.Date = DateTime.Now
             LoadDropDownlist()
             txtMaphieu.Text = pc.ReturnAutoString("PX")
-            Session("uId_Phieunhap") = Nothing
+            Session("uId_Phieuxuat") = Nothing
             If Session("uId_Phieuxuat") <> Nothing Then
                 LoadThongTinPhieuXuat()
             End If
