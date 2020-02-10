@@ -12,21 +12,6 @@
     <data unit="8" value="0" />
     <data unit="9" value="0" />
     <data unit="10" value="0" />
-    <data unit="11" value="0" />
-    <data unit="12" value="0" />
-    <data unit="13" value="0" />
-    <data unit="14" value="0" />
-    <data unit="15" value="0" />
-    <data unit="16" value="0" />
-    <data unit="17" value="0" />
-    <data unit="18" value="0" />
-    <data unit="19" value="0" />
-    <data unit="20" value="0" />
-    <data unit="21" value="0" />
-    <data unit="22" value="1" />
-    <data unit="23" value="0" />
-    <data unit="24" value="0" />
-    <data unit="25" value="0" />
   </dataset>
   <optionset>
     <option set="setSize" value="950, 250" />
@@ -106,6 +91,6 @@
     <option set="setAxisPaddingRight" value="100" />
     <option set="setLegendShow" value="true" />
     <option set="setLegendPosition" value="490, 80" />
-    <option set="setIntervalEndY" value="11" />
+    <option set="setIntervalEndY" value="10" />
   </optionset>
 </JSChart>

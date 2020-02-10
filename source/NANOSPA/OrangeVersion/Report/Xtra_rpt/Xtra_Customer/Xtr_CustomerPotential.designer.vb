@@ -400,7 +400,7 @@ Partial Public Class Xtr_CustomerPotential
         Me.lblDienthoai.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblDienthoai.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
         Me.lblDienthoai.StylePriority.UseFont = False
-        Me.lblDienthoai.Text = "ĐT: 024 3734 5600"
+        Me.lblDienthoai.Text = "ĐT: 094 511 1556"
         '
         'lblPKName
         '
@@ -422,7 +422,7 @@ Partial Public Class Xtr_CustomerPotential
         Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblDiachi.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
         Me.lblDiachi.StylePriority.UseFont = False
-        Me.lblDiachi.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        Me.lblDiachi.Text = "Số 50 - Ngõ 435 Xuân Đỉnh - Bắc Từ Liêm - Hà Nội"
         '
         'XrPictureBox_logo
         '

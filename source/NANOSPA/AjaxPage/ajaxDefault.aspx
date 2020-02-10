@@ -134,7 +134,7 @@
                                         <strong class="primary-font">Hệ thống</strong>
                                     </div>
                                     <p>
-                                        Chào mừng bạn đến với NANO-SPA 2015
+                                        Chào mừng bạn đến với NANO-CLINIC 2020
                                     </p>
                                 </div>
                             </li>

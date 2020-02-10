@@ -651,7 +651,7 @@ Partial Public Class rpt_Phieuthanhtoan_A5
         Me.lblDienthoai.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.lblDienthoai.SizeF = New System.Drawing.SizeF(125.2118!, 25.0!)
         Me.lblDienthoai.StylePriority.UseFont = False
-        Me.lblDienthoai.Text = "ĐT: 024 3734 5600"
+        Me.lblDienthoai.Text = "ĐT: 094 511 1556"
         '
         'lblPKName
         '
@@ -673,7 +673,7 @@ Partial Public Class rpt_Phieuthanhtoan_A5
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel4.SizeF = New System.Drawing.SizeF(226.3001!, 25.0!)
         Me.XrLabel4.StylePriority.UseFont = False
-        Me.XrLabel4.Text = "349 Kim Mã - Q. Ba Đình - Hà Nội"
+        Me.XrLabel4.Text = "Số 50 - Ngõ 435 Xuân Đỉnh - Bắc Từ Liêm - Hà Nội"
         '
         'XrPictureBox_logo
         '

@@ -1,0 +1,8 @@
+-- update name and address for report
+alter table QT_DM_CUAHANG alter column nv_Diachi_en nvarchar(200);
+update QT_DM_CUAHANG 
+set nv_Tencuahang_vn = N'PHÒNG KHÁM CƠ XƯƠNG KHỚP HỒNG HOA',
+nv_Tencuahang_en =N'PHÒNG KHÁM CƠ XƯƠNG KHỚP HỒNG HOA',
+nv_Diachi_vn = N'Số 50 - Ngõ 435 Xuân Đỉnh - Bắc Từ Liêm - Hà Nội',
+nv_Diachi_en = N'Số 50 - Ngõ 435 Xuân Đỉnh Bắc Từ Liêm - Hà Nội',
+nv_Dienthoai ='094 511 1556';
