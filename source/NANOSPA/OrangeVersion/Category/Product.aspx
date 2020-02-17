@@ -625,7 +625,7 @@ function enter_txtDMGianhap(e) {
                                                                             <td><%# Eval("i_Songaycanhbao_HethanSD")%> (Ngày)</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="font-weight: bold">Ghi chú: </td>
+                                                                            <td style="font-weight: bold">Cách dùng: </td>
                                                                             <td><%# Eval("nv_Ghichu_vn")%> </td>
                                                                         </tr>
                                                                     </table>

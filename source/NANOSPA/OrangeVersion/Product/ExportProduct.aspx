@@ -126,13 +126,13 @@
                 var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
                 var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
                 var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
-                txtdongiathang.SetText(jo_FormatMoney(defaultdata[0]));
+                txtdongiathang.SetValue(jo_FormatMoney(defaultdata[0]));
                 var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
                 var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
                 var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
-                lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
-                txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
-                lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
+                lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
                 var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
                 lblTienthua.innerHTML = "0";
             }
@@ -168,6 +168,17 @@
         function UpdatePhieuxuat(s, e) {
             var txtSophieu = document.getElementById("<%=txtMaphieu.ClientID %>");
             var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
+            console.log("update phieu xuat");
+            if (txtSotiennhan.value == "") {
+                alert("Hãy nhập số tiền khách trả!");
+                txtSotiennhan.focus();
+                return;
+            }
+            if (ddlLoaithanhtoan.GetValue() == null) {
+                alert("Hãy chọn hình thức thanh toán!");
+                ddlLoaithanhtoan.Focus();
+                return;
+            }
             var ddlLoaithanhtoanvalue = ddlLoaithanhtoan.GetValue().toString();
             var ddlKhoValue = ddlDMKho.GetValue().toString();
             var txtGiamgiaPhieu = document.getElementById("<%=txtGiamgiaPhieu.ClientID%>");
@@ -188,7 +199,7 @@
             var param_dt = "{'v_Sophieu':'" + txtSophieu.value + "','d_Ngay':'" + deNgayxuat.GetText() + "','f_Tongtienthuc':'" +
                 txtSotiennhan.value.replace(/,/g, "") + "','tienthua':'" + tienthua + "','uId_LoaiTT':'" + ddlLoaithanhtoanvalue +
                 "','f_Giamgia':'" + giamgia + "','uId_Nhanvien':'" + ddlNhanvienvalue + "','nv_Ghichu_vn':'" + txtGhichu.value +
-                "','uId_Kho':'" + ddlKhoValue + "','f_Khachtra':'" + lblconlai.innerHTML.replace(/,/g, "") + "','i_Sothang':'" + txtsothang.GetText() + "','f_Giathang':'" + txtdongiathang.GetText().replace(/,/g, "") + "','b_Kedon':'" + cbkchike.GetChecked() + "'}";
+                "','uId_Kho':'" + ddlKhoValue + "','f_Khachtra':'" + lblconlai.innerHTML.replace(/,/g, "") + "','i_Sothang':'" + txtsothang.GetValue() + "','f_Giathang':'" + txtdongiathang.GetValue().replace(/,/g, "") + "','b_Kedon':'" + cbkchike.GetChecked() + "'}";
             var pageUrl = "../../../../Webservice/nano_websv.asmx/UpdatePhieuxuat";
             $.ajax({
                 type: "POST",
@@ -270,21 +281,21 @@
                 var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
                 var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
                 ddlDMKho.SetValue(defaultdata[1]);
-               
+                console.log(defaultdata);
                 ddlKhachhang.SetValue(defaultdata[2]);
                 deNgayxuat.SetText(ConvertDateToDDMMYYY(defaultdata[3]));
                 txtGhichu.value = defaultdata[4];
                 txtGiamgiaPhieu.value = jo_FormatMoney(jo_IsString(defaultdata[5]));
-                lblTongtien.innerHTML = jo_FormatMoney(jo_IsString(defaultdata[11]*defaultdata[12]));
-                lblConlai.innerHTML = jo_FormatMoney((parseFloat(jo_IsString(defaultdata[11] * defaultdata[12])) - jo_IsString(defaultdata[5])));
+                lblTongtien.innerHTML = jo_FormatMoney(jo_IsString(defaultdata[6]*defaultdata[12]));
+                lblConlai.innerHTML = jo_FormatMoney((parseFloat(jo_IsString(defaultdata[6] * defaultdata[12])) - jo_IsString(defaultdata[5])));
                 txtSotiennhan.value = jo_FormatMoney(jo_IsString(defaultdata[7]));
                 ddlLoaithanhtoan.SetValue(defaultdata[8]);
                 ddlNhanvien.SetValue(defaultdata[9]);
-                tienthua = parseFloat(defaultdata[11] * defaultdata[12]) - parseFloat(defaultdata[5]) - parseFloat(defaultdata[7])
+                tienthua = parseFloat(defaultdata[6] * defaultdata[12]) - parseFloat(defaultdata[5]) - parseFloat(defaultdata[7])
                 lblTienthua.innerHTML = jo_FormatMoney(jo_IsString(tienthua)).replace(/-/g, "");
                 cbkchike.SetChecked(defaultdata[10]);
-                txtsothang.SetText(defaultdata[11]);
-                txtdongiathang.SetText(jo_FormatMoney(jo_IsString(defaultdata[12])));
+                txtsothang.SetValue(defaultdata[11]);
+                txtdongiathang.SetValue(jo_FormatMoney(jo_IsString(defaultdata[12])));
                 if (tienthua < 0) {
                     lblTienthuatext.innerHTML = "Tiền thừa trả khách:";
                 }
@@ -391,7 +402,7 @@
             var b_Check = cbkchike.GetChecked();
             var txtMaphieu = document.getElementById("<%=txtMaphieu.ClientID%>");
                     var txtGhichu = document.getElementById("<%=txtGhichu.ClientID%>");
-            var sPara = ddlDMKho.GetValue() + "$" + ddlNhanvien.GetValue() + "$" + txtMaphieu.value + "$" + deNgayxuat.GetText() + "$" + txtGhichu.value + "$" + b_Check + "$" + txtsothang.GetText();
+            var sPara = ddlDMKho.GetValue() + "$" + ddlNhanvien.GetValue() + "$" + txtMaphieu.value + "$" + deNgayxuat.GetText() + "$" + txtGhichu.value + "$" + b_Check + "$" + 1;
                     var param_dt = "{'sPara':'" + sPara + "'}";
                     var pageUrl = "../../../../Webservice/nano_websv.asmx/InsertPhieuxuat";
                     $.ajax({
@@ -477,7 +488,7 @@
             lblTongtien.innerHTML = "0";
             txtSotiennhan.value = "0";
             lblConlai.innerHTML = "0";
-            txtdongiathang.SetText("0");
+            txtdongiathang.SetValue("0");
             var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
                 lblTienthua.innerHTML = "0";
         }
@@ -677,16 +688,16 @@
               }
           }
           function txtGiathangKey(s, e) {
-              if (isNaN(txtdongiathang.GetText().replace(/,/g, ""))) {
+              if (isNaN(txtdongiathang.GetValue().replace(/,/g, ""))) {
                   return false;
               }
               else {
                 var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
                 var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
                 var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
-                lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
-                txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
-                lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetText().replace(/,/g, "")) * parseFloat(txtsothang.GetText()));
+                lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
                 var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
                 lblTienthua.innerHTML = "0";
             }
@@ -771,10 +782,10 @@
                             <dx:ASPxComboBox ID="ddlNhanvien" ClientInstanceName="ddlNhanvien" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Width="200px" runat="server" ValueType="System.String">
                             </dx:ASPxComboBox>
                         </td>
-                         <td class="info_table_td">Số thang:
+                         <td style="display:none" class="info_table_td">
                         </td>
-                        <td class="info_table_td">
-                           <dx:ASPxTextBox runat="server" ID="txtSothang"  onkeyup="txtGiathangKey()" ClientInstanceName="txtsothang" Width="200px" Text="1">
+                        <td style="display:none" class="info_table_td">
+                           <dx:ASPxTextBox runat="server" ID="txtSothang" onkeyup="txtGiathangKey()" ClientInstanceName="txtsothang" Width="200px" Text="1">
                            </dx:ASPxTextBox>
                         </td>        
                     </tr>
@@ -784,12 +795,12 @@
                         <td class="info_table_td">
                             <asp:TextBox ID="txtGhichu" Width="200px" runat="server" CssClass="nano_textbox"></asp:TextBox>
                         </td>
-                        <td class="info_table_td"> Đơn giá thang</td>
-                        <td class="info_table_td">
+                        <td  class="info_table_td"></td>
+                        <td style="display:none" class="info_table_td">
 <%--                            <dx:ASPxCheckBox runat="server" ID="chkGia" ClientInstanceName="chkgia" style="float:left; padding-right:10px">
                                 <ClientSideEvents CheckedChanged="chkgiachange" />
                             </dx:ASPxCheckBox>--%>
-                            <dx:ASPxTextBox runat="server"  onkeyup="txtGiathangKey()" Width="200px" ClientInstanceName="txtdongiathang" style="float:left"  ID="txtDongiathang">
+                            <dx:ASPxTextBox runat="server" Text="1"  onkeyup="txtGiathangKey()" Width="200px" ClientInstanceName="txtdongiathang" style="float:left"  ID="txtDongiathang">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>
@@ -955,9 +966,12 @@
                 Width="100px" HeaderStyle-HorizontalAlign="Center" Caption="" FieldName="uId_Phieuxuat_Chitiet"
                 Name="uId_Phieuxuat_Chitiet">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn ReadOnly="true" Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains" HeaderStyle-HorizontalAlign="Center" Caption="Tên vị thuốc" FieldName="nv_TenMathang_vn"
+            <dx:GridViewDataTextColumn ReadOnly="true" Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains" HeaderStyle-HorizontalAlign="Center" Caption="Tên thuốc" FieldName="nv_TenMathang_vn"
                 Name="nv_TenMathang_vn">
             </dx:GridViewDataTextColumn>
+<%--               <dx:GridViewDataTextColumn ReadOnly="true" Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains" HeaderStyle-HorizontalAlign="Center" Caption="Cách dùng" FieldName="nv_Ghichu_vn"
+                Name="nv_Ghichu_vn">
+            </dx:GridViewDataTextColumn>--%>
             <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
                 Width="50px" HeaderStyle-HorizontalAlign="Center" ReadOnly="true" Caption="ĐVT" FieldName="tendonvi"
                 Name="tendonvi">
@@ -983,8 +997,8 @@
             <dx:GridViewDataTextColumn VisibleIndex="1" Width="140px" Caption="Thành tiền" Settings-AutoFilterCondition="Contains"
                 HeaderStyle-HorizontalAlign="Center" ReadOnly="true" FieldName="f_Tongtien" Name="f_Tongtien" PropertiesTextEdit-DisplayFormatString="{0:0,0}">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn VisibleIndex="1" Visible="true" Width="200px" Caption="Ghi chú" Settings-AutoFilterCondition="Contains"
-                HeaderStyle-HorizontalAlign="Center" FieldName="nv_Ghichu" Name="nv_Ghichu">
+            <dx:GridViewDataTextColumn VisibleIndex="1" Visible="true" Width="200px" Caption="Cách dùng" Settings-AutoFilterCondition="Contains"
+                HeaderStyle-HorizontalAlign="Center" FieldName="nv_Ghichu_vn" Name="nv_Ghichu_vn">
             </dx:GridViewDataTextColumn>
             <dx:GridViewCommandColumn VisibleIndex="1" Width="40px" ButtonType="Image">
                 <CancelButton>

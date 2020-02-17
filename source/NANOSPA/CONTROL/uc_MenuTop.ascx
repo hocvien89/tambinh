@@ -215,7 +215,7 @@
 <script src="../../../../../../../Css/responsivemenu/flexy-menu.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".flexy-menu").flexymenu({ speed: 400, type: "horizontal", align: "right", indicator: true });
+        //$(".flexy-menu").flexymenu({ speed: 400, type: "horizontal", align: "right", indicator: true });
     });
 </script>
 <ul class="flexy-menu thick orange">

@@ -45,6 +45,8 @@
             tienthua = tienthua * (-1)
         End If
         lblTienthua.Text = String.Format("{0:#,##}", tienthua)
+        lblTencuahang.Text = nv_Tencuahang_vn
+        lblDiachicuahang.Text = nv_Diachicuahang
         pic_Logo.ImageUrl = objFCThamsohethong.SelectTHAMSOHETHONGByID("vLogo").v_Giatri
         lblNhanvien.Text = objFCNhanvien.SelectByID(objEnPhieuDV.uId_Nhanvien).nv_Hoten_vn
         lblHinhThucTT.Text = objFCLoaihinhTT.SelectByID(objEnPhieuDV.uId_LoaiTT).nv_TenLoaiTT
