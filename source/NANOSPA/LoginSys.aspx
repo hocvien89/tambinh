@@ -65,9 +65,9 @@
                 ], { duration: 5000, fade: 750 });
             });
          </script>--%>
-        <div id="footer">
-            <div id="footer_inside">
-                <p>
+        <div id="footer" style="display:flex">
+            <div id="footer_inside" style="display:flex; align-items:center">
+                <p style="margin-bottom:0px">
                     <span style="color: #999; text-shadow: 1px 1px #fff;">&copy; 2020 NANOSOFT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					Design by : <a href="http://nanosoft.vn/" target="_blank" style="color: #000; font-size: 11px; text-shadow: 1px 1px #fff;">Nanosoft Joinstock Company
                     </a>&nbsp;-&nbsp; <a target="_blank" href="http://nanosoft.vn/">http://nanosoft.vn/</a>

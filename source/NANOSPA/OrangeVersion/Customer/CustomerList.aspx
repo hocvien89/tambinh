@@ -169,11 +169,12 @@
                 deNgayden.SetDate(date_ngayden);
                 txtMaKH.value = defaultdata[1];
                 txtHoten.value = defaultdata[2];
-                txtnamsinh.SetText(defaultdata[3])
-                //var date_ngaysinh = new Date(defaultdata[3]);
+                //txtnamsinh.SetText(defaultdata[3])
+                var date_ngaysinh = new Date(defaultdata[3]);
                 //_ngaysinh = date_ngaysinh;
                 //var date_Nam = new Date("01/01/1900")
-                //deNgaysinh.SetDate(date_ngaysinh);
+                console.log(defaultdata);
+                deNgaysinh.SetDate(date_ngaysinh);
                 //if (date_ngaysinh.getDate() == date_Nam.getDate() & date_ngaysinh.getMonth() == date_Nam.getMonth() & date_ngaysinh.getFullYear() == date_Nam.getFullYear()) {
                 //    chk_Ngaysinh.SetChecked(true);
                 //    deNgaysinh.SetEnabled(false);
@@ -251,9 +252,9 @@
             txtHoten.value = "";
             txtDiachi.value = "";
             txtDienthoai.value = "";
-            txtnamsinh.SetText("");
+            //txtnamsinh.SetText("");
             //deNgayden.SetDate(new Date());
-            //deNgaysinh.SetDate(new Date());
+            deNgaysinh.SetDate(new Date());
             txtEmail.value = "";
             txtGhichu.value = "";
             imgAnhdaidien.src = "";
@@ -296,7 +297,7 @@
                 //grvdanhsachsearch.Refresh();
                 var txtHoten = document.getElementById("<%=txtHoten.ClientID%>");
                 if (txtHoten.value != "") {
-                    txtnamsinh.Focus();
+                    deNgaysinh.Focus();
                 }
                 return false;
             }
@@ -451,10 +452,16 @@
                 deNgayden.ShowDropDown();
                 e.processOnServer = false;
             }
-            else if (txtnamsinh.GetText() == "") {
-                txtnamsinh.Focus();
+            //else if (txtnamsinh.GetText() == "") {
+            //    txtnamsinh.Focus();
+            //    error.innerHTML = "Ngày sinh không được để trống";
+            //    //deNgaysinh.ShowDropDown();
+            //    e.processOnServer = false;
+            //}
+            else if (deNgaysinh.GetText() == "") {
+                deNgaysinh.Focus();
                 error.innerHTML = "Ngày sinh không được để trống";
-                //deNgaysinh.ShowDropDown();
+                deNgaysinh.ShowDropDown();
                 e.processOnServer = false;
             }
             else if (document.getElementById("<%=txtHoten.ClientID%>").value == "") {
@@ -725,7 +732,7 @@
                     Width="150px" HeaderStyle-HorizontalAlign="Center" Caption="Tên bệnh nhân" FieldName="nv_Hoten_vn"
                     Name="nv_Hoten_vn">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn Width="90" VisibleIndex="2" Caption="Năm sinh" Settings-AutoFilterCondition="Contains"
+                <dx:GridViewDataTextColumn Width="90" VisibleIndex="2" Caption="Ngày sinh" Settings-AutoFilterCondition="Contains"
                     HeaderStyle-HorizontalAlign="Center" FieldName="d_Ngaysinh" Name="d_Ngaysinh">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn VisibleIndex="2" Caption="Địa chỉ" Settings-AutoFilterCondition="Contains"
@@ -1140,16 +1147,16 @@
 
                                                     <asp:TextBox ID="txtHoten" AutoPostBack="false" onkeypress="return enter_txtHoten(event)" runat="server" Width="200px" CssClass="nano_textbox"></asp:TextBox>
                                                 </td>
-                                                <td class="info_table_td">Năm sinh:
+                                                <td class="info_table_td">Ngày sinh:
                                                 </td>
                                                 <td class="info_table_td">
                                                     <dx:ASPxCheckBox ID="chk_Ngaysinh" runat="server" Style="float: left; margin-right: 8px; padding-top: 5px" ClientInstanceName="chk_Ngaysinh" Visible="false">
                                                         <ClientSideEvents CheckedChanged="chk_NgaysinhChange" />
                                                     </dx:ASPxCheckBox>
-                                                    <dx:ASPxDateEdit ID="deNgaysinh" Visible="false" UseMaskBehavior="true" AutoPostBack="false" onkeypress="return enter_deNgaysinh(event)" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
+                                                    <dx:ASPxDateEdit ID="deNgaysinh" Visible="true" UseMaskBehavior="true" AutoPostBack="false" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
                                                         runat="server">
                                                     </dx:ASPxDateEdit>
-                                                    <dx:ASPxTextBox ID="txtNamsinh" runat="server" ClientInstanceName="txtnamsinh"  onkeypress="return enter_txtnamsinh(event)"  Style="float: left; margin-right: 8px;" Width="80px" Height="25px"></dx:ASPxTextBox> 
+                                                    <dx:ASPxTextBox ID="txtNamsinh" Visible="false" runat="server" ClientInstanceName="txtnamsinh"  onkeypress="return enter_txtnamsinh(event)"  Style="float: left; margin-right: 8px;" Width="80px" Height="25px"></dx:ASPxTextBox> 
                                                     <%--                                                    <asp:TextBox ID="txtTuoi" runat="server" Width="30px" Style="float: left; margin-right: 7px" placeholder="Tuổi" CssClass="nano_textbox"></asp:TextBox>--%>
                                                     <dx:ASPxComboBox ClientInstanceName="ddlGioitinh" onkeypress="return enter_ddlGioitinh(event)" ID="ddlGioitinh" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Height="25px" Width="50px" runat="server" ValueType="System.String">
                                                         <Items>

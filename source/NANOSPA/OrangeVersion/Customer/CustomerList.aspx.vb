@@ -247,7 +247,8 @@ Partial Public Class CustomerList
                 .uId_Cuahang = Session("uId_Cuahang").ToString
                 .v_Makhachang = txtMaKH.Text
                 .nv_Hoten_vn = CStr(Me.txtHoten.Text.Trim)
-                .d_Ngaysinh = BO.Util.ConvertDateTime("1/1/" + txtNamsinh.Text)
+                '.d_Ngaysinh = BO.Util.ConvertDateTime("1/1/" + txtNamsinh.Text)
+                .d_Ngaysinh = BO.Util.ConvertDateTime(deNgaysinh.Text)
                 .nv_Hinhanh = txtImgUrl.Text.Trim
                 .v_DienthoaiDD = CStr(Me.txtDienthoai.Text.Trim)
                 '.nv_Diachi_vn = CStr(Me.txtDiachi.Text.Trim)
