@@ -1384,7 +1384,7 @@
     <Content Include="images\bg_body.png" />
     <Content Include="images\bg_Header.png" />
     <Content Include="images\bg_HeaderTable.png" />
-    <Content Include="images\bg_login.jpg" />
+    <Content Include="images\bg_login.png" />
     <Content Include="images\bg_MinTable.png" />
     <Content Include="images\btn_add.png" />
     <Content Include="images\btn_Cancel.png" />

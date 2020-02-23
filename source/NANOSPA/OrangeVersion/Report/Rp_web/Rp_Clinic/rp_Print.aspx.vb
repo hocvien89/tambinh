@@ -57,8 +57,8 @@
         rp.lblDiachi.Html = Session("nv_DiachiCH_en")
         rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         rp.cellHoten.Text = objEnKhachhang.nv_Hoten_vn
-        rp.cellDiaChi.Text = objEnKhachhang.nv_Diachi_vn
-        rp.cellDienThoai.Text = objEnKhachhang.v_DienthoaiDD
+        rp.cellDiachi.Text = objEnKhachhang.nv_Diachi_vn
+        rp.cellDienthoai.Text = objEnKhachhang.v_DienthoaiDD
         rp.cellGioiTinh.Text = IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ")
         rp.cellTuoi.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year)
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()

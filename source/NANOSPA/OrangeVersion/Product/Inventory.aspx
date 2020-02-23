@@ -114,6 +114,11 @@
                         <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
+                        HeaderStyle-HorizontalAlign="Center" Caption="GTrị Lãi trong ngày" Width="150px" FieldName="f_LaiXuatNgay"
+                        Name="f_LaiXuatNgay">
+                        <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
                         HeaderStyle-HorizontalAlign="Center" Caption="SL tiêu hao" Width="100px" FieldName="f_SLTieuhao"
                         Name="f_SLTieuhao">
                         <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
