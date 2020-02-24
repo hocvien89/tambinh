@@ -139,13 +139,17 @@
         <SettingsEditing Mode="Inline" />
         <SettingsPager PageSize="14">
         </SettingsPager>
-        <Settings ShowFilterRow="true" ShowGroupPanel="false" ShowFilterRowMenu="true" ShowColumnHeaders="true" />
+          <SettingsDetail ShowDetailRow="true" />
+        <Settings ShowFilterRow="true" ShowGroupPanel="false" ShowFilterRowMenu="true" ShowColumnHeaders="true" ShowFooter="true"/>
         <SettingsBehavior AllowFocusedRow="true" AllowMultiSelection="true" ConfirmDelete="true" ColumnResizeMode="NextColumn" EnableCustomizationWindow="true" />
         <SettingsText ConfirmDelete="Bạn có muốn xóa không?" />
         <Styles>
             <AlternatingRow Enabled="True" BackColor="#EAFCFF">
             </AlternatingRow>
         </Styles>
+         <TotalSummary>
+                                                    <dx:ASPxSummaryItem FieldName="f_LaiXuatNgay" SummaryType="Sum"  />
+                                                </TotalSummary>
     </dx:ASPxGridView>
     <dx:ASPxGridViewExporter ID="dgvexport" GridViewID="dgvDevexpress" runat="server"></dx:ASPxGridViewExporter>
 </asp:Content>

@@ -21,14 +21,12 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rpt_Phieuthanhtoan_SP_A6))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
         Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell2 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell8 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
@@ -38,13 +36,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrTable2 = New DevExpress.XtraReports.UI.XRTable()
-        Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell4 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell5 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell9 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell6 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.lblDiachiKH = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblTenKH = New DevExpress.XtraReports.UI.XRLabel()
         Me.lblNhanvien = New DevExpress.XtraReports.UI.XRLabel()
@@ -62,8 +53,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrLabel19 = New DevExpress.XtraReports.UI.XRLabel()
         Me.lbTienthutext = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel26 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.f_Dongia = New DevExpress.XtraReports.UI.CalculatedField()
         Me.f_Giamgia = New DevExpress.XtraReports.UI.CalculatedField()
@@ -71,13 +60,12 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.f_Tongtien = New DevExpress.XtraReports.UI.CalculatedField()
         Me.nv_TenMathang_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.tendonvi = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRRichText()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRRichText()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -105,20 +93,20 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         '
         'XrTableRow1
         '
-        Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell1, Me.XrTableCell2, Me.XrTableCell10, Me.XrTableCell3, Me.XrTableCell8})
+        Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell3, Me.XrTableCell11, Me.XrTableCell1, Me.XrTableCell2, Me.XrTableCell10, Me.XrTableCell8})
         Me.XrTableRow1.Name = "XrTableRow1"
         Me.XrTableRow1.Weight = 1.0R
         '
         'XrTableCell1
         '
-        Me.XrTableCell1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "f_Dongia", "{0:#,##}")})
+        Me.XrTableCell1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "tendonvi", "{0:#,##}")})
         Me.XrTableCell1.Font = New System.Drawing.Font("Times New Roman", 6.0!)
         Me.XrTableCell1.Name = "XrTableCell1"
         Me.XrTableCell1.StylePriority.UseFont = False
         Me.XrTableCell1.StylePriority.UseTextAlignment = False
         Me.XrTableCell1.Text = "XrTableCell1"
         Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell1.Weight = 1.0580499312982705R
+        Me.XrTableCell1.Weight = 0.66325356158355142R
         '
         'XrTableCell2
         '
@@ -127,27 +115,16 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrTableCell2.StylePriority.UseTextAlignment = False
         Me.XrTableCell2.Text = "XrTableCell2"
         Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell2.Weight = 0.19349820966960668R
+        Me.XrTableCell2.Weight = 0.35786891713131508R
         '
         'XrTableCell10
         '
-        Me.XrTableCell10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "tendonvi")})
+        Me.XrTableCell10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "f_Dongia", "{0:#,##}")})
         Me.XrTableCell10.Name = "XrTableCell10"
         Me.XrTableCell10.StylePriority.UseTextAlignment = False
         Me.XrTableCell10.Text = "XrTableCell10"
         Me.XrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell10.Weight = 0.31834791497856885R
-        '
-        'XrTableCell3
-        '
-        Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "f_Giamgia", "{0:#,##}")})
-        Me.XrTableCell3.Name = "XrTableCell3"
-        Me.XrTableCell3.StylePriority.UseTextAlignment = False
-        XrSummary1.FormatString = "{0:#,##}"
-        Me.XrTableCell3.Summary = XrSummary1
-        Me.XrTableCell3.Text = "XrTableCell3"
-        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell3.Weight = 0.707580751250156R
+        Me.XrTableCell10.Weight = 0.50278701193130826R
         '
         'XrTableCell8
         '
@@ -156,7 +133,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrTableCell8.StylePriority.UseTextAlignment = False
         Me.XrTableCell8.Text = "XrTableCell8"
         Me.XrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell8.Weight = 0.72252319280339816R
+        Me.XrTableCell8.Weight = 0.72252366876893759R
         '
         'TopMargin
         '
@@ -174,8 +151,8 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         '
         'ReportHeader
         '
-        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblTencuahang, Me.lblDiachi, Me.pic_Logo, Me.XrLabel6, Me.XrLabel10, Me.XrLabel3, Me.XrLabel1, Me.XrTable2, Me.lblDiachiKH, Me.lblTenKH, Me.lblNhanvien, Me.lblNgaylap, Me.XrLine1})
-        Me.ReportHeader.HeightF = 131.8748!
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lblDiachi, Me.lblTencuahang, Me.pic_Logo, Me.XrLabel6, Me.XrLabel10, Me.XrLabel3, Me.XrLabel1, Me.lblDiachiKH, Me.lblTenKH, Me.lblNhanvien, Me.lblNgaylap, Me.XrLine1})
+        Me.ReportHeader.HeightF = 112.7607!
         Me.ReportHeader.Name = "ReportHeader"
         '
         'pic_Logo
@@ -229,67 +206,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrLabel1.StylePriority.UseTextAlignment = False
         Me.XrLabel1.Text = "PHIẾU THANH TOÁN"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrTable2
-        '
-        Me.XrTable2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
-        Me.XrTable2.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrTable2.Font = New System.Drawing.Font("Times New Roman", 6.0!, System.Drawing.FontStyle.Bold)
-        Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 116.9238!)
-        Me.XrTable2.Name = "XrTable2"
-        Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow2})
-        Me.XrTable2.SizeF = New System.Drawing.SizeF(190.0!, 14.95097!)
-        Me.XrTable2.StylePriority.UseBorders = False
-        Me.XrTable2.StylePriority.UseFont = False
-        Me.XrTable2.StylePriority.UseTextAlignment = False
-        Me.XrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrTableRow2
-        '
-        Me.XrTableRow2.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell4, Me.XrTableCell5, Me.XrTableCell9, Me.XrTableCell6, Me.XrTableCell7})
-        Me.XrTableRow2.Name = "XrTableRow2"
-        Me.XrTableRow2.Weight = 1.0R
-        '
-        'XrTableCell4
-        '
-        Me.XrTableCell4.CanGrow = False
-        Me.XrTableCell4.Name = "XrTableCell4"
-        Me.XrTableCell4.Padding = New DevExpress.XtraPrinting.PaddingInfo(14, 0, 0, 0, 100.0!)
-        Me.XrTableCell4.StylePriority.UsePadding = False
-        Me.XrTableCell4.Text = "Đơn giá"
-        Me.XrTableCell4.Weight = 1.0580499286972678R
-        '
-        'XrTableCell5
-        '
-        Me.XrTableCell5.CanGrow = False
-        Me.XrTableCell5.Name = "XrTableCell5"
-        Me.XrTableCell5.Text = "SL"
-        Me.XrTableCell5.Weight = 0.19349818625155479R
-        '
-        'XrTableCell9
-        '
-        Me.XrTableCell9.CanGrow = False
-        Me.XrTableCell9.Name = "XrTableCell9"
-        Me.XrTableCell9.StylePriority.UseTextAlignment = False
-        Me.XrTableCell9.Text = "ĐVT"
-        Me.XrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell9.Weight = 0.31834802688943742R
-        '
-        'XrTableCell6
-        '
-        Me.XrTableCell6.CanGrow = False
-        Me.XrTableCell6.Name = "XrTableCell6"
-        Me.XrTableCell6.Padding = New DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 100.0!)
-        Me.XrTableCell6.StylePriority.UsePadding = False
-        Me.XrTableCell6.Text = "Giảm giá"
-        Me.XrTableCell6.Weight = 0.70758062223277629R
-        '
-        'XrTableCell7
-        '
-        Me.XrTableCell7.CanGrow = False
-        Me.XrTableCell7.Name = "XrTableCell7"
-        Me.XrTableCell7.Text = "Thành tiền"
-        Me.XrTableCell7.Weight = 0.72252323592896373R
         '
         'lblDiachiKH
         '
@@ -473,26 +389,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrLabel26.StylePriority.UseFont = False
         Me.XrLabel26.Text = "Xin chân thành cảm ơn. Hẹn gặp lại quý khách!"
         '
-        'GroupHeader1
-        '
-        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel2})
-        Me.GroupHeader1.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("nv_TenMathang_vn", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
-        Me.GroupHeader1.HeightF = 14.84064!
-        Me.GroupHeader1.Name = "GroupHeader1"
-        '
-        'XrLabel2
-        '
-        Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
-        Me.XrLabel2.Font = New System.Drawing.Font("Times New Roman", 6.0!)
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.5636927!, 0.0!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(185.3289!, 13.0!)
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "XrLabel2"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
         'f_Dongia
         '
         Me.f_Dongia.Name = "f_Dongia"
@@ -519,25 +415,52 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         '
         'lblTencuahang
         '
-        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 8.25!)
-        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(46.98758!, 2.204777!)
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 6.0!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(47.7259!, 1.60361!)
+        Me.lblTencuahang.Multiline = True
         Me.lblTencuahang.Name = "lblTencuahang"
-        Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
-        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(143.0124!, 11.19942!)
+        Me.lblTencuahang.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(142.2741!, 11.73874!)
         Me.lblTencuahang.StylePriority.UseFont = False
+        Me.lblTencuahang.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'lblDiachi
         '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 8.25!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(46.98758!, 13.40419!)
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 6.0!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(47.7259!, 13.34235!)
+        Me.lblDiachi.Multiline = True
         Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.SerializableRtfString = resources.GetString("lblDiachi.SerializableRtfString")
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(143.0124!, 11.19942!)
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(142.2741!, 11.26126!)
         Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'XrTableCell11
+        '
+        Me.XrTableCell11.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
+        Me.XrTableCell11.Name = "XrTableCell11"
+        Me.XrTableCell11.StylePriority.UseTextAlignment = False
+        Me.XrTableCell11.Text = "XrTableCell11"
+        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrTableCell11.Weight = 0.59567221504085044R
+        '
+        'XrTableCell3
+        '
+        Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
+        Me.XrTableCell3.Name = "XrTableCell3"
+        Me.XrTableCell3.StylePriority.UseTextAlignment = False
+        XrSummary1.FormatString = "{0:#,#}"
+        XrSummary1.Func = DevExpress.XtraReports.UI.SummaryFunc.RecordNumber
+        XrSummary1.IgnoreNullValues = True
+        XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrTableCell3.Summary = XrSummary1
+        Me.XrTableCell3.Text = "XrTableCell3"
+        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell3.Weight = 0.15789462554403719R
         '
         'rpt_Phieuthanhtoan_SP_A6
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.ReportFooter, Me.GroupHeader1})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.ReportHeader, Me.ReportFooter})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.f_Dongia, Me.f_Giamgia, Me.f_Soluong, Me.f_Tongtien, Me.nv_TenMathang_vn, Me.tendonvi})
         Me.DataSource = Me.BindingSource1
         Me.Margins = New System.Drawing.Printing.Margins(5, 5, 5, 5)
@@ -547,10 +470,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.Version = "12.2"
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblTencuahang, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblDiachi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -562,12 +482,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
     Friend WithEvents lblNgaylap As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLine1 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrTable2 As DevExpress.XtraReports.UI.XRTable
-    Friend WithEvents XrTableRow2 As DevExpress.XtraReports.UI.XRTableRow
-    Friend WithEvents XrTableCell4 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell5 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell6 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell7 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents lblDiachiKH As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblTenKH As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblNhanvien As DevExpress.XtraReports.UI.XRLabel
@@ -578,7 +492,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
     Friend WithEvents XrTableRow1 As DevExpress.XtraReports.UI.XRTableRow
     Friend WithEvents XrTableCell1 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell2 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell3 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell8 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrLabel12 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lblTongtien As DevExpress.XtraReports.UI.XRLabel
@@ -591,8 +504,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
     Friend WithEvents XrLabel19 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents lbTienthutext As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel26 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents GroupHeader1 As DevExpress.XtraReports.UI.GroupHeaderBand
-    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents f_Dongia As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents f_Giamgia As DevExpress.XtraReports.UI.CalculatedField
@@ -601,8 +512,9 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
     Friend WithEvents nv_TenMathang_vn As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents tendonvi As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents XrTableCell10 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableCell9 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents pic_Logo As DevExpress.XtraReports.UI.XRPictureBox
-    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRRichText
-    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRRichText
+    Friend WithEvents lblDiachi As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblTencuahang As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrTableCell11 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableCell3 As DevExpress.XtraReports.UI.XRTableCell
 End Class

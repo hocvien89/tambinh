@@ -895,7 +895,7 @@
                             </dx:ASPxButton>
                             <%-- in phieu jolieD --%>
                             <dx:ASPxButton ID="btnIn" Image-Url="~/images/16x16/printer.png" AutoPostBack="false" Style="float: left; margin-left: 10px" ClientInstanceName="btnClear" runat="server" Text="In phiếu" Visible="True">
-                              <%--  <ClientSideEvents Click="InPhieu" />--%>
+                                <ClientSideEvents Click="InPhieu" />
                             </dx:ASPxButton>
                             <dx:ASPxButton ID="btnInDonThuoc" Image-Url="~/images/16x16/printer.png" AutoPostBack="false" Style="float: left; margin-left: 10px" ClientInstanceName="btnInDonThuoc" runat="server" Text="In đơn thuốc" Visible="True">
                              <ClientSideEvents Click="InDonThuoc" />
@@ -1451,14 +1451,14 @@
             <Paddings PaddingBottom="5px" />
         </ContentStyle>
     </dx:ASPxPopupControl>
-       <dx:ASPxPopupMenu ID="popMenu" runat="server" PopupElementID="btnIn" ClientInstanceName="pmRowMenu"   PopupHorizontalAlign="OutsideRight"  PopupVerticalAlign="TopSides"
+     <%--  <dx:ASPxPopupMenu ID="popMenu" runat="server" PopupElementID="btnIn" ClientInstanceName="pmRowMenu"   PopupHorizontalAlign="OutsideRight"  PopupVerticalAlign="TopSides"
             PopupAction="LeftMouseClick">
             <Items>
                 <dx:MenuItem Text="In đơn thuốc đông y" Name="DONGY"></dx:MenuItem>
                 <dx:MenuItem Text="In đơn thuốc tây y" Name="TAYY"></dx:MenuItem>
-      <%--          <dx:MenuItem Text="In hướng dẫn" Name="HD"></dx:MenuItem>--%>
+      <%--          <dx:MenuItem Text="In hướng dẫn" Name="HD"></dx:MenuItem>
                 <dx:MenuItem Text="In đính kèm" Name="DK"></dx:MenuItem>
             </Items>
             <ClientSideEvents Init="InitPopupMenuHandler" ItemClick="menuItemClick" />
-        </dx:ASPxPopupMenu>
+        </dx:ASPxPopupMenu>--%>
 </asp:Content>

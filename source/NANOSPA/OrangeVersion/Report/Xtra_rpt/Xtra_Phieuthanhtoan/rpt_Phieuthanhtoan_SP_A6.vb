@@ -38,4 +38,10 @@
         lblTienthua.Text = String.Format("{0:#,##}", Val(objEnPhieuxuat.nv_Noidungxuat_en) - Val(objEnPhieuxuat.f_Giamgia_Tong) - tiennhan)
         lblNhanvien.Text = objFCNhanvien.SelectByID(objEnPhieuxuat.uId_Nhanvien).nv_Hoten_vn
     End Sub
+
+    Private Sub lblTencuahang_BeforePrint(sender As Object, e As Drawing.Printing.PrintEventArgs)
+        Using docServer As New DevExpress.XtraRichEdit.RichEditDocumentServer
+            docServer.Document.DefaultCharacterProperties.FontSize = 9
+        End Using
+    End Sub
 End Class

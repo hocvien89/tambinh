@@ -624,13 +624,4 @@ Partial Public Class ExportProduct
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UpdateProgress2 As Global.System.Web.UI.UpdateProgress
-
-    '''<summary>
-    '''popMenu control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents popMenu As Global.DevExpress.Web.ASPxMenu.ASPxPopupMenu
 End Class

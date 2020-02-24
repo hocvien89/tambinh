@@ -7,6 +7,11 @@
     <title></title>
 </head>
 <body>
+    <style>
+        .csDD450837 {
+            font-size:9px!important;
+        }
+    </style>
     <form id="form1" runat="server">
     <div>
         <uc1:ReportViewerControl runat="server" ID="ReportViewerControl" />
