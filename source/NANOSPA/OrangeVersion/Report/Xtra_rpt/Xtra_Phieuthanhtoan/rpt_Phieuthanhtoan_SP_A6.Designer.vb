@@ -24,6 +24,8 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell1 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell2 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell10 = New DevExpress.XtraReports.UI.XRTableCell()
@@ -31,6 +33,8 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRLabel()
         Me.pic_Logo = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
@@ -60,10 +64,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.f_Tongtien = New DevExpress.XtraReports.UI.CalculatedField()
         Me.nv_TenMathang_vn = New DevExpress.XtraReports.UI.CalculatedField()
         Me.tendonvi = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.lblTencuahang = New DevExpress.XtraReports.UI.XRLabel()
-        Me.lblDiachi = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrTableCell11 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +97,29 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrTableRow1.Name = "XrTableRow1"
         Me.XrTableRow1.Weight = 1.0R
         '
+        'XrTableCell3
+        '
+        Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
+        Me.XrTableCell3.Name = "XrTableCell3"
+        Me.XrTableCell3.StylePriority.UseTextAlignment = False
+        XrSummary1.FormatString = "{0:#,#}"
+        XrSummary1.Func = DevExpress.XtraReports.UI.SummaryFunc.RecordNumber
+        XrSummary1.IgnoreNullValues = True
+        XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
+        Me.XrTableCell3.Summary = XrSummary1
+        Me.XrTableCell3.Text = "XrTableCell3"
+        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.XrTableCell3.Weight = 0.15789462554403719R
+        '
+        'XrTableCell11
+        '
+        Me.XrTableCell11.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
+        Me.XrTableCell11.Name = "XrTableCell11"
+        Me.XrTableCell11.StylePriority.UseTextAlignment = False
+        Me.XrTableCell11.Text = "XrTableCell11"
+        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrTableCell11.Weight = 0.868421061797635R
+        '
         'XrTableCell1
         '
         Me.XrTableCell1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "tendonvi", "{0:#,##}")})
@@ -106,7 +129,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrTableCell1.StylePriority.UseTextAlignment = False
         Me.XrTableCell1.Text = "XrTableCell1"
         Me.XrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell1.Weight = 0.66325356158355142R
+        Me.XrTableCell1.Weight = 0.31578946190029178R
         '
         'XrTableCell2
         '
@@ -115,7 +138,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrTableCell2.StylePriority.UseTextAlignment = False
         Me.XrTableCell2.Text = "XrTableCell2"
         Me.XrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        Me.XrTableCell2.Weight = 0.35786891713131508R
+        Me.XrTableCell2.Weight = 0.43258417005779021R
         '
         'XrTableCell10
         '
@@ -155,11 +178,33 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.ReportHeader.HeightF = 112.7607!
         Me.ReportHeader.Name = "ReportHeader"
         '
+        'lblDiachi
+        '
+        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 6.0!)
+        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(4.157619!, 13.34235!)
+        Me.lblDiachi.Multiline = True
+        Me.lblDiachi.Name = "lblDiachi"
+        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblDiachi.SizeF = New System.Drawing.SizeF(181.735!, 11.26126!)
+        Me.lblDiachi.StylePriority.UseFont = False
+        Me.lblDiachi.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'lblTencuahang
+        '
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 6.0!)
+        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(4.157619!, 1.603612!)
+        Me.lblTencuahang.Multiline = True
+        Me.lblTencuahang.Name = "lblTencuahang"
+        Me.lblTencuahang.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(181.735!, 11.73874!)
+        Me.lblTencuahang.StylePriority.UseFont = False
+        Me.lblTencuahang.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
         'pic_Logo
         '
         Me.pic_Logo.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 1.603609!)
         Me.pic_Logo.Name = "pic_Logo"
-        Me.pic_Logo.SizeF = New System.Drawing.SizeF(46.98758!, 34.73874!)
+        Me.pic_Logo.SizeF = New System.Drawing.SizeF(3.0!, 34.73874!)
         Me.pic_Logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage
         '
         'XrLabel6
@@ -171,7 +216,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel6.SizeF = New System.Drawing.SizeF(46.98758!, 12.30182!)
         Me.XrLabel6.StylePriority.UseFont = False
-        Me.XrLabel6.Text = "Khách hàng:"
+        Me.XrLabel6.Text = "Bệnh nhân:"
         '
         'XrLabel10
         '
@@ -204,7 +249,7 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(155.8572!, 18.4955!)
         Me.XrLabel1.StylePriority.UseFont = False
         Me.XrLabel1.StylePriority.UseTextAlignment = False
-        Me.XrLabel1.Text = "PHIẾU THANH TOÁN"
+        Me.XrLabel1.Text = "PHIẾU THU"
         Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'lblDiachiKH
@@ -245,11 +290,11 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         'lblNgaylap
         '
         Me.lblNgaylap.Font = New System.Drawing.Font("Times New Roman", 6.0!)
-        Me.lblNgaylap.LocationFloat = New DevExpress.Utils.PointFloat(47.72589!, 24.60361!)
+        Me.lblNgaylap.LocationFloat = New DevExpress.Utils.PointFloat(4.157608!, 24.60361!)
         Me.lblNgaylap.Multiline = True
         Me.lblNgaylap.Name = "lblNgaylap"
         Me.lblNgaylap.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblNgaylap.SizeF = New System.Drawing.SizeF(142.2741!, 11.73874!)
+        Me.lblNgaylap.SizeF = New System.Drawing.SizeF(181.735!, 11.73874!)
         Me.lblNgaylap.StylePriority.UseFont = False
         Me.lblNgaylap.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -412,51 +457,6 @@ Partial Public Class rpt_Phieuthanhtoan_SP_A6
         'tendonvi
         '
         Me.tendonvi.Name = "tendonvi"
-        '
-        'lblTencuahang
-        '
-        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 6.0!)
-        Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(47.7259!, 1.60361!)
-        Me.lblTencuahang.Multiline = True
-        Me.lblTencuahang.Name = "lblTencuahang"
-        Me.lblTencuahang.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblTencuahang.SizeF = New System.Drawing.SizeF(142.2741!, 11.73874!)
-        Me.lblTencuahang.StylePriority.UseFont = False
-        Me.lblTencuahang.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'lblDiachi
-        '
-        Me.lblDiachi.Font = New System.Drawing.Font("Times New Roman", 6.0!)
-        Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(47.7259!, 13.34235!)
-        Me.lblDiachi.Multiline = True
-        Me.lblDiachi.Name = "lblDiachi"
-        Me.lblDiachi.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.lblDiachi.SizeF = New System.Drawing.SizeF(142.2741!, 11.26126!)
-        Me.lblDiachi.StylePriority.UseFont = False
-        Me.lblDiachi.Text = "lblNgaylap" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'XrTableCell11
-        '
-        Me.XrTableCell11.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
-        Me.XrTableCell11.Name = "XrTableCell11"
-        Me.XrTableCell11.StylePriority.UseTextAlignment = False
-        Me.XrTableCell11.Text = "XrTableCell11"
-        Me.XrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.XrTableCell11.Weight = 0.59567221504085044R
-        '
-        'XrTableCell3
-        '
-        Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_TenMathang_vn")})
-        Me.XrTableCell3.Name = "XrTableCell3"
-        Me.XrTableCell3.StylePriority.UseTextAlignment = False
-        XrSummary1.FormatString = "{0:#,#}"
-        XrSummary1.Func = DevExpress.XtraReports.UI.SummaryFunc.RecordNumber
-        XrSummary1.IgnoreNullValues = True
-        XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
-        Me.XrTableCell3.Summary = XrSummary1
-        Me.XrTableCell3.Text = "XrTableCell3"
-        Me.XrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        Me.XrTableCell3.Weight = 0.15789462554403719R
         '
         'rpt_Phieuthanhtoan_SP_A6
         '

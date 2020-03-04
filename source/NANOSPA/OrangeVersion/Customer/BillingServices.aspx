@@ -1464,7 +1464,7 @@
             }
             else {
                 var $dialog = $('<div></div>')
-                 .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/Rp_Phieuthanhtoan_Dongy.aspx" width="850px" height="100%"></iframe>')
+                 .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Phieuthanhtoan/rp_PhieuthanhtoanSP.aspx" width="850px" height="100%"></iframe>')
                  .dialog({
                      autoOpen: false,
                      modal: true,
@@ -3019,7 +3019,7 @@
                                                     <dx:ASPxButton ID="btnInDonThuoc" Image-Url="~/images/16x16/printer.png" AutoPostBack="false" Style="float: left; margin-left: 10px" ClientInstanceName="btnInDonThuoc" runat="server" Text="In đơn thuốc" Visible="True">
                                                         <ClientSideEvents Click="InDonThuoc" />
                                                     </dx:ASPxButton>
-                                                    <dx:ASPxButton ID="InPhieu_Dongy" Image-Url="~/images/16x16/printer.png" AutoPostBack="false" Style="float: left; margin-left: 10px" ClientInstanceName="InPhieu_PX_Client_DY" runat="server" Text="In phiếu đông y " Visible="true">
+                                                    <dx:ASPxButton ID="InPhieu_Dongy" Image-Url="~/images/16x16/printer.png" AutoPostBack="false" Style="float: left; margin-left: 10px" ClientInstanceName="InPhieu_PX_Client_DY" runat="server" Text="In phiếu" Visible="true">
                                                         <ClientSideEvents Click="InPhieuDongY" />
                                                     </dx:ASPxButton>
                                                     <dx:ASPxButton ID="InPhieu_Tayy" Image-Url="~/images/16x16/printer.png" AutoPostBack="false" Style="float: left; margin-left: 10px" ClientInstanceName="InPhieu_PX_Client_TY" runat="server" Text="In phiếu tây y" Visible="false">
