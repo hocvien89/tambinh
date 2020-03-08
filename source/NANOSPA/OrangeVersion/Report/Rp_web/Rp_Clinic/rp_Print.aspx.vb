@@ -53,17 +53,15 @@
         Dim datenow As DateTime = Date.Now
         uId_Khachang = Session("uId_Khachhang")
         objEnKhachhang = objFcKhachhang.SelectByID(uId_Khachang)
-        rp.lblTencuahang.Html = Session("nv_Tencuahang_en")
+        rp.lblTencuahang.Text = Session("nv_Tencuahang_en")
         rp.lblDiachi.Html = Session("nv_DiachiCH_en")
         rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
-        rp.cellHoten.Text = objEnKhachhang.nv_Hoten_vn
-        rp.cellDiachi.Text = objEnKhachhang.nv_Diachi_vn
-        rp.cellDienthoai.Text = objEnKhachhang.v_DienthoaiDD
-        rp.cellGioiTinh.Text = IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ")
-        rp.cellTuoi.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year)
+        rp.lblTenkhachhang.Text = objEnKhachhang.nv_Hoten_vn
+        rp.lblDiachiKH.Text = objEnKhachhang.nv_Diachi_vn
+        rp.lblDienthoai.Text = objEnKhachhang.v_DienthoaiDD
+        rp.lblNamsinh.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year).ToString() + " (" + objEnKhachhang.d_Ngaysinh.Year.ToString() + ")" + " (" + IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ") + ")"
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         dt = objFcPhieuxuat.SelectByID_QLMH_PHIEUXUAT_CHITIET(Session("uId_Phieuxuat").ToString())
-        rp.xtrlogo.ImageUrl = "~" + objFCThamso.SelectTHAMSOHETHONGByID("vLogo").v_Giatri.ToString()
         rp.BindingSource1.DataSource = dt
         ReportViewerControl.ReportViewer.Report = rp
     End Sub
