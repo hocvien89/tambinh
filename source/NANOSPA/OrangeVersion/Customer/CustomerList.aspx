@@ -376,6 +376,30 @@
             window.location.href = "../../OrangeVersion/Product/ExportProduct.aspx";
             return false;
         }
+        function Huyphieuxuat(uId_Phieuxuat, uId_Khachhang) {
+            if (confirm("Xác nhận thực hiện hủy thuốc?")) {
+                var param_dt = "{'uidPhieuxuat':'" + uId_Phieuxuat + "','uidKhachhang':'" + uId_Khachhang + "'}";
+                var pageUrl = "../../../../Webservice/nano_websv.asmx/huyPhieuXuat";
+                $.ajax({
+                    type: "POST",
+                    url: pageUrl,
+                    data: param_dt,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    async: false,
+                    success: function (msg) {
+                        if (msg.d != "") {
+                            var result = msg.d.split("$");
+                            alert(result[1]);
+                        }
+                    },
+                    error: onFail
+                });
+            }
+            else {
+                return false;
+            }
+        }
         function Thietlaplieutrinh(uId_Phieudichvu, uId_Khachhang, uId_Dichvu_Dieutri, uId_Phieudichvu_Chitiet) {
             jo_RemoveSession("uId_Khachhang");
             jo_CreateSession("uId_Phieudichvu", uId_Phieudichvu);
@@ -824,6 +848,7 @@
                                                                 <img src="../../../images/bub.png" /></a>
                                                         </DataItemTemplate>
                                                     </dx:GridViewDataColumn>
+
                                                 </Columns>
                                                 <Templates>
                                                     <DetailRow>
@@ -949,6 +974,12 @@
                                                         <dx:GridViewDataColumn Width="30px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
                                                             <DataItemTemplate>
                                                                 <a id="popup" title="Chọn phiếu" href='javascript:void(0)' onclick="return <%# String.Format("Chonphieuxuat('{0}', '{1}')",Eval("uId_Phieuxuat"), Eval("uId_Khachhang")).ToString %>">
+                                                                    <img src="../../../images/bub.png" /></a>
+                                                            </DataItemTemplate>
+                                                        </dx:GridViewDataColumn>
+                                                        <dx:GridViewDataColumn Width="30px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
+                                                            <DataItemTemplate>
+                                                                <a id="popup" title="Trả lại thuốc" href='javascript:void(0)' onclick="return <%# String.Format("Huyphieuxuat('{0}', '{1}')", Eval("uId_Phieuxuat"), Eval("uId_Khachhang")).ToString%>">
                                                                     <img src="../../../images/bub.png" /></a>
                                                             </DataItemTemplate>
                                                         </dx:GridViewDataColumn>

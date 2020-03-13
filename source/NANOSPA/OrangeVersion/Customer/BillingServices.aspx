@@ -1323,6 +1323,10 @@
                             ddlMathang.Focus();
                             return false;
                         }
+                        else {
+                            alert(data[1]);
+                            return false;
+                        }
                     }
                 },
                 error: onFail

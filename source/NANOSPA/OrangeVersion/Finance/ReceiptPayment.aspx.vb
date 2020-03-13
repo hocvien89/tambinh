@@ -83,6 +83,7 @@ Public Class ReceiptPayment
         dgvDevexpress.DataSource = dt
         dgvDevexpress.DataBind()
     End Sub
+
 #End Region
 #Region "Grid"
     Protected Sub dgvDevexpress_DataBinding(sender As Object, e As EventArgs)
@@ -232,29 +233,29 @@ Public Class ReceiptPayment
                     objFCNhatKy.Write(Session("sTendangnhap"), System.Environment.MachineName, noidungnhatky)
                     ltrChisucess.Text = "<span class='success' id='success'>Lưu thông tin thành công!</span>"
                 End If
-                Else
-                    If txt_Lydochi.Text = "" Then
-                        objEnPhieuthuhi.nv_Lydo_vn = cbo_Khoanchi.SelectedItem.Text + " mã phiếu " + txt_Maphieuchi.Text
-                    End If
-                    objEnPhieuthuhi.uId_LoaiTT = "43915768-694A-49B8-8DB2-6332718DB194"
-                    objEnPhieuthuhi.uId_Cuahang = Session("uId_Cuahang")
-                    Dim ddlNguoinopSelect As Integer
-                    ddlNguoinopSelect = ddlNguoinop.SelectedIndex
-                    Session("uId_Phieuthuchi") = objFcPhieuthuchi.Insert(objEnPhieuthuhi)
-                    ltrChisucess.Text = "<span class='success' id='success'>Thêm thông tin thành công!</span>"
-                objFCNhatKy.Write(Session("sTendangnhap"), System.Environment.MachineName, "Thêm phiếu chi " & txt_Maphieuchi.Text & ". Lí do: " & objEnPhieuthuhi.nv_Lydo_vn & ". Số tiền chi: " & txt_Tienchi.Text)
-                    'With objEnCongnoTT
-                    '    If ddlNguoinopSelect >= 0 Then
-                    '        .uId_Khachhang = ddlNguoinop.SelectedItem.Value.ToString
-                    '    Else
-                    '        .uId_Khachhang = ""
-                    '    End If
-                    '    .uId_Phieuthuchi = Session("uId_Phieuthuchi")
-                    'End With
-                    'objFcCongnoTT.Insert(objEnCongnoTT)
-                End If
             Else
-                ltrChisucess.Text = "<span class='error' id='sucesss'>Phiếu đã khóa!</span>"
+                If txt_Lydochi.Text = "" Then
+                    objEnPhieuthuhi.nv_Lydo_vn = cbo_Khoanchi.SelectedItem.Text + " mã phiếu " + txt_Maphieuchi.Text
+                End If
+                objEnPhieuthuhi.uId_LoaiTT = "43915768-694A-49B8-8DB2-6332718DB194"
+                objEnPhieuthuhi.uId_Cuahang = Session("uId_Cuahang")
+                Dim ddlNguoinopSelect As Integer
+                ddlNguoinopSelect = ddlNguoinop.SelectedIndex
+                Session("uId_Phieuthuchi") = objFcPhieuthuchi.Insert(objEnPhieuthuhi)
+                ltrChisucess.Text = "<span class='success' id='success'>Thêm thông tin thành công!</span>"
+                objFCNhatKy.Write(Session("sTendangnhap"), System.Environment.MachineName, "Thêm phiếu chi " & txt_Maphieuchi.Text & ". Lí do: " & objEnPhieuthuhi.nv_Lydo_vn & ". Số tiền chi: " & txt_Tienchi.Text)
+                'With objEnCongnoTT
+                '    If ddlNguoinopSelect >= 0 Then
+                '        .uId_Khachhang = ddlNguoinop.SelectedItem.Value.ToString
+                '    Else
+                '        .uId_Khachhang = ""
+                '    End If
+                '    .uId_Phieuthuchi = Session("uId_Phieuthuchi")
+                'End With
+                'objFcCongnoTT.Insert(objEnCongnoTT)
+            End If
+        Else
+            ltrChisucess.Text = "<span class='error' id='sucesss'>Phiếu đã khóa!</span>"
         End If
     End Sub
 #End Region
@@ -264,7 +265,7 @@ Public Class ReceiptPayment
     'End Sub
 #End Region
 
-    
+
     Protected Sub btn_Xoaphieu_Click(sender As Object, e As EventArgs)
         objFcPhieuthuchi = New BO.QLTC_PhieuthuchiFacade
         objFCNhatKy = New BO.NHATKYSUDUNGFacade

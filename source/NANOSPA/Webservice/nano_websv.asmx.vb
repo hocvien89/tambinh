@@ -1258,6 +1258,7 @@ Public Class nano_websv
             Dim checkKhoaPhieu As Boolean
             checkKhoaPhieu = objFcPhieuxuat.SelectByID(Session("uId_Phieuxuat")).b_IsKhoa
             Dim dt_KP As New DataTable
+            'khoa so nghiep vu
             dt_KP = objFCPhanQuyen.SelectAllTable(Session("uId_Nhanvien_Dangnhap"), "67e68aea-9dbd-43d5-b316-e5ad9c0e6fd3")
             If checkKhoaPhieu = False Or dt_KP.Rows.Count > 0 Then
                 Dim sUid_Phieuxuat As String = ""
@@ -1267,11 +1268,11 @@ Public Class nano_websv
                 objEnPhieuxuat.v_Maphieuxuat = sList(2)
                 objEnPhieuxuat.d_Ngayxuat = BO.Util.ConvertDateTime(sList(3))
                 objEnPhieuxuat.nv_Noidungxuat_vn = sList(4)
-                objEnPhieuxuat.f_Giamgia_Tong = 0
-                objEnPhieuxuat.f_Tongtienthuc = 0
-                objEnPhieuxuat.b_Dathanhtoan = Boolean.Parse(sList(5))
-                objEnPhieuxuat.i_Soluog = Convert.ToInt32(sList(6))
+                objEnPhieuxuat.b_Dathanhtoan = Boolean.Parse(sList(5)) 'chi ke
+                objEnPhieuxuat.i_Soluog = Convert.ToInt32(sList(6)) 'so thang
                 If Session("uId_Phieuxuat") = Nothing Then
+                    objEnPhieuxuat.f_Giamgia_Tong = 0
+                    objEnPhieuxuat.f_Tongtienthuc = 0
                     Dim dt_Test As DataTable
                     dt_Test = objFcPhieuxuat.SelectBySoPhieuXuat(sList(2))
                     If dt_Test.Rows.Count > 0 Then
@@ -1901,6 +1902,33 @@ Public Class nano_websv
             objFcPhieuxuatLoaiTT = Nothing
         End If
         Return f_Result
+    End Function
+
+    'huy phieu xuat
+    <WebMethod()>
+    Public Function huyPhieuXuat(ByVal uidPhieuxuat As String, ByVal uidKhachhang As String) As String
+        Dim objEnPhieuxuat As New CM.QLMH_PHIEUXUATEntity
+        Dim objEnPhieuthuhci As New CM.QLTC_PhieuthuchiEntity
+        Dim objFcPhieuthuchi As New BO.QLTC_PhieuthuchiFacade
+        Dim objFcPhieuxuat As New BO.QLMH_PHIEUXUATFacade
+        Try
+            objEnPhieuxuat = objFcPhieuxuat.SelectByID(uidPhieuxuat)
+            objEnPhieuxuat.b_Dathanhtoan = 1
+            objEnPhieuxuat.nv_Noidungxuat_en = "khách hàng trả thuốc"
+            objFcPhieuxuat.Update(objEnPhieuxuat)
+            objEnPhieuthuhci.d_Ngay = Date.Now()
+            objEnPhieuthuhci.f_Sotien = objEnPhieuxuat.f_Tongtienthuc
+            objEnPhieuthuhci.uId_Cuahang = Session("uId_Cuahang")
+            objEnPhieuthuhci.uId_Nhanvien = Session("uId_Nhanvien_Dangnhap")
+            objEnPhieuthuhci.nv_Lydo_vn = "Khách hàng trả thuốc phiếu " + objEnPhieuxuat.v_Maphieuxuat
+            objEnPhieuthuhci.v_Maphieu = CreateMaphieuthuchi(Date.Now, "PC")
+            objEnPhieuthuhci.nv_Ghichu = uidPhieuxuat
+            objEnPhieuthuhci.b_IsKhoa = 1
+            objFcPhieuthuchi.Insert(objEnPhieuthuhci)
+            Return "1$Khách hàng trả thuốc thành công"
+        Catch e As Exception
+            Return "2$Có lỗ sảy ra khi xử lý"
+        End Try
     End Function
 
 End Class

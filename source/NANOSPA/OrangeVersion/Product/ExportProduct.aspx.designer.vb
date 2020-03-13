@@ -95,15 +95,6 @@ Partial Public Class ExportProduct
     Protected WithEvents txtDongiathang As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
 
     '''<summary>
-    '''btnLuu control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnLuu As Global.DevExpress.Web.ASPxEditors.ASPxButton
-
-    '''<summary>
     '''btnClear control.
     '''</summary>
     '''<remarks>
@@ -111,6 +102,15 @@ Partial Public Class ExportProduct
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnClear As Global.DevExpress.Web.ASPxEditors.ASPxButton
+
+    '''<summary>
+    '''btnLuu control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnLuu As Global.DevExpress.Web.ASPxEditors.ASPxButton
 
     '''<summary>
     '''btnDanhsach control.
