@@ -1906,26 +1906,15 @@ Public Class nano_websv
 
     'huy phieu xuat
     <WebMethod()>
-    Public Function huyPhieuXuat(ByVal uidPhieuxuat As String, ByVal uidKhachhang As String) As String
-        Dim objEnPhieuxuat As New CM.QLMH_PHIEUXUATEntity
-        Dim objEnPhieuthuhci As New CM.QLTC_PhieuthuchiEntity
-        Dim objFcPhieuthuchi As New BO.QLTC_PhieuthuchiFacade
+    Public Function huyPhieuXuat(ByVal uidPhieuxuatChitiet As String, ByVal uidNhanvien As String) As String
         Dim objFcPhieuxuat As New BO.QLMH_PHIEUXUATFacade
         Try
-            objEnPhieuxuat = objFcPhieuxuat.SelectByID(uidPhieuxuat)
-            objEnPhieuxuat.b_Dathanhtoan = 1
-            objEnPhieuxuat.nv_Noidungxuat_en = "khách hàng trả thuốc"
-            objFcPhieuxuat.Update(objEnPhieuxuat)
-            objEnPhieuthuhci.d_Ngay = Date.Now()
-            objEnPhieuthuhci.f_Sotien = objEnPhieuxuat.f_Tongtienthuc
-            objEnPhieuthuhci.uId_Cuahang = Session("uId_Cuahang")
-            objEnPhieuthuhci.uId_Nhanvien = Session("uId_Nhanvien_Dangnhap")
-            objEnPhieuthuhci.nv_Lydo_vn = "Khách hàng trả thuốc phiếu " + objEnPhieuxuat.v_Maphieuxuat
-            objEnPhieuthuhci.v_Maphieu = CreateMaphieuthuchi(Date.Now, "PC")
-            objEnPhieuthuhci.nv_Ghichu = uidPhieuxuat
-            objEnPhieuthuhci.b_IsKhoa = 1
-            objFcPhieuthuchi.Insert(objEnPhieuthuhci)
-            Return "1$Khách hàng trả thuốc thành công"
+            If objFcPhieuxuat.updateHuyThuoc(uidPhieuxuatChitiet, uidNhanvien) Then
+                Return "1$Khách hàng trả thuốc thành công"
+            Else
+                Return "2$Có lỗ sảy ra khi xử lý"
+            End If
+
         Catch e As Exception
             Return "2$Có lỗ sảy ra khi xử lý"
         End Try

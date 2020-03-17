@@ -376,9 +376,10 @@
             window.location.href = "../../OrangeVersion/Product/ExportProduct.aspx";
             return false;
         }
-        function Huyphieuxuat(uId_Phieuxuat, uId_Khachhang) {
-            if (confirm("Xác nhận thực hiện hủy thuốc?")) {
-                var param_dt = "{'uidPhieuxuat':'" + uId_Phieuxuat + "','uidKhachhang':'" + uId_Khachhang + "'}";
+        function hoanThuoc(uId_Phieuxuat_Chitiet) {
+            if (confirm("Xác nhận thực hiện hoàn lại thuốc?")) {
+                var uidNhanvien = jo_GetSession("uId_Nhanvien_Dangnhap");
+                var param_dt = "{'uidPhieuxuatChitiet':'" + uId_Phieuxuat_Chitiet +"','uidNhanvien':'" + uidNhanvien + "'}";
                 var pageUrl = "../../../../Webservice/nano_websv.asmx/huyPhieuXuat";
                 $.ajax({
                     type: "POST",
@@ -977,12 +978,6 @@
                                                                     <img src="../../../images/bub.png" /></a>
                                                             </DataItemTemplate>
                                                         </dx:GridViewDataColumn>
-                                                        <dx:GridViewDataColumn Width="30px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
-                                                            <DataItemTemplate>
-                                                                <a id="popup" title="Trả lại thuốc" href='javascript:void(0)' onclick="return <%# String.Format("Huyphieuxuat('{0}', '{1}')", Eval("uId_Phieuxuat"), Eval("uId_Khachhang")).ToString%>">
-                                                                    <img src="../../../images/bub.png" /></a>
-                                                            </DataItemTemplate>
-                                                        </dx:GridViewDataColumn>
                                                     </Columns>
                                                     <Templates>
                                                         <DetailRow>
@@ -1008,6 +1003,14 @@
                                                                         <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
                                                                             Caption="Tổng tiền" PropertiesTextEdit-DisplayFormatString="{0:0,0}" FieldName="f_Tongtien" Name="f_Tongtien">
                                                                         </dx:GridViewDataTextColumn>
+                                                                        <dx:GridViewDataTextColumn Visible="false" FieldName="b_Hoanthuoc"></dx:GridViewDataTextColumn>
+                                                                        <dx:GridViewDataColumn Width="30px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
+                                                                            <DataItemTemplate>
+                                                                                <a id="popup" title='<%#IIf(Eval("b_Hoanthuoc") = False, "Trả lại thuốc", "Thuốc đã trả")%>' href='javascript:void(0)' 
+                                                                                    onclick="return <%#IIf(Eval("b_Hoanthuoc") = False, String.Format("hoanThuoc('{0}')", Eval("uId_Phieuxuat_Chitiet")).ToString, "")%>">
+                                                                                    <img style="width: 16px;" src= '<%#IIf(Eval("b_Hoanthuoc") = False, "../../../images/btn_Delete.png", "../../../images/warning-png-icon.png")%> ' /></a>
+                                                                            </DataItemTemplate>
+                                                                        </dx:GridViewDataColumn>
                                                                     </Columns>
                                                                 </dx:ASPxGridView>
                                                             </div>

@@ -2,6 +2,7 @@
 
     Dim IQLMH_PHIEUXUAT As DB.IQLMH_PHIEUXUATDA = New DB.QLMH_PHIEUXUATDA
 
+
 #Region "Phieu xuat - Header"
     Public Function SelectAll() As List(Of CM.QLMH_PHIEUXUATEntity)
         Return IQLMH_PHIEUXUAT.SelectAll()
@@ -98,6 +99,11 @@
 
     Public Function Select_PHIEUXUAT_CHITIET_ByMaPX(ByVal v_Maphieuxuat As String) As System.Data.DataTable
         Return IQLMH_PHIEUXUAT.Select_PHIEUXUAT_CHITIET_ByMaPX(v_Maphieuxuat)
+    End Function
+
+    ' huy thuoc
+    Public Function updateHuyThuoc(ByVal uid_Phieuxuat_Chitiet As String, ByVal uid_Nhanvien As String) As Boolean
+        Return IQLMH_PHIEUXUAT.updateHoanThuoc(uid_Phieuxuat_Chitiet, uid_Nhanvien)
     End Function
 #End Region
     Public Function MaPhieuxuatMax(ByVal ngaynhap As Date) As String

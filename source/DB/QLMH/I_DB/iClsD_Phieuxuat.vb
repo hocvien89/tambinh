@@ -53,6 +53,8 @@
     Function DeleteByID_QLMH_PHIEUXUAT_CHITIET(ByVal uId_Phieuxuat_Chitiet As String) As Boolean
 
     Function Update_QLMH_PHIEUXUAT_CHITIET(ByVal obj As CM.QLMH_PHIEUXUATEntity) As Boolean
+
+    Function updateHoanThuoc(ByVal uid_Phieuxuat_Chitiet As String, ByVal uid_Nhanvien As String) As Boolean
 #End Region
 
     Function MaPhieuxuatMax(ByVal ngaynhap As Date) As String

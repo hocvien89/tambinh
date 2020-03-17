@@ -631,4 +631,21 @@ Public Class QLMH_PHIEUXUATDA
         End Try
         Return DT
     End Function
+
+    Public Function updateHoanthuoc(uid_Phieuxuat_chitiet As String, uid_Nhanvien As String) As Boolean Implements IQLMH_PHIEUXUATDA.updateHoanThuoc
+        Dim db As Database
+        Dim sp As String = "[dbo].[udp_phieu_xuat_chi_tiet_hoan_thuoc]"
+        Dim objCmd As DbCommand
+        Try
+            db = DatabaseFactory.CreateDatabase()
+            objCmd = db.GetStoredProcCommand(sp)
+            db.AddInParameter(objCmd, "@uId_Phieuxuat_Chitiet", DbType.String, uid_Phieuxuat_chitiet)
+            db.AddInParameter(objCmd, "@uId_Nhanvien", DbType.String, uid_Nhanvien)
+            db.ExecuteNonQuery(objCmd)
+            Return True
+        Catch ex As Exception
+            log.WriteLog(sp, ex.Message)
+            Return False
+        End Try
+    End Function
 End Class
