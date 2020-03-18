@@ -19,6 +19,7 @@
     Private _vTypeGia As String
     Private _f_Gia As Double
     Private _i_Soluong As Integer
+    Private _b_Chike As Boolean
 #End Region
 
 #Region "Propertys of Phieu xuat - Header"
@@ -200,6 +201,14 @@
         End Get
         Set(value As String)
             _vTypeGia = value
+        End Set
+    End Property
+    Public Property b_Chike() As Boolean Implements IQLMH_PHIEUXUATEntity.b_Chike
+        Get
+            Return _b_Chike
+        End Get
+        Set(value As Boolean)
+            _b_Chike = value
         End Set
     End Property
 #End Region

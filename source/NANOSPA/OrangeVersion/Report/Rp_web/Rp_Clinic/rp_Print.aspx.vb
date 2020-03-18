@@ -1,12 +1,14 @@
 ﻿Public Class rp_Print
     Inherits System.Web.UI.Page
     Dim objFCThamso As New BO.clsB_QT_THAMSOHETHONG
+    Dim Ngayhen
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim type As String
         type = Request.QueryString("type")
         If type = "phieukham" Then
             LoadPhieuKham()
         ElseIf type = "donthuoc" Then
+            Ngayhen = Request.QueryString("Ngayhen")
             LoadDonThuoc()
         ElseIf type = "dieutri" Then
             LoadDieuTri()
@@ -62,10 +64,10 @@
         rp.lblNamsinh.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year).ToString() + " (" + objEnKhachhang.d_Ngaysinh.Year.ToString() + ")" + " (" + IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ") + ")"
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         dt = objFcPhieuxuat.SelectByID_QLMH_PHIEUXUAT_CHITIET(Session("uId_Phieuxuat").ToString())
-        Dim dateNgayhen = dt.Rows(0).Item("ngay_hen")
+        Dim dateNgayhen = Ngayhen
         If dateNgayhen.ToString() <> "" Then
             'Dim dateNgayhen As Date = New Date(strNgayhen)
-            rp.lblNgayhen.Text = "Ngày " + dateNgayhen.Day.ToString() + " Tháng " + dateNgayhen.Month.ToString() + " Năm " + dateNgayhen.Year.ToString()
+            rp.lblNgayhen.Text = "Ngày " + dateNgayhen.Substring(0, 2) + " Tháng " + dateNgayhen.Substring(3, 2) + " Năm " + dateNgayhen.Substring(6, 4)
         Else
             rp.lblNgayhen.Text = "Ngày   Tháng   Năm"
         End If

@@ -125,7 +125,7 @@ Public Class QLMH_PHIEUXUATDA
                     .f_Giamgia_Tong = IIf(IsDBNull(objReader("f_Giamgia")) = True, "", objReader("f_Giamgia"))
                     .f_Tongtienthuc = IIf(IsDBNull(objReader("f_Tongtienthuc")) = True, "", objReader("f_Tongtienthuc"))
                     .b_IsKhoa = IIf(IsDBNull(objReader("b_IsKhoa")) = True, False, objReader("b_IsKhoa"))
-                    .b_Dathanhtoan = IIf(IsDBNull(objReader("b_IsKhoa")) = True, False, objReader("b_Kedon"))
+                    .b_Chike = IIf(IsDBNull(objReader("b_Kedon")) = True, False, objReader("b_Kedon"))
                     .uId_LoaiTT = IIf(IsDBNull(objReader("uId_LoaiTT")) = True, "", Convert.ToString(objReader("uId_LoaiTT")))
                     .i_Soluog = IIf(IsDBNull(objReader("i_Sothang")) = True, 0, objReader("i_Sothang"))
                     .f_Gia = IIf(IsDBNull(objReader("f_Giathang")) = True, 0, objReader("f_Giathang"))
@@ -173,7 +173,7 @@ Public Class QLMH_PHIEUXUATDA
             db.AddInParameter(objCmd, "@nv_Noidungxuat_en", DbType.String, obj.nv_Noidungxuat_en)
             db.AddInParameter(objCmd, "@f_Giamgia", DbType.Double, obj.f_Giamgia)
             db.AddInParameter(objCmd, "@f_Tongtienthuc", DbType.Double, obj.f_Tongtienthuc)
-            db.AddInParameter(objCmd, "@b_Kedon", DbType.Boolean, obj.b_Dathanhtoan)
+            db.AddInParameter(objCmd, "@b_Kedon", DbType.Boolean, obj.b_Chike)
             sOut_Uid_Phieunhap = db.ExecuteDataSet(objCmd).Tables(0).Rows(0)(0).ToString
             Return sOut_Uid_Phieunhap
         Catch ex As Exception
@@ -217,7 +217,7 @@ Public Class QLMH_PHIEUXUATDA
             db.AddInParameter(objCmd, "@f_Tongtienthuc", DbType.Double, obj.f_Tongtienthuc)
             db.AddInParameter(objCmd, "@uId_LoaiTT", DbType.String, obj.uId_LoaiTT)
             db.AddInParameter(objCmd, "@b_IsKhoa", DbType.Boolean, obj.b_IsKhoa)
-            db.AddInParameter(objCmd, "@b_Kedon", DbType.Boolean, obj.b_Dathanhtoan)
+            db.AddInParameter(objCmd, "@b_Kedon", DbType.Boolean, obj.b_Chike)
             db.AddInParameter(objCmd, "@i_Sothang", DbType.Int16, obj.i_Soluog)
             db.AddInParameter(objCmd, "@f_Giathang", DbType.Double, obj.f_Gia)
             db.ExecuteNonQuery(objCmd)

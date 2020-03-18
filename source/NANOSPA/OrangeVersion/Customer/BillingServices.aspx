@@ -1174,6 +1174,10 @@
             pcDanhsachDonthuoc.Show();
         }
         function UpdatePhieuxuat(s, e) {
+        if (cbkchike.GetChecked()) {
+            alert("Đơn thuốc chỉ kê không thể in thanh toán!");
+            return;
+        }
             var txtSophieu = document.getElementById("<%=txtMaphieu.ClientID %>");
             var txtSotiennhan = document.getElementById("<%=txtSotiennhan_px.ClientID %>");
             var ddlLoaithanhtoanvalue = ddlLoaithanhtoan_PX.GetValue().toString();
@@ -1466,6 +1470,9 @@
             if (jo_GetSession("uId_Phieuxuat") == null) {
                 alert("Chưa chọn phiếu để in!");
             }
+            else if (cbkchike.GetChecked()) {
+                alert("Đơn thuốc chỉ kê không thể in thanh toán!");
+            }
             else {
                 var $dialog = $('<div></div>')
                  .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Phieuthanhtoan/rp_PhieuthanhtoanSP.aspx" width="850px" height="100%"></iframe>')
@@ -1656,7 +1663,7 @@
               }
               else {
                   var $dialog = $('<div></div>')
-                   .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=donthuoc" width="850px" height="100%"></iframe>')
+                   .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=donthuoc&Ngayhen='+dateNgayhen.GetText()+'" width="850px" height="100%"></iframe>')
                    .dialog({
                        autoOpen: false,
                        modal: true,
@@ -2914,11 +2921,13 @@
                                                     <dx:ASPxComboBox ID="ddlNhanvien_PX" ClientInstanceName="ddlNhanvien_PX" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Width="200px" runat="server" ValueType="System.String">
                                                     </dx:ASPxComboBox>
                                                 </td>
-                                                <td style="display:none" class="info_table_td">Số thang:
+                                                <td  class="info_table_td">Ngày hẹn:
                                                 </td>
-                                                <td style="display:none" class="info_table_td">
-                                                    <dx:ASPxTextBox runat="server" ID="txtSothang" onkeyup="txtGiathangKey()" ClientInstanceName="txtsothang" Width="200px" Text="1">
-                                                    </dx:ASPxTextBox>
+                                                <td class="info_table_td">
+                                                     <dx:ASPxDateEdit ID="dateNgayHen" Visible="true" UseMaskBehavior="true" AutoPostBack="false" ClientInstanceName="dateNgayhen" Style="float: left; margin-right: 8px;" Width="200px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
+                                runat="server">
+                            </dx:ASPxDateEdit>
+                                                 
                                                 </td>
                                             </tr>
                                             <tr>
@@ -2932,6 +2941,8 @@
                                                     <%--                            <dx:ASPxCheckBox runat="server" ID="chkGia" ClientInstanceName="chkgia" style="float:left; padding-right:10px">
                                 <ClientSideEvents CheckedChanged="chkgiachange" />
                             </dx:ASPxCheckBox>--%>
+                                                       <dx:ASPxTextBox runat="server" ID="txtSothang" onkeyup="txtGiathangKey()" ClientInstanceName="txtsothang" Width="200px" Text="1">
+                                                    </dx:ASPxTextBox>
                                                     <dx:ASPxTextBox runat="server" onkeyup="txtGiathangKey()" Width="200px" Enabled="false" ClientInstanceName="txtdongiathang" Style="float: left" ID="txtDongiathang" MaskSettings-Mask="<0..9999999999g>">
                                                     </dx:ASPxTextBox>
                                                 </td>

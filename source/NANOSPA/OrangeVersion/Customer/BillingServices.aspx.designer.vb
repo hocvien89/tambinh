@@ -1112,13 +1112,13 @@ Partial Public Class BillingServices
     Protected WithEvents ddlNhanvien_PX As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
-    '''txtSothang control.
+    '''dateNgayHen control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtSothang As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
+    Protected WithEvents dateNgayHen As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
 
     '''<summary>
     '''txtGhichu_PX control.
@@ -1128,6 +1128,15 @@ Partial Public Class BillingServices
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtGhichu_PX As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtSothang control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSothang As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
 
     '''<summary>
     '''txtDongiathang control.

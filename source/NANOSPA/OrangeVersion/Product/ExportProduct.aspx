@@ -166,8 +166,12 @@
         }
         // luu phieu xuat khi click buttom luu phieu
         function UpdatePhieuxuat(s, e) {
+            if (cbkchike.GetChecked()) {
+                alert("Đơn thuốc chỉ kê không thể thanh toán!");
+                return;
+            }
             var txtSophieu = document.getElementById("<%=txtMaphieu.ClientID %>");
-            var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
+         var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
             console.log("update phieu xuat");
             if (txtSotiennhan.value == "") {
                 alert("Hãy nhập số tiền khách trả!");
@@ -518,6 +522,9 @@
             if (jo_GetSession("uId_Phieuxuat") == null) {
                 alert("Chưa chọn phiếu để in!");
             }
+            else if (cbkchike.GetChecked()) {
+                alert("Đơn thuốc chỉ kê không thể in thanh toán!");
+            }
             else {
                 var $dialog = $('<div></div>')
                     //jolieD
@@ -603,6 +610,9 @@
         function InPhieuDongY(s, e) {
             if (jo_GetSession("uId_Phieuxuat") == null) {
                 alert("Chưa chọn phiếu để in!");
+            }
+            else if (cbkchike.GetChecked()) {
+                alert("Đơn thuốc chỉ kê không thể in thanh toán!");
             }
             else {
                 var $dialog = $('<div></div>')
@@ -697,40 +707,41 @@
             }
             else {
                 var lblTongtien = document.getElementById("<%=lblTongtien.ClientID%>");
-                  var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
-                  var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
-                  lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
-                  txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
-                  lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
-                  var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
-                lblTienthua.innerHTML = "0";
-            }
-        }
-        function InDonThuoc(s, e) {
-            var donthuoc = jo_GetSession("uId_Phieuxuat")
-            if (donthuoc = null) {
-                alert("Hãy chọn đơn thuốc");
-                return;
-            }
-            else {
-                var $dialog = $('<div></div>')
-                 .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=donthuoc" width="850px" height="100%"></iframe>')
-                 .dialog({
-                     autoOpen: false,
-                     modal: true,
-                     height: 634,
-                     width: 855.733,
-                     title: "In Đơn Thuốc",
-                     buttons: {
-                         "Close": function () { $dialog.dialog('close'); }
-                     },
-                     close: function (event, ui) {
-                     }
-                 });
-                $dialog.dialog('open');
-                return false;
-            }
-        }
+                var lblConlai = document.getElementById("<%=lblConlai.ClientID%>");
+                var txtSotiennhan = document.getElementById("<%=txtSotiennhan.ClientID%>");
+                lblTongtien.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                txtSotiennhan.value = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                lblConlai.innerHTML = jo_FormatMoney(parseFloat(txtdongiathang.GetValue().replace(/,/g, "")) * parseFloat(txtsothang.GetValue()));
+                var lblTienthua = document.getElementById("<%=lblTienthua.ClientID%>");
+                  lblTienthua.innerHTML = "0";
+              }
+          }
+          function InDonThuoc(s, e) {
+              var donthuoc = jo_GetSession("uId_Phieuxuat")
+              if (donthuoc = null) {
+                  alert("Hãy chọn đơn thuốc");
+                  return;
+              }
+              else {
+                  console.log(dateNgayhen.GetText());
+                  var $dialog = $('<div></div>')
+                   .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=donthuoc&Ngayhen=' + dateNgayhen.GetText() + '" width="850px" height="100%"></iframe>')
+                   .dialog({
+                       autoOpen: false,
+                       modal: true,
+                       height: 634,
+                       width: 855.733,
+                       title: "In Đơn Thuốc",
+                       buttons: {
+                           "Close": function () { $dialog.dialog('close'); }
+                       },
+                       close: function (event, ui) {
+                       }
+                   });
+                  $dialog.dialog('open');
+                  return false;
+              }
+          }
     </script>
     <div class="brest_crum">
         <p class="p_header"><i class="fa fa-user fa-fw fa-1x"></i>KÊ THUỐC</p>
@@ -786,10 +797,12 @@
                             <dx:ASPxComboBox ID="ddlNhanvien" ClientInstanceName="ddlNhanvien" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Width="200px" runat="server" ValueType="System.String">
                             </dx:ASPxComboBox>
                         </td>
-                        <td style="display: none" class="info_table_td"></td>
-                        <td style="display: none" class="info_table_td">
-                            <dx:ASPxTextBox runat="server" ID="txtSothang" onkeyup="txtGiathangKey()" ClientInstanceName="txtsothang" Width="200px" Text="1">
-                            </dx:ASPxTextBox>
+                        <td class="info_table_td">Ngày hẹn:</td>
+                        <td  class="info_table_td">
+                            
+                            <dx:ASPxDateEdit ID="dateNgayHen" Visible="true" UseMaskBehavior="true" AutoPostBack="false" ClientInstanceName="dateNgayhen" Style="float: left; margin-right: 8px;" Width="200px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
+                                runat="server">
+                            </dx:ASPxDateEdit>
                         </td>
                     </tr>
                     <tr>
@@ -804,6 +817,8 @@
                                 <ClientSideEvents CheckedChanged="chkgiachange" />
                             </dx:ASPxCheckBox>--%>
                             <dx:ASPxTextBox runat="server" Text="1" onkeyup="txtGiathangKey()" Width="200px" ClientInstanceName="txtdongiathang" Style="float: left" ID="txtDongiathang">
+                            </dx:ASPxTextBox>
+                            <dx:ASPxTextBox style="display: none" runat="server" ID="txtSothang" onkeyup="txtGiathangKey()" ClientInstanceName="txtsothang" Width="200px" Text="1">
                             </dx:ASPxTextBox>
                         </td>
                     </tr>

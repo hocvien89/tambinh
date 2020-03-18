@@ -211,7 +211,7 @@ Public Class ExportProduct
         lblTongtien.Text = String.Format("{0:#,##0}", Val(objEnPhieuxuat.nv_Noidungxuat_en))
         lblConlai.Text = String.Format("{0:#,##0}", Val(objEnPhieuxuat.nv_Noidungxuat_en) - objEnPhieuxuat.f_Giamgia_Tong)
         txtSothang.Text = objEnPhieuxuat.i_Soluog
-        chkChike.Checked = objEnPhieuxuat.b_Dathanhtoan
+        chkChike.Checked = objEnPhieuxuat.b_Chike
         txtDongiathang.Text = String.Format("{0:#,##0}", BO.Util.IsDouble(objEnPhieuxuat.f_Gia))
         Dim tiennhan As Integer
         tiennhan = Integer.Parse(BO.Util.IsDouble(objEnPhieuxuat.f_Tongtienthuc))

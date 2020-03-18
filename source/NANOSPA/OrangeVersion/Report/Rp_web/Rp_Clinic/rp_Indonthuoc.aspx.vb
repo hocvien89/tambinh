@@ -2,10 +2,12 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Loadrp()
+        Dim dateNgayhen As String
+        dateNgayhen = Request.QueryString("Ngayhen")
+        Loadrp(dateNgayhen)
     End Sub
 
-    Private Sub Loadrp()
+    Private Sub Loadrp(ngayhen As String)
         Dim rp As New Xtr_Indonthuoc
         Dim objEnPhieuxuat As New CM.QLMH_PHIEUXUATEntity
         Dim objFcthamso As New BO.clsB_QT_THAMSOHETHONG

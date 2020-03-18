@@ -728,18 +728,17 @@ Public Class nano_websv
         objFcDonviQD = New BO.DMQuyDoiDonViFacade
         Dim rs As String = ""
         Dim checkKhoaPhieu As Boolean
-        checkKhoaPhieu = objFcPhieuxuat.SelectByID(Session("uId_Phieuxuat")).b_IsKhoa
+        objEnPhieuxuat = objFcPhieuxuat.SelectByID(Session("uId_Phieuxuat"))
+        checkKhoaPhieu = objEnPhieuxuat.b_IsKhoa
         Dim dt_KP As New DataTable
         dt_KP = objFCPhanQuyen.SelectAllTable(Session("uId_Nhanvien_Dangnhap"), "67e68aea-9dbd-43d5-b316-e5ad9c0e6fd3")
         If checkKhoaPhieu = False Or dt_KP.Rows.Count > 0 Then
             Dim d_Ngayxuat As Date
-            d_Ngayxuat = objFcPhieuxuat.SelectByID(Session("uId_Phieuxuat")).d_Ngayxuat
-            Dim uId_Kho As String = objFcPhieuxuat.SelectByID(Session("uId_Phieuxuat")).uId_Kho
-            objEnPhieuxuat = New CM.QLMH_PHIEUXUATEntity
+            d_Ngayxuat = objEnPhieuxuat.d_Ngayxuat
+            Dim uId_Kho As String = objEnPhieuxuat.uId_Kho
             objEnMathang = objFcMathang.SelectByMamathangVaKho(objFcMathang.SelectByID(v_MaMathang).v_MaMathang, uId_Kho)
             objEnPhieuxuat.uId_Phieuxuat = Session("uId_Phieuxuat")
             objEnPhieuxuat.uId_Mathang = objEnMathang.uId_Mathang
-
             objEnPhieuxuat.f_Soluong = f_Soluong
             'Gia nay lay theo: gia don vi nho nhat * so luong nho nhat
             'Truoc het la lay ti le quy doi
@@ -756,7 +755,7 @@ Public Class nano_websv
             'Quy doi ve so luong nho nhat theo ma don vi
             Dim LaySLNhoNhat As Integer
             LaySLNhoNhat = objFcMathang.QuyDoiVeDonViNhoNhat(objEnMathang.uId_Mathang, MaDonVi, Val(f_Soluong))
-            If objFcMathang.LaySLTonByTime(d_Ngayxuat, uId_Kho, Session("uId_Cuahang").ToString(), objEnMathang.uId_Mathang) >= LaySLNhoNhat Then
+            If objFcMathang.LaySLTonByTime(d_Ngayxuat, uId_Kho, Session("uId_Cuahang").ToString(), objEnMathang.uId_Mathang) >= LaySLNhoNhat Or objEnPhieuxuat.b_Chike = True Then
                 objFcPhieuxuat.Insert_QLMH_PHIEUXUAT_CHITIET(objEnPhieuxuat)
                 rs = "Success"
             Else
@@ -818,7 +817,7 @@ Public Class nano_websv
                         .d_Ngayxuat = BO.Util.ConvertDateTime(d_Ngay)
                         .uId_Phieuxuat = oLibP.NullProString(Session("uId_Phieuxuat"))
                         .uId_Kho = uId_Kho
-                        .b_Dathanhtoan = b_Kedon
+                        .b_Chike = b_Kedon
                         .i_Soluog = i_Sothang
                         .f_Gia = f_Giathang
                         'Truong hop thanh toan khong thanh toan tu the
@@ -962,7 +961,7 @@ Public Class nano_websv
         objEnPhieuxuat = objFcPhieuxuat.SelectByID(uId_Phieuxuat)
         rs = objEnPhieuxuat.v_Maphieuxuat & "$" & objEnPhieuxuat.uId_Kho & "$" & objEnPhieuxuat.uId_Khachhang & "$" & objEnPhieuxuat.d_Ngayxuat _
             & "$" & objEnPhieuxuat.nv_Noidungxuat_vn & "$" & objEnPhieuxuat.f_Giamgia_Tong & "$" & objEnPhieuxuat.nv_Noidungxuat_en & "$" & objEnPhieuxuat.f_Tongtienthuc _
-            & "$" & objEnPhieuxuat.uId_LoaiTT & "$" & objEnPhieuxuat.uId_Nhanvien & "$" & objEnPhieuxuat.b_Dathanhtoan & "$" & objEnPhieuxuat.i_Soluog & "$" & objEnPhieuxuat.f_Gia
+            & "$" & objEnPhieuxuat.uId_LoaiTT & "$" & objEnPhieuxuat.uId_Nhanvien & "$" & objEnPhieuxuat.b_Chike & "$" & objEnPhieuxuat.i_Soluog & "$" & objEnPhieuxuat.f_Gia
         Return rs
     End Function
 
@@ -1268,7 +1267,7 @@ Public Class nano_websv
                 objEnPhieuxuat.v_Maphieuxuat = sList(2)
                 objEnPhieuxuat.d_Ngayxuat = BO.Util.ConvertDateTime(sList(3))
                 objEnPhieuxuat.nv_Noidungxuat_vn = sList(4)
-                objEnPhieuxuat.b_Dathanhtoan = Boolean.Parse(sList(5)) 'chi ke
+                objEnPhieuxuat.b_Chike = Boolean.Parse(sList(5)) 'chi ke
                 objEnPhieuxuat.i_Soluog = Convert.ToInt32(sList(6)) 'so thang
                 If Session("uId_Phieuxuat") = Nothing Then
                     objEnPhieuxuat.f_Giamgia_Tong = 0

@@ -68,13 +68,13 @@ Partial Public Class ExportProduct
     Protected WithEvents ddlNhanvien As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
-    '''txtSothang control.
+    '''dateNgayHen control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtSothang As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
+    Protected WithEvents dateNgayHen As Global.DevExpress.Web.ASPxEditors.ASPxDateEdit
 
     '''<summary>
     '''txtGhichu control.
@@ -93,6 +93,15 @@ Partial Public Class ExportProduct
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtDongiathang As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
+
+    '''<summary>
+    '''txtSothang control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSothang As Global.DevExpress.Web.ASPxEditors.ASPxTextBox
 
     '''<summary>
     '''btnClear control.

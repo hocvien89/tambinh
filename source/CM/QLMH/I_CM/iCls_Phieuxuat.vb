@@ -17,6 +17,7 @@
     Property vTypeGia() As String
     Property f_Gia() As Double
     Property i_Soluog() As Integer
+    Property b_Chike() As Boolean
 
     'Detail
     Property uId_Phieuxuat_Chitiet() As String
