@@ -60,7 +60,9 @@
         rp.lblSdt.Text = "SĐT: " + Session("nv_Dienthoai")
         rp.lblTenkhachhang.Text = objEnKhachhang.nv_Hoten_vn
         rp.lblDiachiKH.Text = objEnKhachhang.nv_Diachi_vn
+        rp.lblChandoan.Text = objEnKhachhang.nv_Diachi_en
         rp.lblDienthoai.Text = objEnKhachhang.v_DienthoaiDD
+        rp.lblMaKhachHang.Text = "Mã: " + objEnKhachhang.v_Makhachang
         rp.lblNamsinh.Text = public_class.GetTuoiByNamSinh(objEnKhachhang.d_Ngaysinh.Year).ToString() + " (" + objEnKhachhang.d_Ngaysinh.Year.ToString() + ")" + " (" + IIf(objEnKhachhang.b_Gioitinh = True, "Nam", "Nữ") + ")"
         rp.lblNgayThang.Text = "Ngày " + datenow.Day.ToString() + " Tháng " + datenow.Month.ToString() + " Năm " + datenow.Year.ToString()
         dt = objFcPhieuxuat.SelectByID_QLMH_PHIEUXUAT_CHITIET(Session("uId_Phieuxuat").ToString())

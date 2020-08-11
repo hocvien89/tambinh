@@ -1251,10 +1251,11 @@
                                                         Height="25px" Width="200px" ValueType="System.String" runat="server">
                                                     </dx:ASPxComboBox>
                                                 </td>
-                                               <td class="info_table_td">Bệnh sử:
+                                               <td class="info_table_td">Chẩn đoán: 
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <asp:TextBox ID="txtGhichu" onkeypress="return enter_txtGhichu(event)" runat="server" Width="200px" CssClass="nano_textbox"></asp:TextBox>
+                                                    <dx:ASPxMemo ID="txt_Danhgia" runat="server" ClientInstanceName="txt_Chandoan" Height="25px" Width="100%"></dx:ASPxMemo>
+                                                    
                                                 </td>
               
                                             </tr>
@@ -1266,11 +1267,11 @@
                                                         IncrementalFilteringMode="StartsWith" Height="25px" Width="200px" runat="server" ValueType="System.String">
                                                     </dx:ASPxComboBox>
                                                
-                                                <td class="info_table_td">Chẩn đoán:
+                                                <td class="info_table_td">Bệnh sử:
                                                 </td>
                                                 <td class="info_table_td" colspan="3">
-                                               
-                                                    <dx:ASPxMemo ID="txt_Danhgia" runat="server" Height="50px" ClientInstanceName="txt_Chandoan" Width="100%"></dx:ASPxMemo>
+                                                   <dx:ASPxMemo ID="txtGhichu" runat="server" ClientInstanceName="txt_Benhsu" Height="50px" Width="100%"></dx:ASPxMemo>
+                                           
                                                 </td>
                                             </tr>
                                             <tr>

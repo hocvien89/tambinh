@@ -98,7 +98,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.XrTable1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid
         Me.XrTable1.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTable1.BorderWidth = 1
-        Me.XrTable1.Font = New System.Drawing.Font("Times New Roman", 6.0!)
+        Me.XrTable1.Font = New System.Drawing.Font("Times New Roman", 10.25!)
         Me.XrTable1.LocationFloat = New DevExpress.Utils.PointFloat(5.522209!, 0.0!)
         Me.XrTable1.Name = "XrTable1"
         Me.XrTable1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100.0!)
@@ -191,7 +191,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblTencuahang
         '
-        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.lblTencuahang.Font = New System.Drawing.Font("Times New Roman", 10.25!)
         Me.lblTencuahang.LocationFloat = New DevExpress.Utils.PointFloat(57.11514!, 0.0!)
         Me.lblTencuahang.Name = "lblTencuahang"
         Me.lblTencuahang.SerializableRtfString = resources.GetString("lblTencuahang.SerializableRtfString")
@@ -200,7 +200,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblDiachicuahang
         '
-        Me.lblDiachicuahang.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.lblDiachicuahang.Font = New System.Drawing.Font("Times New Roman", 10.25!)
         Me.lblDiachicuahang.LocationFloat = New DevExpress.Utils.PointFloat(57.11514!, 11.19942!)
         Me.lblDiachicuahang.Name = "lblDiachicuahang"
         Me.lblDiachicuahang.SerializableRtfString = resources.GetString("lblDiachicuahang.SerializableRtfString")
@@ -225,7 +225,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblNhanvien
         '
-        Me.lblNhanvien.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNhanvien.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblNhanvien.LocationFloat = New DevExpress.Utils.PointFloat(83.8411!, 101.6667!)
         Me.lblNhanvien.Multiline = True
         Me.lblNhanvien.Name = "lblNhanvien"
@@ -238,7 +238,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel3
         '
-        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel3.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(5.522209!, 101.6667!)
         Me.XrLabel3.Multiline = True
         Me.XrLabel3.Name = "XrLabel3"
@@ -249,7 +249,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel6
         '
-        Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel6.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(5.522209!, 68.18918!)
         Me.XrLabel6.Multiline = True
         Me.XrLabel6.Name = "XrLabel6"
@@ -260,7 +260,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblTenKH
         '
-        Me.lblTenKH.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTenKH.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblTenKH.LocationFloat = New DevExpress.Utils.PointFloat(83.27737!, 68.18918!)
         Me.lblTenKH.Multiline = True
         Me.lblTenKH.Name = "lblTenKH"
@@ -271,7 +271,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblDiachi
         '
-        Me.lblDiachi.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDiachi.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblDiachi.LocationFloat = New DevExpress.Utils.PointFloat(84.40488!, 90.49097!)
         Me.lblDiachi.Multiline = True
         Me.lblDiachi.Name = "lblDiachi"
@@ -282,7 +282,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel10
         '
-        Me.XrLabel10.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel10.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(5.522209!, 90.49098!)
         Me.XrLabel10.Multiline = True
         Me.XrLabel10.Name = "XrLabel10"
@@ -293,7 +293,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel1
         '
-        Me.XrLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel1.Font = New System.Drawing.Font("Tahoma", 10.25!, System.Drawing.FontStyle.Bold)
         Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(57.11513!, 49.69368!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -305,7 +305,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblNgaylap
         '
-        Me.lblNgaylap.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNgaylap.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblNgaylap.LocationFloat = New DevExpress.Utils.PointFloat(56.98754!, 23.0!)
         Me.lblNgaylap.Multiline = True
         Me.lblNgaylap.Name = "lblNgaylap"
@@ -318,7 +318,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         Me.XrTable2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom
         Me.XrTable2.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrTable2.Font = New System.Drawing.Font("Tahoma", 6.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrTable2.Font = New System.Drawing.Font("Tahoma", 10.25!, System.Drawing.FontStyle.Bold)
         Me.XrTable2.LocationFloat = New DevExpress.Utils.PointFloat(5.522209!, 0.0!)
         Me.XrTable2.Name = "XrTable2"
         Me.XrTable2.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow2})
@@ -397,7 +397,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lbctkm
         '
-        Me.lbctkm.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbctkm.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lbctkm.LocationFloat = New DevExpress.Utils.PointFloat(90.60417!, 86.4117!)
         Me.lbctkm.Multiline = True
         Me.lbctkm.Name = "lbctkm"
@@ -408,7 +408,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel5
         '
-        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel5.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(6.66666!, 85.18623!)
         Me.XrLabel5.Multiline = True
         Me.XrLabel5.Name = "XrLabel5"
@@ -419,7 +419,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblHinhThucTT
         '
-        Me.lblHinhThucTT.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHinhThucTT.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblHinhThucTT.LocationFloat = New DevExpress.Utils.PointFloat(90.60412!, 71.82837!)
         Me.lblHinhThucTT.Multiline = True
         Me.lblHinhThucTT.Name = "lblHinhThucTT"
@@ -430,7 +430,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel4
         '
-        Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel4.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(6.666605!, 70.60288!)
         Me.XrLabel4.Multiline = True
         Me.XrLabel4.Name = "XrLabel4"
@@ -441,7 +441,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lbTienthutext
         '
-        Me.lbTienthutext.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTienthutext.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lbTienthutext.LocationFloat = New DevExpress.Utils.PointFloat(6.666659!, 59.85781!)
         Me.lbTienthutext.Multiline = True
         Me.lbTienthutext.Name = "lbTienthutext"
@@ -452,7 +452,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblTienthua
         '
-        Me.lblTienthua.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTienthua.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblTienthua.LocationFloat = New DevExpress.Utils.PointFloat(90.60412!, 59.85789!)
         Me.lblTienthua.Multiline = True
         Me.lblTienthua.Name = "lblTienthua"
@@ -463,7 +463,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel19
         '
-        Me.XrLabel19.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel19.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(6.666659!, 48.50004!)
         Me.XrLabel19.Multiline = True
         Me.XrLabel19.Name = "XrLabel19"
@@ -474,7 +474,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblKhachtra
         '
-        Me.lblKhachtra.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKhachtra.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblKhachtra.LocationFloat = New DevExpress.Utils.PointFloat(90.6042!, 48.49998!)
         Me.lblKhachtra.Multiline = True
         Me.lblKhachtra.Name = "lblKhachtra"
@@ -485,7 +485,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblConlai
         '
-        Me.lblConlai.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblConlai.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblConlai.LocationFloat = New DevExpress.Utils.PointFloat(90.6042!, 33.32843!)
         Me.lblConlai.Multiline = True
         Me.lblConlai.Name = "lblConlai"
@@ -496,7 +496,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel16
         '
-        Me.XrLabel16.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel16.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(6.666659!, 33.32848!)
         Me.XrLabel16.Multiline = True
         Me.XrLabel16.Name = "XrLabel16"
@@ -507,7 +507,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblGiamgia
         '
-        Me.lblGiamgia.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGiamgia.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblGiamgia.LocationFloat = New DevExpress.Utils.PointFloat(90.6042!, 21.97058!)
         Me.lblGiamgia.Multiline = True
         Me.lblGiamgia.Name = "lblGiamgia"
@@ -518,7 +518,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel14
         '
-        Me.XrLabel14.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel14.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(6.666659!, 21.97063!)
         Me.XrLabel14.Multiline = True
         Me.XrLabel14.Name = "XrLabel14"
@@ -529,7 +529,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'lblTongtien
         '
-        Me.lblTongtien.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTongtien.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.lblTongtien.LocationFloat = New DevExpress.Utils.PointFloat(90.6042!, 9.999999!)
         Me.lblTongtien.Multiline = True
         Me.lblTongtien.Name = "lblTongtien"
@@ -540,7 +540,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         '
         'XrLabel12
         '
-        Me.XrLabel12.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel12.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(6.666659!, 9.999999!)
         Me.XrLabel12.Multiline = True
         Me.XrLabel12.Name = "XrLabel12"
@@ -594,7 +594,7 @@ Partial Public Class rpt_Phieuthanhtoan_A6
         Me.XrLabel2.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "nv_Tendichvu_vn")})
-        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.Font = New System.Drawing.Font("Tahoma", 10.25!)
         Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(5.522208!, 0.0!)
         Me.XrLabel2.Name = "XrLabel2"
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)

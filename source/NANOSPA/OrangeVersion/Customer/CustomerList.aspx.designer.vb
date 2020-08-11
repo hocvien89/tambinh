@@ -311,13 +311,13 @@ Partial Public Class CustomerList
     Protected WithEvents ddlNghenghiep As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
-    '''txtGhichu control.
+    '''txt_Danhgia control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtGhichu As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Danhgia As Global.DevExpress.Web.ASPxEditors.ASPxMemo
 
     '''<summary>
     '''ddlNguon control.
@@ -329,13 +329,13 @@ Partial Public Class CustomerList
     Protected WithEvents ddlNguon As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
-    '''txt_Danhgia control.
+    '''txtGhichu control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_Danhgia As Global.DevExpress.Web.ASPxEditors.ASPxMemo
+    Protected WithEvents txtGhichu As Global.DevExpress.Web.ASPxEditors.ASPxMemo
 
     '''<summary>
     '''cbo_nhanvientuvan control.

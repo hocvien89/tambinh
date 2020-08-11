@@ -1618,6 +1618,7 @@
     <Content Include="images\Trogiup.jpg" />
     <Content Include="images\VIP.jpg" />
     <Content Include="images\vip_card.jpg" />
+    <Content Include="images\warning-png-icon.png" />
     <Content Include="images\web.png" />
     <Content Include="images\white_user.png" />
     <Content Include="images\zendSpaHeader.png" />
