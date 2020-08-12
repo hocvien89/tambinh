@@ -35,7 +35,7 @@
         <div class="register-container container">
             <div class="row">
                 <div class="register span6">
-                    <h2>LOGIN - <span class="red"><strong>PK - HỒNG HOA</strong></span></h2>
+                    <h2>LOGIN - <span class="red"><strong>PK - ICC</strong></span></h2>
                     <label for="UserName">UserName</label>
                     <asp:TextBox ID="txtTendangnhap" CssClass="inputlogin" placeholder="enter your username..." runat="server"></asp:TextBox>
                     <label for="password">Password</label>

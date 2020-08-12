@@ -347,6 +347,60 @@ Partial Public Class CustomerList
     Protected WithEvents cbo_nhanvientuvan As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
+    '''ASPxDropDownEdit1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxDropDownEdit1 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
+    '''TextBox1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''TextBox2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''ASPxDropDownEdit2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxDropDownEdit2 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
+    '''ASPxDropDownEdit4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxDropDownEdit4 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
+    '''ASPxDropDownEdit3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxDropDownEdit3 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
     '''ltrError control.
     '''</summary>
     '''<remarks>

@@ -99,12 +99,12 @@
                 }
                 if (KeyID == 115) {
                     document.getElementById('<%=btOK.ClientID%>').click();
-                 }
-                 if (KeyID == 120) {
-                     document.getElementById('<%=btnClear.ClientID%>').click();
                 }
-                if (KeyID == 27) {
-                    document.getElementById('<%=btCancel.ClientID%>').click();
+                if (KeyID == 120) {
+                    document.getElementById('<%=btnClear.ClientID%>').click();
+                 }
+                 if (KeyID == 27) {
+                     document.getElementById('<%=btCancel.ClientID%>').click();
                 }
             }
         });
@@ -164,7 +164,7 @@
                 var imgAnhdaidien = document.getElementById('<%=imgAnhdaidien.ClientID%>');
                 var txtImgUrl = document.getElementById('<%=txtImgUrl.ClientID%>');
                 var date_ngayden = new Date(defaultdata[0]);
-             
+
                 //cbo_nhanvientuvan.SetValue(defaultdata[15]);
                 deNgayden.SetDate(date_ngayden);
                 txtMaKH.value = defaultdata[1];
@@ -197,7 +197,7 @@
                 imgAnhdaidien.src = defaultdata[11];
                 txtImgUrl.value = defaultdata[11];
                 txt_Chandoan.SetValue(defaultdata[19]);
-             if (defaultdata[14] == 1) {
+                if (defaultdata[14] == 1) {
                     radkh.SetChecked(true);
                 }
                 else if (defaultdata[14] == 2) {
@@ -216,8 +216,8 @@
                     cbo_nguoigioithieu.SetEnabled(true);
                     cbo_nguoigioithieu.SetValue(defaultdata[12]);
                 }
-               
-              
+
+
             }
         }
         function onFail(ex) {
@@ -324,7 +324,7 @@
             if (e.keyCode == 13) {
                 var txtdienthoai = document.getElementById("<%=txtDienthoai.ClientID%>");
                 txtdienthoai.focus();
-                
+
                 return false;
             }
         }
@@ -379,7 +379,7 @@
         function hoanThuoc(uId_Phieuxuat_Chitiet) {
             if (confirm("Xác nhận thực hiện hoàn lại thuốc?")) {
                 var uidNhanvien = jo_GetSession("uId_Nhanvien_Dangnhap");
-                var param_dt = "{'uidPhieuxuatChitiet':'" + uId_Phieuxuat_Chitiet +"','uidNhanvien':'" + uidNhanvien + "'}";
+                var param_dt = "{'uidPhieuxuatChitiet':'" + uId_Phieuxuat_Chitiet + "','uidNhanvien':'" + uidNhanvien + "'}";
                 var pageUrl = "../../../../Webservice/nano_websv.asmx/huyPhieuXuat";
                 $.ajax({
                     type: "POST",
@@ -477,12 +477,12 @@
                 deNgayden.ShowDropDown();
                 e.processOnServer = false;
             }
-            //else if (txtnamsinh.GetText() == "") {
-            //    txtnamsinh.Focus();
-            //    error.innerHTML = "Ngày sinh không được để trống";
-            //    //deNgaysinh.ShowDropDown();
-            //    e.processOnServer = false;
-            //}
+                //else if (txtnamsinh.GetText() == "") {
+                //    txtnamsinh.Focus();
+                //    error.innerHTML = "Ngày sinh không được để trống";
+                //    //deNgaysinh.ShowDropDown();
+                //    e.processOnServer = false;
+                //}
             else if (deNgaysinh.GetText() == "") {
                 deNgaysinh.Focus();
                 error.innerHTML = "Ngày sinh không được để trống";
@@ -506,17 +506,17 @@
             }
             else if (txtEmail.value != "") {
                 var uId_Khachhang = jo_GetSession("uId_Khachhang")
-                if (CheckExist("email", txtEmail.value) == "existemail" && (uId_Khachhang=""||uId_Khachhang==null)) {
+                if (CheckExist("email", txtEmail.value) == "existemail" && (uId_Khachhang = "" || uId_Khachhang == null)) {
                     error.innerHTML = "Email đã tồn tại!";
                     e.processOnServer = false;
                     txtEmail.focus();
                 }
             }
-            //else if (cbo_nhanvientuvan.GetText() == "") {
-            //    error.innerHTML = "Bạn nhập vào nhân viên tư vấn!";
-            //    e.processOnServer = false;
-            //    cbo_nhanvientuvan.focus();
-            //}
+                //else if (cbo_nhanvientuvan.GetText() == "") {
+                //    error.innerHTML = "Bạn nhập vào nhân viên tư vấn!";
+                //    e.processOnServer = false;
+                //    cbo_nhanvientuvan.focus();
+                //}
             else if (txtSDT.value != "") {
                 var uid_khachhang = jo_GetSession("uId_Khachhang")
                 if (uid_khachhang == "" || uid_khachhang == "null") {
@@ -560,18 +560,15 @@
             }
         }
         function myfunction(s, e) {
-         if(   radkh.GetChecked()==true)
-            {
+            if (radkh.GetChecked() == true) {
                 cbo_nguoigioithieu.PerformCallback();
-         }
-         else if (radnv.GetChecked() == true)
-         {
+            }
+            else if (radnv.GetChecked() == true) {
                 cbo_nguoigioithieu.PerformCallback();
-         }
-         else if (radnguon.GetChecked() == true)
-         {
+            }
+            else if (radnguon.GetChecked() == true) {
                 cbo_nguoigioithieu.PerformCallback();
-         }
+            }
 
         }
         function cbo_NGThieuChange(s, e) {
@@ -688,6 +685,36 @@
             }
             return false;
         }
+
+        // multiple select
+        var textSeparator = ";";
+        function updateText() {
+            var selectedItems = checkListBox.GetSelectedItems();
+            checkComboBox.SetText(getSelectedItemsText(selectedItems));
+        }
+        function synchronizeListBoxValues(dropDown, args) {
+            checkListBox.UnselectAll();
+            var texts = dropDown.GetText().split(textSeparator);
+            var values = getValuesByTexts(texts);
+            checkListBox.SelectValues(values);
+            updateText(); // for remove non-existing texts
+        }
+        function getSelectedItemsText(items) {
+            var texts = [];
+            for (var i = 0; i < items.length; i++)
+                texts.push(items[i].text);
+            return texts.join(textSeparator);
+        }
+        function getValuesByTexts(texts) {
+            var actualValues = [];
+            var item;
+            for (var i = 0; i < texts.length; i++) {
+                item = checkListBox.FindItemByText(texts[i]);
+                if (item != null)
+                    actualValues.push(item.value);
+            }
+            return actualValues;
+        }
     </script>
     <div class="brest_crum">
         <p class="p_header"><i class="fa fa-user fa-fw fa-1x"></i>QUẢN LÍ BỆNH NHÂN</p>
@@ -772,10 +799,10 @@
                 <dx:GridViewDataTextColumn Caption="Bệnh sử" Settings-AutoFilterCondition="Contains"
                     VisibleIndex="3" FieldName="nv_Ghichu_vn" Name="nv_Ghichu_vn" Width="150px">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn  Caption="Chẩn đoán" Settings-AutoFilterCondition="Contains"
+                <dx:GridViewDataTextColumn Caption="Chẩn đoán" Settings-AutoFilterCondition="Contains"
                     VisibleIndex="3" FieldName="nv_Diachi_en" Name="nv_Diachi_en">
                 </dx:GridViewDataTextColumn>
-                  <dx:GridViewDataTextColumn Caption="Nguồn" Width="150" Settings-AutoFilterCondition="Contains"
+                <dx:GridViewDataTextColumn Caption="Nguồn" Width="150" Settings-AutoFilterCondition="Contains"
                     VisibleIndex="3" FieldName="nv_Nguon_vn" Name="nv_Nguon_vn">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn Caption="Ngày đến" Width="90" Settings-AutoFilterCondition="Contains"
@@ -787,7 +814,7 @@
                             <img src="../../../images/btn_Edit.png" /></a>
                     </DataItemTemplate>
                 </dx:GridViewDataColumn>
-                 <dx:GridViewDataColumn Visible="false" Width="40px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
+                <dx:GridViewDataColumn Visible="false" Width="40px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
                     <DataItemTemplate>
                         <a id="popup" title="Kích hoạt thẻ" href='javascript:void(0)' onclick="return <%# String.Format("Kichhoatthetaikhoan('{0}')", Eval("uId_Khachhang")).ToString%>">
                             <img src="../../images/16x16/card_front.png" /></a>
@@ -872,7 +899,7 @@
                                                                     <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
                                                                         Caption="Đã ĐT" FieldName="i_SL_daDieutri" Name="i_SL_daDieutri">
                                                                     </dx:GridViewDataTextColumn>
-                                                                     <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
+                                                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
                                                                         Caption="Trạng thái" FieldName="b_Trangthai" Name="b_Trangthai">
                                                                     </dx:GridViewDataTextColumn>
                                                                     <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
@@ -887,7 +914,7 @@
                                                                     <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" HeaderStyle-HorizontalAlign="Center"
                                                                         Caption="Thành tiền" FieldName="f_Tongtien" Name="f_Tongtien" PropertiesTextEdit-DisplayFormatString="{0:0,0}">
                                                                     </dx:GridViewDataTextColumn>
-                                                                    
+
                                                                     <dx:GridViewDataColumn Width="30px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
                                                                         <DataItemTemplate>
                                                                             <a id="popup" title="Thiết lập liệu trình dịch vụ <%#Eval("nv_Tendichvu_vn")%>" href='javascript:void(0)' onclick="return <%# String.Format("Thietlaplieutrinh('{0}', '{1}', '{2}','{3}')", Eval("uId_Phieudichvu"), Eval("uId_Khachhang"), Eval("uId_Dichvu"), Eval("uId_Phieudichvu_Chitiet")).ToString%>">
@@ -1006,9 +1033,9 @@
                                                                         <dx:GridViewDataTextColumn Visible="false" FieldName="b_Hoanthuoc"></dx:GridViewDataTextColumn>
                                                                         <dx:GridViewDataColumn Width="30px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
                                                                             <DataItemTemplate>
-                                                                                <a id="popup" title='<%#IIf(Eval("b_Hoanthuoc") = False, "Trả lại thuốc", "Thuốc đã trả")%>' href='javascript:void(0)' 
+                                                                                <a id="popup" title='<%#IIf(Eval("b_Hoanthuoc") = False, "Trả lại thuốc", "Thuốc đã trả")%>' href='javascript:void(0)'
                                                                                     onclick="return <%#IIf(Eval("b_Hoanthuoc") = False, String.Format("hoanThuoc('{0}')", Eval("uId_Phieuxuat_Chitiet")).ToString, "")%>">
-                                                                                    <img style="width: 16px;" src= '<%#IIf(Eval("b_Hoanthuoc") = False, "../../../images/btn_Delete.png", "../../../images/warning-png-icon.png")%> ' /></a>
+                                                                                    <img style="width: 16px;" src='<%#IIf(Eval("b_Hoanthuoc") = False, "../../../images/btn_Delete.png", "../../../images/warning-png-icon.png")%> ' /></a>
                                                                             </DataItemTemplate>
                                                                         </dx:GridViewDataColumn>
                                                                     </Columns>
@@ -1136,22 +1163,23 @@
     </div>
     <asp:HiddenField ID="hdfuIdKhachhang" Value="" runat="server" />
     <asp:HiddenField ID="hdfKHGThieu" runat="server" />
+    <%-- Add --%>
     <dx:ASPxPopupControl ID="pcAddKhachhang" runat="server" CloseAction="CloseButton" Modal="True" ShowCloseButton="true" ShowMaximizeButton="true"
-        PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ClientInstanceName="pcAddKhachhang"
-        HeaderText="Thêm / Sửa bệnh nhân" AllowDragging="True" PopupAnimationType="None">
+        PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="TopSides" ClientInstanceName="pcAddKhachhang"
+        HeaderText="Thêm / Sửa bệnh nhân" AllowDragging="True" PopupAnimationType="None" Width="100%" Height="100%">
         <ClientSideEvents PopUp="function(s, e) { ASPxClientEdit.ClearGroup('entryGroup'); pcAddKhachhang.Focus(); }" />
         <ContentCollection>
             <dx:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
-                <dx:ASPxPanel ID="Panel1" runat="server" Width="900px" Height="350px">
+                <dx:ASPxPanel ID="Panel1" runat="server" Width="100%" Height="100%">
                     <PanelCollection>
                         <dx:PanelContent ID="PanelContent1" runat="server">
                             <asp:UpdatePanel ID="upKhachhang" runat="server">
                                 <ContentTemplate>
                                     <fieldset class="field_tt">
                                         <legend><span style="font-weight: bold; color: green">Thông tin bệnh nhân</span></legend>
-                                         <table class="info_table">
+                                        <table class="info_table">
                                             <tr>
-                                                <td class="info_table_td">Ngày đến:
+                                                <td class="info_table_td" style="width:150px">Ngày đến:
                                                 </td>
                                                 <td class="info_table_td">
                                                     <dx:ASPxDateEdit ID="deNgayden" UseMaskBehavior="true" ClientInstanceName="deNgayden" Width="200px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
@@ -1190,7 +1218,7 @@
                                                     <dx:ASPxDateEdit ID="deNgaysinh" Visible="true" UseMaskBehavior="true" AutoPostBack="false" ClientInstanceName="deNgaysinh" Style="float: left; margin-right: 8px;" Width="120px" Height="25px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
                                                         runat="server">
                                                     </dx:ASPxDateEdit>
-                                                    <dx:ASPxTextBox ID="txtNamsinh" Visible="false" runat="server" ClientInstanceName="txtnamsinh"  onkeypress="return enter_txtnamsinh(event)"  Style="float: left; margin-right: 8px;" Width="80px" Height="25px"></dx:ASPxTextBox> 
+                                                    <dx:ASPxTextBox ID="txtNamsinh" Visible="false" runat="server" ClientInstanceName="txtnamsinh" onkeypress="return enter_txtnamsinh(event)" Style="float: left; margin-right: 8px;" Width="80px" Height="25px"></dx:ASPxTextBox>
                                                     <%--                                                    <asp:TextBox ID="txtTuoi" runat="server" Width="30px" Style="float: left; margin-right: 7px" placeholder="Tuổi" CssClass="nano_textbox"></asp:TextBox>--%>
                                                     <dx:ASPxComboBox ClientInstanceName="ddlGioitinh" onkeypress="return enter_ddlGioitinh(event)" ID="ddlGioitinh" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Height="25px" Width="50px" runat="server" ValueType="System.String">
                                                         <Items>
@@ -1200,18 +1228,23 @@
                                                     </dx:ASPxComboBox>
                                                 </td>
                                             </tr>
-                                              <tr>
-                                                 <td class="info_table_td"><dx:ASPxRadioButton ID="radkh"  ClientInstanceName="radkh" Text="Bệnh nhân" GroupName="gioithieu" runat="server">
-                                                      <ClientSideEvents CheckedChanged="myfunction" />
-                                                                           </dx:ASPxRadioButton></td>
-                                                   <td class="info_table_td"> <dx:ASPxRadioButton ID="radnv"  ClientInstanceName="radnv" Text="Nhân viên" GroupName="gioithieu" runat="server">
+                                            <tr>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxRadioButton ID="radkh" ClientInstanceName="radkh" Text="Bệnh nhân" GroupName="gioithieu" runat="server">
                                                         <ClientSideEvents CheckedChanged="myfunction" />
-                                                                              </dx:ASPxRadioButton></td>
-                                                   <td class="info_table_td" ><dx:ASPxRadioButton ID="radnguon" ClientInstanceName="radnguon"  Text="Nguồn đến" GroupName="gioithieu" runat="server">
-                                                            <ClientSideEvents CheckedChanged="myfunction" />
-                                                        </dx:ASPxRadioButton>
-                                                   </td>
-                                             </tr>
+                                                    </dx:ASPxRadioButton>
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxRadioButton ID="radnv" ClientInstanceName="radnv" Text="Nhân viên" GroupName="gioithieu" runat="server">
+                                                        <ClientSideEvents CheckedChanged="myfunction" />
+                                                    </dx:ASPxRadioButton>
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxRadioButton ID="radnguon" ClientInstanceName="radnguon" Text="Nguồn đến" GroupName="gioithieu" runat="server">
+                                                        <ClientSideEvents CheckedChanged="myfunction" />
+                                                    </dx:ASPxRadioButton>
+                                                </td>
+                                            </tr>
                                             <tr>
                                                 <td class="info_table_td">Địa chỉ:
                                                 </td>
@@ -1225,7 +1258,7 @@
                                                     </dx:ASPxCheckBox>
                                                     <dx:ASPxComboBox ID="cbo_Nguoigioithhieu" runat="server" OnCallback="cbo_Nguoigioithhieu_Callback" ClientInstanceName="cbo_nguoigioithieu" ValueField="uId_Khachhang" Width="177px"
                                                         TextFormatString="{0} - {1} - {2}" DropDownStyle="DropDown" ValueType="System.String" EnableCallbackMode="true" IncrementalFilteringMode="Contains">
-                                
+
                                                         <ClientSideEvents SelectedIndexChanged="cbo_NGThieuChange" />
                                                     </dx:ASPxComboBox>
                                                 </td>
@@ -1251,66 +1284,214 @@
                                                         Height="25px" Width="200px" ValueType="System.String" runat="server">
                                                     </dx:ASPxComboBox>
                                                 </td>
-                                               <td class="info_table_td">Chẩn đoán: 
+                                                <td class="info_table_td">Chẩn đoán: 
                                                 </td>
                                                 <td class="info_table_td">
                                                     <dx:ASPxMemo ID="txt_Danhgia" runat="server" ClientInstanceName="txt_Chandoan" Height="25px" Width="100%"></dx:ASPxMemo>
-                                                    
+
                                                 </td>
-              
+
                                             </tr>
                                             <tr>
-                                                  <%--  <td class="info_table_td">Nguồn đến:
+                                                <%--  <td class="info_table_td">Nguồn đến:
                                                 </td>--%>
-                                         
-                                                    <dx:ASPxComboBox ID="ddlNguon" Visible="false" ClientInstanceName="ddlNguon" DropDownStyle="DropDown" onkeypress="return enter_ddlNguon(event)"
-                                                        IncrementalFilteringMode="StartsWith" Height="25px" Width="200px" runat="server" ValueType="System.String">
-                                                    </dx:ASPxComboBox>
-                                               
+
+                                                <dx:ASPxComboBox ID="ddlNguon" Visible="false" ClientInstanceName="ddlNguon" DropDownStyle="DropDown" onkeypress="return enter_ddlNguon(event)"
+                                                    IncrementalFilteringMode="StartsWith" Height="25px" Width="200px" runat="server" ValueType="System.String">
+                                                </dx:ASPxComboBox>
+
                                                 <td class="info_table_td">Bệnh sử:
                                                 </td>
                                                 <td class="info_table_td" colspan="3">
-                                                   <dx:ASPxMemo ID="txtGhichu" runat="server" ClientInstanceName="txt_Benhsu" Height="50px" Width="100%"></dx:ASPxMemo>
-                                           
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                            <%--       <td class="info_table_td">Nhân viên tư vấn:
-                                                </td>--%>
-                                                   <td class="info_table_td">
-                                                       <dx:ASPxComboBox ID="cbo_nhanvientuvan" SelectedIndex="0" Visible="false" DropDownStyle="DropDown" ClientInstanceName="cbo_nhanvientuvan" Width="200px" runat="server" ValueType="System.String"></dx:ASPxComboBox>
-                                                </td>
-                                             </tr>
-                                            <tr>
-                                                <td colspan="5">
-                                                    <div id="diverror" class="error">
-                                                        <dx:ASPxLabel ID="ltrError"  EncodeHtml="false" ClientInstanceName="ltrError" runat="server"></dx:ASPxLabel>
-                                                        <dx:ASPxLabel ID="ltrSuccess" runat="server" EncodeHtml="false" ClientInstanceName="ltrSuccess"></dx:ASPxLabel>
-                                                    </div>
+                                                    <dx:ASPxMemo ID="txtGhichu" runat="server" ClientInstanceName="txt_Benhsu" Height="50px" Width="100%"></dx:ASPxMemo>
 
                                                 </td>
                                             </tr>
+                                            <%-- row --%>
                                             <tr>
-                                                <td colspan="5">
-                                                    <div class="pcmButton">
-                                                        <dx:ASPxButton ID="btOK" Image-Url="~/images/btn_Save.png" ClientInstanceName="btOk" OnClick="btOK_Click" runat="server" Text="Lưu (F4)" Style="float: left; margin-right: 15px">
-                                                            <ClientSideEvents Click="CheckEmpty" />
-                                                        </dx:ASPxButton>
-                                                        <dx:ASPxButton ID="btaddbill" Image-Url="~/images/16x16/report_go.png" OnClick="btaddbill_Click" runat="server" Text="Thêm phiếu dịch vụ" AutoPostBack="False" Style="float: left; margin-right: 8px">
-                                                            <ClientSideEvents Click="Checkthemdv" />
-                                                        </dx:ASPxButton>
-                                                        <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" Visible="false" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
-                                                            <ClientSideEvents Click="Checkthempx" />
-                                                        </dx:ASPxButton>
-                                                        <dx:ASPxButton ID="btnClear" runat="server" AutoPostBack="false" Image-Url="~/images/16x16/refresh.png" Text="Làm mới (F9)" Style="float: left; margin-right: 8px">
-                                                            <ClientSideEvents Click="ClearText_Dev" />
-                                                        </dx:ASPxButton>
-                                                        <dx:ASPxButton ID="btCancel" Image-Url="~/images/16x16/cancel.png" runat="server" Text="Thoát (ESC)" AutoPostBack="False" Style="float: left; margin-right: 8px">
-                                                            <ClientSideEvents Click="ClosePopup" />
-                                                        </dx:ASPxButton>
-                                                    </div>
+                                                <%--       <td class="info_table_td">Nhân viên tư vấn:
+                                                </td>--%>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxComboBox ID="cbo_nhanvientuvan" SelectedIndex="0" Visible="false" DropDownStyle="DropDown" ClientInstanceName="cbo_nhanvientuvan" Width="200px" runat="server" ValueType="System.String"></dx:ASPxComboBox>
                                                 </td>
                                             </tr>
+
+                                            <%-- row --%>
+                                            <tr>
+                                                <td class="info_table_td">Bạn biết phòng khám ICC qua:
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit1" Width="200px" runat="server" AnimationType="None">
+                                                        <DropDownWindowStyle BackColor="#EDEDED" />
+                                                        <DropDownWindowTemplate>
+                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
+                                                                runat="server" Height="200" EnableSelectAll="true">
+                                                                <Border BorderStyle="None" />
+                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                <Items>
+                                                                    <dx:ListEditItem Text="Walk In" Value="0" Selected="true" />
+                                                                    <dx:ListEditItem Text="Telesale" Value="1" />
+                                                                    <dx:ListEditItem Text="QCFB" Value="2" />
+                                                                    <dx:ListEditItem Text="TV" Value="3" />
+                                                                    <dx:ListEditItem Text="SEO" Value="4" Selected="true" />
+                                                                    <dx:ListEditItem Text="QCGG" Value="5" Selected="true" />
+                                                                    <dx:ListEditItem Text="Bạn bè" Value="6" Selected="true" />
+                                                                </Items>
+                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                            </dx:ASPxListBox>
+                                                        </DropDownWindowTemplate>
+                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                    </dx:ASPxDropDownEdit>
+                                                </td>
+                                                 <td class="info_table_td">Vùng bị đau:
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <asp:TextBox ID="TextBox1" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                </td>
+
+                                                        <%-- row --%>
+                                            <tr>
+                                                 <td class="info_table_td">Đau bao lâu:
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <asp:TextBox ID="TextBox2" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                </td>
+                                                <td class="info_table_td">PP Đã điều trị:
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit2" Width="200px" runat="server" AnimationType="None">
+                                                        <DropDownWindowStyle BackColor="#EDEDED" />
+                                                        <DropDownWindowTemplate>
+                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
+                                                                runat="server" Height="200" EnableSelectAll="true">
+                                                                <Border BorderStyle="None" />
+                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                <Items>
+                                                                    <dx:ListEditItem Text="Bác sỹ" Value="0"/>
+                                                                    <dx:ListEditItem Text="Châm cứu" Value="1" />
+                                                                    <dx:ListEditItem Text="Vật lý trị liệu" Value="2" />
+                                                                    <dx:ListEditItem Text="Kéo giãn" Value="3" />
+                                                                    <dx:ListEditItem Text="Tiêm" Value="4"/>
+                                                                    <dx:ListEditItem Text="Tiêm" Value="5" />
+                                                                    <dx:ListEditItem Text="Đông Y" Value="6" />
+                                                                    <dx:ListEditItem Text="Thuốc" Value="7" />
+                                                                    <dx:ListEditItem Text="Mát xa" Value="8" />
+                                                                    <dx:ListEditItem Text="Chườm" Value="9" />
+                                                                    <dx:ListEditItem Text="Phẫu thuật" Value="10" />
+                                                                    <dx:ListEditItem Text="Hút dịch" Value="11" />
+                                                                    <dx:ListEditItem Text="Bấm huyệt" Value="12" />
+                                                                    <dx:ListEditItem Text="Nắn chỉnh cột sống" Value="13" />
+                                                                    <dx:ListEditItem Text="ATPT" Value="14" />
+                                                                </Items>
+                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                            </dx:ASPxListBox>
+                                                        </DropDownWindowTemplate>
+                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                    </dx:ASPxDropDownEdit>
+                                                </td>
+                                                
+                                                 <%-- row --%>
+                                            <tr>
+                                                 <td class="info_table_td">Cảm giác:
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit4" Width="200px" runat="server" AnimationType="None">
+                                                        <DropDownWindowStyle BackColor="#EDEDED" />
+                                                        <DropDownWindowTemplate>
+                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
+                                                                runat="server" Height="200" EnableSelectAll="true">
+                                                                <Border BorderStyle="None" />
+                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                <Items>
+                                                                    <dx:ListEditItem Text="Bỏng rát" Value="0"/>
+                                                                    <dx:ListEditItem Text="Nhói" Value="1" />
+                                                                    <dx:ListEditItem Text="Đau lan" Value="2" />
+                                                                    <dx:ListEditItem Text="Đau âm ỉ" Value="3" />
+                                                                    <dx:ListEditItem Text="Nhức" Value="4"/>
+                                                                    <dx:ListEditItem Text="Cứng đờ" Value="5" />
+                                                                    <dx:ListEditItem Text="Tê" Value="6" />
+                                                                    <dx:ListEditItem Text="Buốt" Value="7" />
+                                                                    <dx:ListEditItem Text="Sưng tấy" Value="8" />
+                                                                    <dx:ListEditItem Text="Mất cảm giác" Value="9" />
+                                                                    <dx:ListEditItem Text="Chóng mặt" Value="10" />
+                                                                    <dx:ListEditItem Text="Ù tai" Value="11" />
+                                                                    <dx:ListEditItem Text="Đau đầu" Value="12" />
+                                                                    <dx:ListEditItem Text="Bốc hỏa" Value="13" />
+                                                                    <dx:ListEditItem Text="Mỏi" Value="14" />
+                                                                    <dx:ListEditItem Text="Mờ mắt" Value="15" />
+                                                                    <dx:ListEditItem Text="Khó thở" Value="16" />
+                                                                </Items>
+                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                            </dx:ASPxListBox>
+                                                        </DropDownWindowTemplate>
+                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                    </dx:ASPxDropDownEdit>
+                                                </td>
+                                                <td class="info_table_td">Tư thế nào đau hơn:
+                                                </td>
+                                                <td class="info_table_td">
+                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit3" Width="200px" runat="server" AnimationType="None">
+                                                        <DropDownWindowStyle BackColor="#EDEDED" />
+                                                        <DropDownWindowTemplate>
+                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
+                                                                runat="server" Height="200" EnableSelectAll="true">
+                                                                <Border BorderStyle="None" />
+                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                <Items>
+                                                                    <dx:ListEditItem Text="Bác sỹ" Value="0"/>
+                                                                    <dx:ListEditItem Text="Châm cứu" Value="1" />
+                                                                    <dx:ListEditItem Text="Vật lý trị liệu" Value="2" />
+                                                                    <dx:ListEditItem Text="Kéo giãn" Value="3" />
+                                                                    <dx:ListEditItem Text="Tiêm" Value="4"/>
+                                                                    <dx:ListEditItem Text="Tiêm" Value="5" />
+                                                                    <dx:ListEditItem Text="Đông Y" Value="6" />
+                                                                    <dx:ListEditItem Text="Thuốc" Value="7" />
+                                                                    <dx:ListEditItem Text="Mát xa" Value="8" />
+                                                                    <dx:ListEditItem Text="Chườm" Value="9" />
+                                                                    <dx:ListEditItem Text="Phẫu thuật" Value="10" />
+                                                                    <dx:ListEditItem Text="Hút dịch" Value="11" />
+                                                                    <dx:ListEditItem Text="Bấm huyệt" Value="12" />
+                                                                    <dx:ListEditItem Text="Nắn chỉnh cột sống" Value="13" />
+                                                                    <dx:ListEditItem Text="ATPT" Value="14" />
+                                                                </Items>
+                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                            </dx:ASPxListBox>
+                                                        </DropDownWindowTemplate>
+                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                    </dx:ASPxDropDownEdit>
+                                                </td>
+
+                                                <%-- row msg --%>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <div id="diverror" class="error">
+                                                            <dx:ASPxLabel ID="ltrError" EncodeHtml="false" ClientInstanceName="ltrError" runat="server"></dx:ASPxLabel>
+                                                            <dx:ASPxLabel ID="ltrSuccess" runat="server" EncodeHtml="false" ClientInstanceName="ltrSuccess"></dx:ASPxLabel>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <div class="pcmButton">
+                                                            <dx:ASPxButton ID="btOK" Image-Url="~/images/btn_Save.png" ClientInstanceName="btOk" OnClick="btOK_Click" runat="server" Text="Lưu (F4)" Style="float: left; margin-right: 15px">
+                                                                <ClientSideEvents Click="CheckEmpty" />
+                                                            </dx:ASPxButton>
+                                                            <dx:ASPxButton ID="btaddbill" Image-Url="~/images/16x16/report_go.png" OnClick="btaddbill_Click" runat="server" Text="Thêm phiếu dịch vụ" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                                <ClientSideEvents Click="Checkthemdv" />
+                                                            </dx:ASPxButton>
+                                                            <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" Visible="false" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                                <ClientSideEvents Click="Checkthempx" />
+                                                            </dx:ASPxButton>
+                                                            <dx:ASPxButton ID="btnClear" runat="server" AutoPostBack="false" Image-Url="~/images/16x16/refresh.png" Text="Làm mới (F9)" Style="float: left; margin-right: 8px">
+                                                                <ClientSideEvents Click="ClearText_Dev" />
+                                                            </dx:ASPxButton>
+                                                            <dx:ASPxButton ID="btCancel" Image-Url="~/images/16x16/cancel.png" runat="server" Text="Thoát (ESC)" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                                <ClientSideEvents Click="ClosePopup" />
+                                                            </dx:ASPxButton>
+                                                        </div>
+                                                    </td>
+                                                </tr>
                                         </table>
                                     </fieldset>
                                     <asp:UpdateProgress runat="server" ID="UpdateProgress1" AssociatedUpdatePanelID="upKhachhang" DisplayAfter="0" DynamicLayout="false">
@@ -1342,7 +1523,7 @@
                                     <legend><span style="font-weight: bold; color: green; font-size: 18px"></span></legend>
                                     <div style="height: 52px; width: 300px">
                                         <asp:FileUpload ID="UploadFileExcel" runat="server" Width="335px" BorderStyle="Groove" />
-                                       
+
 
                                     </div>
                                     <div>
@@ -1499,11 +1680,10 @@
                             <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                                 <ContentTemplate>
                                     <fieldset class="field_tt">
-                                        <legend><span style="font-weight: bold; color: green"> Tìm kiếm thông tin thẻ </span></legend>
+                                        <legend><span style="font-weight: bold; color: green">Tìm kiếm thông tin thẻ </span></legend>
                                         <table class="info_table">
                                             <tr>
-                                                <td class="info_table_td"> 
-                                                    Nhập mã thẻ :
+                                                <td class="info_table_td">Nhập mã thẻ :
                                                 </td>
                                                 <td class="info_table_td">
                                                     <dx:ASPxTextBox runat="server" ID="txt_Mathe" Width="200px"></dx:ASPxTextBox>
@@ -1514,69 +1694,69 @@
                                             </tr>
                                         </table>
                                     </fieldset>
-                              <dx:ASPxGridView ID="dgvDsTheTT" runat="server" ClientInstanceName="client_dgvDsTheTT"
-                                AutoGenerateColumns="false" KeyFieldName="uId_Khachhang_Goidichvu" SettingsPager-PageSize="8"
-                                SettingsPager-Position="Bottom">
-                                <Columns>
-                                    <dx:GridViewCommandColumn ShowSelectCheckbox="True" Visible="false" VisibleIndex="-2">
-                                    </dx:GridViewCommandColumn>
-                                    <dx:GridViewDataTextColumn Visible="false" VisibleIndex="-1" Settings-AutoFilterCondition="Contains"
-                                        Width="100px" HeaderStyle-HorizontalAlign="Center" Caption="" FieldName="uId_Khachhang_Goidichvu"
-                                        Name="uId_Khachhang_Goidichvu">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Width="130px" Caption="Mã thẻ" FieldName="vMaBarcode"
-                                        Name="vMaBarcode">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Width="90px" Caption="Tên thẻ" FieldName="nv_Tengoi_vn"
-                                        Name="nv_Tengoi_vn">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Caption="Ngày mua" Width="100px" FieldName="d_Ngaymua"
-                                        Name="d_Ngaymua">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Caption="Số tiền" Width="100px" FieldName="f_Sotien"
-                                        Name="f_Sotien">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Caption="Giá trị thẻ" Width="100px" FieldName="f_Giatrigoi"
-                                        Name="f_Giatrigoi">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Caption="Ngày BĐ" Width="100px" FieldName="d_NgayBD"
-                                        Name="d_NgayBD">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Caption="Ngày KT" Width="100px" FieldName="d_NgayKT"
-                                        Name="d_NgayKT">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
-                                        HeaderStyle-HorizontalAlign="Center" Caption="Trạng thái" Width="130px" FieldName="b_Kichhoat"
-                                        Name="b_Kichhoat">
-                                    </dx:GridViewDataTextColumn>
-                                      <dx:GridViewDataColumn Width="40px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
-                                        <DataItemTemplate >
-                                            <a id="popup" title="Kích hoạt thẻ" href='javascript:void(0)' onclick="return <%# String.Format("Unlock_Account('{0}','{1}')", Eval("uId_Khachhang_Goidichvu"), Eval("b_Kichhoat")).ToString%>">
-                                                <img src="../../../images/bub.png" />
-                                            </a>
-                                        </DataItemTemplate>
-                                    </dx:GridViewDataColumn>
-                                </Columns>
-                                <SettingsEditing Mode="Inline" />
-                                <SettingsPager PageSize="10">
-                                </SettingsPager>
-                                <Settings ShowFilterRow="true" ShowGroupPanel="false" ShowFilterRowMenu="true" ShowColumnHeaders="true" />
-                                <SettingsBehavior AllowFocusedRow="true" AllowMultiSelection="true" ConfirmDelete="true" ColumnResizeMode="NextColumn" EnableCustomizationWindow="true" />
-                                <SettingsText ConfirmDelete="Bạn có muốn xóa không?" />
-                                <ClientSideEvents EndCallback="grid_EndCallback" />
-                                <Styles>
-                                    <AlternatingRow Enabled="True" BackColor="#EAFCFF">
-                                    </AlternatingRow>
-                                </Styles>
-                                <SettingsText EmptyDataRow="Không có thẻ thanh toán!" />
-                             </dx:ASPxGridView>
+                                    <dx:ASPxGridView ID="dgvDsTheTT" runat="server" ClientInstanceName="client_dgvDsTheTT"
+                                        AutoGenerateColumns="false" KeyFieldName="uId_Khachhang_Goidichvu" SettingsPager-PageSize="8"
+                                        SettingsPager-Position="Bottom">
+                                        <Columns>
+                                            <dx:GridViewCommandColumn ShowSelectCheckbox="True" Visible="false" VisibleIndex="-2">
+                                            </dx:GridViewCommandColumn>
+                                            <dx:GridViewDataTextColumn Visible="false" VisibleIndex="-1" Settings-AutoFilterCondition="Contains"
+                                                Width="100px" HeaderStyle-HorizontalAlign="Center" Caption="" FieldName="uId_Khachhang_Goidichvu"
+                                                Name="uId_Khachhang_Goidichvu">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Width="130px" Caption="Mã thẻ" FieldName="vMaBarcode"
+                                                Name="vMaBarcode">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Width="90px" Caption="Tên thẻ" FieldName="nv_Tengoi_vn"
+                                                Name="nv_Tengoi_vn">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Caption="Ngày mua" Width="100px" FieldName="d_Ngaymua"
+                                                Name="d_Ngaymua">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Caption="Số tiền" Width="100px" FieldName="f_Sotien"
+                                                Name="f_Sotien">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" PropertiesTextEdit-DisplayFormatString="{0:0,0}" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Caption="Giá trị thẻ" Width="100px" FieldName="f_Giatrigoi"
+                                                Name="f_Giatrigoi">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Caption="Ngày BĐ" Width="100px" FieldName="d_NgayBD"
+                                                Name="d_NgayBD">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Caption="Ngày KT" Width="100px" FieldName="d_NgayKT"
+                                                Name="d_NgayKT">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Visible="true" VisibleIndex="1" Settings-AutoFilterCondition="Contains"
+                                                HeaderStyle-HorizontalAlign="Center" Caption="Trạng thái" Width="130px" FieldName="b_Kichhoat"
+                                                Name="b_Kichhoat">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataColumn Width="40px" VisibleIndex="4" CellStyle-HorizontalAlign="Center">
+                                                <DataItemTemplate>
+                                                    <a id="popup" title="Kích hoạt thẻ" href='javascript:void(0)' onclick="return <%# String.Format("Unlock_Account('{0}','{1}')", Eval("uId_Khachhang_Goidichvu"), Eval("b_Kichhoat")).ToString%>">
+                                                        <img src="../../../images/bub.png" />
+                                                    </a>
+                                                </DataItemTemplate>
+                                            </dx:GridViewDataColumn>
+                                        </Columns>
+                                        <SettingsEditing Mode="Inline" />
+                                        <SettingsPager PageSize="10">
+                                        </SettingsPager>
+                                        <Settings ShowFilterRow="true" ShowGroupPanel="false" ShowFilterRowMenu="true" ShowColumnHeaders="true" />
+                                        <SettingsBehavior AllowFocusedRow="true" AllowMultiSelection="true" ConfirmDelete="true" ColumnResizeMode="NextColumn" EnableCustomizationWindow="true" />
+                                        <SettingsText ConfirmDelete="Bạn có muốn xóa không?" />
+                                        <ClientSideEvents EndCallback="grid_EndCallback" />
+                                        <Styles>
+                                            <AlternatingRow Enabled="True" BackColor="#EAFCFF">
+                                            </AlternatingRow>
+                                        </Styles>
+                                        <SettingsText EmptyDataRow="Không có thẻ thanh toán!" />
+                                    </dx:ASPxGridView>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                         </dx:PanelContent>
