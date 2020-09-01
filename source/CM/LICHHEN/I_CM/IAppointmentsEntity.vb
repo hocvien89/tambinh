@@ -20,7 +20,7 @@
 
     Property Label() As Int32
 
-    Property ResourceID() As Int32
+    Property ResourceID() As String
 
     Property ResourceIDs() As String
 

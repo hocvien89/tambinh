@@ -102,9 +102,9 @@
                 }
                 if (KeyID == 120) {
                     document.getElementById('<%=btnClear.ClientID%>').click();
-                 }
-                 if (KeyID == 27) {
-                     document.getElementById('<%=btCancel.ClientID%>').click();
+                }
+                if (KeyID == 27) {
+                    document.getElementById('<%=btCancel.ClientID%>').click();
                 }
             }
         });
@@ -113,12 +113,12 @@
         function ShowEditWindow() {
             pcAddKhachhang.Show();
             var txtHoten = document.getElementById("<%=txtHoten.ClientID %>");
-            ClearText();
-            txtHoten.focus();
-        }
-        function ShowAddWindow() {
-            pcAddKhachhang.Show();
-            var txtMaKH = document.getElementById("<%=txtMaKH.ClientID%>");
+             ClearText();
+             txtHoten.focus();
+         }
+         function ShowAddWindow() {
+             pcAddKhachhang.Show();
+             var txtMaKH = document.getElementById("<%=txtMaKH.ClientID%>");
             ClearText();
         }
         //Su kien khi chon 1 dong
@@ -155,6 +155,7 @@
         function OnSuccessCall(msg) {
             if (msg.d != "") {
                 var defaultdata = msg.d.split("$");
+                console.log(defaultdata)
                 var txtMaKH = document.getElementById("<%=txtMaKH.ClientID %>");
                 var txtHoten = document.getElementById("<%=txtHoten.ClientID %>");
                 var txtDiachi = document.getElementById("<%=txtDiachi.ClientID%>");
@@ -163,6 +164,10 @@
                 var txtGhichu = document.getElementById("<%=txtGhichu.ClientID%>");
                 var imgAnhdaidien = document.getElementById('<%=imgAnhdaidien.ClientID%>');
                 var txtImgUrl = document.getElementById('<%=txtImgUrl.ClientID%>');
+                var txtVungBiDau = document.getElementById("<%=txtVungBiDau.ClientID%>");
+                var txtDauBaoLau = document.getElementById("<%=txtDauBaoLau.ClientID%>");
+                var txtTuTheKhacDauHon = document.getElementById("<%=txtTuTheKhacDauHon.ClientID%>");
+                var txtTuTheKhacTotHon = document.getElementById("<%=txtTuTheKhacTotHon.ClientID%>");
                 var date_ngayden = new Date(defaultdata[0]);
 
                 //cbo_nhanvientuvan.SetValue(defaultdata[15]);
@@ -216,8 +221,45 @@
                     cbo_nguoigioithieu.SetEnabled(true);
                     cbo_nguoigioithieu.SetValue(defaultdata[12]);
                 }
+                if (defaultdata[20] != "") {
+                    checkComboBoxKnowHow.SetText(defaultdata[20])
+                    checkListBoxKnowHow.SelectIndices(defaultdata[20].split(";"))
+                }
+                
+                txtVungBiDau.value = defaultdata[21]
+                txtDauBaoLau.value = defaultdata[22]
 
+                if (defaultdata[23] != "") {
+                    checkComboBoxDaDieuTri.SetText(defaultdata[23])
+                    checkListBoxDaDieuTri.SelectIndices(defaultdata[23].split(";"))
+                }
 
+                if (defaultdata[24] != "") {
+                    checkComboBoxCamGiac.SetText(defaultdata[24])
+                    checkListBoxCamGiac.SelectIndices(defaultdata[24].split(";"))
+                }
+                
+                ddlMucDoDau.SetValue(defaultdata[25])
+                if (defaultdata[26] != "") {
+                    var dataTuTheDauHon = defaultdata[26].split(";");
+                    var dataTuTheDauHonList = dataTuTheDauHon.slice(0, dataTuTheDauHon.length - 1)
+                    checkComboBoxTuTheDauHon.SetText(dataTuTheDauHonList.join(";"))
+                    checkListBoxTuTheDauHon.SelectIndices(dataTuTheDauHonList)
+                    txtTuTheKhacDauHon.value = dataTuTheDauHon.pop();
+                }
+                
+                if (defaultdata[27] != "") {
+                    var dataTuTheTotHon = defaultdata[27].split(";");
+                    var dataTuTheTotHonList = dataTuTheDauHon.slice(0, dataTuTheTotHon.length - 1)
+                    checkComboBoxTuTheTotHon.SetText(dataTuTheTotHonList.join(";"))
+                    checkListBoxTuTheTotHon.SelectIndices(dataTuTheTotHonList)
+                    txtTuTheKhacTotHon.value = dataTuTheTotHon.pop()
+                }
+
+                if (defaultdata[28] != "") {
+                    checkComboBoxAnhHuong.SetText(defaultdata[28])
+                    checkListBoxAnhHuong.SelectIndices(defaultdata[28].split(";"))
+                } 
             }
         }
         function onFail(ex) {
@@ -686,18 +728,33 @@
             return false;
         }
 
-        // multiple select
+        // multiple select process
         var textSeparator = ";";
-        function updateText() {
+        function updateText(dropDown) {
+            var arrName = dropDown.uniqueID.split("$")
+            var dropDownName = arrName.slice(-1);
+            if (dropDownName == "listBox") {
+                var dropDownName = arrName.slice(-4, -3)[0];
+            }
+
+
+            var checkBox = getDropDownClient(dropDownName)
+            var checkListBox = checkBox.checkListBox;
+            var checkComboBox = checkBox.checkComboBox;
             var selectedItems = checkListBox.GetSelectedItems();
             checkComboBox.SetText(getSelectedItemsText(selectedItems));
         }
         function synchronizeListBoxValues(dropDown, args) {
-            checkListBox.UnselectAll();
+            var dropDownName = dropDown.name.split("_").slice(-1)[0];
+            var checkBox = getDropDownClient(dropDownName)
+            var checkListBox = checkBox.checkListBox;
+            var checkComboBox = checkBox.checkComboBox;
+            console.log(dropDown)
             var texts = dropDown.GetText().split(textSeparator);
-            var values = getValuesByTexts(texts);
+            checkListBox.UnselectAll();
+            var values = getValuesByTexts(texts, checkListBox);
             checkListBox.SelectValues(values);
-            updateText(); // for remove non-existing texts
+            updateText(dropDown); // for remove non-existing texts
         }
         function getSelectedItemsText(items) {
             var texts = [];
@@ -705,7 +762,7 @@
                 texts.push(items[i].text);
             return texts.join(textSeparator);
         }
-        function getValuesByTexts(texts) {
+        function getValuesByTexts(texts, checkListBox) {
             var actualValues = [];
             var item;
             for (var i = 0; i < texts.length; i++) {
@@ -714,6 +771,41 @@
                     actualValues.push(item.value);
             }
             return actualValues;
+        }
+        function getDropDownClient(dropDownName) {
+            var returnCheckListBox = {};
+
+            switch (dropDownName.toString()) {
+                case "checkComboBoxKnowHow":
+                    returnCheckListBox.checkListBox = checkListBoxKnowHow;
+                    returnCheckListBox.checkComboBox = checkComboBoxKnowHow;
+                    console.log(returnCheckListBox)
+                    break;
+                case "checkComboBoxDaDieuTri":
+                    returnCheckListBox.checkListBox = checkListBoxDaDieuTri;
+                    returnCheckListBox.checkComboBox = checkComboBoxDaDieuTri;
+                    break;
+                case "checkComboBoxCamGiac":
+                    returnCheckListBox.checkListBox = checkListBoxCamGiac;
+                    returnCheckListBox.checkComboBox = checkComboBoxCamGiac;
+                    break;
+                case "checkComboBoxTuTheDauHon":
+                    returnCheckListBox.checkListBox = checkListBoxTuTheDauHon;
+                    returnCheckListBox.checkComboBox = checkComboBoxTuTheDauHon;
+                    break;
+                case "checkComboBoxTuTheTotHon":
+                    returnCheckListBox.checkListBox = checkListBoxTuTheTotHon;
+                    returnCheckListBox.checkComboBox = checkComboBoxTuTheTotHon;
+                    break;
+                case "checkComboBoxAnhHuong":
+                    returnCheckListBox.checkListBox = checkListBoxAnhHuong;
+                    returnCheckListBox.checkComboBox = checkComboBoxAnhHuong;
+                    break;
+                default:
+            }
+            return returnCheckListBox;
+        }
+        function setCheckBoxListItem(checkListBox,itemList) {
         }
     </script>
     <div class="brest_crum">
@@ -1179,7 +1271,7 @@
                                         <legend><span style="font-weight: bold; color: green">Thông tin bệnh nhân</span></legend>
                                         <table class="info_table">
                                             <tr>
-                                                <td class="info_table_td" style="width:150px">Ngày đến:
+                                                <td class="info_table_td" style="width: 150px">Ngày đến:
                                                 </td>
                                                 <td class="info_table_td">
                                                     <dx:ASPxDateEdit ID="deNgayden" UseMaskBehavior="true" ClientInstanceName="deNgayden" Width="200px" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"
@@ -1321,21 +1413,21 @@
                                                 <td class="info_table_td">Bạn biết phòng khám ICC qua:
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit1" Width="200px" runat="server" AnimationType="None">
+                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxKnowHow" ID="checkComboBoxKnowHow" Width="200px" runat="server" AnimationType="None">
                                                         <DropDownWindowStyle BackColor="#EDEDED" />
                                                         <DropDownWindowTemplate>
-                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
+                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBoxKnowHow" SelectionMode="CheckColumn"
                                                                 runat="server" Height="200" EnableSelectAll="true">
                                                                 <Border BorderStyle="None" />
                                                                 <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
                                                                 <Items>
-                                                                    <dx:ListEditItem Text="Walk In" Value="0" Selected="true" />
+                                                                    <dx:ListEditItem Text="Walk In" Value="0" />
                                                                     <dx:ListEditItem Text="Telesale" Value="1" />
                                                                     <dx:ListEditItem Text="QCFB" Value="2" />
                                                                     <dx:ListEditItem Text="TV" Value="3" />
-                                                                    <dx:ListEditItem Text="SEO" Value="4" Selected="true" />
-                                                                    <dx:ListEditItem Text="QCGG" Value="5" Selected="true" />
-                                                                    <dx:ListEditItem Text="Bạn bè" Value="6" Selected="true" />
+                                                                    <dx:ListEditItem Text="SEO" Value="4"/>
+                                                                    <dx:ListEditItem Text="QCGG" Value="5" />
+                                                                    <dx:ListEditItem Text="Bạn bè" Value="6" />
                                                                 </Items>
                                                                 <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
                                                             </dx:ASPxListBox>
@@ -1343,155 +1435,247 @@
                                                         <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
                                                     </dx:ASPxDropDownEdit>
                                                 </td>
-                                                 <td class="info_table_td">Vùng bị đau:
+                                                <td class="info_table_td">Vùng bị đau:
                                                 </td>
                                                 <td class="info_table_td">
-                                                    <asp:TextBox ID="TextBox1" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                    <asp:TextBox ID="txtVungBiDau" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
                                                 </td>
 
-                                                        <%-- row --%>
-                                            <tr>
-                                                 <td class="info_table_td">Đau bao lâu:
-                                                </td>
-                                                <td class="info_table_td">
-                                                    <asp:TextBox ID="TextBox2" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
-                                                </td>
-                                                <td class="info_table_td">PP Đã điều trị:
-                                                </td>
-                                                <td class="info_table_td">
-                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit2" Width="200px" runat="server" AnimationType="None">
-                                                        <DropDownWindowStyle BackColor="#EDEDED" />
-                                                        <DropDownWindowTemplate>
-                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
-                                                                runat="server" Height="200" EnableSelectAll="true">
-                                                                <Border BorderStyle="None" />
-                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
-                                                                <Items>
-                                                                    <dx:ListEditItem Text="Bác sỹ" Value="0"/>
-                                                                    <dx:ListEditItem Text="Châm cứu" Value="1" />
-                                                                    <dx:ListEditItem Text="Vật lý trị liệu" Value="2" />
-                                                                    <dx:ListEditItem Text="Kéo giãn" Value="3" />
-                                                                    <dx:ListEditItem Text="Tiêm" Value="4"/>
-                                                                    <dx:ListEditItem Text="Tiêm" Value="5" />
-                                                                    <dx:ListEditItem Text="Đông Y" Value="6" />
-                                                                    <dx:ListEditItem Text="Thuốc" Value="7" />
-                                                                    <dx:ListEditItem Text="Mát xa" Value="8" />
-                                                                    <dx:ListEditItem Text="Chườm" Value="9" />
-                                                                    <dx:ListEditItem Text="Phẫu thuật" Value="10" />
-                                                                    <dx:ListEditItem Text="Hút dịch" Value="11" />
-                                                                    <dx:ListEditItem Text="Bấm huyệt" Value="12" />
-                                                                    <dx:ListEditItem Text="Nắn chỉnh cột sống" Value="13" />
-                                                                    <dx:ListEditItem Text="ATPT" Value="14" />
-                                                                </Items>
-                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
-                                                            </dx:ASPxListBox>
-                                                        </DropDownWindowTemplate>
-                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
-                                                    </dx:ASPxDropDownEdit>
-                                                </td>
-                                                
-                                                 <%-- row --%>
-                                            <tr>
-                                                 <td class="info_table_td">Cảm giác:
-                                                </td>
-                                                <td class="info_table_td">
-                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit4" Width="200px" runat="server" AnimationType="None">
-                                                        <DropDownWindowStyle BackColor="#EDEDED" />
-                                                        <DropDownWindowTemplate>
-                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
-                                                                runat="server" Height="200" EnableSelectAll="true">
-                                                                <Border BorderStyle="None" />
-                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
-                                                                <Items>
-                                                                    <dx:ListEditItem Text="Bỏng rát" Value="0"/>
-                                                                    <dx:ListEditItem Text="Nhói" Value="1" />
-                                                                    <dx:ListEditItem Text="Đau lan" Value="2" />
-                                                                    <dx:ListEditItem Text="Đau âm ỉ" Value="3" />
-                                                                    <dx:ListEditItem Text="Nhức" Value="4"/>
-                                                                    <dx:ListEditItem Text="Cứng đờ" Value="5" />
-                                                                    <dx:ListEditItem Text="Tê" Value="6" />
-                                                                    <dx:ListEditItem Text="Buốt" Value="7" />
-                                                                    <dx:ListEditItem Text="Sưng tấy" Value="8" />
-                                                                    <dx:ListEditItem Text="Mất cảm giác" Value="9" />
-                                                                    <dx:ListEditItem Text="Chóng mặt" Value="10" />
-                                                                    <dx:ListEditItem Text="Ù tai" Value="11" />
-                                                                    <dx:ListEditItem Text="Đau đầu" Value="12" />
-                                                                    <dx:ListEditItem Text="Bốc hỏa" Value="13" />
-                                                                    <dx:ListEditItem Text="Mỏi" Value="14" />
-                                                                    <dx:ListEditItem Text="Mờ mắt" Value="15" />
-                                                                    <dx:ListEditItem Text="Khó thở" Value="16" />
-                                                                </Items>
-                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
-                                                            </dx:ASPxListBox>
-                                                        </DropDownWindowTemplate>
-                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
-                                                    </dx:ASPxDropDownEdit>
-                                                </td>
-                                                <td class="info_table_td">Tư thế nào đau hơn:
-                                                </td>
-                                                <td class="info_table_td">
-                                                    <dx:ASPxDropDownEdit ClientInstanceName="checkComboBox" ID="ASPxDropDownEdit3" Width="200px" runat="server" AnimationType="None">
-                                                        <DropDownWindowStyle BackColor="#EDEDED" />
-                                                        <DropDownWindowTemplate>
-                                                            <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBox" SelectionMode="CheckColumn"
-                                                                runat="server" Height="200" EnableSelectAll="true">
-                                                                <Border BorderStyle="None" />
-                                                                <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
-                                                                <Items>
-                                                                    <dx:ListEditItem Text="Bác sỹ" Value="0"/>
-                                                                    <dx:ListEditItem Text="Châm cứu" Value="1" />
-                                                                    <dx:ListEditItem Text="Vật lý trị liệu" Value="2" />
-                                                                    <dx:ListEditItem Text="Kéo giãn" Value="3" />
-                                                                    <dx:ListEditItem Text="Tiêm" Value="4"/>
-                                                                    <dx:ListEditItem Text="Tiêm" Value="5" />
-                                                                    <dx:ListEditItem Text="Đông Y" Value="6" />
-                                                                    <dx:ListEditItem Text="Thuốc" Value="7" />
-                                                                    <dx:ListEditItem Text="Mát xa" Value="8" />
-                                                                    <dx:ListEditItem Text="Chườm" Value="9" />
-                                                                    <dx:ListEditItem Text="Phẫu thuật" Value="10" />
-                                                                    <dx:ListEditItem Text="Hút dịch" Value="11" />
-                                                                    <dx:ListEditItem Text="Bấm huyệt" Value="12" />
-                                                                    <dx:ListEditItem Text="Nắn chỉnh cột sống" Value="13" />
-                                                                    <dx:ListEditItem Text="ATPT" Value="14" />
-                                                                </Items>
-                                                                <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
-                                                            </dx:ASPxListBox>
-                                                        </DropDownWindowTemplate>
-                                                        <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
-                                                    </dx:ASPxDropDownEdit>
-                                                </td>
-
-                                                <%-- row msg --%>
+                                                <%-- row --%>
                                                 <tr>
-                                                    <td colspan="5">
-                                                        <div id="diverror" class="error">
-                                                            <dx:ASPxLabel ID="ltrError" EncodeHtml="false" ClientInstanceName="ltrError" runat="server"></dx:ASPxLabel>
-                                                            <dx:ASPxLabel ID="ltrSuccess" runat="server" EncodeHtml="false" ClientInstanceName="ltrSuccess"></dx:ASPxLabel>
-                                                        </div>
+                                                    <td class="info_table_td">Đau bao lâu:
+                                                    </td>
+                                                    <td class="info_table_td">
+                                                        <asp:TextBox ID="txtDauBaoLau" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                    </td>
+                                                    <td class="info_table_td">PP Đã điều trị:
+                                                    </td>
+                                                    <td class="info_table_td">
+                                                        <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxDaDieuTri" ID="checkComboBoxDaDieuTri" Width="200px" runat="server" AnimationType="None">
+                                                            <DropDownWindowStyle BackColor="#EDEDED" />
+                                                            <DropDownWindowTemplate>
+                                                                <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBoxDaDieuTri" SelectionMode="CheckColumn"
+                                                                    runat="server" Height="200" EnableSelectAll="true">
+                                                                    <Border BorderStyle="None" />
+                                                                    <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                    <Items>
+                                                                        <dx:ListEditItem Text="Bác sỹ" Value="0" />
+                                                                        <dx:ListEditItem Text="Châm cứu" Value="1" />
+                                                                        <dx:ListEditItem Text="Vật lý trị liệu" Value="2" />
+                                                                        <dx:ListEditItem Text="Kéo giãn" Value="3" />
+                                                                        <dx:ListEditItem Text="Tiêm" Value="4" />
+                                                                        <dx:ListEditItem Text="Đông Y" Value="5" />
+                                                                        <dx:ListEditItem Text="Thuốc" Value="6" />
+                                                                        <dx:ListEditItem Text="Mát xa" Value="7" />
+                                                                        <dx:ListEditItem Text="Chườm" Value="8" />
+                                                                        <dx:ListEditItem Text="Phẫu thuật" Value="9" />
+                                                                        <dx:ListEditItem Text="Hút dịch" Value="10" />
+                                                                        <dx:ListEditItem Text="Bấm huyệt" Value="11" />
+                                                                        <dx:ListEditItem Text="Nắn chỉnh cột sống" Value="12" />
+                                                                        <dx:ListEditItem Text="ATPT" Value="13" />
+                                                                    </Items>
+                                                                    <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                                </dx:ASPxListBox>
+                                                            </DropDownWindowTemplate>
+                                                            <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                        </dx:ASPxDropDownEdit>
+                                                    </td>
 
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="5">
-                                                        <div class="pcmButton">
-                                                            <dx:ASPxButton ID="btOK" Image-Url="~/images/btn_Save.png" ClientInstanceName="btOk" OnClick="btOK_Click" runat="server" Text="Lưu (F4)" Style="float: left; margin-right: 15px">
-                                                                <ClientSideEvents Click="CheckEmpty" />
-                                                            </dx:ASPxButton>
-                                                            <dx:ASPxButton ID="btaddbill" Image-Url="~/images/16x16/report_go.png" OnClick="btaddbill_Click" runat="server" Text="Thêm phiếu dịch vụ" AutoPostBack="False" Style="float: left; margin-right: 8px">
-                                                                <ClientSideEvents Click="Checkthemdv" />
-                                                            </dx:ASPxButton>
-                                                            <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" Visible="false" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
-                                                                <ClientSideEvents Click="Checkthempx" />
-                                                            </dx:ASPxButton>
-                                                            <dx:ASPxButton ID="btnClear" runat="server" AutoPostBack="false" Image-Url="~/images/16x16/refresh.png" Text="Làm mới (F9)" Style="float: left; margin-right: 8px">
-                                                                <ClientSideEvents Click="ClearText_Dev" />
-                                                            </dx:ASPxButton>
-                                                            <dx:ASPxButton ID="btCancel" Image-Url="~/images/16x16/cancel.png" runat="server" Text="Thoát (ESC)" AutoPostBack="False" Style="float: left; margin-right: 8px">
-                                                                <ClientSideEvents Click="ClosePopup" />
-                                                            </dx:ASPxButton>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                    <%-- row --%>
+                                                    <tr>
+                                                        <td class="info_table_td">Cảm giác:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxCamGiac" ID="checkComboBoxCamGiac" Width="200px" runat="server" AnimationType="None">
+                                                                <DropDownWindowStyle BackColor="#EDEDED" />
+                                                                <DropDownWindowTemplate>
+                                                                    <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBoxCamGiac" SelectionMode="CheckColumn"
+                                                                        runat="server" Height="200" EnableSelectAll="true">
+                                                                        <Border BorderStyle="None" />
+                                                                        <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                        <Items>
+                                                                            <dx:ListEditItem Text="Bỏng rát" Value="0" />
+                                                                            <dx:ListEditItem Text="Nhói" Value="1" />
+                                                                            <dx:ListEditItem Text="Đau lan" Value="2" />
+                                                                            <dx:ListEditItem Text="Đau âm ỉ" Value="3" />
+                                                                            <dx:ListEditItem Text="Nhức" Value="4" />
+                                                                            <dx:ListEditItem Text="Cứng đờ" Value="5" />
+                                                                            <dx:ListEditItem Text="Tê" Value="6" />
+                                                                            <dx:ListEditItem Text="Buốt" Value="7" />
+                                                                            <dx:ListEditItem Text="Sưng tấy" Value="8" />
+                                                                            <dx:ListEditItem Text="Mất cảm giác" Value="9" />
+                                                                            <dx:ListEditItem Text="Chóng mặt" Value="10" />
+                                                                            <dx:ListEditItem Text="Ù tai" Value="11" />
+                                                                            <dx:ListEditItem Text="Đau đầu" Value="12" />
+                                                                            <dx:ListEditItem Text="Bốc hỏa" Value="13" />
+                                                                            <dx:ListEditItem Text="Mỏi" Value="14" />
+                                                                            <dx:ListEditItem Text="Mờ mắt" Value="15" />
+                                                                            <dx:ListEditItem Text="Khó thở" Value="16" />
+                                                                        </Items>
+                                                                        <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                                    </dx:ASPxListBox>
+                                                                </DropDownWindowTemplate>
+                                                                <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                            </dx:ASPxDropDownEdit>
+                                                        </td>
+                                                        <td class="info_table_td">Mức độ đau:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <dx:ASPxComboBox ClientInstanceName="ddlMucDoDau" onkeypress="return enter_ddlGioitinh(event)" ID="ddlMucDoDau" DropDownStyle="DropDown" IncrementalFilteringMode="StartsWith" Height="25px" Width="200px" runat="server" ValueType="System.String">
+                                                                <Items>
+                                                                    <dx:ListEditItem Value="M0" Selected="true" Text="Không đau" />
+                                                                    <dx:ListEditItem Value="M1" Text="Mức 1" />
+                                                                    <dx:ListEditItem Value="M2" Text="Mức 2" />
+                                                                    <dx:ListEditItem Value="M3" Text="Mức 3" />
+                                                                    <dx:ListEditItem Value="M4" Text="Mức 4" />
+                                                                    <dx:ListEditItem Value="M5" Text="Mức 5" />
+                                                                    <dx:ListEditItem Value="M6" Text="Mức 6" />
+                                                                    <dx:ListEditItem Value="M7" Text="Mức 7" />
+                                                                    <dx:ListEditItem Value="M8" Text="Mức 8" />
+                                                                    <dx:ListEditItem Value="M9" Text="Mức 9" />
+                                                                    <dx:ListEditItem Value="M10" Text="Mức 10" />
+                                                                    <dx:ListEditItem Value="M11" Text="Đau nặng" />
+                                                                </Items>
+                                                            </dx:ASPxComboBox>
+                                                        </td>
+                                                    </tr>
+
+                                                    <%-- row --%>
+                                                    <tr>
+
+                                                        <td class="info_table_td">Tư thế đau hơn:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxTuTheDauHon" ID="checkComboBoxTuTheDauHon" Width="200px" runat="server" AnimationType="None">
+                                                                <DropDownWindowStyle BackColor="#EDEDED" />
+                                                                <DropDownWindowTemplate>
+                                                                    <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBoxTuTheDauHon" SelectionMode="CheckColumn"
+                                                                        runat="server" Height="200" EnableSelectAll="true">
+                                                                        <Border BorderStyle="None" />
+                                                                        <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                        <Items>
+                                                                            <dx:ListEditItem Text="Ngồi" Value="0" />
+                                                                            <dx:ListEditItem Text="Đứng" Value="1" />
+                                                                            <dx:ListEditItem Text="Đi lại" Value="2" />
+                                                                            <dx:ListEditItem Text="Cúi gập" Value="3" />
+                                                                            <dx:ListEditItem Text="Nằm" Value="4" />
+                                                                            <dx:ListEditItem Text="Đọc sách" Value="5" />
+                                                                            <dx:ListEditItem Text="Ngủ dậy" Value="6" />
+                                                                            <dx:ListEditItem Text="Lái xe" Value="7" />
+                                                                        </Items>
+                                                                        <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                                    </dx:ASPxListBox>
+                                                                </DropDownWindowTemplate>
+                                                                <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                            </dx:ASPxDropDownEdit>
+                                                        </td>
+                                                        <td class="info_table_td">Tư thế khác:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <asp:TextBox ID="txtTuTheKhacDauHon" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                        </td>
+                                                    </tr>
+
+
+                                                    <%-- row --%>
+                                                    <tr>
+
+                                                        <td class="info_table_td">Tư thế tốt hơn:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxTuTheTotHon" ID="checkComboBoxTuTheTotHon" Width="200px" runat="server" AnimationType="None">
+                                                                <DropDownWindowStyle BackColor="#EDEDED" />
+                                                                <DropDownWindowTemplate>
+                                                                    <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBoxTuTheTotHon" SelectionMode="CheckColumn"
+                                                                        runat="server" Height="200" EnableSelectAll="true">
+                                                                        <Border BorderStyle="None" />
+                                                                        <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                        <Items>
+                                                                            <dx:ListEditItem Text="Ngồi" Value="0" />
+                                                                            <dx:ListEditItem Text="Đứng" Value="1" />
+                                                                            <dx:ListEditItem Text="Đi lại" Value="2" />
+                                                                            <dx:ListEditItem Text="Cúi gập" Value="3" />
+                                                                            <dx:ListEditItem Text="Nằm" Value="4" />
+                                                                            <dx:ListEditItem Text="Đọc sách" Value="5" />
+                                                                            <dx:ListEditItem Text="Ngủ dậy" Value="6" />
+                                                                            <dx:ListEditItem Text="Lái xe" Value="7" />
+                                                                        </Items>
+                                                                        <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                                    </dx:ASPxListBox>
+                                                                </DropDownWindowTemplate>
+                                                                <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                            </dx:ASPxDropDownEdit>
+                                                        </td>
+                                                        <td class="info_table_td">Tư thế khác:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <asp:TextBox ID="txtTuTheKhacTotHon" runat="server" Width="200px" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                        </td>
+                                                    </tr>
+
+                                                    <%-- row --%>
+                                                    <tr>
+
+                                                        <td class="info_table_td">Cơn đau ảnh hưởng:
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxAnhHuong" ID="checkComboBoxAnhHuong" Width="200px" runat="server" AnimationType="None">
+                                                                <DropDownWindowStyle BackColor="#EDEDED" />
+                                                                <DropDownWindowTemplate>
+                                                                    <dx:ASPxListBox Width="100%" ID="listBox" ClientInstanceName="checkListBoxAnhHuong" SelectionMode="CheckColumn"
+                                                                        runat="server" Height="200" EnableSelectAll="true">
+                                                                        <Border BorderStyle="None" />
+                                                                        <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+                                                                        <Items>
+                                                                            <dx:ListEditItem Text="Giâc ngủ" Value="0" />
+                                                                            <dx:ListEditItem Text="Công việc" Value="1" />
+                                                                            <dx:ListEditItem Text="Sinh hoạt hàng ngày" Value="2" />
+                                                                            <dx:ListEditItem Text="Chất lượng cuộc sống" Value="3" />
+                                                                        </Items>
+                                                                        <ClientSideEvents SelectedIndexChanged="updateText" Init="updateText" />
+                                                                    </dx:ASPxListBox>
+                                                                </DropDownWindowTemplate>
+                                                                <ClientSideEvents TextChanged="synchronizeListBoxValues" DropDown="synchronizeListBoxValues" />
+                                                            </dx:ASPxDropDownEdit>
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                        </td>
+                                                        <td class="info_table_td">
+                                                            <asp:TextBox ID="TextBox4" runat="server" Width="200px" Visible="false" onkeypress="return enter_txtEmail(event)" CssClass="nano_textbox"></asp:TextBox>
+                                                        </td>
+                                                    </tr>
+
+                                                    <%-- row msg --%>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div id="diverror" class="error">
+                                                                <dx:ASPxLabel ID="ltrError" EncodeHtml="false" ClientInstanceName="ltrError" runat="server"></dx:ASPxLabel>
+                                                                <dx:ASPxLabel ID="ltrSuccess" runat="server" EncodeHtml="false" ClientInstanceName="ltrSuccess"></dx:ASPxLabel>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div class="pcmButton">
+                                                                <dx:ASPxButton ID="btOK" Image-Url="~/images/btn_Save.png" ClientInstanceName="btOk" OnClick="btOK_Click" runat="server" Text="Lưu (F4)" Style="float: left; margin-right: 15px">
+                                                                    <ClientSideEvents Click="CheckEmpty" />
+                                                                </dx:ASPxButton>
+                                                                <dx:ASPxButton ID="btaddbill" Image-Url="~/images/16x16/report_go.png" OnClick="btaddbill_Click" runat="server" Text="Thêm phiếu dịch vụ" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                                    <ClientSideEvents Click="Checkthemdv" />
+                                                                </dx:ASPxButton>
+                                                                <dx:ASPxButton ID="btnaddproductbill" Image-Url="~/images/16x16/report_go.png" Visible="false" OnClick="btnaddproductbill_Click" runat="server" Text="Thêm đơn thuốc" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                                    <ClientSideEvents Click="Checkthempx" />
+                                                                </dx:ASPxButton>
+                                                                <dx:ASPxButton ID="btnClear" runat="server" AutoPostBack="false" Image-Url="~/images/16x16/refresh.png" Text="Làm mới (F9)" Style="float: left; margin-right: 8px">
+                                                                    <ClientSideEvents Click="ClearText_Dev" />
+                                                                </dx:ASPxButton>
+                                                                <dx:ASPxButton ID="btCancel" Image-Url="~/images/16x16/cancel.png" runat="server" Text="Thoát (ESC)" AutoPostBack="False" Style="float: left; margin-right: 8px">
+                                                                    <ClientSideEvents Click="ClosePopup" />
+                                                                </dx:ASPxButton>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
                                         </table>
                                     </fieldset>
                                     <asp:UpdateProgress runat="server" ID="UpdateProgress1" AssociatedUpdatePanelID="upKhachhang" DisplayAfter="0" DynamicLayout="false">

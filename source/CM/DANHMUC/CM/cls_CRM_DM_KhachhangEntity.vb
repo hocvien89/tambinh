@@ -32,6 +32,15 @@ Public Class CRM_DM_KhachhangEntity
     Private _uId_Nguoigioithieu As String
     Private _Thang As Int16
     Private _Soluong As Int16
+    Private _nv_BietPhongKham As String
+    Private _nv_VungBiDau As String
+    Private _nv_DauBaoLau As String
+    Private _nv_DaDieuTri As String
+    Private _nv_CamGiacDau As String
+    Private _nv_MucDoDau As String
+    Private _nv_TuTheDauHon As String
+    Private _nv_TuTheTotHon As String
+    Private _nv_AnhHuong As String
     Public Property uId_Khachhang() As String Implements ICRM_DM_KhachhangEntity.uId_Khachhang
         Get
             Return _uId_Khachhang
@@ -407,6 +416,116 @@ Public Class CRM_DM_KhachhangEntity
         End Get
         Set(ByVal value As Short)
             _Thang = value
+        End Set
+    End Property
+
+    Public Property nv_AnhHuong() As String Implements ICRM_DM_KhachhangEntity.nv_AnhHuong
+        Get
+            Return _nv_AnhHuong
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_AnhHuong = String.Empty
+            Else
+                _nv_AnhHuong = value.Trim
+            End If
+        End Set
+    End Property
+
+    Public Property nv_BietPhongKham() As String Implements ICRM_DM_KhachhangEntity.nv_BietPhongKham
+        Get
+            Return _nv_BietPhongKham
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_BietPhongKham = String.Empty
+            Else
+                _nv_BietPhongKham = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_CamGiacDau() As String Implements ICRM_DM_KhachhangEntity.nv_CamGiacDau
+        Get
+            Return _nv_CamGiacDau
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_CamGiacDau = String.Empty
+            Else
+                _nv_CamGiacDau = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_DaDieuTri() As String Implements ICRM_DM_KhachhangEntity.nv_DaDieuTri
+        Get
+            Return _nv_DaDieuTri
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_DaDieuTri = String.Empty
+            Else
+                _nv_DaDieuTri = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_DauBaoLau() As String Implements ICRM_DM_KhachhangEntity.nv_DauBaoLau
+        Get
+            Return _nv_DauBaoLau
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_DauBaoLau = String.Empty
+            Else
+                _nv_DauBaoLau = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_MucDoDau() As String Implements ICRM_DM_KhachhangEntity.nv_MucDoDau
+        Get
+            Return _nv_MucDoDau
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_MucDoDau = String.Empty
+            Else
+                _nv_MucDoDau = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_TuTheDauHon() As String Implements ICRM_DM_KhachhangEntity.nv_TuTheDauHon
+        Get
+            Return _nv_TuTheDauHon
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_TuTheDauHon = String.Empty
+            Else
+                _nv_TuTheDauHon = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_TuTheTotHon() As String Implements ICRM_DM_KhachhangEntity.nv_TuTheTotHon
+        Get
+            Return _nv_TuTheTotHon
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_TuTheTotHon = String.Empty
+            Else
+                _nv_TuTheTotHon = value.Trim
+            End If
+        End Set
+    End Property
+    Public Property nv_VungBiDau() As String Implements ICRM_DM_KhachhangEntity.nv_VungBiDau
+        Get
+            Return _nv_VungBiDau
+        End Get
+        Set(ByVal value As String)
+            If (value = Nothing) Then
+                _nv_VungBiDau = String.Empty
+            Else
+                _nv_VungBiDau = value.Trim
+            End If
         End Set
     End Property
 End Class

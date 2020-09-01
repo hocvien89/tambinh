@@ -33,7 +33,7 @@
             <table class="dxscLabelControlPair" cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="dxscLabelCell">
-                        <dx:ASPxLabel ID="ASPxLabel3" runat="server" AssociatedControlID="tbSubject" Text="Thuộc cửa hàng">
+                        <dx:ASPxLabel ID="ASPxLabel3" runat="server" AssociatedControlID="tbSubject" Text="Thuộc phòng khám">
                         </dx:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
@@ -51,7 +51,7 @@
             <table class="dxscLabelControlPair" cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="dxscLabelCell">
-                        <dx:ASPxLabel ID="lblSubject" runat="server" AssociatedControlID="tbSubject" Text="Chủ đề">
+                        <dx:ASPxLabel ID="lblSubject" runat="server" AssociatedControlID="tbSubject" Text="Ghi chú">
                         </dx:ASPxLabel>
                     </td>
                     <td class="dxscControlCell">
@@ -197,6 +197,28 @@
             </table>
         </td>
     </tr>
+    <tr>
+        <td class="dxscSingleCell">
+             <table class="dxscLabelControlPair" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="dxscLabelCell">
+                        <dx:ASPxLabel ID="ASPxLabel4" Visible="True" runat="server" Text="Bác sỹ: ">
+                        </dx:ASPxLabel>
+                    </td>
+                    <td class="dxscControlCell">
+                        <dx:ASPxComboBox ID="ddlBacSy" OnCallback="ddlBacSy_Callback" EnableCallbackMode="false" ClientInstanceName="ddlBacsy" runat="server" CallbackPageSize="10"
+                            IncrementalFilteringMode="Contains" ValueField="ResourceId"  TextField="nv_Hoten_vn" ValueType="System.String" TextFormatString="{0}"
+                            Width="100%" DropDownStyle="DropDown" Visible="True"  SelectedIndex="0">
+                        </dx:ASPxComboBox>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td class="dxscSingleCell"  style="padding-left: 25px;">
+              
+           
+        </td>
+    </tr>
     <tr style="display: block">
         <%
             If CanShowReminders Then
@@ -338,10 +360,11 @@
 <script id="dxss_ASPxSchedulerAppoinmentForm" type="text/javascript">
    $(document).ready(function () {
         if ('<%#(CType(Container, UserAppointmentFormTemplateContainer)).Appointment.CustomFields("uId_Nhanvien")%>'=="") {
-            var resourceid = '<%#(CType(Container, UserAppointmentFormTemplateContainer)).Appointment.ResourceId%>'
+            var uidNhanvien = '<%#(CType(Container, UserAppointmentFormTemplateContainer)).Appointment.ResourceId%>'
             var Startdate = '<%#(CType(Container, UserAppointmentFormTemplateContainer)).Start%>'
             var Endate = '<%#(CType(Container, UserAppointmentFormTemplateContainer)).End%>'
-            var param_dt = "{'Resource':'" + resourceid + "','dStart':'" + Startdate + "','dEnd':'" + Endate + "'}";
+            var param_dt = "{'uidNhanvien':'" + 1 + "','dStart':'" + Startdate + "','dEnd':'" + Endate + "'}";
+            console.log(param_dt)
             var pageUrl = "../../../../Webservice/nano_websv.asmx/LoadThongTinResource";
 
             $.ajax({
@@ -501,6 +524,7 @@
          });
      }
     function Check_Error(s, e) {
+        console.log("begin insert")
         var uId_Nhanvien = ddlNhanvien.GetValue();
         //var startDate = edtStartTimeAppointmentForm.GetDate();
         //var endDate = edtEndTimeAppointmentForm.GetDate();

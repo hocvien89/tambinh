@@ -276,11 +276,15 @@ Partial Public Class CustomerList
                 '.nv_Ghichu_en = Session("sTendangnhap").ToString
                 .uId_Xaphuong = "47014a0c-b3db-4470-91a2-c7fedd0d8953"
                 .nv_Ghichu_vn = txtGhichu.Text
-                'xuanhieu160415 charmnguyenspa thêm tinhda,sk của kh
-                '.nv_Diachi_en = txtTinhtrangda.Text
-                '.nv_Nguyenquan_en = txtSuckhoe.Text
-                '.nv_Hoten_en = txt_Lichsuchamsocda.Text
-                '.nv_Diachi_en = txt_Lichsuchamsocsuckhoe.Text
+                .nv_BietPhongKham = checkComboBoxKnowHow.Text
+                .nv_VungBiDau = txtVungBiDau.Text
+                .nv_DauBaoLau = txtDauBaoLau.Text
+                .nv_DaDieuTri = checkComboBoxDaDieuTri.Text
+                .nv_CamGiacDau = checkComboBoxCamGiac.Text
+                .nv_MucDoDau = ddlMucDoDau.SelectedItem.Value.ToString
+                .nv_TuTheDauHon = checkComboBoxTuTheDauHon.Text + ";" + txtTuTheKhacDauHon.Text
+                .nv_TuTheTotHon = checkComboBoxTuTheTotHon.Text + ";" + txtTuTheKhacTotHon.Text
+                .nv_AnhHuong = checkComboBoxAnhHuong.Text
             End With
             'tao mot doi tuong khach hang tiem nang 
             With objEnkhachhangtiemnang

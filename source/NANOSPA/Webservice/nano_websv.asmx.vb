@@ -97,13 +97,17 @@ Public Class nano_websv
         objFCKhachhang = New BO.CRM_DM_KhachhangFacade
         objEnKhachhang = New CM.CRM_DM_KhachhangEntity
         objEnKhachhang = objFCKhachhang.SelectByID(uId_Khachhang)
+        '0,1,2
         rs = objEnKhachhang.d_Ngayden & "$" & objEnKhachhang.v_Makhachang & "$" & objEnKhachhang.nv_Hoten_vn &
             "$" & objEnKhachhang.d_Ngaysinh & "$" & objEnKhachhang.b_Gioitinh & "$" & objEnKhachhang.nv_Diachi_vn &
-              "$" & objEnKhachhang.v_DienthoaiDD & "$" & objEnKhachhang.v_Email & "$" & objEnKhachhang.uId_Nghenghiep &
-              "$" & objEnKhachhang.uId_Nguonden & "$" & objEnKhachhang.nv_Ghichu_vn & "$" & objEnKhachhang.nv_Hinhanh &
-              "$" & objEnKhachhang.uId_Nguoigioithieu & "$" & objEnKhachhang.nv_Diachi_en & "$" & objEnKhachhang.nv_Nguyenquan_en &
-              "$" & objEnKhachhang.nv_Hoten_en & "$" & objEnKhachhang.d_NgaycapCMT &
-        "$" & objEnKhachhang.v_Dienthoaikhac & "$" & objEnKhachhang.nv_Noicap_en & "$" & objEnKhachhang.nv_Diachi_en
+            "$" & objEnKhachhang.v_DienthoaiDD & "$" & objEnKhachhang.v_Email & "$" & objEnKhachhang.uId_Nghenghiep &
+            "$" & objEnKhachhang.uId_Nguonden & "$" & objEnKhachhang.nv_Ghichu_vn & "$" & objEnKhachhang.nv_Hinhanh &
+            "$" & objEnKhachhang.uId_Nguoigioithieu & "$" & objEnKhachhang.nv_Diachi_en & "$" & objEnKhachhang.nv_Nguyenquan_en &
+            "$" & objEnKhachhang.nv_Hoten_en & "$" & objEnKhachhang.d_NgaycapCMT &
+            "$" & objEnKhachhang.v_Dienthoaikhac & "$" & objEnKhachhang.nv_Noicap_en & "$" & objEnKhachhang.nv_Diachi_en &
+        "$" & objEnKhachhang.nv_BietPhongKham & "$" & objEnKhachhang.nv_VungBiDau & "$" & objEnKhachhang.nv_DauBaoLau &
+        "$" & objEnKhachhang.nv_DaDieuTri & "$" & objEnKhachhang.nv_CamGiacDau & "$" & objEnKhachhang.nv_MucDoDau &
+        "$" & objEnKhachhang.nv_TuTheDauHon & "$" & objEnKhachhang.nv_TuTheTotHon & "$" & objEnKhachhang.nv_AnhHuong
         Return rs
     End Function
     <WebMethod> _
@@ -1676,25 +1680,21 @@ Public Class nano_websv
     End Function
 #End Region
     <WebMethod(True)> _
-    Public Function LoadThongTinResource(Resource As Integer, dStart As DateTime, dEnd As DateTime) As String
-        objFcResource = New BO.ResourcesFacade
+    Public Function LoadThongTinResource(uidNhanvien As String, dStart As DateTime, dEnd As DateTime) As String
         Dim dt As DataTable
         Dim str As String = "Yes"
-        Dim uId_Nhanvien As String = objFcResource.SelectByResourceId(Resource)
         Try
-            If uId_Nhanvien <> "" Then
                 objFcNhanvien = New BO.QT_DM_NHANVIENFacade
-                dt = objFcNhanvien.SelectnhanvienByLichhen(Session("uId_Nhanvien"), dStart, dEnd, uId_Nhanvien)
+            dt = objFcNhanvien.SelectnhanvienByLichhen(uidNhanvien, dStart, dEnd, uidNhanvien)
                 If dt.Rows.Count > 0 Then
                     For Each row As DataRow In dt.Rows
-                        If row("uId_Nhanvien").ToString = uId_Nhanvien Then
-                            If row("trangthai").ToString = "1" Then
-                                str = "No"
-                            End If
+                    If row("uId_Nhanvien").ToString = uidNhanvien Then
+                        If row("trangthai").ToString = "1" Then
+                            str = "No"
                         End If
+                    End If
                     Next
                 End If
-            End If
         Catch ex As Exception
 
         End Try

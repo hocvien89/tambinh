@@ -1,4 +1,4 @@
-﻿Public Class Xtr_Inphieuthuchi
+﻿Public Class Xtr_Inphieuthu
     Private objFcPhieuthuchi As BO.QLTC_PhieuthuchiFacade
     Private objEnPhieuthuchi As CM.QLTC_PhieuthuchiEntity
     Private objFcDMThuchi As BO.QLTC_DM_THUCHIFacade

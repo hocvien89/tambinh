@@ -770,7 +770,10 @@ ul.enlarge
 	padding: 3px 3px 4px !important;
 }
 .box_lichhen{
-	float: right; margin-right: 8px
+	margin-left:20px;
+    margin-right: 40px;
+    flex-grow:1;
+
 }
 td.cs55BE0B1 img {
     width:88px!important;
@@ -787,4 +790,7 @@ td.cs55BE0B1 img {
 
 .csDD450837 {
     font-weight:bold!important;
+}
+.div-flex {
+    display:flex;
 }

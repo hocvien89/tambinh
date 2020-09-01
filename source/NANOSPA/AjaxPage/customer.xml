@@ -3,15 +3,6 @@
   <dataset type="line" id="gray">
     <data unit="1" value="0"></data>
     <data unit="1" value="0" />
-    <data unit="2" value="0" />
-    <data unit="3" value="0" />
-    <data unit="4" value="0" />
-    <data unit="5" value="0" />
-    <data unit="6" value="0" />
-    <data unit="7" value="0" />
-    <data unit="8" value="0" />
-    <data unit="9" value="0" />
-    <data unit="10" value="0" />
   </dataset>
   <optionset>
     <option set="setSize" value="950, 250" />

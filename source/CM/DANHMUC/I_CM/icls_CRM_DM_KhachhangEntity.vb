@@ -56,5 +56,14 @@ Public Interface ICRM_DM_KhachhangEntity
 
     Property Thang() As Int16
     Property Soluong() As Int16
+    Property nv_BietPhongKham() As String
+    Property nv_VungBiDau() As String
+    Property nv_DauBaoLau() As String
+    Property nv_DaDieuTri() As String
+    Property nv_CamGiacDau() As String
+    Property nv_MucDoDau() As String
+    Property nv_TuTheDauHon() As String
+    Property nv_TuTheTotHon() As String
+    Property nv_AnhHuong() As String
 
 End Interface

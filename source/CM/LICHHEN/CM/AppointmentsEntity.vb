@@ -14,7 +14,7 @@
     Private _Description As String
     Private _Status As Int32
     Private _Label As Int32
-    Private _ResourceID As Int32
+    Private _ResourceID As String
     Private _ResourceIDs As String
     Private _ReminderInfo As String
     Private _RecurrenceInfo As String
@@ -152,11 +152,11 @@
         End Set
     End Property
 
-    Public Property ResourceID() As Int32 Implements IAppointmentsEntity.ResourceID
+    Public Property ResourceID() As String Implements IAppointmentsEntity.ResourceID
         Get
             Return _ResourceID
         End Get
-        Set(ByVal value As Int32)
+        Set(ByVal value As String)
             _ResourceID = value
         End Set
     End Property

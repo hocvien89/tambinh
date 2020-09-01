@@ -347,58 +347,112 @@ Partial Public Class CustomerList
     Protected WithEvents cbo_nhanvientuvan As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
-    '''ASPxDropDownEdit1 control.
+    '''checkComboBoxKnowHow control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxDropDownEdit1 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+    Protected WithEvents checkComboBoxKnowHow As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
 
     '''<summary>
-    '''TextBox1 control.
+    '''txtVungBiDau control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtVungBiDau As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox2 control.
+    '''txtDauBaoLau control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDauBaoLau As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''ASPxDropDownEdit2 control.
+    '''checkComboBoxDaDieuTri control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxDropDownEdit2 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+    Protected WithEvents checkComboBoxDaDieuTri As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
 
     '''<summary>
-    '''ASPxDropDownEdit4 control.
+    '''checkComboBoxCamGiac control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxDropDownEdit4 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+    Protected WithEvents checkComboBoxCamGiac As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
 
     '''<summary>
-    '''ASPxDropDownEdit3 control.
+    '''ddlMucDoDau control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ASPxDropDownEdit3 As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+    Protected WithEvents ddlMucDoDau As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
+
+    '''<summary>
+    '''checkComboBoxTuTheDauHon control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents checkComboBoxTuTheDauHon As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
+    '''txtTuTheKhacDauHon control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTuTheKhacDauHon As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''checkComboBoxTuTheTotHon control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents checkComboBoxTuTheTotHon As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
+    '''txtTuTheKhacTotHon control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTuTheKhacTotHon As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''checkComboBoxAnhHuong control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents checkComboBoxAnhHuong As Global.DevExpress.Web.ASPxEditors.ASPxDropDownEdit
+
+    '''<summary>
+    '''TextBox4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''ltrError control.

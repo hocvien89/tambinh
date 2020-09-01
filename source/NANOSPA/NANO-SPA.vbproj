@@ -1831,6 +1831,7 @@
     </Content>
     <Content Include="Webservice\nano_websv.asmx" />
     <Content Include="Webservice\nano_websv_CheckInCheckOut.asmx" />
+    <Content Include="Webservice\nano_websv_lichhen.asmx" />
     <Content Include="Webservice\nano_websv_thetichdiem.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -2727,6 +2728,12 @@
     <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuCongNoThanhToan.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuThuA5.Designer.vb">
+      <DependentUpon>rpt_PhieuThuA5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuThuA5.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\Xtr_InphieunhapByID.designer.vb">
       <DependentUpon>Xtr_InphieunhapByID.vb</DependentUpon>
     </Compile>
@@ -3053,6 +3060,10 @@
       <DependentUpon>nano_websv_CheckInCheckOut.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Webservice\nano_websv_lichhen.asmx.vb">
+      <DependentUpon>nano_websv_lichhen.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Webservice\nano_websv_thetichdiem.asmx.vb">
       <DependentUpon>nano_websv_thetichdiem.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -3089,6 +3100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuCongNoThanhToan.resx">
       <DependentUpon>rpt_PhieuCongNoThanhToan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuThuA5.resx">
+      <DependentUpon>rpt_PhieuThuA5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\Xtr_InphieunhapByID.resx">
       <DependentUpon>Xtr_InphieunhapByID.vb</DependentUpon>

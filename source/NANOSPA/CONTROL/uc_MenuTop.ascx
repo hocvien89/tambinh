@@ -130,7 +130,7 @@
                 <ul>
                     <li><a href="../../../../OrangeVersion/Category/DMThuchi.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">DM Thu Chi</a></li>
-                   <li><a href="../../../../OrangeVersion/Category/DM_Resources.aspx">
+                   <li><a href="../../../../OrangeVersion/Category/Room.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">DM phòng</a></li>
 <%--                       <li><a href="../../../../OrangeVersion/Category/Marketing_Tag.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">DM Tag</a></li>--%>

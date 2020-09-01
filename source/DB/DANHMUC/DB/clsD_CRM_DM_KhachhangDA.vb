@@ -160,6 +160,15 @@ Public Class CRM_DM_KhachhangDA
                     .uId_Cuahang = IIf(IsDBNull(objReader("uId_Cuahang")) = True, "", Convert.ToString(objReader("uId_Cuahang")))
                     .uId_Nghenghiep = IIf(IsDBNull(objReader("uId_Nghenghiep")) = True, "", Convert.ToString(objReader("uId_Nghenghiep")))
                     .uId_Nguoigioithieu = IIf(IsDBNull(objReader("uId_Nguoigioithieu")) = True, "", Convert.ToString(objReader("uId_Nguoigioithieu")))
+                    .nv_BietPhongKham = IIf(IsDBNull(objReader("nv_BietPhongKham")) = True, "", objReader("nv_BietPhongKham"))
+                    .nv_VungBiDau = IIf(IsDBNull(objReader("nv_VungBiDau")) = True, "", objReader("nv_VungBiDau"))
+                    .nv_DauBaoLau = IIf(IsDBNull(objReader("nv_DauBaoLau")) = True, "", objReader("nv_DauBaoLau"))
+                    .nv_DaDieuTri = IIf(IsDBNull(objReader("nv_DaDieuTri")) = True, "", objReader("nv_DaDieuTri"))
+                    .nv_CamGiacDau = IIf(IsDBNull(objReader("nv_CamGiacDau")) = True, "", objReader("nv_CamGiacDau"))
+                    .nv_MucDoDau = IIf(IsDBNull(objReader("nv_MucDoDau")) = True, "", objReader("nv_MucDoDau"))
+                    .nv_TuTheDauHon = IIf(IsDBNull(objReader("nv_TuTheDauHon")) = True, "", objReader("nv_TuTheDauHon"))
+                    .nv_TuTheTotHon = IIf(IsDBNull(objReader("nv_TuTheTotHon")) = True, "", objReader("nv_TuTheTotHon"))
+                    .nv_AnhHuong = IIf(IsDBNull(objReader("nv_AnhHuong")) = True, "", objReader("nv_AnhHuong"))
                 End With
             End If
             Return obj
@@ -223,6 +232,15 @@ Public Class CRM_DM_KhachhangDA
             db.AddInParameter(objCmd, "@uId_Cuahang", DbType.String, obj.uId_Cuahang)
             db.AddInParameter(objCmd, "@uId_Nghenghiep", DbType.String, obj.uId_Nghenghiep)
             db.AddInParameter(objCmd, "@uId_Nguoigioithieu", DbType.String, obj.uId_Nguoigioithieu)
+            db.AddInParameter(objCmd, "@nv_BietPhongKham", DbType.String, obj.nv_BietPhongKham)
+            db.AddInParameter(objCmd, "@nv_VungBiDau", DbType.String, obj.nv_VungBiDau)
+            db.AddInParameter(objCmd, "@nv_DauBaoLau", DbType.String, obj.nv_DauBaoLau)
+            db.AddInParameter(objCmd, "@nv_DaDieuTri", DbType.String, obj.nv_DaDieuTri)
+            db.AddInParameter(objCmd, "@nv_CamGiacDau", DbType.String, obj.nv_CamGiacDau)
+            db.AddInParameter(objCmd, "@nv_MucDoDau", DbType.String, obj.nv_MucDoDau)
+            db.AddInParameter(objCmd, "@nv_TuTheDauHon", DbType.String, obj.nv_TuTheDauHon)
+            db.AddInParameter(objCmd, "@nv_TuTheTotHon", DbType.String, obj.nv_TuTheTotHon)
+            db.AddInParameter(objCmd, "@nv_AnhHuong", DbType.String, obj.nv_AnhHuong)
             Return db.ExecuteDataSet(objCmd).Tables(0).Rows(0)(0).ToString
             Return True
         Catch ex As Exception
@@ -285,7 +303,15 @@ Public Class CRM_DM_KhachhangDA
             db.AddInParameter(objCmd, "@uId_Cuahang", DbType.String, obj.uId_Cuahang)
             db.AddInParameter(objCmd, "@uId_Nghenghiep", DbType.String, obj.uId_Nghenghiep)
             db.AddInParameter(objCmd, "@uId_Nguoigioithieu", DbType.String, obj.uId_Nguoigioithieu)
-
+            db.AddInParameter(objCmd, "@nv_BietPhongKham", DbType.String, obj.nv_BietPhongKham)
+            db.AddInParameter(objCmd, "@nv_VungBiDau", DbType.String, obj.nv_VungBiDau)
+            db.AddInParameter(objCmd, "@nv_DauBaoLau", DbType.String, obj.nv_DauBaoLau)
+            db.AddInParameter(objCmd, "@nv_DaDieuTri", DbType.String, obj.nv_DaDieuTri)
+            db.AddInParameter(objCmd, "@nv_CamGiacDau", DbType.String, obj.nv_CamGiacDau)
+            db.AddInParameter(objCmd, "@nv_MucDoDau", DbType.String, obj.nv_MucDoDau)
+            db.AddInParameter(objCmd, "@nv_TuTheDauHon", DbType.String, obj.nv_TuTheDauHon)
+            db.AddInParameter(objCmd, "@nv_TuTheTotHon", DbType.String, obj.nv_TuTheTotHon)
+            db.AddInParameter(objCmd, "@nv_AnhHuong", DbType.String, obj.nv_AnhHuong)
             db.ExecuteNonQuery(objCmd)
             Return True
         Catch ex As Exception
