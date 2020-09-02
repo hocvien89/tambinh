@@ -1637,7 +1637,7 @@
               }
               else {
                   var $dialog = $('<div></div>')
-                   .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Phieuthanhtoan/rp_Phieudichvu.aspx?Luachon=Thanhtoan" width="850px" height="100%"></iframe>')
+                   .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=phieuthudichvu" width="850px" height="100%"></iframe>')
                    .dialog({
                        autoOpen: false,
                        modal: true,

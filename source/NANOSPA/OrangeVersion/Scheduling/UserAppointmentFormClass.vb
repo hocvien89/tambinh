@@ -222,12 +222,10 @@ Public Class UserAppointmentSaveCallbackCommand
         End If
         ' them dk kiem tra cbo nhan vien kt
 
-            MyBase.AssignControllerValues()
+        MyBase.AssignControllerValues()
     End Sub
     Protected Overrides Function CreateAppointmentFormController(ByVal apt As Appointment) As AppointmentFormController
         Return New UserAppointmentFormController(Control, apt)
     End Function
 End Class
 #End Region ' #userappointmentsavecallbackcommand  
-
-

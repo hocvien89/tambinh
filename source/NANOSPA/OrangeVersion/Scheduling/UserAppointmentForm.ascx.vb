@@ -70,7 +70,6 @@ Partial Public Class UserAppointmentForm
             MyBase.DataBind()
             LoadDropDown_Nhanvien()
             LoadDropDown_Nhanvien_KT()
-            LoadDropDown_Bacsy()
             Dim container As UserAppointmentFormTemplateContainer = CType(Parent, UserAppointmentFormTemplateContainer)
             Dim apt As Appointment = container.Appointment
             edtLabel.SelectedIndex = apt.LabelId
@@ -91,7 +90,6 @@ Partial Public Class UserAppointmentForm
                 ddlNhanvien.Text = objEnNhanvien.nv_Hoten_vn
                 ddlDichvu.Value = objEnDichvu.uId_Dichvu
                 ddlDichvu.Text = objEnDichvu.nv_Tendichvu_vn
-                ddlBacSy.Value = objEnNhanvien.uId_Nhanvien
                 objEnNhanvien = New CM.QT_DM_NHANVIENEntity
                 objEnNhanvien = objFcNhanvien.SelectByID(dt.Rows(0).Item("uId_Nhanvien_Kythuat").ToString)
                 ddl_Nhanvien_Kythuat.Value = objEnNhanvien.uId_Nhanvien
@@ -140,10 +138,8 @@ Partial Public Class UserAppointmentForm
         Else
             If (Not Object.Equals(apt.ResourceId, Resource.Empty.Id)) Then
                 edtResource.Value = apt.ResourceId.ToString()
-                ddlBacSy.Value = apt.ResourceId
             Else
                 edtResource.Value = SchedulerIdHelper.EmptyResourceId
-                edtResource.Value = ddlBacSy.Value
             End If
         End If
     End Sub
@@ -220,16 +216,6 @@ Partial Public Class UserAppointmentForm
         ddl_Nhanvien_Kythuat.DataSource = dt
         ddl_Nhanvien_Kythuat.DataBind()
     End Sub
-
-    Public Sub LoadDropDown_Bacsy()
-        objFcNhanvien = New BO.QT_DM_NHANVIENFacade
-        Dim uid As String = UniqueID
-        Dim dt As DataTable
-        dt = objFcNhanvien.Select_Nhanvien_By_Phong("0685C720-892F-4474-930B-237289DE09EF")
-        ddlBacSy.DataSource = dt
-        ddlBacSy.DataBind()
-    End Sub
-
     Public Function LoadDropDown_Cuahang() As DataTable
         objFcCuahang = New BO.QT_DM_CUAHANGFacade
         Dim dt As DataTable
@@ -269,9 +255,4 @@ Partial Public Class UserAppointmentForm
     Protected Sub ddl_Nhanvien_Kythuat_Callback(sender As Object, e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
         LoadDropDown_Nhanvien_KT()
     End Sub
-
-    Protected Sub ddlBacSy_Callback(sender As Object, e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
-        LoadDropDown_Bacsy()
-    End Sub
 End Class
-

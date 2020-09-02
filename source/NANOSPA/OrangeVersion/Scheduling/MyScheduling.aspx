@@ -51,13 +51,13 @@
                         <td>Hẹn lịch
                         </td>
                     </tr>
-                    <tr>
+                   <%-- <tr>
                         <td class="info_table_td">
                             <div style="width: 30px; height: 30px; background-color: #A8D5FF"></div>
                         </td>
                         <td>Chuyển lịch
                         </td>
-                    </tr>
+                    </tr>--%>
                     <tr>
                         <td class="info_table_td">
                             <div style="width: 30px; height: 30px; background-color: #C1F49C"></div>
@@ -149,7 +149,7 @@
             <OptionsForms AppointmentFormTemplateUrl="~/OrangeVersion/Scheduling/UserAppointmentForm.ascx" />
             <OptionsBehavior ShowViewSelector="True" />
             <Storage EnableReminders="true">
-                <Appointments CommitIdToDataSource="false"  ResourceSharing="true" AutoRetrieveId="true">
+                <Appointments CommitIdToDataSource="false" AutoRetrieveId="true">
                     <Mappings
                         AppointmentId="UniqueID"
                         End="EndDate"
@@ -163,9 +163,9 @@
                         ReminderInfo="ReminderInfo"
                         Label="Label"
                         Status="Status"
-                        ResourceId="ResourceId" />
+                        ResourceId="ResourceID" />
                     <CustomFieldMappings>
-                        <%--<dxwschs:ASPxAppointmentCustomFieldMapping Member="CustomField1" Name="CustomField1" />--%>
+                        <dxwschs:ASPxAppointmentCustomFieldMapping Member="CustomField1" Name="CustomField1" />
                         <dxwschs:ASPxAppointmentCustomFieldMapping Member="uId_Nhanvien" Name="uId_Nhanvien" />
                         <dxwschs:ASPxAppointmentCustomFieldMapping Member="uId_Cuahang" Name="uId_Cuahang" />
                         <dxwschs:ASPxAppointmentCustomFieldMapping Member="uId_Dichvu" Name="uId_Dichvu" />
@@ -181,15 +181,35 @@
                 </Appointments>
                
                 <Resources>
-                    <Mappings ResourceId="ResourceId" Caption="nv_Hoten_vn" Color="Color" Image="Image" />
+                    <Mappings ResourceId="ResourceID" Caption="ResourceName" Color="Color" Image="Image" />
                     <CustomFieldMappings>
-                        <dxwschs:ASPxResourceCustomFieldMapping Member="ResourceId" Name="ResourceId" />
+                        <dxwschs:ASPxResourceCustomFieldMapping Member="ResourceID" Name="ResourceID" />
                     </CustomFieldMappings>
                 </Resources>
             </Storage>
             <OptionsView FirstDayOfWeek="Monday" />
         </dxwschs:ASPxScheduler>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:NANO_SPA.My.MySettings.sConnect %>"  SelectCommand="SELECT *  FROM [QT_DM_NHANVIEN] nv inner join PQP_NHANVIEN_PHONG pb on nv.uId_Nhanvien = pb. uId_Nhanvien where pb.uId_Phongban='0685C720-892F-4474-930B-237289DE09EF' ">
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:NANO_SPA.My.MySettings.sConnect %>" SelectCommand="SELECT * FROM dbo.Resources r	INNER JOIN	dbo.QT_DM_NHANVIEN qdn	ON	r.CustomField1	= qdn.uId_Nhanvien
+INNER JOIN dbo.PQP_NHANVIEN_PHONG pnp	ON qdn.uId_Nhanvien=pnp.uId_Nhanvien
+WHERE pnp.uId_Phongban='0685C720-892F-4474-930B-237289DE09EF'" >
+            <DeleteParameters>
+                <asp:Parameter Name="UniqueID" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="ResourceID" Type="Int32" />
+                <asp:Parameter Name="ResourceName" Type="String" />
+                <asp:Parameter Name="Color" Type="Int32" />
+                <asp:Parameter Name="Image" Type="Object" />
+                <asp:Parameter Name="CustomField1" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="ResourceID" Type="Int32" />
+                <asp:Parameter Name="ResourceName" Type="String" />
+                <asp:Parameter Name="Color" Type="Int32" />
+                <asp:Parameter Name="Image" Type="Object" />
+                <asp:Parameter Name="CustomField1" Type="String" />
+                <asp:Parameter Name="UniqueID" Type="Int32" />
+            </UpdateParameters>
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"
             ConnectionString="<%$ ConnectionStrings:NANO_SPA.My.MySettings.sConnect %>"
@@ -243,7 +263,6 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     </div>
-    </div>
-        <div style="clear: both"></div>
+        </div>
+    <div style="clear: both"></div>
 </asp:Content>
-

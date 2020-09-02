@@ -212,24 +212,6 @@ Partial Public Class UserAppointmentForm
     Protected WithEvents ddl_Nhanvien_Kythuat As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
 
     '''<summary>
-    '''ASPxLabel4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ASPxLabel4 As Global.DevExpress.Web.ASPxEditors.ASPxLabel
-
-    '''<summary>
-    '''ddlBacSy control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ddlBacSy As Global.DevExpress.Web.ASPxEditors.ASPxComboBox
-
-    '''<summary>
     '''lblResource control.
     '''</summary>
     '''<remarks>

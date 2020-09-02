@@ -197,28 +197,7 @@
             </table>
         </td>
     </tr>
-    <tr>
-        <td class="dxscSingleCell">
-             <table class="dxscLabelControlPair" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td class="dxscLabelCell">
-                        <dx:ASPxLabel ID="ASPxLabel4" Visible="True" runat="server" Text="Bác sỹ: ">
-                        </dx:ASPxLabel>
-                    </td>
-                    <td class="dxscControlCell">
-                        <dx:ASPxComboBox ID="ddlBacSy" OnCallback="ddlBacSy_Callback" EnableCallbackMode="false" ClientInstanceName="ddlBacsy" runat="server" CallbackPageSize="10"
-                            IncrementalFilteringMode="Contains" ValueField="ResourceId"  TextField="nv_Hoten_vn" ValueType="System.String" TextFormatString="{0}"
-                            Width="100%" DropDownStyle="DropDown" Visible="True"  SelectedIndex="0">
-                        </dx:ASPxComboBox>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td class="dxscSingleCell"  style="padding-left: 25px;">
-              
-           
-        </td>
-    </tr>
+
     <tr style="display: block">
         <%
             If CanShowReminders Then

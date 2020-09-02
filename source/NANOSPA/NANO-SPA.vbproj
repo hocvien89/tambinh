@@ -2734,6 +2734,12 @@
     <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuThuA5.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_phieuthu_scc.Designer.vb">
+      <DependentUpon>rpt_phieuthu_scc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_phieuthu_scc.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\Xtr_InphieunhapByID.designer.vb">
       <DependentUpon>Xtr_InphieunhapByID.vb</DependentUpon>
     </Compile>
@@ -3103,6 +3109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_PhieuThuA5.resx">
       <DependentUpon>rpt_PhieuThuA5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\rpt_phieuthu_scc.resx">
+      <DependentUpon>rpt_phieuthu_scc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrangeVersion\Report\Xtra_rpt\Xtra_Phieuthanhtoan\Xtr_InphieunhapByID.resx">
       <DependentUpon>Xtr_InphieunhapByID.vb</DependentUpon>

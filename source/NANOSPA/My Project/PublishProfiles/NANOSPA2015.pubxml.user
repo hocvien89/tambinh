@@ -14,7 +14,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/17/2020 08:19:08</publishTime>
     </File>
     <File Include="AjaxPage/customer.xml">
-      <publishTime>08/17/2020 14:55:21</publishTime>
+      <publishTime>09/03/2020 02:30:58</publishTime>
     </File>
     <File Include="AjaxPage/XML_DEMO.aspx">
       <publishTime>08/16/2020 19:56:56</publishTime>
@@ -26,10 +26,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/17/2020 08:19:09</publishTime>
     </File>
     <File Include="bin/BO.dll">
-      <publishTime>08/17/2020 14:19:14</publishTime>
+      <publishTime>09/03/2020 02:44:52</publishTime>
     </File>
     <File Include="bin/BO.pdb">
-      <publishTime>08/17/2020 14:19:14</publishTime>
+      <publishTime>09/03/2020 02:44:52</publishTime>
     </File>
     <File Include="bin/CKEditor.NET.dll">
       <publishTime>08/17/2020 08:19:08</publishTime>
@@ -38,19 +38,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/17/2020 08:19:08</publishTime>
     </File>
     <File Include="bin/CM.dll">
-      <publishTime>08/17/2020 14:19:13</publishTime>
+      <publishTime>09/03/2020 02:44:50</publishTime>
     </File>
     <File Include="bin/CM.pdb">
-      <publishTime>08/17/2020 14:19:13</publishTime>
+      <publishTime>09/03/2020 02:44:50</publishTime>
     </File>
     <File Include="bin/cs/AjaxControlToolkit.resources.dll">
       <publishTime>08/17/2020 08:19:09</publishTime>
     </File>
     <File Include="bin/DB.dll">
-      <publishTime>08/17/2020 14:19:14</publishTime>
+      <publishTime>09/03/2020 02:44:51</publishTime>
     </File>
     <File Include="bin/DB.pdb">
-      <publishTime>08/17/2020 14:19:14</publishTime>
+      <publishTime>09/03/2020 02:44:51</publishTime>
     </File>
     <File Include="bin/de/AjaxControlToolkit.resources.dll">
       <publishTime>08/17/2020 08:19:09</publishTime>
@@ -176,13 +176,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/17/2020 08:19:09</publishTime>
     </File>
     <File Include="bin/NANO-SPA.dll">
-      <publishTime>08/17/2020 15:12:59</publishTime>
+      <publishTime>09/03/2020 02:45:11</publishTime>
     </File>
     <File Include="bin/NANO-SPA.pdb">
-      <publishTime>08/17/2020 15:12:59</publishTime>
+      <publishTime>09/03/2020 02:45:11</publishTime>
     </File>
     <File Include="bin/NANO-SPA.xml">
-      <publishTime>08/17/2020 15:12:59</publishTime>
+      <publishTime>09/03/2020 02:45:11</publishTime>
     </File>
     <File Include="bin/nl/AjaxControlToolkit.resources.dll">
       <publishTime>08/17/2020 08:19:09</publishTime>
@@ -3641,7 +3641,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/16/2020 19:56:56</publishTime>
     </File>
     <File Include="CONTROL/uc_MenuTop.ascx">
-      <publishTime>08/17/2020 08:19:08</publishTime>
+      <publishTime>08/31/2020 22:22:52</publishTime>
     </File>
     <File Include="Css/assets/bootstrap/css/bootstrap.css">
       <publishTime>08/16/2020 19:56:56</publishTime>
@@ -3836,7 +3836,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/16/2020 19:56:56</publishTime>
     </File>
     <File Include="Css/style.css">
-      <publishTime>08/17/2020 08:19:08</publishTime>
+      <publishTime>08/31/2020 22:01:37</publishTime>
     </File>
     <File Include="Css/style_ipad.css">
       <publishTime>08/16/2020 19:56:56</publishTime>
@@ -4979,7 +4979,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/16/2020 19:56:56</publishTime>
     </File>
     <File Include="OrangeVersion/Customer/BillingServices.aspx">
-      <publishTime>08/17/2020 08:19:08</publishTime>
+      <publishTime>09/02/2020 23:59:12</publishTime>
     </File>
     <File Include="OrangeVersion/Customer/Contract_Print.aspx">
       <publishTime>08/16/2020 19:56:56</publishTime>
@@ -5069,7 +5069,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/16/2020 19:56:56</publishTime>
     </File>
     <File Include="OrangeVersion/Product/ExportProduct.aspx">
-      <publishTime>08/17/2020 08:19:08</publishTime>
+      <publishTime>09/03/2020 00:27:02</publishTime>
     </File>
     <File Include="OrangeVersion/Product/Inventory.aspx">
       <publishTime>08/17/2020 08:19:08</publishTime>
@@ -5237,13 +5237,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/16/2020 19:56:57</publishTime>
     </File>
     <File Include="OrangeVersion/Scheduling/MyScheduling.aspx">
-      <publishTime>08/16/2020 19:56:57</publishTime>
+      <publishTime>09/03/2020 02:30:11</publishTime>
     </File>
     <File Include="OrangeVersion/Scheduling/SchdulerReport.aspx">
       <publishTime>08/16/2020 19:56:57</publishTime>
     </File>
     <File Include="OrangeVersion/Scheduling/UserAppointmentForm.ascx">
-      <publishTime>08/16/2020 19:56:57</publishTime>
+      <publishTime>09/03/2020 02:18:13</publishTime>
     </File>
     <File Include="OrangeVersion/Util/DeclineRole.aspx">
       <publishTime>08/16/2020 19:56:57</publishTime>
@@ -5378,13 +5378,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/16/2020 19:56:57</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/17/2020 15:13:01</publishTime>
+      <publishTime>09/03/2020 02:45:13</publishTime>
     </File>
     <File Include="Webservice/nano_websv.asmx">
       <publishTime>08/16/2020 19:56:57</publishTime>
     </File>
     <File Include="Webservice/nano_websv_CheckInCheckOut.asmx">
       <publishTime>08/16/2020 19:56:57</publishTime>
+    </File>
+    <File Include="Webservice/nano_websv_lichhen.asmx">
+      <publishTime>08/31/2020 23:27:37</publishTime>
     </File>
     <File Include="Webservice/nano_websv_thetichdiem.asmx">
       <publishTime>08/16/2020 19:56:57</publishTime>

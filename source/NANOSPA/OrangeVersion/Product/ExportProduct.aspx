@@ -521,16 +521,16 @@
         function InPhieu(s, e) {
             if (jo_GetSession("uId_Phieuxuat") == null) {
                 alert("Chưa chọn phiếu để in!");
-            }
-            else if (cbkchike.GetChecked()) {
-                alert("Đơn thuốc chỉ kê không thể in thanh toán!");
+            //}
+            //else if (cbkchike.GetChecked()) {
+            //    alert("Đơn thuốc chỉ kê không thể in thanh toán!");
             }
             else {
                 var $dialog = $('<div></div>')
                     //jolieD
                  //.html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Phieuthuchi/rp_InHoadontonghop.aspx?Luachon=Phieuxuat" width="850px" height="100%"></iframe>')
                     //Harumy
-                    .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Phieuthanhtoan/rp_PhieuthanhtoanSP.aspx" width="850px" height="100%"></iframe>')
+                    .html('<iframe style="border: 0px; " src=" ../../OrangeVersion/Report/Rp_web/Rp_Clinic/rp_Print.aspx?type=phieuthudonthuoc" width="850px" height="100%"></iframe>')
                  .dialog({
                      autoOpen: false,
                      modal: true,
