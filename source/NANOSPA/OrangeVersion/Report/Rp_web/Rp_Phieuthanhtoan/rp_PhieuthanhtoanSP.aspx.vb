@@ -8,8 +8,8 @@
         If Not (oThamsohethong Is Nothing) Then
             If oThamsohethong.v_Giatri = "0" Then
                 Dim rp_A6 As New rpt_Phieuthanhtoan_SP_A6 'May in nhiet(Ko goi la A6)
-                rp_A6.lblTencuahang.Text = Session("nv_Tencuahang_vn")
-                rp_A6.lblDiachi.Text = Session("nv_DiachiCH_vn")
+                'rp_A6.lblTencuahang.Text = Session("nv_Tencuahang_vn")
+                'rp_A6.lblDiachi.Text = Session("nv_DiachiCH_vn")
                 rp_A6.BindData(Session("uId_Phieuxuat"), Session("uId_Khachhang"), Session("nv_Tencuahang_vn"), Session("nv_DiachiCH_vn"))
                 ReportViewerControl.ReportViewer.Report = rp_A6
             ElseIf oThamsohethong.v_Giatri = "1" Then
