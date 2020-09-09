@@ -12,7 +12,7 @@ Public Class MyScheduling
         If Not IsPostBack Then
          
         End If
-        scheduler1.ActiveViewType = SchedulerViewType.Timeline
+        scheduler1.ActiveViewType = SchedulerViewType.Day
         scheduler1.Start = System.DateTime.Today.AddHours(7)
     End Sub
     Protected Sub scheduler1_AppointmentFormShowing(sender As Object, e As AppointmentFormEventArgs) Handles scheduler1.AppointmentFormShowing
@@ -57,10 +57,10 @@ Public Class MyScheduling
             e.Menu.Items(5).Text = "Hủy"
         End If
     End Sub
-    Private workTimes() As TimeOfDayInterval = {New TimeOfDayInterval(TimeSpan.FromHours(8), TimeSpan.FromHours(16)),
-                                                New TimeOfDayInterval(TimeSpan.FromHours(10), TimeSpan.FromHours(20)),
-                                                Nothing, New TimeOfDayInterval(TimeSpan.FromHours(7), TimeSpan.FromHours(15)),
-                                                New TimeOfDayInterval(TimeSpan.FromHours(16), TimeSpan.FromHours(24))}
+    Private workTimes() As TimeOfDayInterval = {New TimeOfDayInterval(TimeSpan.FromHours(7), TimeSpan.FromHours(22)),
+                                                New TimeOfDayInterval(TimeSpan.FromHours(7), TimeSpan.FromHours(22)),
+                                                Nothing, New TimeOfDayInterval(TimeSpan.FromHours(7), TimeSpan.FromHours(22)),
+                                                New TimeOfDayInterval(TimeSpan.FromHours(7), TimeSpan.FromHours(22))}
     Protected Sub scheduler1_QueryWorkTime(sender As Object, e As QueryWorkTimeEventArgs)
         If scheduler1.Storage.Resources Is Nothing Then
             Return

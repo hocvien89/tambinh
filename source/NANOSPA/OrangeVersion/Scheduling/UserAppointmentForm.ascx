@@ -455,7 +455,7 @@
                     btnMyAppointmentFormOk.SetEnabled(false);
                 }
                 else if (msg.d == "ALL") {
-                    lbl_Error.SetText("Phòng đang bận");
+                    lbl_Error.SetText("Bác sỹ đang bận");
                     btnMyAppointmentFormOk.SetEnabled(false);
                 }
                 else {
