@@ -451,7 +451,7 @@
             async: false,
             success: function (msg) {
                 if (msg.d == "YES") {
-                    lbl_Error.SetText("Nhân viên lễ tân trùng lịch");
+                    lbl_Error.SetText("Nhân viên tư vấn trùng lịch");
                     btnMyAppointmentFormOk.SetEnabled(false);
                 }
                 else if (msg.d == "ALL") {
@@ -491,7 +491,7 @@
                  }
                  else if (msg.d == "ALL")
                  {
-                     lbl_Error.SetText("Phòng đang bận");
+                     lbl_Error.SetText("Bác sỹ đang bận");
                      btnMyAppointmentFormOk.SetEnabled(false);
                  }
                  else {
@@ -550,6 +550,9 @@
             async: false,
             success: function (msg) {
                 if (msg.d == "YES") {
+                    lbl_Error.SetText("Bác sỹ đã bận");
+                    ddlNhanvien.SetEnabled(false);
+                    dll_Nhanvien_Kythuat.SetEnabled(false)
                     btnMyAppointmentFormOk.SetEnabled(false);
                 }
             },

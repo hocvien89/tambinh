@@ -85,22 +85,13 @@ Public Class Personel
 
     Private Sub loadChucvu()
         Try
-            Dim item1 As New ListEditItem
-            Dim item2 As New ListEditItem
-            Dim item3 As New ListEditItem
-            Dim item4 As New ListEditItem
-            item1.Value = "0"
-            item1.Text = "Giám đốc"
-            item2.Value = "1"
-            item2.Text = "Nhân viên"
-            item3.Value = "2"
-            item3.Text = "Lễ tân"
-            item4.Value = "3"
-            item4.Text = "Kế toán"
-            pcbo_Chucvu.Items.Add(item1)
-            pcbo_Chucvu.Items.Add(item2)
-            pcbo_Chucvu.Items.Add(item3)
-            pcbo_Chucvu.Items.Add(item4)
+            Dim dt As DataTable
+            Dim objFcNguon As New BO.CRM_DM_NGUONFacade
+            dt = objFcNguon.SelectAllTable_ByvType("CHUCVU")
+            pcbo_Chucvu.DataSource = dt
+            pcbo_Chucvu.TextField = "nv_Nguon_vn"
+            pcbo_Chucvu.ValueField = "uId_Nguon"
+            pcbo_Chucvu.DataBind()
         Catch ex As Exception
         End Try
     End Sub

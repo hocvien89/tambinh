@@ -22,6 +22,8 @@ Public Class Other
                         dt.Rows(i)("vType") = "Nguồn"
                     ElseIf dt.Rows(i)("vType") = "NGHENGHIEP" Then
                         dt.Rows(i)("vType") = "Nghề nghiệp"
+                    ElseIf dt.Rows(i)("vType") = "CHUCVU" Then
+                        dt.Rows(i)("vType") = "Chức vụ"
                     End If
                 Next
                 Grid_Other.DataSource = dt
@@ -127,8 +129,11 @@ Public Class Other
             item1.Text = "Nghề nghiệp"
             item2.Value = "NGUON"
             item2.Text = "Nguồn"
+            item3.Value = "CHUCVU"
+            item3.Text = "Chức vụ"
             cmb.Items.Add(item1)
             cmb.Items.Add(item2)
+            cmb.Items.Add(item3)
         End If
     End Sub
 End Class

@@ -794,3 +794,10 @@ td.cs55BE0B1 img {
 .div-flex {
     display:flex;
 }
+
+.schedule-item {
+    padding-right:20px;
+}
+.dxscApt{
+    max-width:450px!important
+}

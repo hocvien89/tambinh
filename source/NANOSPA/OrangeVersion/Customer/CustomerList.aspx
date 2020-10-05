@@ -1410,7 +1410,7 @@
 
                                             <%-- row --%>
                                             <tr>
-                                                <td class="info_table_td">Bạn biết phòng khám ICC qua:
+                                                <td class="info_table_td">Bạn biết phòng khám SCC qua:
                                                 </td>
                                                 <td class="info_table_td">
                                                     <dx:ASPxDropDownEdit ClientInstanceName="checkComboBoxKnowHow" ID="checkComboBoxKnowHow" Width="200px" runat="server" AnimationType="None">

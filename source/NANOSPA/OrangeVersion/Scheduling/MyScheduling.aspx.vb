@@ -13,6 +13,8 @@ Public Class MyScheduling
          
         End If
         scheduler1.ActiveViewType = SchedulerViewType.Day
+        scheduler1.Views.DayView.ShowWorkTimeOnly = True
+        scheduler1.Views.DayView.TimeScale = System.TimeSpan.Parse("00:15:00")
         scheduler1.Start = System.DateTime.Today.AddHours(7)
     End Sub
     Protected Sub scheduler1_AppointmentFormShowing(sender As Object, e As AppointmentFormEventArgs) Handles scheduler1.AppointmentFormShowing
@@ -45,6 +47,18 @@ Public Class MyScheduling
                 e.Menu.Items(6).Text = "Định dạng"
                 e.Menu.Items(7).Text = "60 phút"
                 e.Menu.Items(8).Text = "30 phút"
+            End If
+        End If
+        If scheduler1.ActiveViewType = SchedulerViewType.Month Then
+            If e.Menu.Id = SchedulerMenuItemId.DefaultMenu Then
+                e.Menu.Items(0).Text = "Đặt lịch"
+                e.Menu.Items(1).Text = "Hẹn cả ngày"
+                e.Menu.Items(2).Visible = False
+                e.Menu.Items(3).Visible = False
+                e.Menu.Items(4).Visible = False
+                e.Menu.Items(5).Text = "Mở ngày đang chọn"
+                e.Menu.Items(6).Text = "Chọn ngày mở"
+                e.Menu.Items(7).Text = "Định dạng"
             End If
         End If
         'Khi kick vào ô đã có dữ liệu thì ra AppointmentMenu
@@ -88,6 +102,8 @@ Public Class MyScheduling
         Dim Id As String = e.Appointment.Id
         objFcAppointment = New BO.AppointmentsFacade
         Dim nv_Hoten As String = ""
+        Dim customerCode As String = ""
+        Dim phone As String = ""
         Dim nv_Nhanvien_vn As String = ""
         Dim nv_Tendichvu_vn As String = ""
         Dim nv_Kythuat_vn As String = ""
@@ -97,8 +113,10 @@ Public Class MyScheduling
             nv_Nhanvien_vn = dt.Rows(0).Item("nv_Nhanvien_vn").ToString
             nv_Tendichvu_vn = dt.Rows(0).Item("nv_Tendichvu_vn").ToString
             nv_Kythuat_vn = dt.Rows(0).Item("nv_Kythuat_vn").ToString
+            customerCode = dt.Rows(0).Item("v_Makhachang").ToString
+            phone = dt.Rows(0).Item("v_DienthoaiDD").ToString
         End If
-        e.Text = String.Format("KH: {0} - Dịch vụ:{1} - Tư vấn: {2}- Kỹ thuật:{3}", nv_Hoten, nv_Tendichvu_vn, nv_Nhanvien_vn, nv_Kythuat_vn)
+        e.Text = String.Format("KH: {0} - Mã KH: {1} - ĐT: {2} - Dịch vụ: {3} - Tư vấn: {4}- Kỹ thuật: {5}", nv_Hoten, customerCode, phone, nv_Tendichvu_vn, nv_Nhanvien_vn, nv_Kythuat_vn)
     End Sub
 
     'Protected Sub scheduler1_CustomErrorText(handler As Object, e As ASPxSchedulerCustomErrorTextEventArgs)

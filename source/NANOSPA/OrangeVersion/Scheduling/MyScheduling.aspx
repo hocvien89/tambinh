@@ -46,30 +46,30 @@
                     </tr>--%>
                         <tr>
                             <td class="info_table_td">
-                                <div style="width: 30px; height: 30px; background-color: #F23A62"></div>
+                                <div style="width: 30px; height: 30px; background-color: #fdff00"></div>
                             </td>
-                            <td>Hẹn lịch
+                            <td>Khách mới
                             </td>
                         </tr>
-                        <%-- <tr>
+                         <tr>
                         <td class="info_table_td">
-                            <div style="width: 30px; height: 30px; background-color: #A8D5FF"></div>
+                            <div style="width: 30px; height: 30px; background-color: #e7e6e6 "></div>
                         </td>
-                        <td>Chuyển lịch
+                        <td>Khách cũ
                         </td>
-                    </tr>--%>
+                    </tr>
                         <tr>
                             <td class="info_table_td">
-                                <div style="width: 30px; height: 30px; background-color: #C1F49C"></div>
+                                <div style="width: 30px; height: 30px; background-color: #53ae47"></div>
                             </td>
                             <td>Đã thực hiện
                             </td>
                         </tr>
                         <tr>
                             <td class="info_table_td">
-                                <div style="width: 30px; height: 30px; background-color: #F3E4C7"></div>
+                                <div style="width: 30px; height: 30px; background-color: #48546a"></div>
                             </td>
-                            <td>Lỡ hẹn
+                            <td>Hủy lịch
                             </td>
                         </tr>
                     </tbody>
@@ -90,7 +90,7 @@
                             <cc1:TimeRuler ShowMinutes="true" />
                         </TimeRulers>
                         <DayViewStyles ScrollAreaHeight="480px">
-                            <TimeCellBody Height="100px"></TimeCellBody>
+                            <TimeCellBody Height="100px" CssClass="schedule-item"></TimeCellBody>
                         </DayViewStyles>
                       <%--  <Templates>
                             <ToolbarViewVisibleIntervalTemplate>
@@ -177,9 +177,10 @@
                             <dxwschs:ASPxAppointmentCustomFieldMapping Member="uId_Nhanvien_Kythuat" Name="uId_Nhanvien_Kythuat" />
                         </CustomFieldMappings>
                         <labels>
-                    <dxwschs:AppointmentLabel Color="#F23A62" DisplayName="Hẹn lịch" MenuCaption="&amp;Hẹn lịch" />
-                    <dxwschs:AppointmentLabel Color="193, 244, 156" DisplayName="Đã thực hiện" MenuCaption="&amp;Đã thực hiện" />
-                    <dxwschs:AppointmentLabel Color="243, 228, 199" DisplayName="Lỡ hẹn" MenuCaption="&amp;Lỡ hẹn" />
+                    <dxwschs:AppointmentLabel Color="#fdff00" DisplayName="Khách mới" MenuCaption="&amp;Khách mới" />
+                    <dxwschs:AppointmentLabel Color="#e7e6e6" DisplayName="Khách cũ" MenuCaption="&amp;Khách cũ" />
+                    <dxwschs:AppointmentLabel Color="#53ae47" DisplayName="Đã thực hiện" MenuCaption="&amp;Đã thực hiện" />
+                    <dxwschs:AppointmentLabel Color="#48546a" DisplayName="Hủy lịch" MenuCaption="&amp;Hủy lịch" />
                 </labels>
                     </Appointments>
 

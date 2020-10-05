@@ -42,13 +42,14 @@
                         <img src="../../../../../images/16x16/star.png" alt="">Quản lý bệnh nhân</a></li>
                     <li><a href="../../../../OrangeVersion/Customer/CustomerBirthday.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">Sinh nhật bệnh nhân</a></li>
-<%--                        <img src="../../../../../images/16x16/star.png" alt="">Thẻ tài khoản KH</a></li>
+                    <li><a href="../../../../OrangeVersion/Customer/AccountCard.aspx">
+                        <img src="../../../../../images/16x16/star.png" alt="">Thẻ tài khoản KH</a></li>
                     <li><a href="../../../../OrangeVersion/Card/LoyaltyCard_Manage.aspx">
-                        <img src="../../../../../images/16x16/star.png" alt="">Thẻ thành viên</a></li>--%>
+                        <img src="../../../../../images/16x16/star.png" alt="">Thẻ thành viên</a></li>
                   
                     <%-- <li><a href="../../../../OrangeVersion/Customer/Contract_Print.aspx">
                         <img src="../../../../../images/16x16/star.png" alt="">In hợp đồng Mẹ & Bé</a></li>--%>
-                    <%--<li>
+              <%--      <li>
                         <a href="../../../../OrangeVersion/Customer/CustomerCard.aspx">
                             <img src="../../../../../images/16x16/star.png" alt="">Thẻ khách hàng</a>
                     </li>--%>

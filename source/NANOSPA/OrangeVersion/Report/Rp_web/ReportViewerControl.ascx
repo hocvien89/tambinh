@@ -5,8 +5,8 @@
     <Items>
         <dx:ReportToolbarButton ItemKind='Search' />
         <dx:ReportToolbarSeparator />
-        <dx:ReportToolbarButton ItemKind='PrintReport' />
-        <dx:ReportToolbarButton ItemKind='PrintPage' />
+        <dx:ReportToolbarButton ItemKind='SaveToWindow' />
+        <dx:ReportToolbarButton ItemKind='SaveToWindow' />
         <dx:ReportToolbarSeparator />
         <dx:ReportToolbarButton Enabled='False' ItemKind='FirstPage' />
         <dx:ReportToolbarButton Enabled='False' ItemKind='PreviousPage' />
